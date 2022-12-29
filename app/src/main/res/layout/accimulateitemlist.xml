@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#dce0dd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llclick"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/pimg"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/circlebackground" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/pimg"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/LightBrown" />
+                    </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:paddingVertical="10dp"
+                android:id="@+id/ll1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pass_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:textColor="@color/DarkBrown" />
+
+                <TextView
+                    android:id="@+id/tid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:textColor="@color/DarkBrown" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/pass_txntype"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:text=""-->
+                <!--                    android:textSize="13dp"-->
+                <!--                    android:textColor="@color/textcolorprimary" />-->
+
+
+                <TextView
+                    android:id="@+id/pass_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:textColor="@color/DarkBrown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/ll1"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13dp"
+                    android:id="@+id/pass_amount"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:textSize="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:id="@+id/pass_grams"/>
+
+            </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/gray"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,346 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:backgroundTint="#DADEE1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardCornerRadius="5dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:background="#FDD835"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="35sp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Your Prediction"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/textcolorprimary"-->
+<!--                        android:textSize="22dp"/>-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/iv_priceedit"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_width="25dp"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:src="@drawable/edit" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text="Created"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="16dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="#123"/>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:id="@+id/tv_date"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text=""&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="16dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="#123"/>&ndash;&gt;-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Updated at"-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:textColor="@color/textcolorprimary"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_updated"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:text=""-->
+<!--                            android:textColor="@color/textcolorprimary"-->
+<!--                            android:textSize="16dp" />-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text="estimated"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="16dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="#123"/>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:text=""&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textSize="16dp"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        android:textColor="#123"/>&ndash;&gt;-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Predicted price"-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="@color/textcolorprimary"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_predictedprice"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text=""-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="@color/textcolorprimary"/>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_predect"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        android:visibility="visible"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Status"-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="@color/textcolorprimary"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_status"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text=""-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="@color/textcolorprimary"/>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#dce0dd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:background="#ffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvpredecttext"
+                android:textColor="@color/textcolorprimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Prediction"
+                android:layout_margin="5sp"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Predicted Date: " />
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:id="@+id/tv_updated"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Predicted Price: "
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:id="@+id/tv_predictedprice"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_predect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status: "
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:textColor="@color/textcolorprimary"
+                            android:id="@+id/tv_status"
+                            android:textSize="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llpredectedit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="#CDCFD1" />
+
+            <ImageView
+                android:id="@+id/iv_priceedit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/edit"
+                app:tint="@color/textcolorprimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

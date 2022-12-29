@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/underprice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:id="@+id/shoopcart"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/topsellimg"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="100dp" />
+
+        <!--<ImageView
+            android:id="@+id/topsellimg"
+            android:layout_width="wrap_content"
+            android:layout_height="135dp"
+            android:layout_gravity="center_horizontal"
+           />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lightgray">
+
+            <TextView
+                android:id="@+id/underpricetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/styles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/underpricetext"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+    <!-- <?xml version="1.0" encoding="utf-8"?>
+ <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_margin="10dp"
+ android:id="@+id/underprice"
+
+ app:cardCornerRadius="15dp">
+
+ <LinearLayout
+     android:layout_width="200dp"
+     android:layout_height="160dp"
+     android:orientation="vertical">
+     <ImageView
+         android:id="@+id/shoopcart"
+         android:layout_width="200dp"
+         android:scaleType="fitXY"
+         android:layout_height="160dp" />
+
+     <ImageView
+         android:id="@+id/topsellimg"
+         android:layout_width="130dp"
+         android:layout_height="100dp"
+         android:layout_gravity="right"
+         android:visibility="gone"
+         android:layout_marginBottom="5dp" />
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_marginTop="5dp"
+         android:alpha="0.5"
+         android:background="@drawable/ourbrandsbackground"
+         android:backgroundTint="#80FFFFFF"
+         android:backgroundTintMode="src_over">
+
+         <TextView
+             android:id="@+id/underpricetext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="7dp"
+             android:singleLine="true"
+             android:text="Good"
+             android:textColor="@color/black"
+             android:textSize="15dp"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/styles"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/underpricetext"
+             android:layout_marginLeft="10dp"
+             android:ellipsize="end"
+             android:singleLine="true"
+             android:text="100 Styles"
+             android:textColor="@color/black"
+             android:textSize="12dp" />
+
+     </RelativeLayout>
+
+
+ </LinearLayout>
+ </androidx.cardview.widget.CardView>-->

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+    <item
+        android:title="Home">
+
+        <menu>
+            <group>
+                <item
+                    android:title="About Us"
+                    android:id="@+id/nav_about"/>
+
+                <item
+                    android:title="FAQs"
+                    android:id="@+id/nav_faqs"/>
+            </group>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/navenquiry"
+        android:title="Enquiry">
+
+        <menu>
+            <group>
+
+                <item android:title="Individual Purchase Enquiry "
+                    android:id="@+id/mnpurchaseenuiry"/>
+
+                <item android:title="Business Enquiry"
+                    android:id="@+id/mnbusinessenquiry"/>
+            </group>
+        </menu>
+    </item>
+    <group>
+        <item android:title="Profile Details">
+            <menu>
+
+                <item
+
+                    android:title="Profile"
+                    android:id="@+id/nav_profile">
+                </item>
+
+                <item
+
+                    android:title="KYC"
+                    android:id="@+id/nav_kyc">
+                </item>
+
+                <item
+
+                    android:title="Nominee"
+                    android:id="@+id/nav_nominee">
+                </item>
+            </menu>
+        </item>
+    </group>
+    <item
+        android:title="Your Offers"
+        android:id="@+id/navoffers">
+    </item>
+    <item
+
+        android:title="Business Associates"
+        android:id="@+id/nav_business"/>
+    <!--    <item-->
+    <!--        android:title="Your Orders"-->
+    <!--        android:id="@+id/nav_orderslist">-->
+    <!--    </item>-->
+    <item
+
+        android:title="Company Details"
+        android:id="@+id/nav_companydetails"/>
+    <item
+        android:title="Contact Us"
+        android:id="@+id/mncotctus"/>
+
+    <item
+        android:visible="false"
+        android:title="Your Predictions"
+        android:id="@+id/nav_predictelist">
+    </item>
+
+    <!--    <item-->
+
+    <!--        android:title="Refer and Earn"-->
+    <!--        android:id="@+id/nav_share"/>-->
+    <item
+
+        android:title="Sign Out"
+        android:id="@+id/nav_logout">
+    </item>
+
+</menu>

@@ -1,0 +1,66 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linearlayout"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--            <ImageView-->
+<!--                android:src="@drawable/empty"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                app:tint="@color/primarybackground"-->
+<!--                tools:ignore="UseAppTint" />-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_rawRes="@raw/empty"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColorHint="#E4DCDC"
+                android:hint="Transfer Gold to Your Family and Friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_passbook">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_passbook"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

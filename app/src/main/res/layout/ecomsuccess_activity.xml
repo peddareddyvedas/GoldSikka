@@ -1,0 +1,168 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/gradient">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/llbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/txtProgressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Downloaded 0%"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                android:textColor="@color/textcolorprimary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtProgressPercent" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Success!"
+                        android:textSize="28dp"
+                        android:textStyle="italic|bold"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:src="@drawable/successrightimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="15dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thank You"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:src="@drawable/successicon"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_continue"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonborder" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

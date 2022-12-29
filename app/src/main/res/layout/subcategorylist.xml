@@ -1,0 +1,46 @@
+<FrameLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+        <include layout="@layout/toolbar_secondry"/>
+
+        <TextView
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gold Products"
+            android:fontFamily="@font/calibri"
+            android:textStyle="bold"
+            android:textColor="@color/textcolorprimary"
+            android:textSize="25dp"/>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_subcategory"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

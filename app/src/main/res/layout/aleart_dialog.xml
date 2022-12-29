@@ -1,0 +1,41 @@
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/textcolorprimary"
+        android:backgroundTint="@color/textcolorprimary"
+        android:theme="@style/EditTextThemeOverlay_Aleartdialog"
+        android:textColorHint="@color/textcolorprimary">
+
+        <EditText
+            android:inputType="textPassword"
+            android:textColorHint="@color/textcolorprimary"
+            android:textColor="@color/textcolorprimary"
+            android:id="@+id/et_password"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Password"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="12sp"
+        android:text=""
+        android:textColor="#E41708"
+        android:id="@+id/tv_password"/>
+
+</LinearLayout>

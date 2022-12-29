@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/transactionname"
+        android:icon="@drawable/ic_baseline_filter_list_24"
+        android:title="menu"
+        android:iconTint="@color/DarkBrown"
+
+        app:showAsAction="always">
+        <menu>
+    <item
+        android:title="ALL"
+        android:id="@+id/filter_all"/>
+    <item
+        android:title="BUY"
+        android:id="@+id/filter_buy"/>
+
+    <item
+        android:title="TRANSFER"
+        android:id="@+id/filter_transfer"/>
+
+    <item
+        android:title="WITHDRAW"
+        android:id="@+id/filter_withdraw"/>
+
+    <item
+        android:title="SELL"
+        android:id="@+id/filter_sell"/>
+
+    <item
+        android:title="GIFT"
+        android:id="@+id/filter_gift"/>
+
+    <item
+        android:title="PROMOTIONAL"
+        android:id="@+id/filter_promotional"/>
+
+    <item
+        android:title="CONVERT"
+        android:id="@+id/filter_convert"/>
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,2104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/backbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/arrowleft"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/dr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/back"
+                        android:src="@drawable/goldsikka_logo2" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:text="Jewel Store"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/LightBrown2" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                tools:context=".Fragments.JewelleryInventory.JewelleryInventoryHome">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/jwish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/juname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/wishlistbtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/roungbg"
+                            android:padding="10dp"
+                            android:scaleX="-1"
+                            android:src="@drawable/ic_like_off" />
+
+                        <TextView
+                            android:id="@+id/wihslistcountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/redroundbg"
+                            android:paddingHorizontal="4dp"
+                            android:paddingVertical="2dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="8dp" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/cartbtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/roungbg"
+                            android:padding="10dp"
+                            android:scaleX="-1"
+                            android:src="@drawable/cart" />
+
+                        <TextView
+                            android:id="@+id/cartcountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/redroundbg"
+                            android:paddingHorizontal="4dp"
+                            android:paddingVertical="2dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="8dp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/myordersbtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/roungbg"
+
+                            android:padding="10dp"
+                            android:scaleX="-1"
+                            android:src="@drawable/bag" />
+
+                        <TextView
+                            android:id="@+id/ordercountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/redroundbg"
+                            android:paddingHorizontal="4dp"
+                            android:paddingVertical="2dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="8dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/ll1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Search"
+                    android:visibility="gone"
+                    android:paddingLeft="12dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/LightBrown"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_item"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Categories"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ecomm_categorylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:overScrollMode="never" />
+
+                    <TextView
+                        android:id="@+id/textsubcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Sub Categories"
+                        android:textColor="@color/black"
+
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ecomm_subcategorylistfilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:overScrollMode="never"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textproduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Products"
+                        android:textColor="@color/black"
+
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ecomm_productcategorylistfilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:overScrollMode="never"
+                        android:visibility="gone" />
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/banners"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
+
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/llindicater"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bannerslayout"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <com.viewpagerindicator.CirclePageIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dip"
+                                app:background="@drawable/pageview_indicator"
+                                app:fillColor="#FF6F00"
+                                app:pageColor="#fff" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goldrates"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_below="@+id/quick_action_layout"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/ecomhome"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvlocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="28dp"
+                                    android:gravity="top"
+                                    android:text=""
+                                    android:textAppearance="@style/hyderabad_2" />
+
+                                <TextView
+                                    android:id="@+id/tvdate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="28dp"
+                                    android:gravity="top"
+                                    android:text=""
+                                    android:textAppearance="@style/hyderabad_2"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="24dp"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvtime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:gravity="right|top"
+                                    android:text=""
+                                    android:textAppearance="@style/pm_ist"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rectangle_2"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="16dp"
+                                android:background="@drawable/goldbackground"
+                                android:gravity="center">
+
+                                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/newgoldbuy" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/gold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:gravity="center_vertical"
+                                    android:lineSpacingExtra="2sp"
+                                    android:text="@string/gold"
+                                    android:textAppearance="@style/gold" />
+
+                                <TextView
+                                    android:id="@+id/gram"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:gravity="center_vertical"
+                                    android:lineSpacingExtra="1sp"
+                                    android:text="@string/tengram"
+                                    android:textAppearance="@style/tengram"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="83dp"
+                                android:layout_height="34dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/newgoldscale" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/tvliverate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:gravity="right|center_vertical"
+                                    android:lineSpacingExtra="2sp"
+                                    android:text=""
+                                    android:textAppearance="@style/some_id"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:background="@drawable/liveprice_bg">
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/ic_dot" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="@string/live_price"
+                                        android:textColor="@color/white"
+                                        android:textSize="10dp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="*T&amp;C Apply"
+                                    android:textColor="@color/Gold"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlgiftcards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:paddingHorizontal="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Gift Cards"
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/viewallproducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="view all"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlgiftnewcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclergiftcards"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp" />
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/bullionimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bullionimg" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlnewarrivals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="New Arrivals"
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/viewallproducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="view all"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlbacknewarrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/gradient">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/homenewarrivalls"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rltopselling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:paddingHorizontal="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Top Selling Products"
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/viewallproducts1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+
+                            android:text="view all"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/hometopsellingproducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:overScrollMode="never"
+
+                        android:padding="10dp"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlourbrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Our Brands List"
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/viewallproducts3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="view all"
+
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homeourbranslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:overScrollMode="never"
+                        android:visibility="visible" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlpriceunder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="Price Under list"
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/viewallproducts4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="view all"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homepriceunderlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="20dp"
+                        android:overScrollMode="never"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/giftcardimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/ic_newgiftcard"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/notfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="125dp"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/an1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/an1"
+                        android:layout_centerHorizontal="true"
+                        android:text="No Data Found"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</FrameLayout>
+
+    <!--
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/backbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/back"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/arrowleft"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/dr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/back"
+                            android:src="@drawable/goldsikka_logo2" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Jewel Store"
+                        android:textColor="@color/DarkBrown"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/uname"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="end"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/uid"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="@color/Gold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/LightBrown2" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    tools:context=".Fragments.JewelleryInventory.JewelleryInventoryHome">
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/jwish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/juname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/wishlistbtn"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/roungbg"
+                                android:padding="10dp"
+                                android:scaleX="-1"
+                                android:src="@drawable/ic_like_off" />
+
+                            <TextView
+                                android:id="@+id/wihslistcountTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:background="@drawable/redroundbg"
+                                android:paddingHorizontal="4dp"
+                                android:paddingVertical="2dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="8dp" />
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/cartbtn"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/roungbg"
+                                android:padding="10dp"
+                                android:scaleX="-1"
+                                android:src="@drawable/cart" />
+
+                            <TextView
+                                android:id="@+id/cartcountTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:background="@drawable/redroundbg"
+                                android:paddingHorizontal="4dp"
+                                android:paddingVertical="2dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="8dp" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/myordersbtn"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/roungbg"
+
+                                android:padding="10dp"
+                                android:scaleX="-1"
+                                android:src="@drawable/bag" />
+
+                            <TextView
+                                android:id="@+id/ordercountTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:background="@drawable/redroundbg"
+                                android:paddingHorizontal="4dp"
+                                android:paddingVertical="2dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="8dp" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/ll1"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Search"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/LightBrown"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_item"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textcategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Categories"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_categorylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never" />
+
+                        <TextView
+                            android:id="@+id/textsubcategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Sub Categories"
+                            android:textColor="@color/black"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_subcategorylistfilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textproduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Products"
+                            android:textColor="@color/black"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_productcategorylistfilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:overScrollMode="never"
+                            android:visibility="gone" />
+
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/banners"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/llindicater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bannerslayout"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <com.viewpagerindicator.CirclePageIndicator
+                                    android:id="@+id/indicator"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dip"
+                                    app:background="@drawable/pageview_indicator"
+                                    app:fillColor="#FF6F00"
+                                    app:pageColor="#fff" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/goldrates"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:layout_below="@+id/quick_action_layout"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/jewelstorebackground"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvlocation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_marginLeft="28dp"
+                                        android:gravity="top"
+                                        android:text=""
+                                        android:textAppearance="@style/hyderabad_2" />
+
+                                    <TextView
+                                        android:id="@+id/tvdate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:gravity="top"
+                                        android:text=""
+                                        android:textAppearance="@style/hyderabad_2"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="24dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvtime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:gravity="right|top"
+                                        android:text=""
+                                        android:textAppearance="@style/pm_ist"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rectangle_2"
+                                    android:layout_width="56dp"
+                                    android:layout_height="56dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/goldbackground"
+                                    android:gravity="center">
+
+                                    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:src="@drawable/newgoldbuy" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center_vertical"
+                                        android:lineSpacingExtra="2sp"
+                                        android:text="@string/gold"
+                                        android:textAppearance="@style/gold" />
+
+                                    <TextView
+                                        android:id="@+id/gram"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center_vertical"
+                                        android:lineSpacingExtra="1sp"
+                                        android:text="@string/tengram"
+                                        android:textAppearance="@style/tengram"
+                                        android:textSize="16dp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="83dp"
+                                    android:layout_height="34dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/newgoldscale" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/tvliverate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="right|center_vertical"
+                                        android:lineSpacingExtra="2sp"
+                                        android:text=""
+                                        android:textAppearance="@style/some_id"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:background="@drawable/liveprice_bg">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="5dp"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_dot" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="@string/live_price"
+                                            android:textColor="@color/white"
+                                            android:textSize="10dp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="*T&amp;C Apply"
+                                        android:textColor="@color/Gold"
+                                        android:textSize="10dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/bullionimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bullionimg" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlnewarrivals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="New Arrivals"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlbacknewarrival"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/gradient">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/homenewarrivalls"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:overScrollMode="never"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rltopselling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Top Selling Products"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hometopsellingproducts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:overScrollMode="never"
+                            android:padding="10dp"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlourbrands"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Our Brands List"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/homeourbranslist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlpriceunder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Price Under list"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/homepriceunderlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="20dp"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_item"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textcategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Categories"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_categorylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never" />
+
+                        <TextView
+                            android:id="@+id/textsubcategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Sub Categories"
+                            android:textColor="@color/black"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_subcategorylistfilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:overScrollMode="never"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textproduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Products"
+                            android:textColor="@color/black"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ecomm_productcategorylistfilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:overScrollMode="never"
+                            android:visibility="gone" />
+
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/banners"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/llindicater"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bannerslayout"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <com.viewpagerindicator.CirclePageIndicator
+                                    android:id="@+id/indicator"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dip"
+                                    app:background="@drawable/pageview_indicator"
+                                    app:fillColor="#FF6F00"
+                                    app:pageColor="#fff" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/goldrates"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:layout_below="@+id/quick_action_layout"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/ecomhome"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvlocation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_marginLeft="28dp"
+                                        android:gravity="top"
+                                        android:text=""
+                                        android:textAppearance="@style/hyderabad_2" />
+
+                                    <TextView
+                                        android:id="@+id/tvdate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="28dp"
+                                        android:gravity="top"
+                                        android:text=""
+                                        android:textAppearance="@style/hyderabad_2"
+                                        android:textSize="16dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="24dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvtime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:gravity="right|top"
+                                        android:text=""
+                                        android:textAppearance="@style/pm_ist"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rectangle_2"
+                                    android:layout_width="56dp"
+                                    android:layout_height="56dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/goldbackground"
+                                    android:gravity="center">
+
+                                    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:src="@drawable/newgoldbuy" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center_vertical"
+                                        android:lineSpacingExtra="2sp"
+                                        android:text="@string/gold"
+                                        android:textAppearance="@style/gold" />
+
+                                    <TextView
+                                        android:id="@+id/gram"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center_vertical"
+                                        android:lineSpacingExtra="1sp"
+                                        android:text="@string/tengram"
+                                        android:textAppearance="@style/tengram"
+                                        android:textSize="16dp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="83dp"
+                                    android:layout_height="34dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/newgoldscale" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/tvliverate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="right|center_vertical"
+                                        android:lineSpacingExtra="2sp"
+                                        android:text=""
+                                        android:textAppearance="@style/some_id"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:background="@drawable/liveprice_bg">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="5dp"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:src="@drawable/ic_dot" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="@string/live_price"
+                                            android:textColor="@color/white"
+                                            android:textSize="10dp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="*T&amp;C Apply"
+                                        android:textColor="@color/Gold"
+                                        android:textSize="10dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/bullionimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="@drawable/bullionimg" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlnewarrivals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="New Arrivals"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlbacknewarrival"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/gradient">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/homenewarrivalls"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:overScrollMode="never"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rltopselling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Top Selling Products"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hometopsellingproducts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:overScrollMode="never"
+
+                            android:padding="10dp"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlourbrands"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Our Brands List"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/homeourbranslist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlpriceunder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="Price Under list"
+                                android:textColor="@color/Gold"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/viewallproducts4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="view all"
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/homepriceunderlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="20dp"
+                            android:overScrollMode="never"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/giftcardimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/ic_newgiftcard" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/notfound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="250dp"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/an1"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerHorizontal="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/empty" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/an1"
+                            android:layout_centerHorizontal="true"
+                            android:text="No Data Available"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+    </FrameLayout>-->

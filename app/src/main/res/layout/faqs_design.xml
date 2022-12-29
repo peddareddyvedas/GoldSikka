@@ -1,0 +1,57 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll_q_a"
+        android:layout_marginLeft="24dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/DarkBrown"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="Questions"
+            android:id="@+id/tvquestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:id="@+id/answer_ll"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textColor="@color/LightBrown"
+            android:id="@+id/tvanswer"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2"/>
+
+
+
+</LinearLayout>

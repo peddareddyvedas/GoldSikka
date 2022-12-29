@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="350dp"
+                    android:layout_height="300dp"
+                    android:src="@drawable/message_popup" />
+
+                <TextView
+
+                    android:id="@+id/tvinfo"
+                    android:textColor="@color/textcolorprimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    android:justificationMode="none"
+                    android:text="Thank you for contacting us – we will get back to you soon!"
+                    android:textSize="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/Gold"
+                    android:layout_margin="20dp"
+                    android:text="Continue"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:id="@+id/btcountinue"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

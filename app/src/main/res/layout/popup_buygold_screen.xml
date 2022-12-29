@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:gravity="end"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/textcolorprimary"
+                    android:id="@+id/iv_close"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="350dp"
+                    android:layout_height="300dp"
+                    android:src="@drawable/message_popup" />
+
+                <TextView
+                    android:textColor="@color/textcolorprimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    android:id="@+id/tvmsg"
+                    android:justificationMode="none"
+                    android:text="Your request has been raised. This is in Persuance of Government of India regulation under PMLA with regard to KYC."
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

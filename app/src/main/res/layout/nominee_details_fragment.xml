@@ -1,0 +1,348 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/Nominee_Name"
+                android:textColor="@color/DarkBrown"
+                android:textSize="16dp"
+                android:textColorHint="@color/LightBrown"
+                android:id="@+id/et_nominee_name"
+                android:paddingLeft="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:id="@+id/tv_nominee_name"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:inputType="number"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/Nomine_Mobile_Number"
+                android:textColor="@color/DarkBrown"
+                android:textColorHint="@color/LightBrown"
+                android:textSize="16dp"
+                android:paddingLeft="12dp"
+                android:id="@+id/et_nominy_mobile"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/tv_nominy_mobile"
+                android:textColor="@color/red"
+                />
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/edittext_background"
+                >
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:backgroundTint="@color/Gold"
+                    android:id="@+id/et_relation" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:id="@+id/tv_relation"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/red" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/Address"
+                android:textColor="@color/DarkBrown"
+                android:textSize="16dp"
+                android:textColorHint="@color/LightBrown"
+                android:id="@+id/et_nominee_address"
+                android:paddingLeft="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:textColor="@color/red" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/City"
+                android:id="@+id/et_nominee_city"
+                android:textColor="@color/DarkBrown"
+                android:textSize="16dp"
+                android:textColorHint="@color/LightBrown"
+                android:paddingLeft="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_nominee_city"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:textColor="@color/red"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:ms_hint="@string/Select_State"
+                    android:backgroundTint="@color/DarkBrown"
+                    android:id="@+id/spin_state"
+                    app:ms_arrowColor="@color/DarkBrown"
+                    app:ms_hintColor="@color/DarkBrown"
+                    app:ms_baseColor="@android:color/transparent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/red" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:ms_hint="@string/Select_Country"
+                    android:id="@+id/spin_country"
+                    app:ms_arrowColor="@color/DarkBrown"
+                    android:backgroundTint="@color/DarkBrown"
+                    app:ms_hintColor="@color/DarkBrown"
+                    app:ms_baseColor="@android:color/transparent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_nominee_country"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/red" />
+            <EditText
+                android:id="@+id/et_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/Zip_Code"
+                android:textColor="@color/DarkBrown"
+                android:textSize="16dp"
+                android:inputType="number"
+                android:textColorHint="@color/LightBrown"
+                android:paddingLeft="12dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_pin"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:text=""
+                android:textColor="@color/red" />
+
+            <Button
+                android:id="@+id/btn_addnominee"
+                android:layout_marginTop="98dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Submit"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

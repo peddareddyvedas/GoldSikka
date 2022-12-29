@@ -1,0 +1,347 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/kyc_icon"
+            android:tint="@color/LightBrown"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="@string/update_kyc"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_add_kyc"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="117dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="117dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Add_Kyc"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_kyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/kyc_icon"
+                app:tint="@color/LightBrown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Gender"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alternative Phone"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aadhar Number"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_aadhaar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAN Number"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_pan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Father Name"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_father"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spouse Name"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_spouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/updatekyc"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/Gold"
+            android:text="Update KYC"
+            android:textColor="@color/white" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/LightBrown2" />
+
+    </LinearLayout>
+
+</LinearLayout>

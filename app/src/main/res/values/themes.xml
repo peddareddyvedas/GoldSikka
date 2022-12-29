@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Goldsikka" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/Gold</item>
+        <item name="colorOnPrimary">@color/Gold</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/Gold</item>
+        <item name="colorSecondaryVariant">@color/Gold</item>
+        <item name="colorOnSecondary">@color/Gold</item>
+        <!-- Status bar color. -->
+        <item name="android:windowBackground">@color/Gold</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+
+
+        <!--                <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

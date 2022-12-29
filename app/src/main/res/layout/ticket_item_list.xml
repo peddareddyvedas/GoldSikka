@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="@color/cardcolor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:id="@+id/tvdate"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginRight="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Ticket Id"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvticketid"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scheme_name"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvschemename"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvdescription"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvstatus"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

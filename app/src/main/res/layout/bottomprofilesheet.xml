@@ -1,0 +1,144 @@
+ <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bottomsheet"
+    android:backgroundTint="@color/Gold"
+    android:id="@+id/bottomsheet"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/profile"
+                android:id="@+id/ivprofile"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp" />
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/image_icon"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="28dp"-->
+<!--                android:layout_marginTop="-18dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/tvname"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tvemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"/>
+
+            <TextView
+                android:id="@+id/tvprofileedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/Edit_Profile"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/editnew"
+                android:drawablePadding="16dp"
+                android:paddingLeft="24dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"/>
+
+            <TextView
+                android:id="@+id/tvbankdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/Bank_Details"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/bankicon"
+                android:drawablePadding="16dp"
+                android:paddingLeft="24dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"/>
+
+            <TextView
+                android:id="@+id/tvaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/OrgPersonal_Address"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/locationicon"
+                android:drawablePadding="16dp"
+                android:paddingLeft="24dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"/>
+
+            <TextView
+                android:id="@+id/tvkyc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/KYC"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/kycicon"
+                android:drawablePadding="16dp"
+                android:paddingLeft="24dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

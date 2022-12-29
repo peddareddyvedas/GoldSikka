@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text="About Us"
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/LightBrown2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llinfo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/readmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llinfo"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableRight="@drawable/arrow_down"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/Gold"
+                android:text="Read More"
+                android:textColor="@color/Gold"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readmore">
+
+                <LinearLayout
+                    android:id="@+id/ll_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@drawable/info_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/about_goldsikka"
+                            android:textColor="@color/DarkBrown"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/vision_mission_philosophy"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_about"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/LightBrown" />
+
+                <LinearLayout
+                    android:id="@+id/ll_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@drawable/briefcase" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/business_associates"
+                            android:textColor="@color/DarkBrown"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/best_security_certification"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_business"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/LightBrown" />
+
+                <LinearLayout
+                    android:id="@+id/ll_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view2"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@drawable/help_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/company_details"
+                            android:textColor="@color/DarkBrown"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Overview of Company"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_company"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/LightBrown" />
+
+                <LinearLayout
+                    android:id="@+id/ll_faqs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view3"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@drawable/help_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/FAQs"
+                            android:textColor="@color/DarkBrown"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/help_support"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_faqs"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/LightBrown" />
+
+                <LinearLayout
+                    android:id="@+id/ll_happy_customers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view4"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@drawable/smile" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/happyCustomer"
+                            android:textColor="@color/DarkBrown"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Goldsikka customer feedbacks"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_happy_customers"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/LightBrown" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

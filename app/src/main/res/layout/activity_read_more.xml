@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activitys.ReadMoreActivity">
+
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldsikka_logo2" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightBrown2"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text=""
+                android:justificationMode="inter_word"
+                android:textSize="16dp"
+                android:textColor="@color/DarkBrown"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

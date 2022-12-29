@@ -1,0 +1,139 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Country"
+                android:textSize="25sp" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tvCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Country"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="State"
+                android:textSize="25sp" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tvState"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="State"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="City"
+                android:textSize="25sp" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tvCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="City"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="PIN"
+                android:textSize="25sp" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tvPin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="PIN"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Address"
+                android:textSize="25sp" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tvLocality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Address"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

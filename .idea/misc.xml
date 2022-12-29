@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_catogories_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_gold_smith_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_pawns_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_random_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_reviews_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_stones_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_store_profile_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_tagslisting_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_top_listing_adapter.xml" value="0.196875" />
+        <entry key="..\:/Android Applications/GIT/GoldSikka16New/app/src/main/res/layout/activity_directory_view_details_adapter.xml" value="0.196875" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

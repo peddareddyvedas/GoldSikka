@@ -1,0 +1,314 @@
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enquiry Form"
+        android:textColor="@color/textcolorprimary"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/linearlayoutbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/etname"
+                    android:textSize="18dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorHint="@color/textcolorprimary"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textColor="#E41708"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/linearlayoutbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/etemail"
+                    android:textSize="18dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Id"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorHint="@color/textcolorprimary"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textColor="#E41708"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/linearlayoutbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/etmobile"
+                    android:textSize="18dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorHint="@color/textcolorprimary"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvmobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textColor="#E41708"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/linearlayoutbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/etaddress"
+                    android:textSize="18dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorHint="@color/textcolorprimary"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textColor="#E41708"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/linearlayoutbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/etmessage"
+                    android:textSize="18dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Message"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorHint="@color/textcolorprimary"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:textColor="#E41708"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvfeatures"
+                    android:textColor="@color/textcolorprimary"
+                    android:text="FEATURES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_terms_condition"
+                    android:textColor="@color/textcolorprimary"
+                    android:text="@string/digital_wallet_terms_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/loading_gif"
+                    android:visibility="gone"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/primarybackground"
+                    android:src="@drawable/loading_gif"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonborder"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/btsubmit"
+                    android:text="Submit"
+                    android:textColor="@color/textcolorprimary"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/econallertbackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:src="@drawable/econallertbackground">
+    >
+
+    <RelativeLayout
+        android:id="@+id/customize_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Customize"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_baseline_close_24" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/subcat_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customize_RL">
+
+        <TextView
+            android:id="@+id/subcat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/subcat_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="37,300"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/delivery_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subcat_ll"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/deliverd_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Delivered By"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/delevery_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:text="Sun,Aug 21"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/goldcolor_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delivery_ll"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/goldcolor_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:text="@string/gold_color"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gold_color_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/goldcolor_tv"
+            android:background="@drawable/goldcolorbg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="White"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gold_yellow_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/gold_color_tv"
+            android:background="@drawable/yellowcolorbg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="Yellow"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/gold_yellow_tv"
+            android:layout_margin="10dp"
+            android:background="#c3c3c3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/goldkarat_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goldcolor_ll">
+
+        <TextView
+            android:id="@+id/goldkarat_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/gold_Karat"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gold24_karat_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/goldkarat_tv"
+            android:background="@drawable/yellowcolorbg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="22kt"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gold_karat18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/gold24_karat_tv"
+            android:background="@drawable/goldcolorbg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="24kt"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/gold_karat18"
+            android:layout_margin="10dp"
+            android:background="#c3c3c3" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Diamond_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goldkarat_ll">
+
+        <TextView
+            android:id="@+id/diamond_tv_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="DIAMOND"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goldkarat_ll"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@id/Diamond_ll"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/diamond_tv_siij"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/goldcolorbg"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="SIIJ"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/diamond_tv_SIGH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yellowcolorbg"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="SIGH"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/diamond_tv_VSGH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/goldcolorbg"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="VSGH"
+                android:textColor="@color/white"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/diamond_tv_VVSEF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yellowcolorbg"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="VVSEF"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <View
+        android:id="@+id/view_ll"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/horizontal_ll"
+        android:background="#c3c3c3" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_ll"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:text="CANCEL"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_toRightOf="@id/cancel_tv"
+            android:text="APPLY"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/backbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/arrowleft" />
+
+                    <ImageView
+                        android:id="@+id/dr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/back"
+                        android:src="@drawable/goldsikka_logo2" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:text=" "
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/LightBrown2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginTop="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/llBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/gold_wallet"
+                                android:textColor="@color/DarkBrown"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tvWalletGold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:text=""
+                                android:textColor="@color/DarkBrown"
+                                android:textSize="24dp" />
+
+                            <!--                <TextView-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:layout_marginLeft="20dp"-->
+                            <!--                    android:layout_marginTop="14dp"-->
+                            <!--                    android:text="Purchased 126,325.00"-->
+                            <!--                    android:layout_marginBottom="5dp"-->
+                            <!--                    android:textColor="@color/lightbrown"-->
+                            <!--                    android:textSize="12dp"/>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end">
+
+                            <Button
+                                android:id="@+id/btn_sellgold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/button_background"
+                                android:backgroundTint="@color/Gold"
+                                android:text="@string/sell_gold"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/iconBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llBox"
+                        android:orientation="vertical">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alignmentMode="alignMargins"
+                            android:columnCount="3"
+                            android:orientation="horizontal"
+                            android:rowCount="1">
+
+                            <LinearLayout
+                                android:id="@+id/ll_transfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_rowWeight="1"
+                                android:layout_columnWeight="1"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/icon_background"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/newtransfer" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/transfer"
+                                    android:textColor="@color/DarkBrown"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                            <!--                            <LinearLayout-->
+                            <!--                                android:id="@+id/ll_gift"-->
+                            <!--                                android:gravity="center"-->
+                            <!--                                android:layout_marginTop="15dp"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:orientation="vertical"-->
+                            <!--                                android:layout_columnWeight="1"-->
+                            <!--                                android:layout_rowWeight="1">-->
+
+                            <!--                                <LinearLayout-->
+                            <!--                                    android:layout_width="48dp"-->
+                            <!--                                    android:layout_height="48dp"-->
+                            <!--                                    android:gravity="center"-->
+                            <!--                                    android:background="@drawable/icon_background">-->
+
+                            <!--                                    <ImageView-->
+                            <!--                                        android:layout_width="wrap_content"-->
+                            <!--                                        android:layout_height="24dp"-->
+                            <!--                                        android:layout_gravity="center"-->
+                            <!--                                        android:src="@drawable/newgift" />-->
+
+                            <!--                                </LinearLayout>-->
+
+                            <!--                                <TextView-->
+                            <!--                                    android:layout_width="wrap_content"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    android:text="@string/gift"-->
+                            <!--                                    android:textColor="@color/DarkBrown"-->
+                            <!--                                    android:textSize="12dp"-->
+                            <!--                                    android:layout_marginTop="10dp"/>-->
+
+                            <!--                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:id="@+id/ll_redeem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_rowWeight="1"
+                                android:layout_columnWeight="1"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/icon_background"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/newredeem" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/redeem"
+                                    android:textColor="@color/DarkBrown"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp"
+                        android:layout_below="@id/iconBox"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_background" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_marginTop="5dp">
+
+                        <!--            <LinearLayout-->
+                        <!--                android:id="@+id/heading"-->
+                        <!--                android:layout_width="match_parent"-->
+                        <!--                android:layout_height="wrap_content"-->
+                        <!--                android:orientation="horizontal">-->
+
+                        <!--            <TextView-->
+                        <!--                android:layout_width="wrap_content"-->
+                        <!--                android:layout_height="wrap_content"-->
+                        <!--                android:text="@string/transactions"-->
+                        <!--                android:textSize="16dp"-->
+                        <!--                android:layout_marginLeft="16dp"-->
+                        <!--                android:textColor="@color/darkbrown"/>-->
+                        <!--                -->
+                        <!--                <LinearLayout-->
+                        <!--                    android:layout_width="match_parent"-->
+                        <!--                    android:layout_height="wrap_content"-->
+                        <!--                    android:gravity="end"-->
+                        <!--                    android:orientation="vertical">-->
+                        <!--                    -->
+                        <!--                    <ImageView-->
+                        <!--                        android:layout_width="24dp"-->
+                        <!--                        android:layout_height="24dp"-->
+                        <!--                        android:src="@drawable/filter_icon"-->
+                        <!--                        android:layout_marginRight="16dp"/>-->
+                        <!--                    -->
+                        <!--                </LinearLayout>-->
+
+                        <!--            </LinearLayout>-->
+
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!--                            <ImageView-->
+                            <!--                                android:src="@drawable/empty"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="100dp"-->
+                            <!--                                app:tint="@color/DarkBrown"-->
+                            <!--                                tools:ignore="UseAppTint" />-->
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/empty" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:hint="No Data available"
+                                android:textColorHint="@color/DarkBrown" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/linearlayout"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_passbook"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

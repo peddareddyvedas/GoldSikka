@@ -1,0 +1,82 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:gravity="end"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/textcolorprimary"
+            android:id="@+id/img_close"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:src="@drawable/addressforreedemimg"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:justificationMode="none"
+            android:id="@+id/tvaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14dp"
+            android:textColor="@color/textcolorprimary"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal|center_vertical"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:gravity="center">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_gravity="center"
+            android:id="@+id/loading_gif"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:tint="@color/primarybackground"
+            android:src="@drawable/loading_gif" />
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonborder"
+            android:textColor="@color/textcolorprimary"
+            android:textSize="18dp"
+            android:text="Continue"
+            android:id="@+id/btn_submit"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

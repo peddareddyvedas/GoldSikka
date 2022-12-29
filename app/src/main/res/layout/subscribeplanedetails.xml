@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="@color/cardcolor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/mygold_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transaction_id"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/mygold_transctionid"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gst"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/tv_gst"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_mygold"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="MMP Amount"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/mygold_Amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_myfinalamount"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Final Amount"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/myfinal_amount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_jewellery"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Total Grams"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/mygold_grams"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llfinalamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Final Amount"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/mygold_totalamount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_mode"
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+                <TextView
+                    android:id="@+id/mygold_txntype"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textColor="@color/DarkBrown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tvstatus"
+                    android:visibility="gone"/>
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btpdfdownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/Gold"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="DownLoad Receipt"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btnextpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/Gold"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/PayNextInstalment"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/backbtn"
+                android:src="@drawable/arrowleft"/>
+            <ImageView
+                android:id="@+id/dr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightBrown2"/>
+
+    <ScrollView
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_below="@+id/view"
+                android:id="@+id/llinfo">
+
+                <TextView
+                    android:id="@+id/tvcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/DarkBrown"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/readmore"
+                android:layout_below="@id/llinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableTint="@color/Gold"
+                android:textColor="@color/Gold"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:drawablePadding="12dp"
+                android:text="Read More"
+                android:drawableRight="@drawable/arrow_down"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readmore">
+
+                <LinearLayout
+                    android:id="@+id/ll_about"
+                    android:layout_marginTop="26dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/info_circle"
+                        android:layout_marginLeft="26dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/about_goldsikka"
+                            android:textColor="@color/DarkBrown"
+                            android:textStyle="bold"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/vision_mission_philosophy"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_below="@id/ll_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightBrown"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"/>
+
+                <LinearLayout
+                    android:layout_below="@id/view1"
+                    android:id="@+id/ll_business"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/briefcase"
+                        android:layout_marginLeft="26dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/business_associates"
+                            android:textColor="@color/DarkBrown"
+                            android:textStyle="bold"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/best_security_certification"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_below="@id/ll_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightBrown"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"/>
+
+                <LinearLayout
+                    android:layout_below="@id/view2"
+                    android:id="@+id/ll_company"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/help_circle"
+                        android:layout_marginLeft="26dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="26dp"
+                            android:text="@string/company_details"
+                            android:textColor="@color/DarkBrown"
+                            android:textStyle="bold"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/best_security_certification"
+                            android:textColor="@color/LightBrown"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_below="@id/ll_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightBrown"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

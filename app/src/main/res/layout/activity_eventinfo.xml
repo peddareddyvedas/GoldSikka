@@ -1,0 +1,249 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/llscreen"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:elevation="10dp"
+            app:diagonal_angle="20"
+            app:diagonal_position="bottom"
+            app:diagonal_direction="right">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:background="@color/textcolorprimary"/>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:gravity="end"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_gravity="end|right"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo_value"/>
+            </LinearLayout>
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvdate"
+                android:textColor="@color/textcolorprimary"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tveventname"
+            android:textColor="@color/textcolorprimary"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:id="@+id/ivqrcode"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:text="Event id : "
+                android:textColor="@color/textcolorprimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tveventid"
+                android:textColor="@color/textcolorprimary"
+                android:textSize="18dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/btshare"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/textcolorprimary"
+                android:background="@drawable/buttonborder"
+                android:text="share"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:elevation="10dp"
+            app:diagonal_angle="20"
+            app:diagonal_direction="left"
+            app:diagonal_position="top">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/textcolorprimary"
+                android:scaleType="centerCrop" />
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+    </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,158 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Verify_Your_Account"
+                    android:textColor="@color/DarkBrown"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="32dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Verify_Your_Account_Content"
+                    android:textColor="@color/DarkBrown"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="16dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/phone"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="24dp"
+                    android:hint="@string/Phone_Number"
+                    android:id="@+id/et_emailmobile"
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:drawableTint="@color/DarkBrown"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="12dp"
+                    android:drawablePadding="12dp"/>
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12sp"
+                    android:text=""
+                    android:textColor="#E41708"
+                    android:visibility="gone"
+                    android:id="@+id/tv_error"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/Gold"
+            android:text="@string/Submit"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+
+</LinearLayout>

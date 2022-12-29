@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home_selector"
+        android:title="@string/Home"/>
+    <item
+        android:id="@+id/passbook"
+        android:enabled="true"
+        android:icon="@drawable/passbook_selector"
+        android:title="@string/passbook"/>
+
+    <item
+        android:id="@+id/Aboutus"
+        android:enabled="true"
+        android:icon="@drawable/aboutus_selector"
+        android:title="About Us"/>
+    <item
+        android:id="@+id/Account"
+        android:enabled="true"
+        android:icon="@drawable/account_selector"
+        android:title="Account"/>
+</menu>

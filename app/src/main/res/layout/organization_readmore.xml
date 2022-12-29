@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activitys.ReadMoreActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:id="@+id/toolbar"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--            <TextView-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_weight="1"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text=""-->
+                <!--                android:textSize="18dp"-->
+                <!--                android:textStyle="bold"-->
+                <!--                android:textColor="@color/darkbrown"-->
+                <!--                android:gravity="center"/>-->
+
+                <!--            <ImageView-->
+                <!--                android:layout_marginRight="15dp"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:src="@drawable/help_circle"-->
+                <!--                app:tint="#261616"/>-->
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightBrown2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text=""
+                android:justificationMode="inter_word"
+                android:textSize="16dp"
+                android:textColor="@color/DarkBrown"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

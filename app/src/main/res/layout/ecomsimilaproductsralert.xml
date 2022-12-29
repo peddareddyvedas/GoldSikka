@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/productdiscreptionbackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Similar Design"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_baseline_close_24" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/iv_close"
+            android:layout_marginTop="30dp"
+            android:id="@+id/similarproducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

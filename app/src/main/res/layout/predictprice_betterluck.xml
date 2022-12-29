@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/laouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/betterluck_nextime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Better Luck Next Time"
+            android:textSize="25dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#123"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvwinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#123"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/laouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Date "
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textcolorprimary"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_bettercreatedDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textcolorprimary"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="Predicted Price"
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textcolorprimary"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_betterprice_predicted"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textcolorprimary"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:textColor="@color/colorWhite"
+            android:layout_margin="10dp"
+            android:id="@+id/bt_nexttime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="continue"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#E53935"
+            android:background="@drawable/ll_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

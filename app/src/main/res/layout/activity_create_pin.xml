@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/frame" />
+
+            <TextView
+                android:id="@+id/tv_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/enter_pin1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/et_otp"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:cursorVisible="true"
+                android:hint=""
+                android:inputType="number"
+                android:itemBackground="@color/lightgray"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="@color/Gold"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="true"
+                app:itemCount="4"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/Gold"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+
+            <TextView
+                android:id="@+id/tv_error1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:text=""
+                android:textColor="#E41708"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_re_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/reenter_pin1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/et_re_otp"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:cursorVisible="true"
+                android:hint=""
+                android:inputType="number"
+                android:itemBackground="@color/lightgray"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:cursorColor="@color/Gold"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="true"
+                app:itemCount="4"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/Gold"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+            <TextView
+                android:id="@+id/tv_error2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:text=""
+                android:textColor="#E41708"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_ce_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/reenter_pin"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <com.chaos.view.PinView
+                android:id="@+id/et_com_pin"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:cursorVisible="true"
+                android:hint=""
+                android:inputType="number"
+                android:itemBackground="@color/lightgray"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:cursorColor="@color/Gold"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="true"
+                app:itemCount="4"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/Gold"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+
+            <TextView
+                android:id="@+id/tv_error3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:text=""
+                android:textColor="#E41708"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Submit"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

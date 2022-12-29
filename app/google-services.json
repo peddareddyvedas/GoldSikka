@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1054771871420",
+    "project_id": "goldsikka-59f07",
+    "storage_bucket": "goldsikka-59f07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054771871420:android:ffdf8d69719132700c5ab9",
+        "android_client_info": {
+          "package_name": "com.goldsikka.goldsikka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054771871420-bjaqldikbrqmgnpr4af0ehh9vk63m5kp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goldsikka.goldsikka",
+            "certificate_hash": "718db6552e5b42f3d33ed8e7f9c64272abcb382b"
+          }
+        },
+        {
+          "client_id": "1054771871420-idtlk02ss5vr4cpfoi4saa8t18esvn8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIubKWNAKy_VfGkcZXhdqY3bklUj5Cywo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054771871420-idtlk02ss5vr4cpfoi4saa8t18esvn8f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1054771871420-3ttfu81rpbk2aspvg5n61jfhmthuek23.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.goldsikkajewels.goldsikka"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

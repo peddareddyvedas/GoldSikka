@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <!-- Parent Layout of ImageView -->
+
+
+    <!--Image to be displayed beside the notification text-->
+
+    <RelativeLayout
+        android:id="@+id/rlll"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY" />
+
+
+    </RelativeLayout>
+
+    <!-- Parent layout for holding the Title and the Body-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/rlll"
+        android:orientation="vertical">
+
+        <!-- TextView for Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/textcolorprimary"
+            android:textStyle="bold" />
+
+        <!-- TextView for Body -->
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textColor="@color/textcolorprimary"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

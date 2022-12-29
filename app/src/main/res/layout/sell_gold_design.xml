@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightBrown2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlGoldWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="34dp"
+                android:background="@drawable/goldwallet_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gold_wallet"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tv_wallet_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30.00 g"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/walletGold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/goldsikkawallet_watermark"/>
+
+            </RelativeLayout>
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/walletGold"-->
+            <!--                android:layout_below="@id/rlGoldWallet"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="292dp"-->
+            <!--                android:layout_marginTop="-85dp"-->
+            <!--                android:src="@drawable/goldsikkawallet_watermark"/>-->
+
+            <LinearLayout
+                android:id="@+id/liveRate"
+                android:layout_marginTop="20dp"
+                android:background="@color/LightBrown2"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldbars"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_liveprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/DarkBrown"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text=""/>
+
+                    <LinearLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/liveprice_bg">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_dot"/>
+
+                        <TextView
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/live_price"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/iv_liveprice"
+                        android:layout_marginRight="24dp"
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:text="@string/referesh"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/etgrams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+                <LinearLayout
+                    android:id="@+id/lltime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvgrams"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_grams"
+                        android:textSize="12dp"
+                        android:textColor="@color/DarkBrown"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="24dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_second_title"
+                        android:visibility="visible"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="24dp"
+                        android:text=""
+                        android:textSize="15dp"
+                        android:textColor="@color/DarkBrown"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/gift_grms"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="12dp"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/LightBrown"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_grmserror"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/colorRed"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+
+                <TextView
+
+                    android:visibility="gone"
+                    android:id="@+id/tv_amounterror"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/colorRed"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"/>
+                <LinearLayout
+                    android:id="@+id/llfractionalmoney"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:justificationMode="inter_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="@color/DarkBrown"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llmoney"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvfractionalamount"
+                        android:justificationMode="inter_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="@color/DarkBrown"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="24dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:text="@string/select_bank_option"
+                    android:id="@+id/select_wallet_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/spin_howdoyou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/questionmark_icon"
+                        android:layout_gravity="center"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/LightBrown"
+                        android:id="@+id/spin_wallet_bank"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_bank"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:text="Select Bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/add_bank"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_background"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Add Bank"
+                    android:backgroundTint="@color/Gold"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_bank_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/questionmark_icon"
+                        android:layout_gravity="center"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/LightBrown"
+                        android:id="@+id/spin_bank_details"/>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvtwograms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_minimum_2_grams"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/LightBrown"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvfivegrams"
+                    android:layout_marginBottom="24dp"
+                    android:layout_below="@id/tvtwograms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_fractional_price_are_not_applicable_for_above_5_grams"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="@color/LightBrown"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:layout_below="@id/tvfivegrams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/loading_gif"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:tint="@color/Gold"
+                        android:src="@drawable/loading_gif" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/button_background"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/next"
+                        android:backgroundTint="@color/Gold"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

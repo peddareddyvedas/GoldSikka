@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools" >
+
+
+    <item
+        android:visible="true"
+        android:title="QrScaner"
+        android:id="@+id/mnqrscaner"
+        android:icon="@drawable/ic_baseline_qr_code_scanner_24"
+        app:showAsAction="always"/>
+
+    <item
+        android:iconTint="@color/colorWhite"
+        android:visible="true"
+        android:title="EventList"
+        android:id="@+id/eventlist"
+        app:showAsAction="never">
+
+    </item>
+
+
+
+
+</menu>

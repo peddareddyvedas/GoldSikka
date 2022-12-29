@@ -1,0 +1,101 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Address"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/mt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="House No "
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+
+        <EditText
+            android:id="@+id/mt_shopname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Street"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/mt_regist"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Village/Town"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+        <EditText
+            android:id="@+id/mt_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="District"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/mt_gst"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="State"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/mt_cinNo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Pincode"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_border"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,98 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/DarkBrown"
+            app:menu="@menu/addressmenu"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/LightBrown2"/>
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/ll_bankempty">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/bankicon"
+                android:tint="@color/LightBrown"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:textColor="@color/DarkBrown"
+                android:text="@string/empty_bank"
+                android:justificationMode="inter_word"/>
+
+            <Button
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Add_bank"
+                android:id="@+id/lladd_bankdetails"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_list"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bank_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

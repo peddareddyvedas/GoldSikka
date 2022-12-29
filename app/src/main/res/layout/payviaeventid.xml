@@ -1,0 +1,81 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Event Id"
+            android:textSize="20dp"
+            android:textColor="@color/textcolorprimary"
+            android:textStyle="bold"
+            android:layout_gravity="start"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:inputType="text"
+            android:id="@+id/eteventid"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Id :"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColorHint="@color/textcolorprimary"
+            />
+        <TextView
+
+            android:layout_margin="10dp"
+            android:id="@+id/tveventid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:textColor="#E41708"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvverify"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VERIFY"
+        android:gravity="end"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/textcolorprimary"/>
+
+
+
+
+
+
+
+
+</LinearLayout>

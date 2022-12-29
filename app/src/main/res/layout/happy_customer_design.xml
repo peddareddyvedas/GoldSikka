@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile"
+            android:layout_gravity="center"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_profile"-->
+<!--            android:backgroundTint="@color/colorWhite"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:src="@drawable/profile" />-->
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:id="@+id/cust_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13dp"
+                    android:textColor="@color/DarkBrown" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:id="@+id/cust_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="13dp"
+                android:textColor="@color/DarkBrown" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/cust_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/textcolorprimary" />
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:id="@+id/cust_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="13dp"
+                android:textColor="@color/DarkBrown" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

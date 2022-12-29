@@ -1,0 +1,365 @@
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_image"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Tax Invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/logo_value"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/app_color"
+                    android:gravity="center"
+                    android:text="Goldsikka Jewels Limited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:text="Goldsikka Jewels Limited, 1st Floor, #3-5-171/1/2, Near Melkote park, Himayatnagar,Hyderabad, Telangana 500029.India"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/bill_date"
+                android:layout_gravity="center"
+                android:text="Date"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/bill_id"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:text="Date"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="Bill To"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text="Name "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/bill_name"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text=": "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text="Mobile "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/bill_mobile"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text=": "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text="Email "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/bill_email"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:text=": "
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Description of Goods / Services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bill_amount"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:text="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/bill_gstamount"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:text="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="end"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:id="@+id/bill_totalamount"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:text="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="end"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"/>
+
+                <TextView
+                    android:id="@+id/bill_gramsvalue"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:text="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+           <!-- <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/colorWhite"
+                                android:gravity="bottom"
+                                android:text="CIN No :   U51909TG2019PLC130903"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/colorWhite"
+                                android:gravity="bottom"
+                                android:text="PAN No : AAHCG7082N"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/colorWhite"
+                                android:gravity="bottom"
+                                android:text="GSTIN No : 36AAHCG7082N1ZZ"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/colorWhite"
+                                android:gravity="bottom"
+                                android:text="Udyog Aadhar No : TS02E0067316"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>-->
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_download"
+        android:textColor="@color/colorWhite"
+        android:text="Download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:id="@+id/tvwalletmoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="@string/wallet_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/et_addmoney"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/edittext_background"
+        android:drawablePadding="10dp"
+        android:inputType="number"
+        android:textColorHint="@color/LightBrown"
+        android:drawableLeft="@drawable/rupeerupee"
+        android:paddingLeft="12dp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Add minimum 50 rs "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:text="Do you want withdraw ?"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/tv_withdraw"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:text="CLICK HERE"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="bottom"
+            android:text="ADD"
+            android:textAppearance="@style/new_to_gold"
+            android:id="@+id/btn_addmoney"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/buttonbackground"
+            />
+    </FrameLayout>
+
+
+</LinearLayout>

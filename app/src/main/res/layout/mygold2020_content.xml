@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lltitle"
+        android:layout_width="match_parent"
+        android:layout_height="199dp"
+        android:background="@color/Gold"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/backbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/arrowleft" />
+
+                    <ImageView
+                        android:id="@+id/dr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/back"
+                        android:src="@drawable/goldsikka_logo2" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24sp"
+                android:layout_marginLeft="24sp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="-180dp"
+            android:src="@drawable/goldsikkalogo_watermark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-110dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/goldcoins" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lltitle">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/llscheme_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/contentboxbackground">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlBox"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_features"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/features"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_faqs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_features"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/FAQs"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_faqs"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/by_starting_a_subscription_you_agree_to_the"
+                        android:textColor="@color/LightBrown"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_terms_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvby"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/terms_and_conditions"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/bt_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/rltext"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/Gold"
+                    android:text="@string/start_subscription"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

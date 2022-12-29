@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightBrown2"/>
+
+    <!--        <androidx.core.widget.NestedScrollView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <RelativeLayout
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/transferGold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transfer_gold"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="24dp"
+            android:textSize="20dp"
+            android:textColor="@color/DarkBrown"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_below="@id/transferGold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/please_enter_the_contact_number"
+            android:textColor="@color/DarkBrown"
+            android:textSize="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:queryHint="Search"
+            android:longClickable="true"
+            android:clickable="true"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_below="@id/text"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/LightBrown2"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/searchview"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2">
+
+            <TextView
+                android:id="@+id/tvcontacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/your_contacts"
+                android:textColor="@color/DarkBrown"/>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvcontacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/idRVContacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/idPBLoading"-->
+<!--                    android:layout_below="@id/idRVContacts"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true" />-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--        </androidx.core.widget.NestedScrollView>-->
+
+</RelativeLayout>

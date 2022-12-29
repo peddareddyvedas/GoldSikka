@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activitys.EntryPin">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/backbtn"
+                android:src="@drawable/arrowleft"/>
+            <ImageView
+                android:id="@+id/dr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/goldsikka_logo2" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/lllayout"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/frame"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:id="@+id/tv_enterpin"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/enter_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.chaos.view.PinView
+            android:id="@+id/et_otp"
+            android:textColor="@color/DarkBrown"
+            android:layout_gravity="center"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:textSize="14sp"
+            app:itemCount="4"
+            app:itemSpacing="20dp"
+            app:itemWidth="41dp"
+            android:layout_marginTop="48px"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            app:lineColor="@color/DarkBrown"
+            app:viewType="line" />
+
+        <TextView
+            android:gravity="end"
+            android:layout_gravity="center"
+            android:id="@+id/forgot_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Pin ?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="20dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/otp_edo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#E41708"
+            android:textSize="12sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:text="@string/Submit"
+                android:textSize="14dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/Gold"
+                android:background="@drawable/button_background"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

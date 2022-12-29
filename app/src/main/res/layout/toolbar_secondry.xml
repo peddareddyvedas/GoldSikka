@@ -1,0 +1,64 @@
+<!--<androidx.appcompat.widget.Toolbar android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@color/primarybackground"-->
+<!--    android:id="@+id/toolbar"-->
+
+<!--    android:theme="@style/ToolbarTheme"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="end">-->
+<!--    <ImageView-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:src="@drawable/shopping_cart_24"-->
+<!--        />-->
+<!--    </LinearLayout>-->
+
+<!--</androidx.appcompat.widget.Toolbar>-->
+<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/textcolorprimary"
+    android:id="@+id/toolbar"
+    android:orientation="horizontal"
+    android:theme="@style/ToolBarStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<LinearLayout
+    android:gravity="end"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="end"
+            android:src="@drawable/shopping_cart_24" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_itemcount"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:minWidth="15dp"
+            android:padding="4dp"
+            android:textSize="8sp"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="top|end"
+            android:background="@drawable/badge_item_count"
+            android:textColor="@color/white" />
+</LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

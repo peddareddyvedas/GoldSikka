@@ -1,0 +1,202 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/DarkBrown"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/LightBrown2"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/linearlayout"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kyc_icon"
+            android:tint="@color/LightBrown"
+            tools:ignore="UseAppTint" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:textColor="@color/LightBrown"
+            android:text="@string/update_kyc"
+            android:justificationMode="inter_word"/>
+        <LinearLayout
+            android:id="@+id/llbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="117dp"
+                android:layout_marginRight="117dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Add_Kyc"
+                android:id="@+id/org_btnkyc"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_kyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/kyc_icon"
+                android:layout_marginLeft="24dp"
+                app:tint="@color/LightBrown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Gender"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/org_tvgender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Althernate_Phone"
+                android:textColor="@color/DarkBrown"
+
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/org_tvmobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Aadhar_Number"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/org_tvaadhaar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Pan_Number"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/org_tvpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/LightBrown2"/>
+    </LinearLayout>
+
+</LinearLayout>

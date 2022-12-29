@@ -1,0 +1,478 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldsikka_logo2" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background">
+
+            <LinearLayout
+                android:background="@color/background"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Purchase Payment Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5sp">
+
+                <TextView
+                    android:id="@+id/tennure"
+                    android:fontFamily="@font/calibri"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorWhite"
+                    android:paddingTop="25sp"
+                    android:paddingLeft="5sp"
+                    android:text="MMP Tennure"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    app:ms_hint="--Select Tennure--"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_mmi_tennure"
+                    app:ms_baseColor="@color/colorWhite"
+                    app:ms_hintColor="@color/colorWhite"/>
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Amount:"
+                        android:textSize="22sp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textColorHint="@color/colorWhite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/amount"
+                        android:paddingLeft="20sp"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="GST 3%:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/gst1"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Purchase Gold:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/p_gold"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Processing Fee:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/prs_fee"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Company contribution upto:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/cmp_contibution"
+                        android:paddingLeft="20sp"
+                        android:layout_marginTop="24dp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="GST 3%:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/gst2"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Gold value:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/gold_value"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimary"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Final amount:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        android:id="@+id/final_amount"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorPrimary"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="Final gold:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimary"
+                        android:id="@+id/final_gold"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mmi_tennure_details"
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="MMP Tennure details:"
+                        android:textSize="22sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/sp_gpb_cycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:ms_arrowColor="#fff"
+                        app:ms_baseColor="#fff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="@font/calibri"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorWhite"
+                        android:paddingTop="17sp"
+                        android:paddingLeft="5sp"
+                        android:text="MMP Amount:"
+                        android:textSize="22sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorWhite"
+                        android:id="@+id/mmi_amount"
+                        android:paddingLeft="20sp"
+                        android:textSize="20sp"
+                        android:hint="0.00/Month"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp">
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_margin="20dp"
+                        android:text="Buy"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/edittext_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/LightBrown2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/coupons_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/gs_small_logo"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvcoponcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ABCD12345678"
+                    android:textSize="14dp"
+                    android:textColor="@color/Gold"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:gravity="end"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/tvapply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="@string/apply"
+                    android:backgroundTint="@color/Gold"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvcouponvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="24dp"
+                android:textSize="14dp"
+                android:textColor="@color/Gold"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvmoreinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/more_info"
+                android:textColor="@color/Gold"
+                android:textSize="14dp"
+                android:gravity="end"
+                android:layout_marginRight="24dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvminitrans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/LightBrown"
+            android:layout_marginTop="5dp"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tvcouponstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/LightBrown"
+            android:layout_marginTop="5dp"
+            android:text=""/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/cardcolor"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/offer_description"
+                        android:layout_marginTop="8dp"
+                        android:textSize="12dp"
+                        android:textColor="@color/DarkBrown"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvdescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Coupon value Rs.500 worth of Gold in Digital wallet"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/LightBrown"
+                        android:drawableStart="@drawable/coupon_arrow"
+                        android:drawablePadding="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="12dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearlayout"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/empty"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        app:tint="@color/primarybackground"-->
+<!--                        tools:ignore="UseAppTint" />-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:lottie_rawRes="@raw/empty"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColorHint="@color/textcolorprimary"
+                        android:hint="No Data Available"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llrv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rveventlist"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+</FrameLayout>

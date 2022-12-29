@@ -1,0 +1,192 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="Loan Enquiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Enter Name"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Enter Mobile"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Enter Email"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:id="@+id/spin_selectplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawablePadding="5dp"
+                    app:ms_alignLabels="false"
+                    app:ms_arrowSize="10dp"
+                    app:ms_enableErrorLabel="true"
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_floatingLabelText="floating label"
+                    app:ms_hint="Please Select plan"
+                    app:ms_multiline="false"
+                    app:ms_thickness="0dp" />
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:id="@+id/spin_selectjewellery_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawablePadding="5dp"
+                    app:ms_alignLabels="false"
+                    app:ms_arrowSize="10dp"
+                    app:ms_enableErrorLabel="true"
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_floatingLabelText="floating label"
+                    app:ms_hint="Please Select Jewellery Type"
+                    app:ms_multiline="false"
+                    app:ms_thickness="0dp" />
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:id="@+id/spin_selectgold_purity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawablePadding="5dp"
+                    app:ms_alignLabels="false"
+                    app:ms_arrowSize="10dp"
+                    app:ms_enableErrorLabel="true"
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_floatingLabelText="floating label"
+                    app:ms_hint="Please Select Gold Purity"
+                    app:ms_multiline="false"
+                    app:ms_thickness="0dp" />
+
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:id="@+id/spin_selectloan_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawablePadding="5dp"
+                    app:ms_alignLabels="false"
+                    app:ms_arrowSize="10dp"
+                    app:ms_enableErrorLabel="true"
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_floatingLabelText="floating label"
+                    app:ms_hint="Please Select Loan Amount"
+                    app:ms_multiline="false"
+                    app:ms_thickness="0dp" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Enter Address"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:textColorHint="@color/colorWhite"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Enter Message"
+                    android:background="@drawable/edittext_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+                <Button
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/btn_submit"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:text="Submit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Goldsikka Gullak">
+            <menu>
+                <group
+                    android:id="@+id/menu_top"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/goldsuvidhamenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/goldsuvidamenu"
+                        android:title="Gold Suvidha" />
+                    <item
+                        android:id="@+id/sellgoldmenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/sellgoldmenu"
+                        android:title="Sell Gold" />
+                    <item
+                        android:id="@+id/redeemmenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/redeemmenu"
+                        android:title="Redeem" />
+                    <item
+                        android:id="@+id/transfermenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/transfermenu"
+                        android:title="Transfer" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+
+    <item
+        android:id="@+id/moneywalletmenubtn"
+        android:checkable="true"
+        android:icon="@drawable/moneywalletmenu"
+        android:title="Booking Account" />
+    <item
+        android:id="@+id/referandearnmenubtn"
+        android:checkable="true"
+        android:icon="@drawable/referandearnmenu"
+        android:title="Refer and Earn" />
+    <item
+        android:id="@+id/feedbackmenubtn"
+        android:checkable="true"
+        android:icon="@drawable/feedbackmenu"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/loyalitypointsmenubtn"
+        android:checkable="true"
+        android:icon="@drawable/loyalitypointsmenu"
+        android:title="Loyalty Points" />
+
+    <group android:checkableBehavior="single">
+        <item android:title="Schemes">
+            <menu>
+                <group
+                    android:id="@+id/menu_btw"
+                    android:checkableBehavior="single">
+                    <!--                    <item-->
+                    <!--                        android:id="@+id/mygoldchitmenubtn"-->
+                    <!--                        android:checkable="true"-->
+                    <!--                        android:icon="@drawable/goldchitmenu"-->
+                    <!--                        android:title="My Gold 2022" />-->
+                    <item
+                        android:id="@+id/mygoldplusmenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/goldplusmenu"
+                        android:title="Gold Plus Plan" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Gift/Donate">
+            <menu>
+                <group
+                    android:id="@+id/menu_bottom"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/Eventsmenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/eventsmenu"
+                        android:title="Events" />
+                    <item
+                        android:id="@+id/donatemenubtn"
+                        android:checkable="true"
+                        android:icon="@drawable/orgmenu"
+                        android:title="Donate" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+</menu>

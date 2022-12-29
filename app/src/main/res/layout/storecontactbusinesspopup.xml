@@ -1,0 +1,290 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10dp"
+    android:background="@color/colorTransparent"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_baseline_close_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_scheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:justificationMode="none"
+                android:text="Enquiry Form"
+                android:textColor="@color/textcolorprimary"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/popupname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_scheme"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/enquiryname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/enquiryname"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/et_enquiryname"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/borderbg"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LightBrown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nameerror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:text="dvsdvd"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/enquiryemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/enquiryemail"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_enquiry_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/borderbg"
+                    android:gravity="center_vertical"
+                    android:hint="Email"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LightBrown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/emailerror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:text="dvsdvd"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/phonenumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Phone Number"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/phonenumber"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/borderbg"
+                    android:gravity="center_vertical"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LightBrown"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/numbererror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:text="dvsdvd"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Message"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/message"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/et_feedback_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/linearlayoutbackground"
+                    android:hint="Additional Comments"
+                    android:maxLength="250"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/LightBrown"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/messageerror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:text="dvsdvd"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvaddress"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/buttonbackground"
+                        android:text="submit"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</androidx.cardview.widget.CardView>

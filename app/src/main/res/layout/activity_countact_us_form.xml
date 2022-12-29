@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etname"
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/user_name"
+                    android:paddingLeft="12dp"/>
+                <TextView
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="#E41708"/>
+
+                <EditText
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:id="@+id/etemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/user_email"
+                    android:paddingLeft="12dp"/>
+                <TextView
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="#E41708"/>
+
+                <EditText
+                    android:id="@+id/etmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/phone_number"
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:paddingLeft="12dp"/>
+                <TextView
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="#E41708"/>
+
+                <EditText
+                    android:id="@+id/etcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:inputType="text"
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/City"
+                    android:paddingLeft="12dp"/>
+
+
+                <EditText
+                    android:id="@+id/etmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textSize="14dp"
+                    android:inputType="text"
+                    android:textColor="@color/DarkBrown"
+                    android:textColorHint="@color/LightBrown"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/message"
+                    android:paddingLeft="12dp"/>
+                <TextView
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="#E41708"/>
+
+                <Button
+                    android:id="@+id/btsubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:backgroundTint="@color/Gold"
+                    android:background="@drawable/button_background"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/Submit"
+                    android:textColor="@color/white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contentboxbackground"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp">
+
+                    <TextView
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_information"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/land_phn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contact"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:tint="@color/Gold"
+                            android:src="@drawable/ic_baseline_phone"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="040-40137575 / 040-23222175"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/whatsapp_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/land_phn"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:tint="@color/Gold"
+                            android:src="@drawable/whatsapp"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="9989874992"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/whatsapp_num"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:tint="@color/Gold"
+                            android:src="@drawable/ic_baseline_email"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="info@goldsikka.com"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mail"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:tint="@color/Gold"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Monday-Saturday(9:30 AM to 6:30 PM)"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

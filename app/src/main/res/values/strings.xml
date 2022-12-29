@@ -1,0 +1,1084 @@
+<!--<resources>-->
+
+
+<!--    <string name="app_name">Goldsikka</string>-->
+
+<!--    <string name="Home">Home</string>-->
+<!--    <string name="JEWELSKART">JEWELSKART</string>-->
+<!--    <string name="buynoe">Buy One</string>-->
+<!--    <string name="offerning">Offerings</string>-->
+<!--    <string name="enquire">Enquiry</string>-->
+<!--    <string name="Globalrates">Global Rates</string>-->
+<!--    <string name="telugu">తెలుగు</string>-->
+
+<!--    <string name="navigation_drawer_open">Open navigation drawer</string>-->
+<!--    <string name="navigation_drawer_close">Close navigation drawer</string>-->
+
+<!--    <string name="text_scroll">Gold Buy Price of Hyderabad 24 Carts = 58.054/- 10grms ; 22 Carts = 53.239/- 10grms</string>-->
+
+<!--    <string name="aboutus">WHO WE ARE &amp; WHAT WE DO</string>-->
+<!--    <string name="digital_wallet_conditions">DIGITAL WALLET TERMS &amp; CONDITIONS</string>-->
+<!--    <string name="digital_wallet_terms_condition"> TERMS &amp; CONDITIONS</string>-->
+<!--    <string name="update_message">Your Application need to update</string>-->
+<!--    <string name="update_now">Update Now</string>-->
+<!--    <string name="cancel">Cancel</string>-->
+<!--    <string name="web_url">https://goldsikka.com/api/</string>-->
+<!--    <string name="Rs">\u20B9</string>-->
+
+<!--    <string name="weak">weak</string>-->
+<!--    <string name="medium">medium</string>-->
+<!--    <string name="strong">strong</string>-->
+<!--    <string name="very_strong">very strong</string>-->
+<!--    <string name="press_again_to_exit">Press again to exit</string>-->
+<!--    <string name="error_no_internet_connection">No internet connection.</string>-->
+<!--    <string name="error_connection_request_failed">Network connection request failed, Try again!</string>-->
+<!--    <string name="error_invalid_data">Server return invalid response, Please contact your administrator.</string>-->
+
+<!--    <string name="facebook_app_id">277411671215978</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb277411671215978</string>-->
+<!--    <string name="internal_storage">internal_storage</string>-->
+
+
+<!--    &lt;!&ndash;    new Designs strings&ndash;&gt;-->
+<!--    <string name="Goldsikka_Limited">Goldsikka Limited</string>-->
+
+<!--    &lt;!&ndash;    OTP MODULE NAME CONVERSIONS&ndash;&gt;-->
+<!--    <string name="Please_enter_OTP">Please enter OTP</string>-->
+<!--    <string name="OTP_sent_to">OTP sent to </string>-->
+<!--    <string name="Enter_OTP">Enter OTP </string>-->
+<!--    <string name="Didnt_recieve_the_code">Didn’t recieve the code?</string>-->
+<!--    <string name="Resend"> Resend</string>-->
+<!--    <string name="Verify_and_Proceed">Verify and Proceed</string>-->
+<!--    <string name="Verify_Details">Verify Details </string>-->
+
+<!--    &lt;!&ndash;    FORGOT PASSWORD MODULE NAME CONVERSIONS&ndash;&gt;-->
+
+<!--    <string name="Forgot_Password">Forgot Password? </string>-->
+
+<!--    <string name="Forgot_changePassword">To reset your password enter your new password and confirm password </string>-->
+<!--    <string name="Forgot_Password_Content">Enter the email/mobile associated with your account and we will send an OTP  to reset your password</string>-->
+<!--    <string name="Submit">Submit</string>-->
+<!--    <string name="Change_Password">Change Password</string>-->
+<!--    <string name="Email"><![CDATA[Email]]></string>-->
+<!--    <string name="Phone_Number"><![CDATA[Phone Number ]]></string>-->
+<!--    <string name="Current_Password"><![CDATA[Current Password ]]></string>-->
+<!--    &lt;!&ndash;    <string name="New_Password">New Password</string>&ndash;&gt;-->
+<!--    <string name="New_Password"><![CDATA[New Password ]]></string>-->
+<!--    <string name="Confirm_Password"><![CDATA[Confirm Password ]]></string>-->
+<!--    &lt;!&ndash;    <string name="Confirm_Password">Confirm Password </string>&ndash;&gt;-->
+<!--    <string name="Verify_Your_Account">Verify Your Account</string>-->
+<!--    <string name="Verify_Your_Account_Content">Please enter your phone number below to verify your account </string>-->
+
+
+<!--    &lt;!&ndash;    FAQ's MODULE NAME CONVERSIONS&ndash;&gt;-->
+
+<!--    <string name="About_Gold_Sikka">About Goldsikka</string>-->
+<!--    <string name="FAQ_s">FAQ’s</string>-->
+<!--    <string name="Registration">Registration</string>-->
+<!--    <string name="Operations">Operations</string>-->
+<!--    <string name="Taxes_Applicable">Taxes Applicable</string>-->
+
+<!--    &lt;!&ndash;    KYC MODULE NAME CONVERSIONS&ndash;&gt;-->
+<!--    <string name="Father_Name"><![CDATA[Father Name ]]></string>-->
+<!--    <string name="Spouse_Name"><![CDATA[Spouse Name ]]></string>-->
+<!--    <string name="Aadhar_Number"><![CDATA[Aadhar Number ]]></string>-->
+<!--    <string name="Pan_Number"><![CDATA[Pan Number ]]></string>-->
+<!--    <string name="Althernate_Phone"><![CDATA[Alternative Phone ]]></string>-->
+<!--    <string name="Gender">Gender</string>-->
+<!--    <string name="update_kyc">Update KYC</string>-->
+<!--    <string name="Add_Kyc">Add KYC</string>-->
+
+<!--    &lt;!&ndash;   NOMINEE  MODULE NAME CONVERSIONS&ndash;&gt;-->
+<!--    <string name="you_don_t_h">You don’t have any nominee, please add by tapping on the button below.</string>-->
+<!--    <string name="Add_Nominee">Add Nominee</string>-->
+<!--    <string name="Nominee_Name"><![CDATA[Nominee Name ]]></string>-->
+<!--    <string name="Nomine_Mobile_Number"><![CDATA[Nominee Mobile Number ]]></string>-->
+<!--    <string name="Relation"><![CDATA[Relation ]]></string>-->
+<!--    <string name="Address"> <![CDATA[Address ]]></string>-->
+<!--    <string name="City"><![CDATA[City ]]></string>-->
+<!--    <string name="Select_State"> Select State</string>-->
+<!--    <string name="Select_Country">Select Country</string>-->
+<!--    <string name="Delete">Delete</string>-->
+<!--    <string name="Edit">Edit</string>-->
+<!--    <string name="Zip_Code"><![CDATA[Zip Code ]]></string>-->
+<!--    <string name="add_nickname">Add Nickname</string>-->
+<!--    <string name="Nominee">Nominee</string>-->
+
+<!--    &lt;!&ndash;   PROFILE  MODULE NAME CONVERSIONS&ndash;&gt;-->
+
+<!--    <string name="Edit_Profile">Edit Profile</string>-->
+<!--    <string name="Bank_Details">Bank Details</string>-->
+<!--    <string name="Personal_Address">Personal Address</string>-->
+<!--    <string name="OrgPersonal_Address">Address</string>-->
+<!--    <string name="KYC">KYC</string>-->
+<!--    <string name="Change_Profile_Picture">Change Profile Picture</string>-->
+<!--    <string name="Name"><![CDATA[Name]]></string>-->
+<!--    <string name="Save">Save</string>-->
+<!--    <string name="SetasPrimary">Set as Primary</string>-->
+<!--    <string name="Add_Address">Add Address</string>-->
+<!--    <string name="Add_New_Address">Add New Address</string>-->
+<!--    <string name="Add_bank">Add Bank Details</string>-->
+<!--    <string name="empty_bank">You don’t have bank details added yet, please add by tapping on the button below.</string>-->
+<!--    <string name="empty_address_content">You don’t have any address saved, please add by tapping on the button below.</string>-->
+<!--    <string name="Select_addresstype"> Select Address Type</string>-->
+<!--    <string name="Account_Number"><![CDATA[Account Number]]></string>-->
+<!--    <string name="Primary">Primary</string>-->
+<!--    <string name="Branch_Name"><![CDATA[Branch Name]]></string>-->
+<!--    <string name="Bank_Name"><![CDATA[Bank Name]]></string>-->
+<!--    <string name="IFSC_Code"><![CDATA[IFSC Code]]></string>-->
+<!--    <string name="Account_Holder_Name"><![CDATA[Account Holder Name]]></string>-->
+
+
+<!--    &lt;!&ndash;   PROFILE  MODULE NAME CONVERSIONS&ndash;&gt;-->
+
+<!--    <string name="Face_ID_Login">Face ID Login</string>-->
+<!--    <string name="Notifications">Notifications</string>-->
+<!--    <string name="Invite_Friends">Refer and Earn</string>-->
+<!--    <string name="Support">Support</string>-->
+<!--    <string name="Terms_Conditions">Terms and Conditions</string>-->
+<!--    <string name="App_Lock">App Lock</string>-->
+
+<!--    <string name="Log_Out">Log Out</string>-->
+
+<!--    &lt;!&ndash;   COMPANY DETAILS  MODULE NAME CONVERSIONS&ndash;&gt;-->
+
+<!--    <string name="CIN_No">CIN No</string>-->
+<!--    <string name="Cin_Number">U51909TG2019PLC130903</string>-->
+<!--    <string name="PAN_No">PAN No</string>-->
+<!--    <string name="PANNo">AAHCG7082N</string>-->
+<!--    <string name="TAN_No">TAN No</string>-->
+<!--    <string name="TAN_Number">HYDG18885G</string>-->
+<!--    <string name="GSTIN_No">GSTIN No</string>-->
+<!--    <string name="GSTIN_Number">36AAHCG7082N1ZZ</string>-->
+<!--    <string name="IEC_No">IEC No</string>-->
+<!--    <string name="IEC_Number">AAHCG7082N</string>-->
+<!--    <string name="Udyog_Aadhar_No">Udyog Aadhar No</string>-->
+<!--    <string name="Udyog_Aadhar_Number">TS02E0067316</string>-->
+<!--    <string name="Govt_of_Telangana_Reg_No">Govt of Telangana Reg No</string>-->
+<!--    <string name="Govt_of_Telangana_Reg_Number">SEA/HYD/ALO/03/0199926/2020</string>-->
+<!--    <string name="MMTC_Limited">MMTC Limited</string>-->
+<!--    <string name="Hyderabad">Hyderabad</string>-->
+<!--    <string name="Ahmedabad">Ahmedabad</string>-->
+<!--    <string name="Hyderbad_code">Gold Code : 10882GL01 <br /> <br /> Silver Code : 108825V01</string>-->
+<!--    <string name="Ahmedabad_code">Gold Code : 10925GL01 <br /> <br /> Silver Code : 109255V01</string>-->
+<!--    <string name="GJEPC_Membership_No">GJEPC Membership No</string>-->
+<!--    <string name="Bureau_of_Indian_Standards">Bureau of Indian Standards</string>-->
+<!--    <string name="Bureau_of_Indian_Standardsnumber">Certificate No : HM/C-6390039720</string>-->
+<!--    <string name="GJEPC_Membership_Number">GJEPC/RO-CHE/700005661/AM/1</string>-->
+<!--    <string name="Registered_Office">Registered Office</string>-->
+<!--    <string name="Registered_Office_Address"> #3-5-573, Narayanaguda, Hyderabad,Telangana 500029 India</string>-->
+<!--    <string name="Admin_Office">Admin Office</string>-->
+<!--    <string name="Admin_Office_Addrsss">1st Floor, #3-5-171/1/2, Near Melkote park, HimayatNagar,Hyderabad, Telangana 500029 India </string>-->
+<!--    <string name="Tech_labs">Tech labs </string>-->
+<!--    <string name="Tech_labs_Address">#301 Jyothi Enclave, Kavuri Hills, Phase lll, Hitech CIty, Hyderabad, Telangana 500081 India </string>-->
+
+
+<!--    &lt;!&ndash;    SUPPORT AND ENQUIRY FORM NAME CONVERSTIONS&ndash;&gt;-->
+<!--    <string name="designation"><![CDATA[Designation ]]></string>-->
+<!--    <string name="message"><![CDATA[Message ]]></string>-->
+<!--    <string name="contact_information">Contact Information:</string>-->
+<!--    <string name="full_name"><![CDATA[Full Name ]]></string>-->
+<!--    <string name="select_plan">Select Plan</string>-->
+
+
+<!--    &lt;!&ndash;    MAIN SCREEN NAME CONVERSTIONS&ndash;&gt;-->
+
+<!--    <string name="WalletGold">Wallet Gold</string>-->
+<!--    <string name="buy_gold">Buy Gold</string>-->
+<!--    <string name="thirtygram">30 gram</string>-->
+<!--    <string name="wallet_gold"> Gold Wallet</string>-->
+<!--    <string name="wallet_purchase_gold"> Gold Purchase Wallet</string>-->
+<!--    <string name="welcome_to_">Welcome to Goldsikka</string>-->
+<!--    <string name="an_easy_and">-->
+<!--An easy and convenient platform to buy, store, sell, gift, and redeem gold-->
+<!--</string>-->
+<!--    <string name="new_to_gold">-->
+
+<!--New to Goldsikka-->
+<!--</string>-->
+<!--    <string name="already_hav">-->
+
+<!--Already have an account-->
+<!--</string>-->
+<!--    <string name="by_creating">-->
+
+<!--By creating account you agree to the-->
+<!--</string>-->
+
+<!--    <string name="name">Name</string>-->
+<!--    <string-array name="geder">-->
+<!--        <item>Select Geneer</item>-->
+<!--        <item>Male</item>-->
+<!--        <item>FeMale</item>-->
+<!--    </string-array>-->
+
+<!--    <string name="passbook">-->
+
+<!--Passbook-->
+<!--</string>-->
+
+<!--    <string name="hyderabad_2">-->
+
+<!--Hyderabad-->
+<!--</string>-->
+
+<!--    <string name="hyderabad_3">-->
+
+<!--23 Mar, 2021-->
+<!--</string>-->
+
+<!--    <string name="gold">-->
+
+<!--GOLD-->
+<!--</string>-->
+<!--    <string name="tengram">-->
+
+<!--1 gram-->
+<!--</string>-->
+
+<!--    <string name="some_id">-->
+
+<!-- 46,325.00-->
+<!--</string>-->
+
+<!--    <string name="gold_plans">-->
+
+<!--Gold Plans-->
+<!--</string>-->
+
+<!--    <string name="my_gold_202">-->
+
+<!--My GOLD 2021-->
+<!--</string>-->
+
+<!--    <string name="spp_on_gold">-->
+
+<!--SPP on gold with easy installments-->
+<!--</string>-->
+
+<!--    <string name="jewellery_p">-->
+
+<!--11+1 Jewellery Plan-->
+<!--</string>-->
+
+
+<!--    <string name="pm_ist">-->
+
+<!--3:03 pm IST-->
+<!--</string>-->
+
+
+<!--    <string name="gift">-->
+
+<!--Gift-->
+<!--</string>-->
+<!--    &lt;!&ndash;    <string name="password">Password</string>&ndash;&gt;-->
+
+<!--    <string name="password"><![CDATA[Password ]]></string>-->
+
+<!--    <string name="redeem">-->
+
+<!--Redeem-->
+<!--</string>-->
+<!--    <string name="one_month_f">-->
+
+<!--One month free installment from Goldsikka-->
+<!--</string>-->
+
+<!--    <string name="view_more_o">-->
+
+<!--View more offers  >-->
+<!--</string>-->
+
+
+<!--    <string name="username_password"><![CDATA[Email or Contact Number ]]></string>-->
+
+
+<!--    <string name="quick_actio">-->
+
+<!--Quick Actions-->
+<!--</string>-->
+<!--    <string name="transfer">-->
+
+<!--Transfer-->
+<!--</string>-->
+
+<!--    <string name="forgotpassword">-->
+
+<!--Forgot Password?-->
+<!--</string>-->
+<!--    <string name="email">Email</string>-->
+<!--    <string name="mobile">Mobile</string>-->
+
+<!--    &lt;!&ndash;    Schems Module&ndash;&gt;-->
+
+
+<!--    <string name="my_gold_2021">My Gold 2021</string>-->
+<!--    <string name="features">Features</string>-->
+<!--    <string name="FAQs">FAQs</string>-->
+<!--    <string name="by_starting_a_subscription_you_agree_to_the">By starting a subscription you agree to the</string>-->
+<!--    <string name="terms_and_conditions">TERMS &amp; CONDITIONS</string>-->
+<!--    <string name="start_subscription">Start Subscription</string>-->
+<!--    <string name="referesh">Refresh</string>-->
+<!--    <string name="live_price">Live Price</string>-->
+<!--    <string name="enter_grams">ENTER GRAMS</string>-->
+<!--    <string name="grams"><![CDATA[Grams ]]></string>-->
+<!--    <string name="mmi_tenure">MMP TENURE</string>-->
+<!--    <string name="PayNextInstalment">Pay Installment</string>-->
+<!--    <string name="select_tenure">Select Tenure</string>-->
+<!--    <string name="mmi_amount">MMP Amount</string>-->
+<!--    <string name="gst">Taxes &amp; Other Levies</string>-->
+<!--    <string name="cashback_gst">Cashback GST</string>-->
+<!--    <string name="processing_fee">Processing Fee</string>-->
+<!--    <string name="final_amount">Final Amount</string>-->
+<!--    <string name="cashback">Cashback</string>-->
+<!--    <string name="subscribe">Subscribe</string>-->
+<!--    <string name="select_amount">Select Amount</string>-->
+<!--    <string name="amount"><![CDATA[Amount]]></string>-->
+<!--    <string name="gold_grams">Gold Grams</string>-->
+<!--    <string name="gold_plus">Gold Plus</string>-->
+<!--    <string name="business_associates">Business Associates</string>-->
+<!--    <string name="sell_gold">Sell Gold</string>-->
+<!--    <string name="gold_wallet">Gold Wallet</string>-->
+<!--    <string name="please_enter_minimum_2_grams">* Please enter minimum 2 grams.</string>-->
+<!--    <string name="the_fractional_price_are_not_applicable_for_above_5_grams">* The fractional price are not applicable for above 5 grams.</string>-->
+<!--    <string name="redeem_gold">Redeem Gold</string>-->
+<!--    <string name="you_cannot_enter_decimal_values">* You cannot enter decimal values</string>-->
+<!--    <string name="next">Next</string>-->
+<!--    <string name="gift_gold">Gift Gold</string>-->
+<!--    <string name="search_contact_number">Search contact number</string>-->
+<!--    <string name="please_enter_the_contact_number">Please enter the contact number registered with Goldsikka to share gift</string>-->
+<!--    <string name="your_contacts">YOUR CONTACTS</string>-->
+
+<!--    <string name="transactions">TRANSACTIONS</string>-->
+<!--    <string name="digital_wallet">Gold Suvidha</string>-->
+<!--    <string name="i_agree">I Agree</string>-->
+<!--    <string name="purity">PURITY</string>-->
+<!--    <string name="hallmark">999/24</string>-->
+<!--    <string name="sell_price">SELL PRICE</string>-->
+<!--    <string name="per_gram">per gram</string>-->
+<!--    <string name="buy_in_rupess">Buy in Rupees</string>-->
+<!--    <string name="buy_in_grams">Buy in Grams</string>-->
+<!--    <string name="proceed_to_pay">Proceed to pay</string>-->
+<!--    <string name="enter_amount">ENTER AMOUNT</string>-->
+<!--    <string name="type_amount_for_grams">* Type amount for grams</string>-->
+<!--    <string name="type_grams_for_amount">* Type grams for amount</string>-->
+<!--    <string name="transfer_gold">Transfer Gold</string>-->
+<!--    <string name="about_goldsikka">About Goldsikka</string>-->
+<!--    <string name="company_details">Company Details</string>-->
+<!--    <string name="vision_mission_philosophy">Vision, Mission and Philosophy</string>-->
+<!--    <string name="best_security_certification">Best security, certification and audit institutions of india</string>-->
+<!--    <string name="help_support">Help and Support</string>-->
+<!--    <string name="more_info">More info</string>-->
+<!--    <string name="create_account">Create Account</string>-->
+<!--    <string name="user_name"><![CDATA[Name ]]></string>-->
+<!--    <string name="user_email"><![CDATA[Email ]]></string>-->
+<!--    <string name="phone_number"><![CDATA[Phone Number]]></string>-->
+<!--    <string name="confirm_password"><![CDATA[Confirm Password ]]></string>-->
+<!--    <string name="one_uppercase">One uppercase</string>-->
+<!--    <string name="one_lowercase">One lowercase</string>-->
+<!--    <string name="one_numerical">One numerical</string>-->
+<!--    <string name="one_special_character">One special character</string>-->
+<!--    <string name="total_eight_place_through">Minimum Eight Values</string>-->
+<!--    <string name="do_you_have_any_referral_code">Do you have any Referral code?</string>-->
+<!--    <string name="referral_code">Referral code</string>-->
+<!--    <string name="by_creating_account_you_agree_to_the">By creating account you agree to the</string>-->
+<!--    <string name="privacy_policy">PRIVACY POLICY</string>-->
+<!--    <string name="date">Date</string>-->
+<!--    <string name="scheme_name">Scheme name</string>-->
+<!--    <string name="total_mmis">Total MMPs</string>-->
+<!--    <string name="paid_mmis">Paid MMPs</string>-->
+<!--    <string name="pending_mmis">Pending MMPs</string>-->
+<!--    <string name="total_grams">Total grams</string>-->
+<!--    <string name="paid_mmis_info">Paid MMPs Info</string>-->
+<!--    <string name="transaction_id">Transaction Id</string>-->
+<!--    <string name="payment_mode">Payment mode</string>-->
+<!--    <string name="quantity">Quantity</string>-->
+<!--    <string name="tax_amount">Tax amount</string>-->
+<!--    <string name="amount_payable">Amount payable</string>-->
+<!--    <string name="change_your">Change the name as your wish</string>-->
+<!--    <string name="rename">Rename here</string>-->
+<!--    <string name="example">E.g. Dad\'s name, Favourite\'s place etc...</string>-->
+<!--    <string name="apply_coupons">Apply coupons</string>-->
+<!--    <string name="apply">APPLY</string>-->
+<!--    <string name="available_coupons">Available coupons</string>-->
+<!--    <string name="applied_successfully">Applied successfully</string>-->
+<!--    <string name="Remove">Remove</string>-->
+<!--    <string name="offer_description">Offer Description:</string>-->
+<!--    <string name="done">Done</string>-->
+<!--    <string name="payment">Payment</string>-->
+<!--    <string name="ticket_id">Ticket Id</string>-->
+<!--    <string name="description">Description</string>-->
+<!--    <string name="status">Status</string>-->
+
+<!--    &lt;!&ndash;    REFERAND EARN NAME CONVERSTIONS&ndash;&gt;-->
+
+<!--    <string name="refer_and_earn">Refer and Earn</string>-->
+<!--    <string name="how_its_works">How its works</string>-->
+<!--    <string name="invite_others_to">Invite others to Goldsikka application and share this Referral code to them at time of registration and Transaction, you will earn attractive commission amount.</string>-->
+<!--    <string name="more_details">More Details</string>-->
+<!--    <string name="details">Details</string>-->
+<!--    <string name="download">Downloads: </string>-->
+<!--    <string name="earned">Earned: </string>-->
+<!--    <string name="withdraw">Withdraw</string>-->
+<!--    <string name="withdraw_amount">Withdraw amount</string>-->
+<!--    <string name="tap_to_copy">Tap to copy</string>-->
+<!--    <string name="refer_now">Refer now</string>-->
+<!--    <string name="enter_minimum_amount">Enter minimum amount of Rs500 to withdraw money.</string>-->
+<!--    <string name="success">Success!</string>-->
+<!--    <string name="thank_you">Thank you</string>-->
+<!--    <string name="Continue">Continue</string>-->
+
+<!--    &lt;!&ndash;    EVENT MODULE NAME CONVERSTIONS&ndash;&gt;-->
+<!--    <string name="event_name"><![CDATA[Event Name ]]></string>-->
+<!--    <string name="bridegroom_name"><![CDATA[Bridegroom name ]]></string>-->
+<!--    <string name="bride_name"><![CDATA[Bride name ]]></string>-->
+<!--    <string name="venue"><![CDATA[Venue ]]></string>-->
+<!--    <string name="GiftGOld">Gift Gold</string>-->
+<!--    <string name="Description">Description</string>-->
+<!--    <string name="event_description"><![CDATA[Event Description ]]></string>-->
+<!--    <string name="event_holder_name"><![CDATA[Event holder name ]]></string>-->
+<!--    <string name="other_event_type"><![CDATA[other event type ]]></string>-->
+<!--    <string name="event_type">Event type</string>-->
+<!--    <string name="upload_couple_photo"><![CDATA[Upload couple photo ]]></string>-->
+<!--    <string name="upload_wedding_card_photo"><![CDATA[Upload wedding card photo ]]></string>-->
+<!--    <string name="upload_photo"><![CDATA[Upload Photo ]]></string>-->
+<!--    <string name="event_information">Event Information</string>-->
+<!--    <string name="time"><![CDATA[Time ]]></string>-->
+
+<!--    <string name="Gift_in_rupess">Gift in Rupees</string>-->
+<!--    <string name="Gift_in_grams">Gift in Grams</string>-->
+<!--    <string name="proceed_to_gift">Proceed to Gift</string>-->
+<!--    <string name="ImgSizeNote">* Image size should not be exceed 5 mb</string>-->
+<!--    <string name="Register">Register</string>-->
+<!--    <string name="upload_organization_document"><![CDATA[upload organization document ]]></string>-->
+<!--    <string name="organization_name"><![CDATA[Organization name]]></string>-->
+<!--    <string name="organization_address"><![CDATA[Organization address ]]></string>-->
+<!--    <string name="organization_zipcode"><![CDATA[Organization zipcode ]]></string>-->
+<!--    <string name="organization_registration_number"><![CDATA[Organization Reg.no ]]></string>-->
+<!--    <string name="organization_city"><![CDATA[Organization city ]]></string>-->
+<!--    <string name="organization_state"><![CDATA[Organization state ]]></string>-->
+<!--    <string name="organization_description"><![CDATA[Organization description ]]></string>-->
+<!--    <string name="organization_photo"><![CDATA[Organization photo ]]></string>-->
+<!--    <string name="upload_org_photo"><![CDATA[Upload organization photo]]></string>-->
+<!--    <string name="authorised_person_details">Authorised person details:</string>-->
+<!--    <string name="DonateGOld">Donate Gold</string>-->
+<!--    <string name="Donate_in_rupess">Donate in Rupees</string>-->
+<!--    <string name="Donate_in_grams">Donate in Grams</string>-->
+<!--    <string name="proceed_to_Donate">Proceed to Donate</string>-->
+<!--    <string name="org_status">Status:</string>-->
+<!--    <string name="org_name">Org.name:</string>-->
+<!--    <string name="org_id">Org.id:</string>-->
+<!--    <string name="org_reg_num">Org.reg.no</string>-->
+<!--    <string name="org_address">Org.address:</string>-->
+<!--    <string name="org_description">Org.description:</string>-->
+<!--    <string name="note">Note:</string>-->
+<!--    <string name="Organization_details">Organization Details</string>-->
+
+<!--    <string name="enter_old_pin"><![CDATA[Enter your old pin]]></string>-->
+<!--    <string name="enter_new_pin"><![CDATA[Enter new 4 digit PIN ]]></string>-->
+
+<!--    <string name="enter_pin"><![CDATA[Enter 4 digit PIN]]></string>-->
+<!--    <string name="creat_pin"><![CDATA[Create PIN ]]></string>-->
+<!--    <string name="reenter_pin"><![CDATA[Reenter 4 digit PIN ]]></string>-->
+<!--    <string name="update_pin"><![CDATA[Update PIN ]]></string>-->
+<!--    <string name="wallet_heading">Add Amount to Money Wallet</string>-->
+<!--    <string name="wallet_hint"><![CDATA[Enter amount ]]></string>-->
+<!--    <string name="add_money">ADD MONEY</string>-->
+<!--    <string name="money_wallet">Money Wallet</string>-->
+<!--    <string name="happyCustomer">Happy Customers</string>-->
+<!--    <string name="National_Secrities_Depository_Limited">National Secrities Depository Limited</string>-->
+<!--    <string name="ISIN_No_INEOJ8501014">ISIN No : INEOJ8501014</string>-->
+<!--    <string name="Email_mobile"><![CDATA[Email/Mobile ]]></string>-->
+<!--    <string name="feedback_here"><![CDATA[Enter Feedback Here ]]></string>-->
+<!--    <string name="event_date"><![CDATA[Date ]]></string>-->
+<!--    <string name="select_bank_option"><![CDATA[Select one option for Transfer the Sell Amount ]]></string>-->
+
+
+<!--    <string name="nav_open">Open</string>-->
+<!--    <string name="nav_close">Close</string>-->
+<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--</resources>-->
+
+
+<resources>
+
+
+    <string name="app_name">Goldsikka</string>
+
+    <string name="Home">Home</string>
+    <string name="JEWELSKART">JEWELSKART</string>
+    <string name="buynoe">Buy One</string>
+    <string name="offerning">Offerings</string>
+    <string name="enquire">Enquiry</string>
+    <string name="Globalrates">Global Rates</string>
+    <string name="telugu">తెలుగు</string>
+
+    <!-- <string name="facebook_app_id">1234</string>
+     <string name="fb_login_protocol_scheme">fb1234</string>
+     <string name="facebook_client_token">56789</string>-->
+    <string name="facebook_app_id">277411671215978</string>
+    <string name="fb_login_protocol_scheme">fb277411671215978</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="text_scroll">Gold Buy Price of Hyderabad 24 Carts = 58.054/- 10grms ; 22 Carts = 53.239/- 10grms</string>
+
+    <string name="aboutus">WHO WE ARE &amp; WHAT WE DO</string>
+    <string name="digital_wallet_conditions">DIGITAL WALLET TERMS &amp; CONDITIONS</string>
+    <string name="digital_wallet_terms_condition"> TERMS &amp; CONDITIONS</string>
+    <string name="update_message">Your Application need to update</string>
+    <string name="update_now">Update Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="web_url">https://goldsikka.com/api/</string>
+    <string name="Rs">\u20B9</string>
+
+    <string name="weak">weak</string>
+    <string name="medium">medium</string>
+    <string name="strong">strong</string>
+    <string name="very_strong">very strong</string>
+    <string name="press_again_to_exit">Press again to exit</string>
+    <string name="error_no_internet_connection">No internet connection.</string>
+    <string name="error_connection_request_failed">Network connection request failed, Try again!</string>
+    <string name="error_invalid_data">Server return invalid response, Please contact your administrator.</string>
+
+    <!-- <string name="facebook_app_id">790634765247180</string>
+     <string name="fb_login_protocol_scheme">fb790634765247180</string>-->
+
+
+    <string name="internal_storage">internal_storage</string>
+
+
+    <!--    new Designs strings-->
+    <string name="Goldsikka_Limited">Goldsikka Limited</string>
+
+    <!--    OTP MODULE NAME CONVERSIONS-->
+    <string name="Please_enter_OTP">Please enter OTP</string>
+    <string name="OTP_sent_to">OTP sent to </string>
+    <string name="Enter_OTP">Enter OTP </string>
+    <string name="Didnt_recieve_the_code">Didn’t recieve the code?</string>
+    <string name="Resend"> Resend</string>
+    <string name="Verify_and_Proceed">Verify and Proceed</string>
+    <string name="Verify_Details">Verify Details </string>
+
+    <!--    FORGOT PASSWORD MODULE NAME CONVERSIONS-->
+
+    <string name="Forgot_Password">Forgot Password? </string>
+
+    <string name="Forgot_changePassword">To reset your password enter your new password and confirm password </string>
+    <string name="Forgot_Password_Content">Enter the email/mobile associated with your account and we will send an OTP  to reset your password</string>
+    <string name="Submit">Submit</string>
+    <string name="Change_Password">Change Password</string>
+    <string name="Email"><![CDATA[Email<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Phone_Number"><![CDATA[Phone Number <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Current_Password"><![CDATA[Current Password <font color=\'#cc0029\'>*</font>]]></string>
+    <!--    <string name="New_Password">New Password</string>-->
+    <string name="New_Password"><![CDATA[New Password <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Confirm_Password"><![CDATA[Confirm Password <font color=\'#cc0029\'>*</font>]]></string>
+    <!--    <string name="Confirm_Password">Confirm Password </string>-->
+    <string name="Verify_Your_Account">Verify Your Account</string>
+    <string name="Verify_Your_Account_Content">Please enter your phone number below to verify your account </string>
+
+
+    <!--    FAQ's MODULE NAME CONVERSIONS-->
+
+    <string name="About_Gold_Sikka">About Goldsikka</string>
+    <string name="FAQ_s">FAQ’s</string>
+    <string name="Registration">Registration</string>
+    <string name="Operations">Operations</string>
+    <string name="Taxes_Applicable">Taxes Applicable</string>
+
+    <!--    KYC MODULE NAME CONVERSIONS-->
+    <string name="Father_Name"><![CDATA[Father Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Spouse_Name"><![CDATA[Spouse Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Aadhar_Number"><![CDATA[Aadhar Number <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Pan_Number"><![CDATA[PAN Number <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Althernate_Phone"><![CDATA[Alternative Phone <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Gender">Gender</string>
+    <string name="update_kyc">Update KYC</string>
+    <string name="Add_Kyc">Add KYC</string>
+
+
+    <!--   NOMINEE  MODULE NAME CONVERSIONS-->
+    <string name="you_don_t_h">You don’t have any nominee, please add by tapping on the button below.</string>
+    <string name="Add_Nominee">Add Nominee</string>
+    <string name="Nominee_Name"><![CDATA[Nominee Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Nomine_Mobile_Number"><![CDATA[Nominee Mobile Number <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Relation"><![CDATA[Relation <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Address"> <![CDATA[Address <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="City"><![CDATA[City <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Select_State"> Select State</string>
+    <string name="Select_Country">Select Country</string>
+    <string name="Delete">Delete</string>
+    <string name="Edit">Edit</string>
+    <string name="Zip_Code"><![CDATA[Zip Code <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="add_nickname">Add Nickname</string>
+    <string name="Nominee">Nominee</string>
+
+    <!--   PROFILE  MODULE NAME CONVERSIONS-->
+
+    <string name="Edit_Profile">Edit Profile</string>
+    <string name="Bank_Details">Bank Details</string>
+    <string name="Personal_Address">Personal Address</string>
+    <string name="OrgPersonal_Address">Address</string>
+    <string name="KYC">KYC</string>
+    <string name="Change_Profile_Picture">Change Profile Picture</string>
+    <string name="Name"><![CDATA[Name<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Save">Save</string>
+    <string name="SetasPrimary">Set as Primary</string>
+    <string name="Add_Address">Add Address</string>
+    <string name="Add_New_Address">Add New Address</string>
+    <string name="Add_bank">Add Bank Details</string>
+    <string name="empty_bank">You don’t have bank details added yet, please add by tapping on the button below.</string>
+    <string name="empty_address_content">You don’t have any address saved, please add by tapping on the button below.</string>
+    <string name="Select_addresstype"> Select Address Type</string>
+    <string name="Account_Number"><![CDATA[Account Number<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Primary">Primary</string>
+    <string name="Branch_Name"><![CDATA[Branch Name<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Bank_Name"><![CDATA[Bank Name<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="IFSC_Code"><![CDATA[IFSC Code<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="Account_Holder_Name"><![CDATA[Account Holder Name<font color=\'#cc0029\'>*</font>]]></string>
+
+
+    <!--   PROFILE  MODULE NAME CONVERSIONS-->
+
+    <string name="Face_ID_Login">Face ID Login</string>
+    <string name="Notifications">Notifications</string>
+    <string name="Invite_Friends">Refer and Earn</string>
+    <string name="Support">Support</string>
+    <string name="Terms_Conditions">Terms and Conditions</string>
+    <string name="App_Lock">App Lock</string>
+
+    <string name="Log_Out">Log Out</string>
+
+    <!--   COMPANY DETAILS  MODULE NAME CONVERSIONS-->
+
+    <string name="CIN_No">CIN No</string>
+    <string name="Cin_Number">U51909TG2019PLC130903</string>
+    <string name="PAN_No">PAN No</string>
+    <string name="PANNo">AAHCG7082N</string>
+    <string name="TAN_No">TAN No</string>
+    <string name="TAN_Number">HYDG18885G</string>
+    <string name="GSTIN_No">GSTIN No</string>
+    <string name="GSTIN_Number">36AAHCG7082N1ZZ</string>
+    <string name="IEC_No">IEC No</string>
+    <string name="IEC_Number">AAHCG7082N</string>
+    <string name="Udyog_Aadhar_No">Udyog Aadhar No</string>
+    <string name="Udyog_Aadhar_Number">TS02E0067316</string>
+    <string name="Govt_of_Telangana_Reg_No">Govt of Telangana Reg No</string>
+    <string name="Govt_of_Telangana_Reg_Number">SEA/HYD/ALO/03/0199926/2020</string>
+    <string name="MMTC_Limited">MMTC Limited</string>
+    <string name="Hyderabad">Hyderabad</string>
+    <string name="Ahmedabad">Ahmedabad</string>
+    <string name="Hyderbad_code">Gold Code : 10882GL01 <br /> <br /> Silver Code : 108825V01</string>
+    <string name="Ahmedabad_code">Gold Code : 10925GL01 <br /> <br /> Silver Code : 109255V01</string>
+    <string name="GJEPC_Membership_No">GJEPC Membership No</string>
+    <string name="Bureau_of_Indian_Standards">Bureau of Indian Standards</string>
+    <string name="Bureau_of_Indian_Standardsnumber">Certificate No : HM/C-6390039720</string>
+    <string name="GJEPC_Membership_Number">GJEPC/RO-CHE/700005661/AM/1</string>
+    <string name="Registered_Office">Registered Office :</string>
+    <string name="Registered_Office_Address"> Goldsikka Limited #3-5-573, Himayatnagar, Hyderabad, Telangana-500029, India.</string>
+    <string name="Admin_Office">Corporate Office :</string>
+    <string name="Admin_Office_Addrsss">Goldsikka Limited 2ndFloor, Ashoka Raghupathi Chambers, H.No.1-10-60, Adj to Prakash Nagar Metro Station, Begumpet, Hyderabad, Telangana-500016, India. </string>
+    <string name="Tech_labs">Jewelry Wholesale Shop :</string>
+    <string name="Tech_labs_Address">Goldsikka Limited 1stFloor, #3-5-171/1/2, Narayanguda Near Melkote park, Hyderabad, Telangana-500029, India. </string>
+    <string name="Bullion_Retail_Shoppe">Bullion Retail Shop :</string>
+    <string name="Bullion_Retail_Shoppe_Address">Shop No.01 HNo 21-6-60, Mehndi Galli, Ghansi Bazar, Charminar, Hyderabad, Telangana-500002, India.</string>
+
+
+    <!--    SUPPORT AND ENQUIRY FORM NAME CONVERSTIONS-->
+    <string name="designation"><![CDATA[Designation <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="message"><![CDATA[Message <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="contact_information">Contact Information:</string>
+    <string name="full_name"><![CDATA[Full Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="select_plan">Select Plan</string>
+
+
+    <!--    MAIN SCREEN NAME CONVERSTIONS-->
+
+    <string name="WalletGold">Wallet Gold</string>
+    <string name="buy_gold">Buy Gold</string>
+    <string name="thirtygram">30 gram</string>
+    <string name="wallet_gold"> Gold Vault</string>
+    <string name="wallet_purchase_gold"> Gold Vault</string>
+    <string name="welcome_to_">Welcome to Goldsikka</string>
+    <string name="an_easy_and">
+An easy and convenient platform to buy, store, sell, gift, and redeem gold
+</string>
+    <string name="new_to_gold">
+
+New to Goldsikka
+</string>
+    <string name="already_hav">
+
+Already have an account
+</string>
+    <string name="by_creating">
+
+By creating account you agree to the
+</string>
+
+    <string name="name">Name</string>
+    <string-array name="geder">
+        <item>Select Geneer</item>
+        <item>Male</item>
+        <item>FeMale</item>
+    </string-array>
+
+    <string name="passbook">
+
+My Transactions
+</string>
+
+    <string name="hyderabad_2">
+
+Hyderabad
+</string>
+
+    <string name="hyderabad_3">
+
+23 Mar, 2021
+</string>
+
+    <string name="gold">
+
+GOLD
+</string>
+    <string name="tengram">
+
+1 gram
+</string>
+
+    <string name="some_id">
+
+ 46,325.00
+</string>
+
+    <string name="gold_plans">
+
+Gold Plans
+</string>
+
+    <string name="my_gold_202">
+
+My GOLD 2021
+</string>
+
+    <string name="spp_on_gold">
+
+SPP on gold with easy installments
+</string>
+
+    <string name="jewellery_p">
+
+11+1 Jewellery Plan
+</string>
+
+
+    <string name="pm_ist">
+
+3:03 pm IST
+</string>
+
+
+    <string name="gift">
+
+Gift
+</string>
+    <!--    <string name="password">Password</string>-->
+
+    <string name="password"><![CDATA[Password <font color=\'#cc0029\'>*</font>]]></string>
+
+    <string name="redeem">
+
+Redeem
+</string>
+    <string name="one_month_f">
+
+One month free installment from Goldsikka
+</string>
+
+    <string name="view_more_o">
+
+View more offers  >
+</string>
+
+
+    <string name="username_password"><![CDATA[Email or Contact Number <font color=\'#cc0029\'>*</font>]]></string>
+
+
+    <string name="quick_actio">
+
+Quick Actions
+</string>
+    <string name="transfer">
+
+Transfer
+</string>
+
+    <string name="forgotpassword">
+
+Forgot Password?
+</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
+
+    <!--    Schems Module-->
+
+
+    <string name="my_gold_2021">My Gold 2021</string>
+    <string name="features">Features</string>
+    <string name="FAQs">FAQs</string>
+    <string name="by_starting_a_subscription_you_agree_to_the">By starting a subscription you agree to the</string>
+    <string name="terms_and_conditions">TERMS &amp; CONDITIONS</string>
+    <string name="start_subscription">NEXT</string>
+    <string name="referesh">Refresh</string>
+    <string name="live_price">Live Price</string>
+    <string name="enter_grams">ENTER GRAMS</string>
+    <string name="grams"><![CDATA[Grams <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="mmi_tenure">MMP TENURE</string>
+    <string name="PayNextInstalment">Pay Installment</string>
+    <string name="select_tenure">Select Tenure</string>
+    <string name="mmi_amount">MMP Amount</string>
+    <string name="gst">Taxes &amp; Other Levies</string>
+    <string name="cashback_gst">Cashback GST</string>
+    <string name="processing_fee">Processing Fee</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="cashback">Cashback</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="select_amount">Select Amount</string>
+    <string name="amount"><![CDATA[Amount <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="gold_grams">Gold Grams</string>
+    <string name="gold_plus">Gold Plus</string>
+    <string name="business_associates">Business Associates</string>
+    <string name="sell_gold">Sell Gold</string>
+    <string name="gold_wallet">Gold Vault</string>
+    <string name="please_enter_minimum_2_grams">* Please enter minimum 2 grams.</string>
+    <string name="the_fractional_price_are_not_applicable_for_above_5_grams">* The fractional price are not applicable for above 5 grams.</string>
+    <string name="redeem_gold">Redeem Gold</string>
+    <string name="you_cannot_enter_decimal_values">* You cannot enter decimal values</string>
+    <string name="next">Next</string>
+    <string name="gift_gold">Gift Gold</string>
+    <string name="search_contact_number">Search contact number</string>
+    <string name="please_enter_the_contact_number">Please enter the contact number registered with Goldsikka to share gift</string>
+    <string name="your_contacts">YOUR CONTACTS</string>
+
+    <string name="transactions">TRANSACTIONS</string>
+    <string name="digital_wallet">Gold Suvidha</string>
+    <string name="i_agree">I Agree</string>
+    <string name="purity">PURITY</string>
+    <string name="hallmark">999/24</string>
+    <string name="sell_price">SELL PRICE</string>
+    <string name="per_gram">per gram</string>
+    <string name="buy_in_rupess">Buy in Rupees</string>
+    <string name="buy_in_grams">Buy in Grams</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="enter_amount">ENTER AMOUNT</string>
+    <string name="type_amount_for_grams">* Type amount for grams</string>
+    <string name="type_grams_for_amount">* Type grams for amount</string>
+    <string name="transfer_gold">Transfer Gold</string>
+    <string name="about_goldsikka">About Goldsikka</string>
+    <string name="company_details">Company Details</string>
+    <string name="vision_mission_philosophy">Vision, Mission and Philosophy</string>
+    <string name="best_security_certification">Best security, certification and audit institutions of india</string>
+    <string name="help_support">Help and Support</string>
+    <string name="more_info">More info</string>
+    <string name="create_account">Create Account</string>
+    <string name="user_name"><![CDATA[Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="user_email"><![CDATA[Email <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="phone_number"><![CDATA[Phone Number <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="shop_name"><![CDATA[Shop Name <font color=\'#cc0029\'>*</font>]]></string>
+
+    <string name="confirm_password"><![CDATA[Confirm Password <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="one_uppercase">One uppercase</string>
+    <string name="one_lowercase">One lowercase</string>
+    <string name="one_numerical">One numerical</string>
+    <string name="one_special_character">One special character</string>
+    <string name="total_eight_place_through">Minimum Eight Values</string>
+    <string name="do_you_have_any_referral_code">Do you have any Referral code?</string>
+    <string name="referral_code">Referral code</string>
+    <string name="by_creating_account_you_agree_to_the">By creating account you agree to the</string>
+    <string name="privacy_policy">PRIVACY POLICY</string>
+    <string name="date">Date</string>
+    <string name="scheme_name">Scheme name</string>
+    <string name="total_mmis">Total MMP</string>
+    <string name="paid_mmis">Paid MMP</string>
+    <string name="pending_mmis">Pending MMP</string>
+    <string name="total_grams">Total grams</string>
+    <string name="paid_mmis_info">Paid MMP Info</string>
+    <string name="transaction_id">Transaction Id</string>
+    <string name="payment_mode">Payment mode</string>
+    <string name="quantity">Quantity</string>
+    <string name="tax_amount">Tax amount</string>
+    <string name="amount_payable">Amount payable</string>
+    <string name="change_your">Change the name as your wish</string>
+    <string name="rename">Rename here</string>
+    <string name="example">E.g. Dad\'s name, Favourite\'s place etc...</string>
+    <string name="apply_coupons">Apply Coupons</string>
+    <string name="apply">APPLY</string>
+    <string name="available_coupons">Available coupons</string>
+    <string name="applied_successfully">Applied successfully</string>
+    <string name="Remove">Remove</string>
+    <string name="offer_description">Offer Description:</string>
+    <string name="done">Done</string>
+    <string name="payment">Payment</string>
+    <string name="ticket_id">Ticket Id</string>
+    <string name="description">Description</string>
+    <string name="status">Status</string>
+
+    <!--    REFERAND EARN NAME CONVERSTIONS-->
+
+    <string name="refer_and_earn">Refer and Earn</string>
+    <string name="how_its_works">How its works</string>
+    <string name="invite_others_to">Invite others to Goldsikka application and share this Referral code to them at time of registration and Transaction, you will earn attractive commission amount.</string>
+    <string name="more_details">More Details</string>
+    <string name="details">Details</string>
+    <string name="download">Downloads: </string>
+    <string name="earned">Earned: </string>
+    <string name="withdraw">Withdraw</string>
+    <string name="withdraw_amount">Withdraw amount</string>
+    <string name="tap_to_copy">Tap to copy</string>
+    <string name="refer_now">Refer now</string>
+    <string name="enter_minimum_amount">Enter minimum amount of Rs500 to withdraw money.</string>
+    <string name="success">Success!</string>
+    <string name="thank_you">Thank you</string>
+    <string name="Continue">Continue</string>
+
+    <!--    EVENT MODULE NAME CONVERSTIONS-->
+    <string name="event_name"><![CDATA[Event Name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="event_name1"><![CDATA[Event Name<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="bridegroom_name"><![CDATA[Bridegroom name <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="bride_name"><![CDATA[Bride name<font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="venue"><![CDATA[Venue<font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="GiftGOld">Gift Gold</string>
+    <string name="Description">Description</string>
+    <string name="event_description"><![CDATA[Event Description<font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="event_holder"><![CDATA[Event holder name<font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="other_event"><![CDATA[Other event type<font color=\'#cc0029\'>*</font> ]]></string>
+    <!-- <string name="event_holder_name"><![CDATA[Event holder name<font color=\'#cc0029\'>*</font> ]]></string>
+     <string name="other_event_type"><![CDATA[Other event type<font color=\'#cc0029\'>*</font> ]]></string>-->
+    <string name="event_type">Event type</string>
+    <string name="upload_couple_photo"><![CDATA[Upload couple photo <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="upload_wedding_card_photo"><![CDATA[Upload wedding card photo <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="upload_photo"><![CDATA[Upload Photo <font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="event_information">Event Information</string>
+    <string name="time"><![CDATA[Time ]]></string>
+
+    <string name="Gift_in_rupess">Gift in Rupees</string>
+    <string name="Gift_in_grams">Gift in Grams</string>
+    <string name="proceed_to_gift">Proceed to Gift</string>
+    <string name="ImgSizeNote">* Image size should not be exceed 5 mb</string>
+    <string name="Register">Register</string>
+    <string name="upload_organization_document"><![CDATA[upload organization document <font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="upload_org_photo"><![CDATA[Upload organization photo  <font color=\'#cc0029\'>*</font>]]></string>
+
+    <string name="organization_name"><![CDATA[Organization name<font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_address"><![CDATA[Organization address <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_zipcode"><![CDATA[Organization zipcode <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_registration_number"><![CDATA[Organization Reg.no <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_city"><![CDATA[Organization city <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_state"><![CDATA[Organization state <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_description"><![CDATA[Organization description <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="organization_photo"><![CDATA[Organization photo <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="authorised_person_details">Authorised person details:</string>
+    <string name="DonateGOld">Donate Gold</string>
+    <string name="Donate_in_rupess">Donate in Rupees</string>
+    <string name="Donate_in_grams">Donate in Grams</string>
+    <string name="proceed_to_Donate">Proceed to Donate</string>
+    <string name="org_status">Status:</string>
+    <string name="org_name">Org.name:</string>
+    <string name="org_id">Org.id:</string>
+    <string name="org_reg_num">Org.reg.no</string>
+    <string name="org_address">Org.address:</string>
+    <string name="org_description">Org.description:</string>
+    <string name="note">Note:</string>
+    <string name="Organization_details">Organization Details</string>
+
+    <string name="enter_old_pin"><![CDATA[Enter your old pin <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="enter_new_pin"><![CDATA[Enter new 4 digit PIN <font color=\'#cc0029\'>*</font>]]></string>
+
+    <string name="enter_pin"><![CDATA[Enter 4 digit PIN <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="enter_pin1"><![CDATA[Enter 4 digit PIN ]]></string>
+    <string name="creat_pin"><![CDATA[Create PIN <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="reenter_pin"><![CDATA[Reenter 4 digit PIN <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="reenter_pin1"><![CDATA[Reenter 4 digit PIN ]]></string>
+
+    <string name="update_pin"><![CDATA[Update PIN <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="wallet_heading">Add Amount to Booking Account</string>
+    <string name="wallet_hint"><![CDATA[Enter amount <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="add_money">ADD MONEY</string>
+    <string name="money_wallet">Booking Account</string>
+    <string name="happyCustomer">Happy Customers</string>
+    <string name="National_Secrities_Depository_Limited">National Secrities Depository Limited</string>
+    <string name="ISIN_No_INEOJ8501014">ISIN No : INEOJ8501014</string>
+    <string name="Email_mobile"><![CDATA[Email/Mobile <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="feedback_here"><![CDATA[Enter Feedback Here *]]></string>
+    <string name="event_date"><![CDATA[Date <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="select_bank_option"><![CDATA[Select one option for Transfer the Sell Amount <font color=\'#cc0029\'>*</font>]]></string>
+
+
+    <string name="rating"><![CDATA[Give Your Ratings<font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="enterfeedbacktext"><![CDATA[Enter Feedback Here <font color=\'#cc0029\'>*</font> ]]></string>
+
+    <string name="enterreviewtext"><![CDATA[Enter Review Text Here <font color=\'#cc0029\'>*</font> ]]></string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="version">V</string>
+    <string name="goldd">#1A2E23</string>
+    <string name="default_notification_channel_id">com.goldsikka.goldsikka</string>
+
+
+    <string-array name="type_bangles">
+        <item>select</item>
+        <item>2-2(2 2/16)"</item>
+        <item>2-4(2 4/16)"</item>
+        <item>2-6(2 6/16)"</item>
+        <item>2-8(2 8/16)"</item>
+        <item>2-10(2 10/16)"</item>
+        <item>2-12(2 12/16)"</item>
+        <item>2-14(2 14/14)"</item>
+        <item>2-16(2 16/16)"</item>
+    </string-array>
+    <string name="gold_color">GOLD COLOR</string>
+    <string name="gold_Karat">GOLD KARAT</string>
+    <string name="addprice">X 11</string>
+
+    <string-array name="type_rings">
+        <item>select</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+
+    <string name="apply_gift">Apply Gift Card</string>
+
+</resources>

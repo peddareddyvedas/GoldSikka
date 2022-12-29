@@ -1,0 +1,323 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/textcolorprimary"
+                android:src="@drawable/ic_baseline_close_24" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_scheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:justificationMode="none"
+            android:text="Gold Plus 11+1 Plan"
+            android:textColor="@color/textcolorprimary"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/tvaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_scheme"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_passbook">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" Recommended Monthly Amount"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/recomendtotalamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text=" Total Item Amount"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ecomitemtotalamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="0dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Your Monthly Amount"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ecommonthlyamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Your Total Payment"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ecomsubtotalpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Period of 11 months"
+                    android:textColor="@color/LightBrown"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/ecomsubtotaldiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="@color/LightBrown"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100% Discount on 12th installment"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ecomgst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100% of 1 month installment value "
+                    android:textColor="@color/LightBrown"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/ecomsubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/LightBrown"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="20dp"-->
+            <!--                android:layout_marginRight="20dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:text="VA"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/ecomva"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentRight="true"-->
+            <!--                    android:layout_marginLeft="20dp"-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:text=""-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="12sp" />-->
+            <!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grand Total"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ecomgrandtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvaddress"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_subscribe"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/buttonbackground"
+                android:text=" Subscribe to Gold plus plan "
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

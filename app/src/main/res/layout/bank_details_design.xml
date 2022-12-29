@@ -1,0 +1,101 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_layout"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_account_no"
+            android:textSize="16sp"
+            android:text="AC/No"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_delete"-->
+<!--            android:tint="@color/colorWhite"-->
+<!--            android:src="@drawable/delete"-->
+<!--            android:gravity="end"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:tint="@color/colorWhite"-->
+<!--            tools:ignore="UseAppTint" />-->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_beneficary_name"
+            android:textSize="16sp"
+            android:text="AC/No"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:textSize="14sp"
+            android:text="AC/No"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_branch"
+            android:textSize="16sp"
+            android:text="AC/No"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_ifsc"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:textSize="14sp"
+            android:text="AC/No"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+
+</LinearLayout>

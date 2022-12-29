@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activitys.Card.CardHome">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/backbtn"
+                    android:src="@drawable/arrowleft"/>
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldsikka_logo2" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/unamee"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="4dp"
+            android:background="@color/lightgray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/cwish"
+                android:text=""/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/uname"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/relaodicon"
+            android:scaleX="-1"
+            android:background="@drawable/roungbg"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardElevation="20dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/app_color"
+        app:cardCornerRadius="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:id="@+id/topsec">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center"
+                android:id="@+id/gicon"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/gicon"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gtv"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:text="GoldSikka"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_below="@id/gtv"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/cardwifii" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/goldchip"
+                android:layout_below="@id/topsec"
+                android:layout_marginTop="20dp"
+                android:id="@+id/gchip"
+                android:outlineProvider="background"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/accno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gchip"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:shadowColor="@color/black"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:text="1234 5678 9012 3456"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/accno"
+                android:layout_marginStart="22dp"
+                android:text="1234"
+                android:id="@+id/accdup"
+                android:textSize="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_below="@id/accdup"
+                android:id="@+id/goodthru"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="8dp"
+                        android:text="GOOD THRU"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10/15"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/cuname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goodthru"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_above="@id/visagoldtv"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/visacard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="12dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:id="@+id/visagoldtv"
+                android:textAllCaps="true"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/piecharticon"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insight Trend"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@color/gray"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/tsellgold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/cgrams"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="+4.23% vs last week"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/dollaricon"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="Buy Gold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/newtransfer"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="Transfer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/newredeem"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="Redeem"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/loyality"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="Loyality Points"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Transactions"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:id="@+id/rct"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="@color/gray"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/rct">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dollaricon"
+                    android:padding="12dp"
+                    android:background="@drawable/roungbg"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buy Gold to say yes"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On 25th jan"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹2841"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹175449"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹714"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹20"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹20"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹20"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dollaricon"
+                        android:padding="12dp"
+                        android:background="@drawable/roungbg"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Gold to say yes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On 25th jan"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- ₹20"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

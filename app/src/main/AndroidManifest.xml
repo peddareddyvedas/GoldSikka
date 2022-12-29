@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.goldsikka.goldsikka">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application xmlns:android="http://schemas.android.com/apk/res/android"
+        android:allowBackup="true"
+        android:configChanges="locale|orientation"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.AppCompat"
+        android:usesCleartextTraffic="true"
+        tools:ignore="RedundantNamespace"
+        tools:targetApi="n">
+        <receiver
+            android:name=".Activitys.MySMSBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".Fragments.JewelleryInventory.JewelleryPassbook"
+            android:exported="false" />
+        <activity
+            android:name=".Fragments.JewelleryInventory.JewelleryHome"
+            android:exported="false" />
+        <activity
+            android:name=".Fragments.JewelleryInventory.Wishlist_Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.JewelleryInventory.SubCatagory_Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.JewelleryInventory.ProductDescription"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Card.CardHome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.ReceiptActivity"
+            android:exported="false" /> <!-- <receiver android:name=".Utils.SMSRecieve"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".Activitys.JewelleryExpo"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.MPIN"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.Refer_Earn_List"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.NotificationList"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.HappyCustomers"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.FeedbackForm"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Activitys.RazorpayPayment" /> <!-- android:parentActivityName=".NewDesignsActivity.MainFragmentActivity" -->
+        <activity
+            android:name=".Activitys.MoneyWallet.AddMonet_to_Wallet"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.EntryPin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activitys.CreatePIN"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OrganizationWalletModule.DonateGold"
+            android:parentActivityName=".OrganizationWalletModule.OrganizationsList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrgProfileEditList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.ORZProfileEdit"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ComingSoon"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.RecivedEventInfo"
+            android:parentActivityName=".Activitys.Events.RecivedEventList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.SentlistActivity"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.ContactsforEvents"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.RecivedEventList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.SchemeNicknameAdd"
+            android:parentActivityName=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.TicketList"
+            android:parentActivityName=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.NextMMiPaymentForSchems"
+            android:parentActivityName=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.SchemeTicket"
+            android:parentActivityName=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Withdraw_popup"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".NewDesignsActivity.EnquiryandSupport"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GrayStatusBar" />
+        <activity
+            android:name=".Activitys.ReadMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GrayStatusBar" />
+        <activity
+            android:name=".Activitys.ChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.ForgotChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.ForgotOtp"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.CopanyDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Coupons.CouponsList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.PaymentError"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.EventDetails"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.EventGift"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.UpdateEvent"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.EventConformation"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.Eventinfo"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.CreateEvents"
+            android:parentActivityName=".Activitys.Events.Eventlist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Events.Eventlist"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.TransactionInvoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.AddBankDetailsForReferral"
+            android:parentActivityName=".Activitys.ReferAndEarnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.ReferralDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.ReferAndEarnActivity"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.SpecialModule.SeasonSale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.SpecialModule.WomensplActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- <activity -->
+        <!-- android:name=".Activitys.Events.EventQRCodeScanner" -->
+        <!-- android:parentActivityName=".Activitys.Events.CreateEvents" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> &lt;!&ndash; <activity &ndash;&gt; -->
+        <!-- android:name=".Activitys.PurchaseEnquiryForm" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Activitys.BusinessEnquiryForm" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Activitys.CountactUsForm" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> -->
+        <activity
+            android:name=".AddBankDetailsForSellModule"
+            android:parentActivityName=".Fragments.Sell_Fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".AddAddressForReedemModule"
+            android:parentActivityName=".Fragments.Reedem_fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.GiftModuleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Profile.CustomerEditAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Profile.CustomerAddressList"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Profile.CustomerAddAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Predict_price.PredictionTermsCondtion"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Verifyaccount_Class"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Predict_price.Predict_EditAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Predict_price.Predict_price_address"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Predict_price.predictprice_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Predict_price.Predicted_List"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.opencart_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- <activity android:name=".Activitys.OnBoardScreen"> -->
+        <!--  -->
+        <!-- </activity> -->
+        <activity
+            android:name=".Activitys.Elevenplus_Jewellery"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Mygold2020Form_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Nominee_Details"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Kyc_Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Edit_CustomerBankdetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Edit_CustomerAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Profile_Details"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.Passbook_Activity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.OTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Fragments.MainFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.LoginActivity"
+            android:exported="true"
+            android:parentActivityName=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activitys.OnBoardScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GrayStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".FirebaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activitys.RegistationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Buy_Gold_Information"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Buy_Digitalgold"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" /> -->
+        <activity
+            android:name=".Activitys.InvoicePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Digital_wallet_fragment"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Sell_Fragment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Reedem_fragment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.TransferGold"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.Scheme_Content_Fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GrayStatusBar" />
+        <activity
+            android:name=".Fragments.Aboutusfragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Business_Associates"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.FAQsFragment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Company_Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.orderslist"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.FAQ_Questions_Answers"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Nominee_details_fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Customer_AddBankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Customer_BankDetailslist"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Edit_coustomer_details"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Get_kyc_details_fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Digital_Feature"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Digital_Terms_Condition"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.Scheme_features"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.Scheme_Faqs_Fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.Scheme_TermsandCondition"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Mygold2020.Get_scheme"
+            android:parentActivityName=".Fragments.Schemes.Schemes_usersubscribed_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Successpopup"
+            android:launchMode="singleTop"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activitys.GetContacts.ContactList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Predictions.prediction_TermsConditions"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommRecipt_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <activity
+            android:name=".Fragments.Ecommerce.EcomSubcategory"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Fragments.Ecommerce.Ecomfavouritiesactivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Fragments.Ecommerce.EcommProductzoom"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Fragments.Ecommerce.Ecommproductdiscreption"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.Ecommunderproductprice_Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Fragments.Ecommerce.EcommBrandListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommCartActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommCheckout_Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommTrackingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommMyOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommPaymentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Fragments.Ecommerce.EcommSuccessPopup"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Fragments.Ecommerce.EcommProductInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <activity
+            android:name=".Directory.DirectoryHomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectoryStoreDetails"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectoryViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.GiftCardActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubTagsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubTopActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubStoneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubRandomActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubPawnActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubGoldsmithActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.DirectorySubbullionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Directory.DirectrotyStoreReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Directory.DirectoryReviewslistActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Directory.Adapters.DirectoryImageurlsAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Directory.Adapters.DirectoryStoreVideoAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".Directory.Adapters.DirectoryStoreProfileAdapter"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
+
+
+
+
+        <!-- test rzp_test_0VM20Pg2VIA2aR -->
+        <!-- live 06-04-21    rzp_live_uvxtS5LwJPMIOP, rzp_test_0VM20Pg2VIA2aR -->
+        <!--        rzp_live_uvxtS5LwJPMIOP-->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="test rzp_test_0VM20Pg2VIA2aR" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBaG-gexC0oYxFXVQAc4GcIHdQUQ3MeU6o" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/pushnotificationicon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Fragments.Forgotpassword_Fragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".NewDesignsActivity.GiftContactList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.Organizationwallet_mainpage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationAddKycDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationBankDetails"
+            android:parentActivityName=".OrganizationWalletModule.Organizationwallet_mainpage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationBusinessAssociates"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationCompanyDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationContactUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationKYCdetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationPassbookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationReadmore"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationRedeemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationVisionMissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationTransactionInvoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationAddAddress"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationAddressList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationAddBankDetails"
+            android:parentActivityName=".OrganizationWalletModule.OrganizationBankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationUpdateBankDetails"
+            android:parentActivityName=".OrganizationWalletModule.OrganizationBankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.OrganizationsList"
+            android:parentActivityName=".NewDesignsActivity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".OrganizationWalletModule.TempleAndNGOsDetails"
+            android:parentActivityName=".OrganizationWalletModule.OrganizationsList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

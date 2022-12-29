@@ -1,0 +1,66 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:theme="@style/navigation_color"
+    app:popupTheme = "@style/DrawerArrowStyle"
+    android:background="@color/primarybackground"
+    tools:openDrawer="start">
+
+
+    <include
+        layout="@layout/app_bar_main"
+        android:id="@+id/llcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <com.etebarian.meowbottomnavigation.MeowBottomNavigation-->
+<!--            android:id="@+id/mbn_idnav"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            app:mbn_backgroundBottomColor="@color/primarybackground"-->
+<!--            app:mbn_countBackgroundColor="@color/primarybackground"-->
+<!--            app:mbn_defaultIconColor="@color/buttoncolor"-->
+<!--            app:mbn_selectedIconColor="@color/textcolorprimary"-->
+<!--            app:mbn_countTextColor="@color/textcolorprimary"-->
+<!--            app:mbn_shadowColor="@color/colorPrimary"-->
+<!--            android:elevation="10dp"-->
+<!--            android:focusableInTouchMode="true"-->
+<!--            app:mbn_circleColor="@color/buttoncolor"-->
+<!--            app:mbn_rippleColor="#CD5C54">-->
+
+<!--        </com.etebarian.meowbottomnavigation.MeowBottomNavigation>-->
+<!--    </RelativeLayout>-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/secondrybackground"
+        android:fitsSystemWindows="true"
+        android:screenReaderFocusable="true"
+        app:itemIconPadding="10dp"
+        app:itemIconTint="@color/textcolorprimary"
+        app:itemTextColor="@color/textcolorblack"
+        android:theme="@style/navigation_color"
+        app:popupTheme = "@style/DrawerArrowStyle"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/nav_menu">
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+

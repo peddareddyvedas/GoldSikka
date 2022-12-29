@@ -1,0 +1,380 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:id="@+id/toolbar"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dr1"
+                    android:src="@drawable/goldsikka_logo2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:id="@+id/title"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/DarkBrown" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:gravity="end"
+                        android:id="@+id/uname"
+                        android:textColor="@color/Gold"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/uid"
+                        android:gravity="end"
+                        android:textColor="@color/Gold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Your Bank Details "
+                    android:gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/textcolorprimary"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_border">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_baseline_account_balance_wallet_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_accountname"
+                                android:inputType="text"
+                                android:textColor="@color/textcolorprimary"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#00000000"
+                                android:hint="Account Holder Name"
+                                android:textSize="18sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_accountname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_border">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_door_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_accountnumber"
+                                android:inputType="number"
+                                android:textColor="@color/textcolorprimary"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#00000000"
+                                android:hint="Account Number"
+                                android:textSize="18sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_accountnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_border">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_bank_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_bankname"
+                                android:inputType="text"
+                                android:backgroundTint="#00000000"
+                                android:textColor="@color/textcolorprimary"
+                                android:layout_gravity="center"
+                                android:hint="Bank Name"
+                                android:textSize="18sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_bankname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_border">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_branch_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_bankbranch"
+                                android:inputType="text"
+                                android:textColor="@color/textcolorprimary"
+                                android:layout_gravity="center"
+                                android:hint="Branch Name"
+                                android:backgroundTint="#00000000"
+                                android:textSize="18sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_bankbranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_border">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_edit_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_ifsccode"
+                                android:inputType="text"
+                                android:textColor="@color/textcolorprimary"
+                                android:layout_gravity="center"
+                                android:hint="IFSC Code"
+                                android:backgroundTint="#00000000"
+                                android:textSize="18sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_ifsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/loading_gif"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:tint="@color/primarybackground"
+                        android:src="@drawable/loading_gif" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBackground"
+                        android:background="@drawable/buttonborder"
+                        android:layout_margin="10dp"
+                        android:text="Add"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardunderproduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="2dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/newarrivalimg"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:transitionName="pimgtransition" />
+
+        <ImageView
+            android:id="@+id/selectwish"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newarrivalimg">
+
+            <TextView
+                android:id="@+id/newarrivalname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:ellipsize="end"
+                android:lines="2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/rrr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newarrivalname">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/colorBlue"
+                    android:src="@drawable/tsellgold" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rrr"
+                android:layout_marginBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="scbb"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp">
+
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardunderproduct"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="@color/LightBrown"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="10dp">
+
+
+            <ImageView
+                android:id="@+id/newarrivalimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/textcolorblack"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_mainlogo" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardunderproduct"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/newarrivalname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="₹ 20,000"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/productprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="₹ 20,000"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </RelativeLayout>-->

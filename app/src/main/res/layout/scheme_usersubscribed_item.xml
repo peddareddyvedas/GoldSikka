@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/cardview"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="@color/LightBrown2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/schemecoins"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/DarkBrown"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="8dp"
+                        android:text=""
+                        android:textColor="@color/DarkBrown"
+                        android:textSize="18dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/Gold"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/tvnickname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/nickname_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/add_nickname"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llnickremove"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="15dp"
+                        android:tint="@color/colorWhite"
+                        android:src="@drawable/ic_delete_24"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Remove"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/LightBrown2"/>
+
+                <LinearLayout
+                    android:id="@+id/tvmore"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/info_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/more_info"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

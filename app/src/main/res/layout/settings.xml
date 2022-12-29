@@ -1,0 +1,639 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primarybackground"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/usetname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/useremail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/userid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/LightBrown">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="Account"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/uname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="sdfsdf" />
+
+                        <TextView
+                            android:id="@+id/uid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="dfwdf" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tveditprofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/editnew"
+                    android:drawablePadding="12dp"
+                    android:text="Edit Profile"
+                    android:textColor="@color/DarkBrown"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvtest3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/lang"
+                    android:drawablePadding="12dp"
+                    android:text="Language"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvbankdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/bankicon"
+                    android:drawablePadding="12dp"
+                    android:text="Bank Details"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvnominee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/nomineeicon1"
+                    android:drawablePadding="12dp"
+                    android:text="Nominee"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvkyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/kycicon"
+                    android:drawablePadding="12dp"
+                    android:text="KYC"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/moneywallet"
+                    android:drawablePadding="12dp"
+                    android:text="Address"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+
+                <TextView
+                    android:id="@+id/tvchangepass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/changepassword"
+                    android:drawablePadding="12dp"
+                    android:text="Change Password"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/changepassword"
+                        android:drawablePadding="12dp"
+                        android:text="@string/App_Lock"
+                        android:textColor="@color/DarkBrown"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/applockswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+                <TextView
+                    android:id="@+id/tvgiftcards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/ic_giftc"
+                    android:drawablePadding="12dp"
+                    android:text="My Gift Cards"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/LightBrown">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="General"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvsupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/help"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Support"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvterms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/terms"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Terms_Conditions"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                <TextView
+                    android:id="@+id/tvlogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/logout"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Log_Out"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LightBrown2" />
+
+                /////////////////
+
+                <TextView
+                    android:id="@+id/tvmoneywallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/moneywallet"
+                    android:drawablePadding="12dp"
+                    android:text="Booking Account"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvmoneywallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/moneywallet"
+                    android:drawablePadding="12dp"
+                    android:text="Booking Account"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvfeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/feedback"
+                    android:drawablePadding="12dp"
+                    android:text="Feedback"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvchangepass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/changepassword"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Change_Password"
+
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvrefer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/friends"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Invite_Friends"
+                    android:textColor="@color/DarkBrown"
+
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvsupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/help"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Support"
+                    android:textColor="@color/DarkBrown"
+
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvterms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/terms"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Terms_Conditions"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/changepassword"
+                        android:drawablePadding="12dp"
+                        android:text="@string/App_Lock"
+                        android:textColor="@color/DarkBrown"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/applockswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvlogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableStart="@drawable/logout"
+                    android:drawablePadding="12dp"
+                    android:text="@string/Log_Out"
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/LightBrown2"
+
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

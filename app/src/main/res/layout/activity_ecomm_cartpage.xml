@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/LightBrown2" />
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/linearlayoutbackground">
+
+        <TextView
+            android:id="@+id/walletbalace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llopencoupon"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rr"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/contentboxbackground"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/badge_icon"
+            android:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/giftcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="@string/apply_gift"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:singleLine="true"
+                    android:text="Remove"
+                    android:textColor="@color/colorRed"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/addgift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="Add"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+            <!--  <ImageView
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginTop="8dp"
+                  android:src="@drawable/arrow_icon"
+                             android:layout_marginRight="10dp"
+       android:tint="@color/black" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llopencoupon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/etcoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llopencoupon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/coupons_bg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etcouponcoode"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/apply_gift"
+            android:paddingLeft="12dp"
+            android:textColor="@color/DarkBrown"
+            android:textColorHint="@color/LightBrown"
+            android:textSize="14dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvofflineapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@string/apply"
+            android:textColor="@color/Gold"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/etcoupon"
+
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclercart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/notfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="50dp"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/an1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/an1"
+                        android:layout_centerHorizontal="true"
+                        android:text="No Data Found"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/productbuttonbackground">
+
+            <TextView
+                android:id="@+id/totalamounttext"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Total Amount :"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/carttotal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalamounttext"
+                android:layout_marginLeft="20dp"
+                android:text="₹ 0"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/carttotal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="Exl GST% and VA% "
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_background"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

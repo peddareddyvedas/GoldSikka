@@ -1,0 +1,374 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldsikka_logo2" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/DarkBrown"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/Gold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Your Address"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/textcolorprimary"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_border"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_baseline_list_alt_24"/>
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spin_title"
+                            android:backgroundTint="@color/textcolorprimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_hint="Select Address Type"
+                            app:ms_hintColor="@color/textcolorprimary"
+                            app:ms_hintTextSize="20sp"
+                            android:dropDownSelector="@color/textcolorprimary"
+                            app:ms_floatingLabelColor="@color/textcolorprimary"
+                            app:ms_highlightColor="@color/textcolorprimary"
+                            app:ms_arrowColor="@color/textcolorprimary"
+                            app:ms_baseColor="@color/textcolorprimary" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/address_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_baseline_home_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/textcolorprimary"
+                                android:hint="Address"
+                                android:id="@+id/et_customeraddress"
+                                android:textColor="@color/textcolorprimary"
+                                android:textColorHint="@color/textcolorprimary"
+                                android:textSize="18sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_erroraddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_baseline_location_city_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+
+                            <EditText
+                                android:id="@+id/et_customercity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/textcolorprimary"
+                                android:hint="City"
+                                android:inputType="text"
+                                android:textColor="@color/textcolorprimary"
+                                android:textColorHint="@color/textcolorprimary"
+                                android:textSize="18sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_streetview_24"/>
+
+                    <!--                    <fr.ganfra.materialspinner.MaterialSpinner-->
+                    <!--                        android:id="@+id/spin_state"-->
+                    <!--                        android:backgroundTint="@color/textcolorprimary"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:ms_hint="Select State"-->
+                    <!--                        app:ms_hintColor="@color/textcolorprimary"-->
+                    <!--                        app:ms_hintTextSize="20sp"-->
+                    <!--                        android:dropDownSelector="@color/textcolorprimary"-->
+                    <!--                        app:ms_floatingLabelColor="@color/textcolorprimary"-->
+                    <!--                        app:ms_highlightColor="@color/textcolorprimary"-->
+                    <!--                        app:ms_arrowColor="@color/textcolorprimary"-->
+                    <!--                        app:ms_baseColor="@color/textcolorprimary" />-->
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spin_state"
+                        android:backgroundTint="@color/textcolorprimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_hint="Select State"
+                        app:ms_hintColor="@color/textcolorprimary"
+                        app:ms_hintTextSize="20sp"
+                        android:dropDownSelector="@color/textcolorprimary"
+                        app:ms_floatingLabelColor="@color/textcolorprimary"
+                        app:ms_highlightColor="@color/textcolorprimary"
+                        app:ms_arrowColor="@color/textcolorprimary"
+                        app:ms_baseColor="@color/textcolorprimary" />
+                    <TextView
+                        android:id="@+id/tv_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/ic_baseline_fiber_pin_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/EditTextThemeOverlay"
+                            android:textColorHint="@color/textcolorprimary">
+
+                            <EditText
+                                android:id="@+id/et_pincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/primarybackground"
+                                android:hint="Zip Code"
+                                android:inputType="number"
+                                android:textColor="@color/textcolorprimary"
+                                android:textColorHint="@color/textcolorprimary"
+                                android:textSize="18sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        android:textColor="#E41708"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/loading_gif"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:tint="@color/primarybackground"
+                        android:src="@drawable/loading_gif" />
+                    <Button
+                        android:id="@+id/btn_addaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/buttonborder"
+                        android:textColor="@color/textcolorprimary"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:text="Add"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

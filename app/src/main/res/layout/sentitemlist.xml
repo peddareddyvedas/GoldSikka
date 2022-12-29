@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:backgroundTint="@color/cardcolor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/contact_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/contactname"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Suresh babu"-->
+<!--                            android:textSize="16dp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@color/Gold"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_weight="1"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="@string/event_name"-->
+                        <!--                        android:textSize="14dp"-->
+                        <!--                        android:textColor="@color/darkbrown"-->
+                        <!--                        android:layout_marginTop="10dp"-->
+                        <!--                        android:layout_marginLeft="10dp"/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tveventname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/DarkBrown"
+                            android:layout_marginLeft="10dp"/>
+
+                        <!--                    <TextView-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_weight="1"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="@string/event_name"-->
+                        <!--                        android:textSize="14dp"-->
+                        <!--                        android:textColor="@color/darkbrown"-->
+                        <!--                        android:layout_marginTop="10dp"-->
+                        <!--                        android:layout_marginLeft="10dp"/>-->
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text=""-->
+<!--                            android:textSize="14dp"-->
+<!--                            android:textColor="@color/DarkBrown"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+                        <TextView
+                            android:id="@+id/tvnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/DarkBrown"
+                            android:layout_marginLeft="10dp"/>
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/time"-->
+<!--                            android:textSize="14dp"-->
+<!--                            android:textColor="@color/DarkBrown"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvtime"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="15:35"-->
+<!--                            android:textSize="14dp"-->
+<!--                            android:textColor="@color/DarkBrown"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:layout_marginLeft="10dp"/>-->
+
+<!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_marginTop="-60dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:src="@drawable/wave"
+                            android:scaleType="fitEnd"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

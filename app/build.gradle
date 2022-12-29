@@ -1,0 +1,159 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.goldsikka.goldsikka"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 25
+        versionName "1.84"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    defaultConfig {
+//        resConfigs "en", "hi", "kn"
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+
+
+    implementation 'com.squareup.picasso:picasso:2.5.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.google.android.material:material:1.2.1'
+//    implementation 'com.google.android.material:material:1.7.0-alpha01'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    //   implementation 'com.github.barteksc:android-pdf-viewer:2.0.3';
+
+    implementation 'com.razorpay:checkout:1.6.18'
+    // implementation 'com.razorpay:checkout:1.6.4'
+
+    implementation 'org.jsoup:jsoup:1.10.2'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.squareup.retrofit:converter-gson:2.0.0-beta1'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.4'
+
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    implementation 'me.spark:submitbutton:1.0.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+
+    implementation 'com.mixpanel.android:mixpanel-android:5.9.6'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61"
+    implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.0.6"
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    implementation 'com.google.android.gms:play-services-tagmanager:17.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.0.1'
+
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+
+    implementation 'com.facebook.android:facebook-android-sdk:8.2.0'
+
+    implementation 'com.facebook.android:facebook-core:8.2.0'
+    implementation 'com.facebook.android:facebook-login:8.2.0'
+    implementation 'com.facebook.android:facebook-share:8.2.0'
+    implementation 'com.facebook.android:facebook-messenger:8.2.0'
+    implementation 'com.facebook.android:facebook-applinks:8.2.0'
+
+
+//    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.karumi:dexter:6.2.2'
+
+//    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation 'com.google.guava:guava:24.1-jre'
+
+    implementation 'com.github.florent37:diagonallayout:1.0.9'
+
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'com.airbnb.android:lottie:5.0.3'
+//    compile 'com.github.faruktoptas:FancyShowCaseView:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+
+    // implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.jsibbold:zoomage:1.2.0'
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

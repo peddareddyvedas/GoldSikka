@@ -1,0 +1,25 @@
+<LinearLayout
+    android:background="@color/Gold"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:src="@drawable/bullet"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/tv_content1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:text="Content1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

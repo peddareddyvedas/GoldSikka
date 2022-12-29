@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#646464">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorRed"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Please Select an Option"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cccccc"
+                android:paddingLeft="30dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/txt_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="Camera"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cccccc"
+                android:paddingLeft="30dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/album"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/txt_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="Album"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btn_no"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="190dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/txt_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="240dp" />
+
+</RelativeLayout>
+
+

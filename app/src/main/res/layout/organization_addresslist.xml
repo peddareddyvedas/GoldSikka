@@ -1,0 +1,95 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/DarkBrown"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        </androidx.appcompat.widget.Toolbar>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/LightBrown2"/>
+        <LinearLayout
+            android:visibility="gone"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:id="@+id/ll_addressempty"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/locationicon"
+                android:tint="@color/LightBrown"
+                tools:ignore="UseAppTint" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:textColor="@color/DarkBrown"
+                android:text="@string/empty_address_content"
+                android:justificationMode="inter_word"/>
+
+            <Button
+                android:id="@+id/lladd_address"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="117dp"
+                android:layout_marginRight="117dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"
+                android:text="@string/Add_Address"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_list"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

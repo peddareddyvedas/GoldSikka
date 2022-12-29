@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/arrowleft" />
+
+                <ImageView
+                    android:id="@+id/dr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/goldsikka_logo2" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/DarkBrown"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/uid"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/Gold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/LightBrown2" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/linearlayoutbackground"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Order Id :"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/orderid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="26725256"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trackrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/pdfdownload"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/Gold"
+        android:text="Next"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/view_order_placed"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/view_order_placed"
+            android:text="Transaction Sucessfull"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/placed_divider"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_order_placed"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/LightBrown" />
+
+        <ImageView
+            android:id="@+id/view_order_placed1"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/placed_divider"
+
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placed_divider"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/view_order_placed1"
+            android:text="Order Placed at Goldsikka"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placed_divider1"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_order_placed1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/LightBrown" />
+
+        <ImageView
+            android:id="@+id/view_order_placed2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/placed_divider1"
+
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text3"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placed_divider1"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/view_order_placed2"
+            android:text="Order Accepted at Goldsikka"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placed_divider2"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_order_placed2"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/LightBrown" />
+
+        <ImageView
+            android:id="@+id/view_order_placed3"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/placed_divider2"
+
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text4"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placed_divider2"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/view_order_placed3"
+            android:text="Your Order is in Making"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placed_divider3"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_order_placed3"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/LightBrown" />
+
+        <ImageView
+            android:id="@+id/view_order_placed4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/placed_divider3"
+
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text5"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placed_divider3"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/view_order_placed4"
+            android:text="Order is Ready to Pickup"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/placed_divider4"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_order_placed4"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/LightBrown" />
+
+        <ImageView
+            android:id="@+id/view_order_placed5"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/placed_divider4"
+
+            android:background="@drawable/shape_completed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text6"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placed_divider4"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/view_order_placed5"
+            android:text="Your Order is Delivery"
+            android:textColor="@color/LightBrown"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

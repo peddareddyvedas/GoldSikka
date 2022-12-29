@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="banner_height">300dp</dimen>
+    <dimen name="view_padding">16dp</dimen>
+    <dimen name="view_padding_small">8dp</dimen>
+    <dimen name="view_padding_thin">4dp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="padding_8">8</dimen>
+    <dimen name="text_size_15">15</dimen>
+    <dimen name="margin_5">5</dimen>
+    <dimen name="margin_20">20</dimen>
+    <dimen name="text_size_16">16</dimen>
+    <dimen name="text_size_20">20</dimen>
+    <dimen name="layout_60">60</dimen>
+    <dimen name="margin_40">40</dimen>
+    <dimen name="margin_12">12</dimen>
+    <dimen name="padding_12">12</dimen>
+    <dimen name="text_size_18">18</dimen>
+</resources>

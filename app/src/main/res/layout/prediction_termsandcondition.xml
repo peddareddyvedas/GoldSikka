@@ -1,0 +1,34 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:id="@+id/frame_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/textcolorprimary"
+                    android:textSize="14dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_terms_condition"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <!--    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Address"
+        android:textColor="@color/textcolorprimary"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:backgroundTint="@color/textcolorprimary"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="1sp"
+        android:layout_marginLeft="1sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:buttonTint="@color/textcolorprimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_address"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/customer_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxx"
+                        android:textSize="18dp"
+                        android:textColor="@color/primarybackground"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvcity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxx"
+                        android:textSize="18dp"
+                        android:textColor="@color/primarybackground"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvstate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxx"
+                        android:textSize="18dp"
+                        android:textColor="@color/primarybackground"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="xxxxxx"
+                        android:textSize="18dp"
+                        android:textColor="@color/primarybackground"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_add_24"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:textColor="@color/textcolorprimary"
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More address"
+            android:textSize="18dp"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_margin="20sp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/id_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonborder"
+        android:text="payment"
+        android:textColor="@color/textcolorprimary"
+        android:textSize="15sp"/>
+    <!--</ScrollView>-->
+</LinearLayout>

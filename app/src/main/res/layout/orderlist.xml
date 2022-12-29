@@ -1,0 +1,62 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearlayout"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/shopping_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:tint="@color/primarybackground"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColorHint="@color/textcolorprimary"
+                        android:hint="No Items Added"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/ll_cardlist">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_orderproductitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

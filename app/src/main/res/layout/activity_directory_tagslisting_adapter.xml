@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listcard"
+        android:layout_width="310dp"
+        android:layout_height="130dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/tagsimg"
+            android:layout_width="90dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/viewgradient"
+            android:orientation="vertical"
+            android:paddingStart="90dp"
+            android:scaleType="fitXY">
+
+            <TextView
+                android:id="@+id/tagstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="gsgdg"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tagsdiscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/ratinglayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/ratingtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="4.4"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="23dp"
+                    android:background="@drawable/ic_goldstar"
+                    android:layout_marginLeft="5dp" />
+
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratings"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:max="5"
+                    android:visibility="gone"
+                    android:scaleX=".6"
+                    android:scaleY=".6"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-3dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Open: "
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/opentime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Close: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/closetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
