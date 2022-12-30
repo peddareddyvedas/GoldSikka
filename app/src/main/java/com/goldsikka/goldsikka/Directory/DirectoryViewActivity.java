@@ -392,9 +392,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
                     startActivity(mapIntent);
                 }
             });
-
         }
-
 
         @Override
         public int getItemCount() {
@@ -483,6 +481,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
             Listmodel listmodel = viewitemlist.get(position);
             String tags = listmodel.getTags();
             //  holder.tv_tags.setText(tags);
+            Log.e("servertags", "" + listmodel.getTags());
 
             if (listmodel.getTags() != null) {
                 holder.viewbtn.setVisibility(View.VISIBLE);
