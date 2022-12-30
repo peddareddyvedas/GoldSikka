@@ -284,6 +284,18 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
             String image = listmodel.getImage();
             String mobile = listmodel.getMobile();
             String ratingtv = listmodel.getRating();
+            String tags = listmodel.getTags();
+
+            Log.e("servertags", "" + listmodel.getTags());
+            if (listmodel.getTags() != null) {
+                holder.tv_tags.setVisibility(View.VISIBLE);
+                holder.tv_tags.setText(tags);
+
+            } else {
+                holder.tv_tags.setVisibility(View.GONE);
+                holder.tv_tags.setText("");
+
+            }
 
             if (listmodel.getRating() != null) {
                 holder.ratinglayout.setVisibility(View.VISIBLE);
@@ -406,7 +418,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
 
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
             ImageView iv_categoryimg;
-            TextView tv_category, tvdiscription, ratingtext, tv_opentime, tv_closetime;
+            TextView tv_category, tvdiscription, ratingtext, tv_opentime, tv_closetime, tv_tags;
             LinearLayout callnowbtn, diections;
             RecyclerView listbtnRV;
             DirectoryReviewsAdapter directoryReviewsAdapter;
@@ -428,6 +440,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
                 tv_opentime = itemView.findViewById(R.id.opentimeing);
                 tv_closetime = itemView.findViewById(R.id.closetimeing);
                 ratinglayout = itemView.findViewById(R.id.ratinglayout);
+                tv_tags = itemView.findViewById(R.id.tv_tags);
 
             }
 
