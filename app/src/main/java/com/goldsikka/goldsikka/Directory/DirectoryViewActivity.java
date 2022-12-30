@@ -290,6 +290,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
             if (listmodel.getTags() != null) {
                 holder.tv_tags.setVisibility(View.VISIBLE);
                 holder.tv_tags.setText(tags);
+                /////newchange
 
             } else {
                 holder.tv_tags.setVisibility(View.GONE);
