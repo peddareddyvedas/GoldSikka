@@ -818,6 +818,8 @@ public class LoginActivity extends BaseActivity implements baseinterface, Google
         Log.e("AccessToken", rs_accesstoken);
         intent.putExtra("roleId", roleId);
         intent.putExtra("uuid", deviceid);
+        intent.putExtra("mobilenumber", stmobile);
+
         startActivity(intent);
         finish();
 
