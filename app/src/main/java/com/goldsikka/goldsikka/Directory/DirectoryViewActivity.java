@@ -75,7 +75,7 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
     String cid;
     String toname;
     RelativeLayout notfound;
-    /// jp Change for testing 
+    /// jp Change for testing
 
 
     @Override
