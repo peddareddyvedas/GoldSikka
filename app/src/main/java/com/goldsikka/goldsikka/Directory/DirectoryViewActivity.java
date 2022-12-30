@@ -57,16 +57,12 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
     TextView unameTv, uidTv, titleTv;
     RelativeLayout backbtn;
     RecyclerView viewrv;
-
     DirectoryViewDetailsAdapter viewItemDetailsAdapter;
-
     List<Listmodel> flist;
-
     EditText searchview;
     ArrayList<Listmodel> viewlistfilter;
     ArrayList<Listmodel> viewitemlist;
     ArrayList<Listmodel> ratinglist;
-
     SwipeRefreshLayout swipeRefresh;
     private int currentPage = PAGE_START;
     private boolean isLastPage = false;
@@ -79,22 +75,20 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
     String cid;
     String toname;
     RelativeLayout notfound;
+    /// jp Change for testing 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directory_view);
-
         bundle = getIntent().getExtras();
         id = bundle.getString("id");
         Log.e("id", "" + id);
         toname = bundle.getString("category");
         Log.e("toname", "" + toname);
-
         initt();
 //        gettimings();
-
     }
 
     private void initt() {
@@ -117,30 +111,23 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
                 onBackPressed();
             }
         });
-
-
         searchview.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void afterTextChanged(Editable name) {
                 viewlistfilter(name.toString());
-
-
             }
         });
 
         LocationTracker.getInstance().fillContext(getApplicationContext());
         LocationTracker.getInstance().startLocation();
-
         intilizerecyclerview();
         getViewItems(id);
     }
@@ -165,7 +152,6 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
 
         }
     }
-
 
     private void intilizerecyclerview() {
         swipeRefresh.setOnRefreshListener(this);
@@ -251,41 +237,29 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
 
     }
 
-
     public class DirectoryViewDetailsAdapter extends RecyclerView.Adapter<DirectoryViewDetailsAdapter.ViewHolder> {
-
         Context context;
         ArrayList<Listmodel> viewitemlist;
-
-
         public DirectoryViewDetailsAdapter(Context context, ArrayList<Listmodel> viewitemlist) {
             this.context = context;
             this.viewitemlist = viewitemlist;
         }
-
         @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             context = parent.getContext();
             View view = LayoutInflater.from(context).inflate(R.layout.activity_directory_view_details_adapter, parent, false);
-
-
             return new ViewHolder(view);
         }
-
-
         @SuppressLint({"UseCompatLoadingForDrawables", "NewApi"})
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
             Listmodel listmodel = viewitemlist.get(position);
-
             String name = listmodel.getStore_name();
             String image = listmodel.getImage();
             String mobile = listmodel.getMobile();
             String ratingtv = listmodel.getRating();
             String tags = listmodel.getTags();
-
             Log.e("servertags", "" + listmodel.getTags());
             if (listmodel.getTags() != null) {
                 holder.tv_tags.setVisibility(View.VISIBLE);
@@ -295,22 +269,16 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
             } else {
                 holder.tv_tags.setVisibility(View.GONE);
                 holder.tv_tags.setText("");
-
             }
-
             if (listmodel.getRating() != null) {
                 holder.ratinglayout.setVisibility(View.VISIBLE);
-
             } else {
                 holder.ratinglayout.setVisibility(View.GONE);
-
             }
             holder.ratingtext.setText(ratingtv);
             String open = listmodel.getStore_open_timings();
             String close = listmodel.getStore_close_timings();
             holder.tv_category.setText(name);
-
-
             Log.e("lmmmmm", "" + listmodel.getPname());
             Log.e("ddddddm", "" + listmodel.getPimg());
             Log.e("holderrating", "" + ratingtv);
@@ -319,7 +287,6 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
 //////////////
 
 // Get Hours
-
             try {
                 String _24HourTime = close;
                 SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
@@ -330,7 +297,6 @@ public class DirectoryViewActivity extends AppCompatActivity implements SwipeRef
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             try {
                 String _24HourTime = open;
                 SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
