@@ -1015,7 +1015,7 @@ public class Ecommproductdiscreption extends AppCompatActivity {
                     if (selectedPosition != position) {
                         selectedPosition = position;
                         notifyDataSetChanged();
-                    //    getEcomProductdisc(listmodel.getId());
+                        //    getEcomProductdisc(listmodel.getId());
 
                       /*  text = viewHolder.giftnamename.getText().toString();
                         etcouponcoode.setText(text);

@@ -28,16 +28,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
+import com.goldsikka.goldsikka.Activitys.AddBankDetailsForReferral;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
+import com.goldsikka.goldsikka.model.CheckoutModel;
 import com.goldsikka.goldsikka.model.Listmodel;
+import com.goldsikka.goldsikka.model.Sizes;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +68,8 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
     ApiDao apiDao;
     SwipeRefreshLayout swipe_layout;
     RelativeLayout notfound;
-
+    String ss = "";
+    ArrayList<String> ssss = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -115,7 +123,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
         ecomwishRecyclerview = findViewById(R.id.ecomwishlist_recyclerview);
 
         ecomwishRecyclerview.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
-        ecomwishAdapter = new EcommWishAdapter(wislistList);
+        ecomwishAdapter = new EcommWishAdapter(wislistList, ssss);
         ecomwishRecyclerview.setHasFixedSize(false);
 
         ecomwishRecyclerview.setAdapter(ecomwishAdapter);
@@ -148,13 +156,18 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
                 Log.e("favoustatuscode", String.valueOf(statuscode));
 //                assert response.body() != null;
                 flist = response.body();
+
+
                 dialog.dismiss();
                 if (statuscode == 200 || statuscode == 202) {
                     if (!flist.isEmpty()) {
-                        notfound.setVisibility(View.GONE);
-                        wislistList.addAll(flist);
-                        ecomwishRecyclerview.getRecycledViewPool().clear();
-                        ecomwishAdapter.notifyDataSetChanged();
+                        for (Listmodel listmodel : flist) {
+                            wislistList.clear();
+                            notfound.setVisibility(View.GONE);
+                            wislistList.addAll(flist);
+                            ecomwishRecyclerview.getRecycledViewPool().clear();
+                            ecomwishAdapter.notifyDataSetChanged();
+                        }
 
                     } else {
                         notfound.setVisibility(View.VISIBLE);
@@ -177,12 +190,14 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     public void onBackPressed() {
         // NavUtils.navigateUpFromSameTask(this);
         super.onBackPressed();
         // finish();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -193,9 +208,11 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
     //// main adapter/////
     private class EcommWishAdapter extends RecyclerView.Adapter<EcommWishAdapter.ViewHolder> {
         private List<Listmodel> wisList;
+        List<String> weilist;
 
-        public EcommWishAdapter(List<Listmodel> moviesList) {
+        public EcommWishAdapter(List<Listmodel> moviesList, ArrayList<String> wislistweight) {
             this.wisList = moviesList;
+            this.weilist = wislistweight;
         }
 
         @Override
@@ -212,7 +229,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
             Log.e("itemName", " " + position);
             Listmodel w = wisList.get(position);
             viewHolder.pnameTv.setText(w.getPname());
-            viewHolder.pweightTv.setText(w.getWeight() + " gms");
+//            viewHolder.pweightTv.setText(favweight + " gms");
             viewHolder.totalwhisprice.setText("₹" + w.getPrice());
             String pimg = w.getImage_uri();
             viewHolder.pid = w.getPid();
@@ -221,7 +238,13 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
             String getproductsize = w.getSize();
             Log.e("getproductsize", "" + getproductsize);
 
-
+            for (int i = 0; i < w.getSizes().size(); i++) {
+                Log.e("favouriteweight", "" + w.getSizes().get(i).getWeight());
+                ss = w.getSizes().get(i).getWeight();
+                Log.e("favweightss", "" + ss);
+                ssss.add(ss);
+            }
+            viewHolder.pweightTv.setText(ss + " gms");
             try {
                 Glide.with(getApplicationContext()).load(pimg).into(viewHolder.pimg);
             } catch (Exception ignored) {
@@ -293,6 +316,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
             }
         }
     }
+
     private void alertDialog(EcommWishAdapter.ViewHolder viewHolder, String pname, String id) {
         AlertDialog.Builder builder = new AlertDialog.Builder(Ecomfavouritiesactivity.this);
         builder.setMessage("Are you sure want to delete this product " + pname);
@@ -313,6 +337,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
     @SuppressLint("UseCompatLoadingForDrawables")
     public void deleteproductfromwishlist(DialogInterface dialog, EcommWishAdapter.ViewHolder holder, String pid) {
         Log.e("token", AccountUtils.getAccessToken(Ecomfavouritiesactivity.this));

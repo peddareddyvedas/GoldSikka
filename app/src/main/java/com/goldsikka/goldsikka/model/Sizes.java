@@ -15,6 +15,7 @@ public class Sizes {
     @SerializedName("sizes")
     @Expose
     private String sizes;
+
     @SerializedName("weight")
     @Expose
     private String weight;

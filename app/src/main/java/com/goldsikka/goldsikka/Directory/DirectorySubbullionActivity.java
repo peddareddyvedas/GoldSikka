@@ -119,23 +119,16 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
             }
         });
 
-
         searchview.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void afterTextChanged(Editable name) {
                 viewlistfilter(name.toString());
-
-
             }
         });
 
@@ -143,21 +136,14 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
         LocationTracker.getInstance().startLocation();
 
         intilizerecyclerview();
-        getViewItems(id);
-
-
+        getViewItems();
     }
-
-
     private void viewlistfilter(String name) {
         viewlistfilter = new ArrayList<>();
         for (Listmodel listmodel : viewitemlist) {
             if (listmodel.getStore_name().toLowerCase().contains(name.toLowerCase())) {
                 viewlistfilter.add(listmodel);
-
             }
-
-
             if (viewlistfilter.isEmpty()) {
                 viewrv.setVisibility(View.GONE);
                 notfound.setVisibility(View.VISIBLE);
@@ -165,7 +151,6 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
                 notfound.setVisibility(View.GONE);
                 viewrv.setVisibility(View.VISIBLE);
                 viewItemDetailsAdapter.filterList(viewlistfilter);
-
             }
             //    viewItemDetailsAdapter.filterList(viewlistfilter);
 
@@ -185,7 +170,7 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
 
     }
 
-    private void getViewItems(String id) {
+    private void getViewItems() {
         viewitemlist.clear();
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Please Wait....");
@@ -216,13 +201,11 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
                                 viewItemDetailsAdapter.notifyDataSetChanged();
                                 Log.e("catname", "No cats");
                                 notfound.setVisibility(View.GONE);
-
                             }
                         }
                     } else if (statuscode == 404) {
                         dialog.dismiss();
                         notfound.setVisibility(View.VISIBLE);
-
                         Log.e("400statuscaod", "" + statuscode);
                     } else if (statuscode == 422) {
                         dialog.dismiss();
@@ -257,7 +240,7 @@ public class DirectorySubbullionActivity extends AppCompatActivity implements Sw
             itemCount = 0;
             currentPage = PAGE_START;
             isLastPage = false;
-            getViewItems(id);
+            getViewItems();
 
             swipeRefresh.setRefreshing(false);
 

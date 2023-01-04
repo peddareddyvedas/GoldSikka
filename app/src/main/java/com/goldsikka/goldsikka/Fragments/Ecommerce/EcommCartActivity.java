@@ -537,7 +537,7 @@ public class EcommCartActivity extends AppCompatActivity {
             viewHolder.weight.setText(w.getWeight() + " gms");
             String pimg = w.getImage_uri();
             viewHolder.pid = w.getPids();
-            Log.e("totalprice", "" + w.getTotalprice());
+            Log.e("totalprice", "" +w.getWeight());
 
             if (w.getSubcatname().equals("Gift Card")) {
                 llopencoupon.setVisibility(View.GONE);
