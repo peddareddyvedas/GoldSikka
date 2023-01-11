@@ -994,7 +994,8 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
     public void onpayment() {
         final Activity activity = this;
         final Checkout co = new Checkout();
-        co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+       // co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         paybleamount = tv_paybaleamount.getText().toString().substring(2);
 

@@ -861,7 +861,8 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
 
         final Activity activity = this;
         final Checkout co = new Checkout();
-        co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+       // co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         try {
             JSONObject options = new JSONObject();

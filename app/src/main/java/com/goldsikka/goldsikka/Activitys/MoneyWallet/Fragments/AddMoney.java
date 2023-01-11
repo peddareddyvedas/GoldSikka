@@ -7,7 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
 import android.text.Html;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,7 +62,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
     EditText et_add_money;
     Button btn_add;
 
-    String st_money;
+    String st_money=" ";
 
     ApiDao apiDao;
 
@@ -154,6 +156,24 @@ public class AddMoney extends Fragment implements View.OnClickListener {
 
 
         et_add_money.setHint(Html.fromHtml(getString(R.string.wallet_hint)));
+        et_add_money.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.toString().length() == 1 && s.toString().startsWith("0")) {
+                    s.clear();
+                }
+            }
+        });
 
     }
 
@@ -179,14 +199,13 @@ public class AddMoney extends Fragment implements View.OnClickListener {
 
     public void addmoney() {
         st_money = et_add_money.getText().toString().trim();
+        int ii= Integer.parseInt(st_money);
         if (st_money.isEmpty()) {
             ToastMessage.onToast(activity, "Please enter amount", ToastMessage.ERROR);
-        } else if (Integer.parseInt(st_money) < 50) {
+        } else if (ii < 50) {
             ToastMessage.onToast(activity, "Please add min 50rs", ToastMessage.ERROR);
-
-        } else if (Integer.parseInt(st_money) > 100000) {
+        } else if (ii > 100000) {
             ToastMessage.onToast(activity, "please add max 1,00,000", ToastMessage.ERROR);
-
         } else {
             Intent intent = new Intent(activity, RazorpayPayment.class);
             intent.putExtra("amount", st_money);
