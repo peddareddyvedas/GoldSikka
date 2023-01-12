@@ -871,23 +871,19 @@ public interface ApiDao {
  */
     @GET("api/ecom/priceunderboxes")
     Call<List<Listmodel>> getEcompriceunderbox(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @GET("api/ecom/priceunderboxes/{id}")
     Call<List<Listmodel>> getEcompriceunderboxprice(
-            @Header("Authorization") String token, @Path("id") String id
-    );
+            @Header("Authorization") String token, @Path("id") String id);
 
     @GET("api/ecom/{cid}/subcategories")
     Call<List<Listmodel>> get_ecomsubcategory(
-            @Path("cid") String cid
-    );
+            @Path("cid") String cid);
 
     @GET("api/ecom/subcategories/{id}/products")
     Call<List<Listmodel>> get_ecomsubcategoryproducts(
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
     @POST("api/ecom/favourites")
     Call<Listmodel> postfavourites(

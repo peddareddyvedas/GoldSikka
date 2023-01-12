@@ -45,12 +45,12 @@ public class ApiClient {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     //https://staging-api.dev.goldsikka.in/
-                    //            http://develop-api.goldsikka.com/
+                    //http://develop-api.goldsikka.com/
 
                     /////liveurl///Production
                     // "https://api.goldsikka.com/"
 
-                    .baseUrl("https://staging-api.dev.goldsikka.in/")
+                    .baseUrl("https://api.goldsikka.com/")
                     //  .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
