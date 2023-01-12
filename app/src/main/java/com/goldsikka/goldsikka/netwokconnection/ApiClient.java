@@ -47,7 +47,7 @@ public class ApiClient {
                     //https://staging-api.dev.goldsikka.in/
                     //http://develop-api.goldsikka.com/
 
-                    /////liveurl///Production
+                    //liveurl
                     // "https://api.goldsikka.com/"
 
                     .baseUrl("https://api.goldsikka.com/")
