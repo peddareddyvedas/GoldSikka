@@ -62,7 +62,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
     EditText et_add_money;
     Button btn_add;
 
-    String st_money=" ";
+    String st_money = "N/A ";
 
     ApiDao apiDao;
 
@@ -79,7 +79,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
     String stForm;
     float stRating = 0;
     Dialog dialog1;
-
+    int ii = 0;
     //    ApiDao apiDao;
     @Override
     public void onAttach(Context context) {
@@ -131,7 +131,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
 
                         dialog.dismiss();
 
-                     //   ToastMessage.onToast(activity, "Technical issue", ToastMessage.ERROR);
+                        //   ToastMessage.onToast(activity, "Technical issue", ToastMessage.ERROR);
                     }
                 }
 
@@ -139,7 +139,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     Log.e("on fails", t.toString());
                     dialog.dismiss();
-                  //  ToastMessage.onToast(activity, "We have some issue", ToastMessage.ERROR);
+                    //  ToastMessage.onToast(activity, "We have some issue", ToastMessage.ERROR);
                 }
             });
         }
@@ -164,6 +164,19 @@ public class AddMoney extends Fragment implements View.OnClickListener {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.e("editonelakhamount", "" + s);
+                int a = 0;
+                String editmoney = "N/A";
+                editmoney = s.toString().trim();
+                try {
+                    a = Integer.parseInt(editmoney);
+                } catch (NumberFormatException nfe) {
+                    // Handle the condition when str is not a number.
+                }
+                if (a > 100000) {
+                    ToastMessage.onToast(activity, "Please add max 1,00,000", ToastMessage.ERROR);
+
+                }
 
             }
 
@@ -199,13 +212,18 @@ public class AddMoney extends Fragment implements View.OnClickListener {
 
     public void addmoney() {
         st_money = et_add_money.getText().toString().trim();
-        int ii= Integer.parseInt(st_money);
+        try {
+            ii = Integer.parseInt(st_money);
+        } catch (NumberFormatException nfe) {
+            // Handle the condition when str is not a number.
+        }
+
         if (st_money.isEmpty()) {
             ToastMessage.onToast(activity, "Please enter amount", ToastMessage.ERROR);
-        } else if (ii < 50) {
-            ToastMessage.onToast(activity, "Please add min 50rs", ToastMessage.ERROR);
+        } else if (ii < 100) {
+            ToastMessage.onToast(activity, "Please add min 100rs", ToastMessage.ERROR);
         } else if (ii > 100000) {
-            ToastMessage.onToast(activity, "please add max 1,00,000", ToastMessage.ERROR);
+            ToastMessage.onToast(activity, "Please add max 1,00,000rs", ToastMessage.ERROR);
         } else {
             Intent intent = new Intent(activity, RazorpayPayment.class);
             intent.putExtra("amount", st_money);
@@ -261,7 +279,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
                         dialog.dismiss();
                     } else {
                         dialog.dismiss();
-                    //    ToastMessage.onToast(activity, "Technical issue", ToastMessage.ERROR);
+                        //    ToastMessage.onToast(activity, "Technical issue", ToastMessage.ERROR);
                     }
                 }
 
@@ -269,7 +287,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     Log.e("on fails", t.toString());
                     dialog.dismiss();
-                 //   ToastMessage.onToast(activity, "We have some issue", ToastMessage.ERROR);
+                    //   ToastMessage.onToast(activity, "We have some issue", ToastMessage.ERROR);
                 }
             });
         }
@@ -351,7 +369,7 @@ public class AddMoney extends Fragment implements View.OnClickListener {
                 @Override
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     dialog.dismiss();
-                  // ToastMessage.onToast(getApplicationContext(), "We have some issues ", ToastMessage.ERROR);
+                    // ToastMessage.onToast(getApplicationContext(), "We have some issues ", ToastMessage.ERROR);
                 }
             });
 

@@ -43,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/colorPrimary"
-        android:text="Add minimum 50 rs "
+        android:text="Add minimum 100 rs "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

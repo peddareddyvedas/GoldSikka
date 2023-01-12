@@ -415,7 +415,8 @@
         <activity
             android:name=".Activitys.OnBoardScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GrayStatusBar">
+            android:theme="@style/AppTheme.GrayStatusBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -423,7 +424,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".FirebaseMessageReceiver">
+        <service android:name=".FirebaseMessageReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
