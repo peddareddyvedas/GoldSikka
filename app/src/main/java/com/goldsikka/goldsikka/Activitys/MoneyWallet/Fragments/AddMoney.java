@@ -228,11 +228,8 @@ public class AddMoney extends Fragment implements View.OnClickListener {
             Intent intent = new Intent(activity, RazorpayPayment.class);
             intent.putExtra("amount", st_money);
             startActivityForResult(intent, 1212);
-
         }
-
     }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
