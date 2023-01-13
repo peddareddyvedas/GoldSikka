@@ -24,10 +24,8 @@ public class ApiClient {
         httpClient.connectTimeout(1, TimeUnit.MINUTES);
         httpClient.readTimeout(30, TimeUnit.SECONDS);
         httpClient.writeTimeout(15, TimeUnit.SECONDS);
-
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-
         httpClient.addInterceptor(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
@@ -41,22 +39,17 @@ public class ApiClient {
                 return chain.proceed(request);
             }
         });
-
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     //https://staging-api.dev.goldsikka.in/
                     //http://develop-api.goldsikka.com/
-
                     //liveurl
                     // "https://api.goldsikka.com/"
-
-                    .baseUrl("https://api.goldsikka.com/")
+                    .baseUrl("https://staging-api.dev.goldsikka.in/")
                     //  .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return retrofit;
     }
-
-
 }
