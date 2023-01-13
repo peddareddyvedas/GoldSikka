@@ -159,7 +159,7 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                     }
                     mylistmodel.setImage_uri(orderimage);
                     myoderslist.add(mylistmodel);
-                    Collections.reverse(myoderslist);
+                  //  Collections.reverse(myoderslist);
                     ecommMyOrdersAdapter.notifyDataSetChanged();
                    /* if (ordernameee.equals("0")) {
                         myoderslist.remove(mylistmodel);
@@ -168,7 +168,7 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                         mylistmodel.setImage_uri(orderimage);
                         myoderslist.add(mylistmodel);
                         Collections.reverse(myoderslist);
-                        ecommMyOrdersAdapter.notifyDataSetChanged();
+                        ecommMyOrdersAdapter.notifyDataSetChanged()
 
                     }*/
 
