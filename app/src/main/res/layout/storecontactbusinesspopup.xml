@@ -12,8 +12,9 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="fill_parent"
-        android:layout_marginBottom="20dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
         <RelativeLayout
             android:layout_width="280dp"
             android:layout_height="wrap_content"
@@ -98,6 +99,7 @@
                     android:gravity="center_vertical"
                     android:hint="Name"
                     android:paddingStart="10dp"
+                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:textColorHint="@color/LightBrown"
                     android:textSize="14sp" />
@@ -146,7 +148,7 @@
                     android:layout_marginEnd="20dp"
                     android:background="@drawable/borderbg"
                     android:gravity="center_vertical"
-                    android:hint="Email"
+              android:singleLine="true"      android:hint="Email"
                     android:paddingStart="10dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/LightBrown"
@@ -195,7 +197,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="20dp"
                     android:background="@drawable/borderbg"
-                    android:gravity="center_vertical"
+           android:singleLine="true"         android:gravity="center_vertical"
                     android:hint="Phone Number"
                     android:inputType="number"
                     android:paddingStart="10dp"

@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -157,7 +157,7 @@
                             android:layout_height="40dp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
-                            android:src="@drawable/goldsikka_logo2" />
+                            android:src="@drawable/goldsikkalogo" />
 
                         <RelativeLayout
                             android:id="@+id/design"

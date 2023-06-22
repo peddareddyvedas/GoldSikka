@@ -45,7 +45,8 @@ public interface ApiDao {
 
 //    @GET("api/price_cities/")
 //    Call<List<price>> getprices(
-//            @Query("city") String city);
+//    @Query("city") String city);
+
 
     @GET("api/user/wallet/content")
     Call<List_Model> getDidigtalwallet_content(
@@ -102,7 +103,6 @@ public interface ApiDao {
             @Field("zipcode") String zipcode,
             @Field("address") String address);
 
-
     @Multipart
     @POST("api/auth/register")
     Call<Listmodel> orggetsignup(
@@ -138,9 +138,6 @@ public interface ApiDao {
             @Part("address") RequestBody address);
 
 
-    /*
-     **/
-
     @FormUrlEncoded
     @POST("api/auth/login")
     Call<Listmodel> getlogin(
@@ -159,7 +156,6 @@ public interface ApiDao {
             @Field("zipcode") String zipcode,
             @Field("address") String address);
 
-
     @POST("api/auth/reset-link")
     Call<Listmodel> get_forgot_email(
             @Query("email") String email);
@@ -171,13 +167,11 @@ public interface ApiDao {
             @Field("message") String email,
             @Field("rating") String password);
 
-
     @POST("api/user/money-wallet/add")
     Call<Listmodel> addmoney_wallet(
             @Header("Authorization") String resendotpToken,
             @Query("amount") String amount,
             @Query("payment_id") String paymentid);
-
 
     @POST("api/auth/account/verify")
     Call<Listmodel> verify_account(
@@ -189,7 +183,6 @@ public interface ApiDao {
             @Query("gs_pin") String gs_pin,
             @Query("confirm_gs_pin") String re_gs_pin);
 
-
     @POST("api/user/gspin/change")
     Call<Listmodel> updatepin(
             @Header("Authorization") String resendotpToken,
@@ -197,13 +190,11 @@ public interface ApiDao {
             @Query("new_gs_pin") String en_gs_pin,
             @Query("confirm_gs_pin") String re_gs_pin);
 
-
     @POST("api/auth/reset-gspin/{token}")
     Call<Listmodel> forgotpin(
             @Path("token") String token,
             @Query("gs_pin") String gs_pin,
             @Query("confirm_gs_pin") String re_gs_pin);
-
 
     @GET("api/user/gspin/check")
     Call<Listmodel> entrypin(
@@ -282,14 +273,12 @@ public interface ApiDao {
             @Header("Authorization") String bannerToken,
             @Part List<MultipartBody.Part> weddingimag);
 
-
     @GET("api/user/schemes/{id}/calculations")
     Call<Listmodel> getcalculation(
             @Header("Authorization") String profileToken,
             @Path("id") String id,
             @Query("tenure") String tenure,
             @Query("grams") String grams);
-
 
     @Headers({
             "Content-Type: application/json",
@@ -416,12 +405,10 @@ public interface ApiDao {
     })
     @GET("api/gold/current/price")
     Call<Listmodel> getlive_rates(
-
             @Header("Authorization") String liveratetoken);
 
     @GET("api/gold/current/22caratPrice")
     Call<Listmodel> getlive_rates22carats(
-
             @Header("Authorization") String liveratetoken);
 
 
@@ -438,6 +425,12 @@ public interface ApiDao {
     @GET("api/user/wallet/gold/price/lock")
     Call<List<Listmodel>> getlock_rates(
             @Query("price") String price,
+            @Header("Authorization") String liveratetoken);
+
+    @GET("api/user/wallet/gold/price/lock")
+    Call<List<Listmodel>> getlock_ratesforschems(
+            @Query("price") String price,
+            @Query("carat") String carat,
             @Header("Authorization") String liveratetoken);
 
     @Headers({
@@ -869,6 +862,7 @@ public interface ApiDao {
     /* @GET("api/ecom/topsellingproducts")
      Call<Object> get_ecomTopSellinglist();
  */
+
     @GET("api/ecom/priceunderboxes")
     Call<List<Listmodel>> getEcompriceunderbox(
             @Header("Authorization") String token);
@@ -1142,13 +1136,10 @@ public interface ApiDao {
 
     @GET("api/ecom/product-info/{id}")
     Call<Listmodel> get_prod_info(
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
     @GET("api/ecom/carts")
-    Call<data> cart_list(
-            @Header("Authorization") String token
-    );
+    Call<data> cart_list(@Header("Authorization") String token);
 
     @Headers({
             "Content-Type: application/json",
@@ -1157,68 +1148,57 @@ public interface ApiDao {
     })
     @GET("api/ecom/carts")
     Call<List_Model> cart_listfortotalamount(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @GET("api/ecom/save-list")
     Call<data> cart_savedlist(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @DELETE("api/ecom/cart/{id}/delete")
     Call<Listmodel> cart_item_deete(
             @Header("Authorization") String token,
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
     @POST("api/ecom/save-product/{id}")
     Call<Listmodel> cart_saveditem(
             @Header("Authorization") String token,
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
     @DELETE("api/ecom/save/{id}/delete")
     Call<Listmodel> cart_saveditem_delete(
             @Header("Authorization") String token,
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
 
     @POST("api/ecom/move-to-cart/{id}")
     Call<Listmodel> movetocart(
             @Header("Authorization") String token,
-            @Path("id") String id
-    );
+            @Path("id") String id);
 
     @POST("api/ecom/place-order")
     Call<Listmodel> cart_payment(
             @Header("Authorization") String token,
             @Query("address_id") String Address_id,
-            @Query("payment_id") String paymentid
-    );
+            @Query("payment_id") String paymentid);
 
     @GET("api/ecom/orders-list")
     Call<Ecommerce_DataClass> order_list(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
 // **** prediction module methodes *****//
 
     @GET("api/user/wallet/modules")
     Call<MainModuleModel> predict(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @GET("api/campaign/prediction-access")
     Call<List_Model> predictAccess(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
 
     @GET("api/campaign/list")
     Call<PredictionListModel> prediction_list(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @GET("api/poplist")
     Call<EventModel> advertaisepopup(
@@ -1228,27 +1208,23 @@ public interface ApiDao {
     @POST("api/campaign/add/predict-price")
     Call<List_Model> predict_pricesubmit(
             @Header("Authorization") String token,
-            @Field("price_predicted") String price
-    );
+            @Field("price_predicted") String price);
 
     @GET("api/campaign/tc")
     Call<Listmodel> getpredict_termscontent(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @FormUrlEncoded
     @POST("api/campaign/update/predict-price/{id}")
     Call<Listmodel> predict_updatedpricesubmit(
             @Header("Authorization") String token,
             @Path("id") String id,
-            @Field("price_predicted") String price
-    );
+            @Field("price_predicted") String price);
 
 
     @GET("api/campaign/timings")
     Call<Listmodel> getpredict_timeings(
-            @Header("Authorization") String token
-    );
+            @Header("Authorization") String token);
 
     @POST("api/campaign/screen-update/{id}")
     Call<Listmodel> init_seescreen(
@@ -1274,8 +1250,7 @@ public interface ApiDao {
             @Field("purchase_type") String purchase_type,
             @Field("grams") String grams,
             @Field("address") String address,
-            @Field("description") String description
-    );
+            @Field("description") String description);
 
     @FormUrlEncoded
     @POST("api/business-enquiry")
@@ -1388,7 +1363,6 @@ public interface ApiDao {
             @Header("Authorization") String token,
             @Query("page") String pagenumber);
 
-
     @GET("api/notifications/list")
     Call<EventModel> NotificationList(
             @Header("Authorization") String token);
@@ -1411,11 +1385,9 @@ public interface ApiDao {
     Call<EventModel> AllNotificationsSeen(
             @Header("Authorization") String token);
 
-
     @GET("api/user/money-wallet/amount")
     Call<Listmodel> walletAmount(
             @Header("Authorization") String token);
-
 
     @FormUrlEncoded
     @POST("/api/user/wallet/buy-gold-with-money-wallet")
@@ -1440,7 +1412,6 @@ public interface ApiDao {
             @Header("Authorization") String token,
             @Query("referralCode") String referralCode);
 
-
     @FormUrlEncoded
     @POST("/api/user/events/gift/money-wallet")
     Call<Listmodel> buywalletAmount_nocoupon(
@@ -1457,7 +1428,6 @@ public interface ApiDao {
             @Field("enteredWalletAmount") String enteredWalletAmount,
             @Field("eventId") String coupon);
 
-
     @FormUrlEncoded
     @POST("api/organizations/donate-gold-money-wallet")
     Call<Listmodel> buywalletAmount_org(
@@ -1465,7 +1435,6 @@ public interface ApiDao {
             @Field("amount") String amount,
             @Field("enteredWalletAmount") String enteredWalletAmount,
             @Field("organizationId") String coupon);
-
 
     @GET("api/user/events/list")
     Call<EventModel> eventlistnextpage(
@@ -1678,7 +1647,6 @@ public interface ApiDao {
 
     @GET("api/directories/mediabycatid/{id}")
     Call<List<Listmodel>> get_directoriesstoreimages(@Header("Authorization") String token, @Path("id") String id);
-
 
     @GET("api/ecom/giftcard")
     Call<List<Listmodel>> getEcomgiftcart(@Header("Authorization") String token);

@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,16 +43,12 @@ import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.model.ReviewsModel;
-import com.goldsikka.goldsikka.model.Sizes;
-import com.goldsikka.goldsikka.model.Stones;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -124,6 +121,7 @@ public class Ecommproductdiscreption extends AppCompatActivity {
     ToggleButton selectfavourite;
     RelativeLayout relativesubtota, relativeva, relativegrandtotal, relativestone;
     int selectedPosition = -1;
+    ScrollView mainscroll;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -198,6 +196,7 @@ public class Ecommproductdiscreption extends AppCompatActivity {
         selectlist = findViewById(R.id.selectlist);
         ratingll = findViewById(R.id.ratingll);
         banglessize_ll = findViewById(R.id.banglessize_ll);
+        mainscroll = findViewById(R.id.mainscroll);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -281,13 +280,14 @@ public class Ecommproductdiscreption extends AppCompatActivity {
         similarList = new ArrayList<>();
         similaradapter = new SimilarproductsAdapter(similarList, getApplicationContext());
         rvsimilarproducts.setAdapter(similaradapter);
+        rvsimilarproducts.stopScroll();
 
 
         rvreviewproducts = findViewById(R.id.rvreviewproducts);
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getApplicationContext());
         linearLayoutManager1.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
         rvreviewproducts.setLayoutManager(linearLayoutManager1); // set LayoutManager to RecyclerView
-        rvreviewproducts.setHasFixedSize(true);
+        rvreviewproducts.setVerticalScrollBarEnabled(true);
         reviewList = new ArrayList<>();
         reviewadapter = new Reviewproductadapter(reviewList, getApplicationContext());
         rvreviewproducts.setAdapter(reviewadapter);
@@ -546,6 +546,8 @@ public class Ecommproductdiscreption extends AppCompatActivity {
     }
 
     public void getEcomProductdisc(String getid) {
+        spinnerlist.clear();
+
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Please Wait....");
         dialog.setCancelable(false);
@@ -566,6 +568,7 @@ public class Ecommproductdiscreption extends AppCompatActivity {
                     if (flist != null) {
                         for (Listmodel listmodel : flist) {
                             spinnerlist.clear();
+
                             Log.e("pname", "pname");
                             pname.setText(listmodel.getPname());
                             selectname = listmodel.getPname();
@@ -870,6 +873,10 @@ public class Ecommproductdiscreption extends AppCompatActivity {
 
     public void getEcommSimilarProducts(String eeeee) {
         similarList.clear();
+        final ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setMessage("Please Wait....");
+        dialog.setCancelable(false);
+        dialog.show();
         Call<List<Listmodel>> getproductsbycat = null;
         apiDao = ApiClient.getClient("").create(ApiDao.class);
         getproductsbycat = apiDao.get_ecomsubcategoryproducts(eeeee);
@@ -878,13 +885,13 @@ public class Ecommproductdiscreption extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Call<List<Listmodel>> call, @NotNull Response<List<Listmodel>> response) {
                 int statuscode = response.code();
+                dialog.dismiss();
                 Log.e("statuscode", String.valueOf(statuscode));
                 flist = response.body();
                 if (statuscode == 200 || statuscode == 201) {
                     Log.e("statuscode", String.valueOf(statuscode));
                     if (flist != null) {
                         similarList.clear();
-                        Collections.shuffle(flist);
                         for (Listmodel listmodel : flist) {
                             //cid = listmodel.getId();
                             similarList.add(listmodel);
@@ -894,13 +901,16 @@ public class Ecommproductdiscreption extends AppCompatActivity {
                         Log.e("catname", "No cats");
                     }
                 } else if (statuscode == 422) {
+                    dialog.dismiss();
                     Log.e("cv", String.valueOf(statuscode));
                 } else {
+                    dialog.dismiss();
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<List<Listmodel>> call, @NonNull Throwable t) {
+                dialog.dismiss();
                 Log.e("ughb", String.valueOf(t));
             }
         });
@@ -1015,15 +1025,16 @@ public class Ecommproductdiscreption extends AppCompatActivity {
                     if (selectedPosition != position) {
                         selectedPosition = position;
                         notifyDataSetChanged();
-                        //    getEcomProductdisc(listmodel.getId());
+                        mainscroll.pageScroll(View.FOCUS_UP);
+                        mainscroll.scrollTo(0, 0);
 
+                        getEcomProductdisc(listmodel.getId());
                       /*  text = viewHolder.giftnamename.getText().toString();
                         etcouponcoode.setText(text);
                         couponammount = coupncod;
                         postGiftCardCode(text);*/
 
                     } else {
-
                         selectedPosition = -1;
                         notifyDataSetChanged();
                     }

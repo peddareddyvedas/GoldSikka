@@ -30,7 +30,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="38dp"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </LinearLayout>
 

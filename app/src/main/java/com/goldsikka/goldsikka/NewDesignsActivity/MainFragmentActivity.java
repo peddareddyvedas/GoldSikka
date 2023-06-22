@@ -374,6 +374,7 @@ import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.ErrorSnackBar;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
+import com.goldsikka.goldsikka.Utils.shared_preference;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -420,11 +421,16 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
 
     public static boolean isFromnboard = false;
 
+    TextView sidemenuname, sidemenuemail, sidemenugsid;
+    shared_preference sharedPreference;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_fragment2);
+        sharedPreference = new shared_preference(getApplicationContext());
+
         ButterKnife.bind(this);
 //        Home();
 
@@ -432,16 +438,19 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.bringToFront();
-
         drawerLayout = findViewById(R.id.my_drawer_layout);
         Log.e("MainAccessToken", AccountUtils.getAccessToken(this));
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
-
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
         navigationView.bringToFront();
-// pass the Open and Close toggle for the drawer layout listener
-// to toggle the button
+
+        View hView = navigationView.getHeaderView(0);
+        sidemenuname= hView.findViewById(R.id.sidemenuname);
+        sidemenuemail= hView.findViewById(R.id.sidemenuemail);
+        sidemenugsid= hView.findViewById(R.id.sidemenugsid);
+        // pass the Open and Close toggle for the drawer layout listener
+       // to toggle the button
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
@@ -452,23 +461,28 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
 //        } catch (PackageManager.NameNotFoundException e) {
 //            e.printStackTrace();
 //        }
-
         Log.e("MainAccessToken", AccountUtils.getAccessToken(this));
-
         if (isFromnboard) {
             Log.e("isif", "" + isFromnboard);
             loadeventsdetails();
-
         } else {
             Log.e("iselse", "" + isFromnboard);
         }
+
+        Log.e("sidegetnamel", "" + (AccountUtils.getName(this)));
+        Log.e("sidegetnamel", "" + (AccountUtils.getEmail(this)));
+        Log.e("sidegetnamel", "" + (AccountUtils.getCustomerID(this)));
+
+        sidemenuname.setText(AccountUtils.getName(this));
+        sidemenuemail.setText(AccountUtils.getEmail(this));
+        sidemenugsid.setText(AccountUtils.getCustomerID(this));
+
     }
 
     public void getDrawerLayout() {
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.my_drawer_layout);
         drawerLayout.openDrawer(GravityCompat.START);
     }
-
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -482,13 +496,10 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
                     startActivity(new Intent(getApplicationContext(), Digital_wallet_fragment.class));
                     drawerLayout.closeDrawer(Gravity.LEFT);
                 }
-
                 return true;
-
             case R.id.sellgoldmenubtn:
                 startActivity(new Intent(getApplicationContext(), Sell_Fragment.class));
                 drawerLayout.closeDrawer(Gravity.LEFT);
-
                 return true;
 
             case R.id.redeemmenubtn:
@@ -544,7 +555,10 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
                 drawerLayout.closeDrawer(Gravity.LEFT);
                 return true;
 
+
+
 //            case R.id.mygoldchitmenubtn:
+
 //                Intent i = new Intent(getApplicationContext(), Scheme_Content_Fragment.class);
 //                AccountUtils.setSchemeID(getApplicationContext(), "1");
 //                AccountUtils.setSchemename(getApplicationContext(), "MY GOLD 2021 (Gold Chit)");
@@ -581,15 +595,17 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainframelayout, new Settings()).commit();
                 return true;
 
+
+
         }
         // ToastMessage.onToast(getApplicationContext(), "call method", Toast.LENGTH_SHORT);
         return true;
     }
 
     private long backPressed;
-    private static final long TIME_DELAY = 2000;
+    private static final long TIME_DELAY = 1000;
 
-    @Override
+  /*  @Override
     public void onBackPressed() {
         Fragment f = getSupportFragmentManager().findFragmentById(R.id.mainframelayout);
         assert f != null;
@@ -607,7 +623,15 @@ public class MainFragmentActivity extends AppCompatActivity implements Navigatio
 
 
     }
+*/
 
+    @Override
+    public void onBackPressed() {    //when click on phone backbutton
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -40,12 +40,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.bumptech.glide.Glide;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
-import com.goldsikka.goldsikka.Utils.NetworkUtils;
-import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
-import com.goldsikka.goldsikka.model.CheckoutModel;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -71,8 +68,9 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
     RelativeLayout backbtn, rlprice, rlgrams, relativesort;
     shared_preference sharedPreference;
     RecyclerView productsrv, ecomsubcat;
-    EcomSubProductsAdapter subproductsAdapter;
     EcomSubCat_Adapter ecomsubcatadapter;
+    EcomSubProductsAdapter subproductsAdapter;
+
     ArrayList<Listmodel> productsList;
     ArrayList<Listmodel> subcatList;
     ArrayList<Listmodel> goldList;
@@ -117,11 +115,13 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
     String silvertext = " ";
     String liveprice;
 
+
+    String selectedidd;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ecomsubcategory_activity);
-
         bundle = getIntent().getExtras();
         cid = bundle.getString("cid");
         toolname = bundle.getString("toolname");
@@ -155,7 +155,6 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         Log.e("toolname", "" + toolname);
         searchView = findViewById(R.id.subcategorysearchview);
 
-
         notfound = findViewById(R.id.notfound);
         backbtn = findViewById(R.id.backbtn);
         tvprice = findViewById(R.id.price);
@@ -171,37 +170,28 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         silverpricetext = findViewById(R.id.silvertext);
         relativesort = findViewById(R.id.relativesort);
 
-
         if (fromto.equals("value")) {
             bullionlayout.setVisibility(View.VISIBLE);
 
         } else {
             bullionlayout.setVisibility(View.GONE);
         }
-
-
         goldButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View view) {
-
                 goldButton.setBackgroundResource(R.drawable.buy_amount_button);
                 silverButton.setBackgroundResource(R.drawable.buy_grams_button);
                 silverButton.setTextColor(getResources().getColor(R.color.black));
                 goldButton.setTextColor(getResources().getColor(R.color.white));
                 silverprice.setText("Gold Live Price :");
                 if (goldButton.getText().equals("Gold")) {
-
                     Log.e("mygoldsubcats", "" + subcatList);
                     subcatList.clear();
                     subcatList.addAll(goldList);
                     ecomsubcatadapter.notifyDataSetChanged();
                     getliveprices();
-
-
                 }
-
-
             }
         });
 
@@ -209,118 +199,86 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View view) {
-
                 goldButton.setBackgroundResource(R.drawable.button_left_border);
                 silverButton.setBackgroundResource(R.drawable.button_right_background);
                 goldButton.setTextColor(getResources().getColor(R.color.black));
                 silverButton.setTextColor(getResources().getColor(R.color.white));
                 silverprice.setText("Silver Live Price :");
                 if (silverButton.getText().equals("Silver")) {
-
                     subcatList.clear();
                     subcatList.addAll(silverList);
                     ecomsubcatadapter.notifyDataSetChanged();
                     Log.e("cvhkdsghgb", "" + silvertext);
                     getsilverliveprices();
-
-
                 }
             }
         });
 
 
-        searchView.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable name) {
-
-               /* if (searchView.getText().toString().isEmpty()) {
-
-                    getInsuranceOperatorsData();
-                }*/
-                productcategoryFilter(name.toString());
-                // subCategoryFilter(name.toString());
-
-            }
-        });
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-
         pweightspinner = findViewById(R.id.pweightspinner);
-
         // create list of customer
         ArrayList<String> pweightsList = getPweightsList();
-
         //Create adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.pwightpsinner, pweightsList);
-
         //Set adapter
         pweightspinner.setAdapter(adapter);
-
         rlprice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bottompricealert();
             }
         });
-
         rlgrams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bottomgramsalert();
             }
         });
+        Log.e("selectoncreat1",""+selectedidd);
 
+        searchView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void afterTextChanged(Editable name) {
+               if (searchView.getText().toString().isEmpty()) {
+                   Log.e("selectoncreat2",""+selectedidd);
+
+                 //  getProductsByCats(selectedidd);
+               }
+                productcategoryFilter(name.toString());
+                // subCategoryFilter(name.toString());
+            }
+        });
     }
-
 
     public void productcategoryFilter(String name) {
         ArrayList<Listmodel> filteredList = new ArrayList<>();
         for (Listmodel listmodel : productsList) {
             if (listmodel.getPname().toLowerCase().contains(name.toLowerCase())) {
                 filteredList.add(listmodel);
-
             } else {
-
             }
             if (filteredList.isEmpty()) {
-                ecomsubcat.setVisibility(View.GONE);
+                productsrv.setVisibility(View.GONE);
                 notfound.setVisibility(View.VISIBLE);
             } else {
                 notfound.setVisibility(View.GONE);
-                ecomsubcat.setVisibility(View.VISIBLE);
-             //   subproductsAdapter.filterList2(filteredList);
+                productsrv.setVisibility(View.VISIBLE);
             }
         }
-
-         subproductsAdapter.filterList2(filteredList);
+        subproductsAdapter.productfilter(filteredList);
     }
-
-
-    public void subCategoryFilter(String name) {
-        ArrayList<Listmodel> filteredList = new ArrayList<>();
-        for (Listmodel listmodel : subcatList) {
-            if (listmodel.getSubcatname().toLowerCase().contains(name.toLowerCase())) {
-                filteredList.add(listmodel);
-
-            }
-        }
-        ecomsubcatadapter.subfilterList2(filteredList);
-    }
-
     private ArrayList<String> getPweightsList() {
         ArrayList<String> plist = new ArrayList<>();
         plist.add("Select Grams");
@@ -344,7 +302,6 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         silverList = new ArrayList<>();
         ecomsubcatadapter = new EcomSubCat_Adapter(activity, subcatList, this);
         ecomsubcat.setAdapter(ecomsubcatadapter);
-
         productsrv = findViewById(R.id.ecomproductsrv);
         productsrv.setHasFixedSize(true);
         productsrv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
@@ -353,12 +310,11 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         subproductsAdapter = new EcomSubProductsAdapter(this, productsList, this, "cats");
         productsrv.setAdapter(subproductsAdapter);
     }
-
+    /////pricefilter
     ImageView imageView_close;
     private RadioGroup radiopiceGroup;
     private RadioButton radioprice;
     RadioButton rbprice, radioshowall, radiolessten, radiotwenty1, radiothirty, radiofifty, radioabovefifty;
-
     public void bottompricealert() {
         BottomSheetDialog dialog = new BottomSheetDialog(EcomSubcategory.this);
         dialog.setContentView(R.layout.ecompricealert);
@@ -389,15 +345,15 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         });
         if (ggg.contains("Select Price")) {
             radioshowall.setChecked(true);
-        } else if (ggg.contains("Upto ₹10000")) {
+        } else if (ggg.contains("Upto ₹30000")) {
             radiolessten.setChecked(true);
-        } else if (ggg.contains("₹10000 - ₹20000")) {
+        } else if (ggg.contains("Upto ₹60000")) {
             radiotwenty1.setChecked(true);
-        } else if (ggg.contains("₹20000 - ₹30000")) {
+        } else if (ggg.contains("Upto ₹100000")) {
             radiothirty.setChecked(true);
-        } else if (ggg.contains("₹30000 - ₹50000")) {
+        } else if (ggg.contains("Upto ₹150000")) {
             radiofifty.setChecked(true);
-        } else if (ggg.contains("Above ₹50000")) {
+        } else if (ggg.contains("Above ₹150000")) {
             radioabovefifty.setChecked(true);
         }
 
@@ -410,16 +366,20 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
                 sprice.setText(price);
                 selectprice = price;
                 localselectprice = selectprice;
-
                 Log.e("selectprice", "" + selectprice);
                 Log.e("localselectprice", "" + localselectprice);
-
                 AccountUtils.setGrams(getApplicationContext(), price);
 
-                if (price.equals("Above ₹50000")) {
-                    filterPriceText(50000, 300000);
-                } else if (price.equals("Upto ₹10000")) {
-                    filterPriceText(0, 10000);
+                if (price.equals("Above ₹150000")) {
+                    filterPriceText(150000, 300000);
+                } else if (price.equals("Upto ₹30000")) {
+                    filterPriceText(0, 30000);
+                } else if (price.equals("Upto ₹60000")) {
+                    filterPriceText(0, 60000);
+                } else if (price.equals("Upto ₹100000")) {
+                    filterPriceText(0, 100000);
+                } else if (price.equals("Upto ₹150000")) {
+                    filterPriceText(0, 150000);
                 } else if (price.equals("Select Price")) {
                     filterPriceText(0, 300000);
                 } else {
@@ -433,11 +393,11 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         dialog.show();
     }
 
+    /////gramsfilter
     ImageView imageView_close1;
     private RadioGroup gramsradioGroup;
     private RadioButton radiogramsButton;
     RadioButton rb, radioselect, radioone, radiosix, radioeleven, radiosixteen, radiotwenty, radioabovetwentyfive;
-
     public void bottomgramsalert() {
         BottomSheetDialog dialog = new BottomSheetDialog(EcomSubcategory.this);
         dialog.setContentView(R.layout.ecomgramsalert);
@@ -468,17 +428,20 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
 
         if (ggggg.contains("Select Grams")) {
             radioselect.setChecked(true);
-        } else if (ggggg.contains("1 - 5 gms")) {
+            filterPriceText(150000, 300000);
+
+
+        } else if (ggggg.contains("Upto 5 gms")) {
             radioone.setChecked(true);
-        } else if (ggggg.contains("6 - 10 gms")) {
+        } else if (ggggg.contains("Upto 10 gms")) {
             radiosix.setChecked(true);
-        } else if (ggggg.contains("11 - 15 gms")) {
+        } else if (ggggg.contains("Upto 15 gms")) {
             radioeleven.setChecked(true);
-        } else if (ggggg.contains("16 - 20 gms")) {
+        } else if (ggggg.contains("Upto 20 gms")) {
             radiosixteen.setChecked(true);
-        } else if (ggggg.contains("21 - 25 gms")) {
+        } else if (ggggg.contains("Upto 50 gms")) {
             radiotwenty.setChecked(true);
-        } else if (ggggg.contains("Above 25 gms")) {
+        } else if (ggggg.contains("Above 50 gms")) {
             radioabovetwentyfive.setChecked(true);
         }
         gramsradioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -490,8 +453,18 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
                 sgrams.setText(spinnerweight);
                 locaselectweight = spinnerweight;
                 AccountUtils.setGrams(getApplicationContext(), spinnerweight);
-                if (spinnerweight.equals("Above 25 gms")) {
-                    filterNewText(26.0f, 1000.0f);
+                if (spinnerweight.equals("Above 50 gms")) {
+                    filterNewText(51.0f, 1000.0f);
+                } else if (spinnerweight.equals("Upto 5 gms")) {
+                    filterNewText(0.0f, 5.0f);
+                } else if (spinnerweight.equals("Upto 10 gms")) {
+                    filterNewText(0.0f, 10.0f);
+                } else if (spinnerweight.equals("Upto 15 gms")) {
+                    filterNewText(0.0f, 15.0f);
+                } else if (spinnerweight.equals("Upto 20 gms")) {
+                    filterNewText(0.0f, 20.0f);
+                } else if (spinnerweight.equals("Upto 50 gms")) {
+                    filterNewText(0.0f, 50.0f);
                 } else if (spinnerweight.equals("Select Grams")) {
                     filterNewText(0.0f, 1000.0f);
                 } else {
@@ -503,15 +476,12 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
 
         dialog.show();
     }
-
-
     @Override
     public void onBackPressed() {
         AccountUtils.setGrams(getApplicationContext(), " ");
         AccountUtils.setPrice(getApplicationContext(), " ");
         super.onBackPressed();
     }
-
     public void getSubCats(String catiddd) {
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Please Wait....");
@@ -683,7 +653,6 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
 
     }
 
-
     @Override
     public void onClick(View v) {
     }
@@ -726,10 +695,14 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         Log.e("lp", " " + lp);
         Log.e("hp", "" + hp);
         filteredlist = new ArrayList<>();
+        pricefilteredlist = new ArrayList<>();
+        pricefilteredlist.clear();
+        sprice.setText("Select Price");
         for (Listmodel item : flist) {
             try {
                 if (Float.parseFloat(item.getWeight()) >= lp && Float.parseFloat(item.getWeight()) <= hp) {
                     filteredlist.add(item);
+
                 }
             } catch (Exception e) {
                 //  ToastMessage.onToast(getApplicationContext(), "Wait for some time dats is loading ", ToastMessage.ERROR);
@@ -764,6 +737,9 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
         int lowprice = pricepart1;
         int highprice = pricepart2;
         pricefilteredlist = new ArrayList<>();
+        filteredlist = new ArrayList<>();
+        filteredlist.clear();
+        sgrams.setText("Select Grams");
         for (Listmodel item : flist) {
             try {
                 if (Integer.parseInt(item.getPrice()) >= lowprice && Integer.parseInt(item.getPrice()) <= highprice) {
@@ -822,8 +798,13 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
             if (selectedPosition == position) {
                 Log.e("if", "" + position);
                 holder.textselectline.setVisibility(View.VISIBLE);
+                productsList.clear();
+                Log.e("Sdfasdfasd", "" + AccountUtils.getproductselectid(getApplicationContext()));
 
-                getProductsByCats(listmodel.getId(), listmodel.getCatname());
+
+                getProductsByCats(listmodel.getId());
+                selectedidd = listmodel.getId();
+                Log.e("oncreat",""+selectedidd);
 
             } else {
                 holder.textselectline.setVisibility(View.GONE);
@@ -836,8 +817,13 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
                         selectedPosition = position;
                         notifyDataSetChanged();
                         Log.e("getidddddddd", "" + listmodel.getId());
+                        productsList.clear();
 
-                        getProductsByCats(listmodel.getId(), listmodel.getCatname());
+                        getProductsByCats(listmodel.getId());
+                        selectedidd = listmodel.getId();
+
+                        Log.e("selectoncreat",""+selectedidd);
+
 //                        getProductBullion( );
                     } else {
 
@@ -848,82 +834,6 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
             });
         }
 
-        public void getProductsByCats(String id, String name) {
-            productsList.clear();
-            /*final ProgressDialog dialog = new ProgressDialog(context);
-            dialog.setMessage("Please Wait....");
-            dialog.setCancelable(false);
-            dialog.show();*/
-            Call<List<Listmodel>> getproductsbycat = null;
-            apiDao = ApiClient.getClient("").create(ApiDao.class);
-
-            getproductsbycat = apiDao.get_ecomsubcategoryproducts(id);
-            getproductsbycat.enqueue(new Callback<List<Listmodel>>() {
-                @SuppressLint({"LongLogTag", "NotifyDataSetChanged"})
-                @Override
-                public void onResponse(@NotNull Call<List<Listmodel>> call, @NotNull Response<List<Listmodel>> response) {
-                    int statuscode = response.code();
-
-                    //  dialog.dismiss();
-                    Log.e("subcatstatuscode", String.valueOf(statuscode));
-                    flist = response.body();
-                    if (statuscode == 200 || statuscode == 201) {
-                        Log.e("subcatlistloadstatuscode", String.valueOf(statuscode));
-                        if (flist != null) {
-                            productsList.clear();
-                            Collections.shuffle(flist);
-                            for (Listmodel listmodel : flist) {
-                                cid = listmodel.getId();
-                                if (spinnerweight.equals(locaselectweight)) {
-
-                                    Log.e("ddddd", "" + spinnerweight);
-                                    Log.e("fffdddd", "" + locaselectweight);
-                                    if (spinnerweight.equals("Above 25 gms")) {
-                                        filterNewText(26.0f, 1000.0f);
-                                    } else if (spinnerweight.equals("Select Grams")) {
-                                        filterNewText(0.0f, 1000.0f);
-                                    } else {
-                                        innerfilter(spinnerweight);
-                                    }
-                                } else if (localselectprice.equals(selectprice)) {
-                                    if (localselectprice.equals("Above ₹50000")) {
-                                        filterPriceText(50000, 300000);
-                                    } else if (localselectprice.equals("Upto ₹10000")) {
-                                        filterPriceText(0, 10000);
-                                    } else if (localselectprice.equals("Select Price")) {
-                                        filterPriceText(0, 300000);
-                                    } else {
-                                        innerpricefilter(localselectprice);
-                                    }
-
-                                } else {
-                                    productsList.add(listmodel);
-                                    subproductsAdapter.notifyDataSetChanged();
-                                }
-                                //  spinneralert();
-                            }
-                        } else {
-                            // dialog.dismiss();
-                            Log.e("catname", "No cats");
-                        }
-//                    openpopupscreen(listmodel.getDescription());
-                    } else if (statuscode == 422) {
-                        // dialog.dismiss();
-                        Log.e("cv", String.valueOf(statuscode));
-//                        ToastMessage.onToast(Elevenplus_Jewellery.this, String.valueOf(statuscode), ToastMessage.ERROR);
-                    } else {
-                        //  dialog.dismiss();
-//                    ToastMessage.onToast(Elevenplus_Jewellery.this, "Please try again", ToastMessage.ERROR);
-                    }
-                }
-
-                @Override
-                public void onFailure(@NonNull Call<List<Listmodel>> call, @NonNull Throwable t) {
-                    Log.e("ughb", String.valueOf(t));
-//                openpopupscreen("Successfully subscribed to Gold Plus Plan");
-                }
-            });
-        }
 
         @Override
         public int getItemCount() {
@@ -949,6 +859,81 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
                 textselectline = itemView.findViewById(R.id.textselectline);
             }
         }
+    }
+
+    public void getProductsByCats(String id) {
+        productsList.clear();
+            /*final ProgressDialog dialog = new ProgressDialog(context);
+            dialog.setMessage("Please Wait....");
+            dialog.setCancelable(false);
+            dialog.show();*/
+        Call<List<Listmodel>> getproductsbycat = null;
+        apiDao = ApiClient.getClient("").create(ApiDao.class);
+
+        getproductsbycat = apiDao.get_ecomsubcategoryproducts(id);
+        getproductsbycat.enqueue(new Callback<List<Listmodel>>() {
+            @SuppressLint({"LongLogTag", "NotifyDataSetChanged"})
+            @Override
+            public void onResponse(@NotNull Call<List<Listmodel>> call, @NotNull Response<List<Listmodel>> response) {
+                int statuscode = response.code();
+                //  dialog.dismiss();
+                Log.e("subproductstatuscode", String.valueOf(statuscode));
+                flist = response.body();
+                if (statuscode == 200 || statuscode == 201) {
+                    Log.e("subproductlist", String.valueOf(statuscode));
+                    if (flist != null) {
+                        productsList.clear();
+                    //    searchView.setText("");
+                        //   Collections.shuffle(flist);
+                        for (Listmodel listmodel : flist) {
+                            cid = listmodel.getId();
+                            if (spinnerweight.equals(locaselectweight)) {
+                                Log.e("ddddd", "" + spinnerweight);
+                                Log.e("fffdddd", "" + locaselectweight);
+                                if (spinnerweight.equals("Above 50 gms")) {
+                                    filterNewText(51.0f, 1000.0f);
+                                } else if (spinnerweight.equals("Select Grams")) {
+                                    filterNewText(0.0f, 1000.0f);
+                                } else {
+                                    innerfilter(spinnerweight);
+                                }
+                            } else if (localselectprice.equals(selectprice)) {
+                                if (localselectprice.equals("Above ₹150000")) {
+                                    filterPriceText(150000, 300000);
+                                } else if (localselectprice.equals("Upto ₹30000")) {
+                                    filterPriceText(0, 30000);
+                                } else if (localselectprice.equals("Select Price")) {
+                                    filterPriceText(0, 300000);
+                                } else {
+                                    innerpricefilter(localselectprice);
+                                }
+                            } else {
+                                productsList.add(listmodel);
+                                subproductsAdapter.notifyDataSetChanged();
+                            }
+                            //  spinneralert();
+                        }
+                    } else {
+                        // dialog.dismiss();
+                        Log.e("catname", "No cats");
+                    }
+//                    openpopupscreen(listmodel.getDescription());
+                } else if (statuscode == 422) {
+                    // dialog.dismiss();
+                    Log.e("cv", String.valueOf(statuscode));
+//                        ToastMessage.onToast(Elevenplus_Jewellery.this, String.valueOf(statuscode), ToastMessage.ERROR);
+                } else {
+                    //  dialog.dismiss();
+//                    ToastMessage.onToast(Elevenplus_Jewellery.this, "Please try again", ToastMessage.ERROR);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<List<Listmodel>> call, @NonNull Throwable t) {
+                Log.e("ughb", String.valueOf(t));
+//                openpopupscreen("Successfully subscribed to Gold Plus Plan");
+            }
+        });
     }
 
     ///Ecom sucatproductlist
@@ -1003,6 +988,12 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
                 holder.pweightTv.setVisibility(View.VISIBLE);
             }
 
+            if (listmodel.getTransction_type().equals("silver")) {
+                holder.gramsimage.setBackgroundResource(R.drawable.ic_silver);
+            } else {
+                holder.gramsimage.setBackgroundResource(R.drawable.tsellgold);
+            }
+
             holder.pname.setText(name);
             holder.pweightTv.setText("  " + weight + " gms");
             holder.pprice.setText("₹" + tprice);
@@ -1048,7 +1039,7 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
             return list.size();
         }
 
-        public void filterList2(ArrayList<Listmodel> filteredList) {
+        public void productfilter(ArrayList<Listmodel> filteredList) {
             list = filteredList;
             notifyDataSetChanged();
         }

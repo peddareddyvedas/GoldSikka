@@ -31,9 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
-import com.goldsikka.goldsikka.Fragments.Buy_Gold_Information;
 import com.goldsikka.goldsikka.Fragments.Successpopup;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
@@ -1003,8 +1001,8 @@ public class EventGift extends AppCompatActivity implements View.OnClickListener
     public void onpayment() {
         final Activity activity = this;
         final Checkout co = new Checkout();
-      //  co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
-        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
+       co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+      //  co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         try {
             JSONObject options = new JSONObject();

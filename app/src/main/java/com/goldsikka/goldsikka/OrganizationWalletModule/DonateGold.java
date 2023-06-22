@@ -2,10 +2,8 @@ package com.goldsikka.goldsikka.OrganizationWalletModule;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
 
 import android.annotation.SuppressLint;
@@ -20,7 +18,6 @@ import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -32,9 +29,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.goldsikka.goldsikka.Activitys.Events.EventGift;
 import com.goldsikka.goldsikka.Activitys.Events.EventModel;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
 import com.goldsikka.goldsikka.Fragments.Successpopup;
 import com.goldsikka.goldsikka.R;
@@ -994,8 +989,8 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
     public void onpayment() {
         final Activity activity = this;
         final Checkout co = new Checkout();
-       // co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
-        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
+       co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+    //    co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         paybleamount = tv_paybaleamount.getText().toString().substring(2);
 

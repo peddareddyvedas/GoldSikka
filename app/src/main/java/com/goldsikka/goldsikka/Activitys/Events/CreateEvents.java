@@ -124,7 +124,7 @@ public class CreateEvents extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.spinevent)
-    Spinner spinevent ;
+    Spinner spinevent;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.spinselect)
     Spinner spinselect;
@@ -213,8 +213,6 @@ public class CreateEvents extends AppCompatActivity {
     TextView tvselectimg;
 
 
-
-
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.loading_gif)
     GifImageView loading_gif;
@@ -223,36 +221,37 @@ public class CreateEvents extends AppCompatActivity {
     Button btsubmit;
 
     ApiDao apiDao;
-    String[] steventypearray = {"Select Event Type","Marriage","Others"};
-    String [] arrymarriagegender = {"Select Bride or Groom","Bride","BrideGroom"};
+    String[] steventypearray = {"Select Event Type", "Marriage", "Others"};
+    String[] arrymarriagegender = {"Select Bride or Groom", "Bride", "BrideGroom"};
 
-    ArrayList<String> eventtypelist ;
-    ArrayList<String> marrigepersionlist ;
+    ArrayList<String> eventtypelist;
+    ArrayList<String> marrigepersionlist;
 
-    String subevent,submarriagegender,steventtype,stmrarigegender;
+    String subevent, submarriagegender, steventtype, stmrarigegender;
 
     private static final String TAG = "Goldsikka";
     private static final int CAMERA_REQUEST = 1887;
     private static final int OTHERSIMG = 1888;
     private static final int WeddingCAMERA_REQUEST = 1889;
 
-    File couplefile,weddingfile,othereventfile;
-    Uri coupleuri,weddinguri,otheruri;
-    RequestBody couplerequestBody,weddingrequestBody,othereventrequestBody;
-    List<MultipartBody.Part> couplepart,weddingparts;
+    File couplefile, weddingfile, othereventfile;
+    Uri coupleuri, weddinguri, otheruri;
+    RequestBody couplerequestBody, weddingrequestBody, othereventrequestBody;
+    List<MultipartBody.Part> couplepart, weddingparts;
 
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
-    String  steventname,steventdate,steventtime,stholdername,stgroom,stbride,stvenue,stdescription;
-    String isteventdate,isteventname,istgroom,istbride,istvenue,istdescription,
-            isteventtype,isteventtime,istholdername,iid,iother_event_type,iimage,ieventid,stotheventname;
+    String steventname, steventdate, steventtime, stholdername, stgroom, stbride, stvenue, stdescription;
+    String isteventdate, isteventname, istgroom, istbride, istvenue, istdescription,
+            isteventtype, isteventtime, istholdername, iid, iother_event_type, iimage, ieventid, stotheventname;
 
-    RequestBody rqsteventname,rqsteventdate,rqsteventtime,rqstholdername,rqstgroom,
-            rqstbride,rqstvenue,rqstdescription,rqsteventtype,rqstmrarigegender,rqstotheventname;
+    RequestBody rqsteventname, rqsteventdate, rqsteventtime, rqstholdername, rqstgroom,
+            rqstbride, rqstvenue, rqstdescription, rqsteventtype, rqstmrarigegender, rqstotheventname;
 
     TextView unameTv, uidTv, titleTv;
     RelativeLayout backbtn;
     ScrollView scrollview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -296,7 +295,7 @@ public class CreateEvents extends AppCompatActivity {
         intilizeviews();
     }
 
-    public void setHint(){
+    public void setHint() {
         eteventname.setHint(Html.fromHtml(getString(R.string.event_name)));
         etholdername.setHint(Html.fromHtml(getString(R.string.event_holder)));
         eteventdate.setHint(Html.fromHtml(getString(R.string.event_date)));
@@ -320,7 +319,7 @@ public class CreateEvents extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
                 return false;
@@ -392,7 +391,6 @@ public class CreateEvents extends AppCompatActivity {
 //    }
 
 
-
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.maintoolmenu,menu);
@@ -400,7 +398,7 @@ public class CreateEvents extends AppCompatActivity {
 //    }
 
 
-    public void intilizeviews(){
+    public void intilizeviews() {
 
         String mydateFormat = "dd/MM/yyyy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(mydateFormat, Locale.ENGLISH);
@@ -411,17 +409,18 @@ public class CreateEvents extends AppCompatActivity {
         ettime.setText(sdftime.format(myCalendar.getTime()));
 
 
-        ArrayAdapter evtypeadapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,steventypearray);
+        ArrayAdapter evtypeadapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, steventypearray);
         evtypeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinevent.setAdapter(evtypeadapter);
         eventspinnerclick();
 
-        ArrayAdapter genderadapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,arrymarriagegender);
+        ArrayAdapter genderadapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, arrymarriagegender);
         genderadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinselect.setAdapter(genderadapter);
         spinclick();
     }
-    public void eventspinnerclick(){
+
+    public void eventspinnerclick() {
 
         eventtypelist = new ArrayList<>();
         // spinner_signuptype = findViewById(R.id.sub_category);
@@ -446,7 +445,7 @@ public class CreateEvents extends AppCompatActivity {
                     llmrgimgtext.setVisibility(View.VISIBLE);
                     llotheeteventname.setVisibility(View.GONE);
 
-                }else if (subevent.equals("Others")){
+                } else if (subevent.equals("Others")) {
                     steventtype = "OTH";
                     rqsteventtype = RequestBody.create(MediaType.parse("text/plain"), steventtype);
                     mllspintype.setVisibility(View.GONE);
@@ -458,7 +457,7 @@ public class CreateEvents extends AppCompatActivity {
                     llotherimg.setVisibility(View.VISIBLE);
                     llmrgimgtext.setVisibility(View.GONE);
                     llotheeteventname.setVisibility(View.VISIBLE);
-                }else if (subevent.equals("Select Event Type")){
+                } else if (subevent.equals("Select Event Type")) {
                     mllspintype.setVisibility(View.GONE);
                     mllbride.setVisibility(View.GONE);
                     mllcoule.setVisibility(View.GONE);
@@ -480,7 +479,7 @@ public class CreateEvents extends AppCompatActivity {
         });
     }
 
-    public void spinclick(){
+    public void spinclick() {
 
         marrigepersionlist = new ArrayList<>();
         // spinner_signuptype = findViewById(R.id.sub_category);
@@ -497,7 +496,7 @@ public class CreateEvents extends AppCompatActivity {
                     stmrarigegender = "F";
                     rqstmrarigegender = RequestBody.create(MediaType.parse("text/plain"), stmrarigegender);
 
-                }else if (submarriagegender.equals("BrideGroom")){
+                } else if (submarriagegender.equals("BrideGroom")) {
                     stmrarigegender = "M";
                     rqstmrarigegender = RequestBody.create(MediaType.parse("text/plain"), stmrarigegender);
                 }
@@ -517,11 +516,12 @@ public class CreateEvents extends AppCompatActivity {
 
         eteventdate.setText(sdf.format(myCalendar.getTime()));
     }
+
     @SuppressLint("NonConstantResourceId")
     @OnClick(R.id.ivdate)
-    public void datepicker(){
+    public void datepicker() {
 
-        DatePickerDialog datePickerDialog =  new DatePickerDialog(CreateEvents.this, date, myCalendar
+        DatePickerDialog datePickerDialog = new DatePickerDialog(CreateEvents.this, date, myCalendar
                 .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                 myCalendar.get(Calendar.DAY_OF_MONTH));
         datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
@@ -530,7 +530,7 @@ public class CreateEvents extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     @OnClick(R.id.ivtime)
-    public void timepicker(){
+    public void timepicker() {
 
         Calendar mcurrentTime = Calendar.getInstance();
         int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
@@ -540,7 +540,7 @@ public class CreateEvents extends AppCompatActivity {
         mTimePicker = new TimePickerDialog(CreateEvents.this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                ettime.setText( selectedHour + ":" + selectedMinute);
+                ettime.setText(selectedHour + ":" + selectedMinute);
             }
         }, hour, minute, true);//Yes 24 hour time
         mTimePicker.setTitle("Select Time");
@@ -551,7 +551,7 @@ public class CreateEvents extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.ivcouple)
-    public void getcoupleimage(){
+    public void getcoupleimage() {
         requestPermissions(
                 new String[]{
                         Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -561,7 +561,7 @@ public class CreateEvents extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.ivwedding)
-    public void getweddingimage(){
+    public void getweddingimage() {
         requestPermissions(
                 new String[]{
                         Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -571,7 +571,7 @@ public class CreateEvents extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @RequiresApi(api = Build.VERSION_CODES.M)
     @OnClick(R.id.ivprofile)
-    public void getimage(){
+    public void getimage() {
         requestPermissions(
                 new String[]{
                         Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -601,18 +601,21 @@ public class CreateEvents extends AppCompatActivity {
             Toast.makeText(this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
         }
     }
-    public void showotherimges(){
+
+    public void showotherimges() {
         Intent intent1 = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent1.addCategory(Intent.CATEGORY_OPENABLE);
         intent1.setType("*/*");
         startActivityForResult(intent1, OTHERSIMG);
     }
-    public void showweddingChooser(){
+
+    public void showweddingChooser() {
         Intent intent1 = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent1.addCategory(Intent.CATEGORY_OPENABLE);
         intent1.setType("*/*");
         startActivityForResult(intent1, WeddingCAMERA_REQUEST);
     }
+
     private void showChooser() {
 
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -622,16 +625,15 @@ public class CreateEvents extends AppCompatActivity {
     }
 
 
-
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @SuppressLint("LongLogTag")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST) {
-            Log.e("from couple","couple");
+            Log.e("from couple", "couple");
             //If the file selection was successful
             if (resultCode == RESULT_OK) {
-                if ( data != null && data.getData() != null){
+                if (data != null && data.getData() != null) {
 
                     try {
                         coupleuri = data.getData();
@@ -642,7 +644,7 @@ public class CreateEvents extends AppCompatActivity {
 
                         couplefile = FileUtilty.getFile(this, coupleuri);
 
-                        Log.e("file",couplefile.toString());
+                        Log.e("file", couplefile.toString());
                         couplepart = new ArrayList<>();
                         couplepart.add(prepareFilePart("photo", coupleuri));
 
@@ -652,7 +654,7 @@ public class CreateEvents extends AppCompatActivity {
                     }
                 }
             }
-        }else if (requestCode == WeddingCAMERA_REQUEST) {
+        } else if (requestCode == WeddingCAMERA_REQUEST) {
             Log.e("from wedding", "wedding");
             if (resultCode == RESULT_OK) {
                 if (data != null && data.getData() != null) {
@@ -675,9 +677,8 @@ public class CreateEvents extends AppCompatActivity {
                     }
                 }
             }
-        }
-        else if (requestCode == OTHERSIMG ) {
-            Log.e("from other","other");
+        } else if (requestCode == OTHERSIMG) {
+            Log.e("from other", "other");
             if (resultCode == RESULT_OK) {
                 if (data != null && data.getData() != null) {
 
@@ -702,7 +703,6 @@ public class CreateEvents extends AppCompatActivity {
         }
 
 
-
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -711,7 +711,7 @@ public class CreateEvents extends AppCompatActivity {
         couplerequestBody = RequestBody.create(MediaType.parse(Objects.requireNonNull
                 (this.getContentResolver().getType(fileUri))), couplefile);
 
-        return MultipartBody.Part.createFormData(partName, couplefile.getName(),couplerequestBody);
+        return MultipartBody.Part.createFormData(partName, couplefile.getName(), couplerequestBody);
     }
 
     private MultipartBody.Part prepareweddingFilePart(String partName, Uri fileUri) {
@@ -719,7 +719,7 @@ public class CreateEvents extends AppCompatActivity {
         weddingrequestBody = RequestBody.create(MediaType.parse(Objects.requireNonNull
                 (this.getContentResolver().getType(fileUri))), weddingfile);
 
-        return MultipartBody.Part.createFormData(partName, weddingfile.getName(),weddingrequestBody);
+        return MultipartBody.Part.createFormData(partName, weddingfile.getName(), weddingrequestBody);
     }
 
     private MultipartBody.Part Otherwedding(String partName, Uri fileUri) {
@@ -727,15 +727,15 @@ public class CreateEvents extends AppCompatActivity {
         othereventrequestBody = RequestBody.create(MediaType.parse(Objects.requireNonNull
                 (this.getContentResolver().getType(fileUri))), othereventfile);
 
-        return MultipartBody.Part.createFormData(partName, othereventfile.getName(),othereventrequestBody);
+        return MultipartBody.Part.createFormData(partName, othereventfile.getName(), othereventrequestBody);
     }
 
 
     @SuppressLint("NonConstantResourceId")
     @OnClick(R.id.btsubmit)
-    public void initvalidation(){
+    public void initvalidation() {
 
-        btsubmit .setVisibility(View.GONE);
+        btsubmit.setVisibility(View.GONE);
         loading_gif.setVisibility(View.VISIBLE);
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -751,10 +751,10 @@ public class CreateEvents extends AppCompatActivity {
                 CreateEvents.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (!NetworkUtils.isConnected(CreateEvents.this)){
+                        if (!NetworkUtils.isConnected(CreateEvents.this)) {
                             ToastMessage.onToast(CreateEvents.this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
 
-                        }else {
+                        } else {
                             validation();
                             loading_gif.setVisibility(View.GONE);
                             btsubmit.setVisibility(View.VISIBLE);
@@ -767,7 +767,7 @@ public class CreateEvents extends AppCompatActivity {
 
     }
 
-    public void validation(){
+    public void validation() {
         scrollview = findViewById(R.id.scrollview);
 
         tv_eventname.setVisibility(View.GONE);
@@ -776,7 +776,7 @@ public class CreateEvents extends AppCompatActivity {
         tvdescription.setVisibility(View.GONE);
         tvvenue.setVisibility(View.GONE);
         tvholdername.setVisibility(View.GONE);
-        tvimg .setVisibility(View.GONE);
+        tvimg.setVisibility(View.GONE);
         tvcouple.setVisibility(View.GONE);
         tvwedding.setVisibility(View.GONE);
         tvgroom.setVisibility(View.GONE);
@@ -797,7 +797,7 @@ public class CreateEvents extends AppCompatActivity {
         stholdername = etholdername.getText().toString().trim();
         scrollview.smoothScrollTo(etholdername.getLeft(), etholdername.getTop());
 
-        stgroom  = etgroomname.getText().toString().trim();
+        stgroom = etgroomname.getText().toString().trim();
         scrollview.smoothScrollTo(etgroomname.getLeft(), etgroomname.getTop());
 
         stbride = etbride.getText().toString().trim();
@@ -813,7 +813,6 @@ public class CreateEvents extends AppCompatActivity {
         scrollview.smoothScrollTo(etotheventname.getLeft(), etotheventname.getTop());
 
 
-
         rqsteventname = RequestBody.create(MediaType.parse("text/plain"), steventname);
         rqsteventdate = RequestBody.create(MediaType.parse("text/plain"), steventdate);
         rqsteventtime = RequestBody.create(MediaType.parse("text/plain"), steventtime);
@@ -823,18 +822,19 @@ public class CreateEvents extends AppCompatActivity {
         rqstvenue = RequestBody.create(MediaType.parse("text/plain"), stvenue);
         rqstdescription = RequestBody.create(MediaType.parse("text/plain"), stdescription);
         rqstdescription = RequestBody.create(MediaType.parse("text/plain"), stdescription);
-        rqstotheventname =RequestBody.create(MediaType.parse("text/plain"),stotheventname);
+        rqstotheventname = RequestBody.create(MediaType.parse("text/plain"), stotheventname);
 
-        if (subevent.equals("Select Event Type")){
+        if (subevent.equals("Select Event Type")) {
             tvspinevent.setVisibility(View.VISIBLE);
             tvspinevent.setText("Please select the type of Event..");
-            ToastMessage.onToast(this,"Please select the type of Event..",ToastMessage.ERROR);
-        }else {
+            ToastMessage.onToast(this, "Please select the type of Event..", ToastMessage.ERROR);
+        } else {
             createevent();
         }
 
     }
-    public void createevent(){
+
+    public void createevent() {
 
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Please Wait....");
@@ -845,25 +845,25 @@ public class CreateEvents extends AppCompatActivity {
             dialog.dismiss();
             ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
             return;
-        }
-        else {
+        } else {
 
 
             apiDao = ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-            Call<EventModel> postdetails = apiDao.createevent("Bearer "+AccountUtils.getAccessToken(this)
-                    ,rqsteventtype,rqsteventname,rqsteventdate,rqsteventtime,rqstdescription,rqstotheventname,rqstvenue
-                    ,rqstmrarigegender,rqstbride,
-                    rqstgroom,rqstholdername,couplepart,weddingparts);
+            Call<EventModel> postdetails = apiDao.createevent("Bearer " + AccountUtils.getAccessToken(this)
+                    , rqsteventtype, rqsteventname, rqsteventdate, rqsteventtime, rqstdescription, rqstotheventname, rqstvenue
+                    , rqstmrarigegender, rqstbride,
+                    rqstgroom, rqstholdername, couplepart, weddingparts);
 
             postdetails.enqueue(new Callback<EventModel>() {
                 @Override
                 public void onResponse(Call<EventModel> call, Response<EventModel> response) {
-                    int statuscode  = response.code();
+                    EventModel model = null;
+                    int statuscode = response.code();
                     Log.e("event statuscode ", String.valueOf(statuscode));
-                    if (statuscode == HttpsURLConnection.HTTP_OK||statuscode == HttpsURLConnection.HTTP_CREATED){
+                    if (statuscode == HttpsURLConnection.HTTP_OK || statuscode == HttpsURLConnection.HTTP_CREATED) {
                         dialog.dismiss();
-                        EventModel model = response.body();
-                        ToastMessage.onToast(CreateEvents.this,model.getMessage(),ToastMessage.SUCCESS);
+                         model = response.body();
+                        ToastMessage.onToast(CreateEvents.this, model.getMessage(), ToastMessage.SUCCESS);
                         JsonObject from = new JsonParser().parse(model.getEvent().toString()).getAsJsonObject();
                         try {
                             JSONObject json_from = new JSONObject(from.toString());
@@ -886,14 +886,18 @@ public class CreateEvents extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                    }else {
+                    } else if (statuscode == 403) {
+                        dialog.dismiss();
+                        ToastMessage.onToast(CreateEvents.this, "Please size is too long", ToastMessage.ERROR);
+
+                    } else {
                         tv_eventname.setVisibility(View.GONE);
                         tvdate.setVisibility(View.GONE);
                         tvtime.setVisibility(View.GONE);
                         tvdescription.setVisibility(View.GONE);
                         tvvenue.setVisibility(View.GONE);
                         tvholdername.setVisibility(View.GONE);
-                        tvimg .setVisibility(View.GONE);
+                        tvimg.setVisibility(View.GONE);
                         tvcouple.setVisibility(View.GONE);
                         tvwedding.setVisibility(View.GONE);
                         tvgroom.setVisibility(View.GONE);
@@ -908,14 +912,12 @@ public class CreateEvents extends AppCompatActivity {
                             JSONObject jObjError = new JSONObject(response.errorBody().string());
                             String st = jObjError.getString("message");
                             ToastMessage.onToast(CreateEvents.this, st, ToastMessage.ERROR);
-
                             JSONObject er = jObjError.getJSONObject("errors");
                             try {
                                 JSONArray array_mobile = er.getJSONArray("event_name");
                                 for (int i = 0; i < array_mobile.length(); i++) {
                                     tv_eventname.setVisibility(View.VISIBLE);
                                     tv_eventname.setText(array_mobile.getString(i));
-
                                 }
 
                             } catch (Exception e) {
@@ -926,7 +928,6 @@ public class CreateEvents extends AppCompatActivity {
                                 for (int i = 0; i < array_mobile.length(); i++) {
                                     tvdate.setVisibility(View.VISIBLE);
                                     tvdate.setText(array_mobile.getString(i));
-
                                 }
 
                             } catch (Exception e) {
@@ -946,11 +947,10 @@ public class CreateEvents extends AppCompatActivity {
                             try {
                                 JSONArray array_mobile = er.getJSONArray("photo");
                                 for (int i = 0; i < array_mobile.length(); i++) {
-                                    if (steventtype.equals("OTH")){
+                                    if (steventtype.equals("OTH")) {
                                         tvimg.setVisibility(View.VISIBLE);
                                         tvimg.setText(array_mobile.getString(i));
-                                    }
-                                    else {
+                                    } else {
                                         tvcouple.setVisibility(View.VISIBLE);
                                         tvcouple.setText(array_mobile.getString(i));
                                     }
@@ -970,7 +970,8 @@ public class CreateEvents extends AppCompatActivity {
 
                             } catch (Exception e) {
                                 e.printStackTrace();
-                            }  try {
+                            }
+                            try {
                                 JSONArray array_mobile = er.getJSONArray("holder_name");
                                 for (int i = 0; i < array_mobile.length(); i++) {
                                     tvholdername.setVisibility(View.VISIBLE);
@@ -1050,10 +1051,9 @@ public class CreateEvents extends AppCompatActivity {
                             }
 
 
-
                         } catch (JSONException | IOException e) {
                             e.printStackTrace();
-                            Log.e("exception",e.toString());
+                            Log.e("exception", e.toString());
                         }
 
 
@@ -1063,15 +1063,16 @@ public class CreateEvents extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<EventModel> call, Throwable t) {
                     dialog.dismiss();
-                    Log.e("cer error",t.toString());
-                    onsucess("create");
+                    Log.e("cererror", t.toString());
+                    //onsucess("create");
 //                    ToastMessage.onToast(CreateEvents.this,t.toString(),ToastMessage.ERROR);
                     //  ToastMessage.onToast(CreateEvents.this,"We have some issue please try after some time",ToastMessage.ERROR);
                 }
             });
         }
     }
-//    public void openverifyeventid(){
+
+    //    public void openverifyeventid(){
 //        final ProgressDialog dialog = new ProgressDialog(this);
 //        dialog.setMessage("Please Wait....");
 //        dialog.setCancelable(false);
@@ -1175,24 +1176,24 @@ public class CreateEvents extends AppCompatActivity {
 //            });
 //        }
 //    }
-    public void onsucess(String from){
+    public void onsucess(String from) {
 
-            Intent intent = new Intent(this, EventConformation.class);
-            intent.putExtra("etype", isteventtype);
-            intent.putExtra("ename", isteventname);
-            intent.putExtra("ebride", istbride);
-            intent.putExtra("egroom", istgroom);
-            intent.putExtra("ehoder", istholdername);
-            intent.putExtra("evenue", istvenue);
-            intent.putExtra("edate", isteventdate);
-            intent.putExtra("etime", isteventtime);
-            intent.putExtra("edes", istdescription);
-            intent.putExtra("iid", iid);
-            intent.putExtra("ieventid", ieventid);
-            intent.putExtra("iimage", iimage);
-            intent.putExtra("othtype", iother_event_type);
-            intent.putExtra("from", from);
-            Log.e("imageefef", iimage);
-            startActivity(intent);
+        Intent intent = new Intent(this, EventConformation.class);
+        intent.putExtra("etype", isteventtype);
+        intent.putExtra("ename", isteventname);
+        intent.putExtra("ebride", istbride);
+        intent.putExtra("egroom", istgroom);
+        intent.putExtra("ehoder", istholdername);
+        intent.putExtra("evenue", istvenue);
+        intent.putExtra("edate", isteventdate);
+        intent.putExtra("etime", isteventtime);
+        intent.putExtra("edes", istdescription);
+        intent.putExtra("iid", iid);
+        intent.putExtra("ieventid", ieventid);
+        intent.putExtra("iimage", iimage);
+        intent.putExtra("othtype", iother_event_type);
+        intent.putExtra("from", from);
+        Log.e("imageefef", iimage);
+        startActivity(intent);
     }
 }

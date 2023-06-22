@@ -1,83 +1,58 @@
 package com.goldsikka.goldsikka.Fragments.NewDesignsFragments;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.ContactsContract;
-import android.provider.Settings;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.view.GravityCompat;
 import androidx.core.widget.NestedScrollView;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.bumptech.glide.Glide;
-import com.goldsikka.goldsikka.Activitys.Card.CardHome;
 import com.goldsikka.goldsikka.Activitys.Events.Eventlist;
 import com.goldsikka.goldsikka.Activitys.FeedbackForm;
 import com.goldsikka.goldsikka.Activitys.GetContacts.ContactList;
-import com.goldsikka.goldsikka.Activitys.GetContacts.ContactsModal;
-import com.goldsikka.goldsikka.Activitys.GiftModuleActivity;
 import com.goldsikka.goldsikka.Activitys.Kyc_Details;
 import com.goldsikka.goldsikka.Activitys.MoneyWallet.AddMonet_to_Wallet;
 import com.goldsikka.goldsikka.Activitys.Nominee_Details;
 import com.goldsikka.goldsikka.Activitys.NotificationList;
 import com.goldsikka.goldsikka.Activitys.Passbook_Activity;
-import com.goldsikka.goldsikka.Activitys.Profile.CustomerAddressList;
 import com.goldsikka.goldsikka.Activitys.ReferAndEarnActivity;
 import com.goldsikka.goldsikka.Adapter.BannersAdapter;
-import com.goldsikka.goldsikka.Adapter.PageviewAdapter;
 import com.goldsikka.goldsikka.Adapter.Schemes_list_Adapter;
 import com.goldsikka.goldsikka.ComingSoon;
 import com.goldsikka.goldsikka.Directory.DirectoryHomeActivity;
-import com.goldsikka.goldsikka.Fragments.Buy_Gold_Information;
-import com.goldsikka.goldsikka.Fragments.Customer_BankDetailslist;
 import com.goldsikka.goldsikka.Fragments.Digital_wallet_fragment;
-import com.goldsikka.goldsikka.Fragments.Edit_coustomer_details;
 import com.goldsikka.goldsikka.Fragments.Get_kyc_details_fragment;
 import com.goldsikka.goldsikka.Fragments.JewelleryInventory.JewelleryHome;
 import com.goldsikka.goldsikka.Fragments.Sell_Fragment;
-import com.goldsikka.goldsikka.Fragments.TransferGold;
 import com.goldsikka.goldsikka.Fragments.Reedem_fragment;
 import com.goldsikka.goldsikka.Fragments.Schemes.Scheme_Content_Fragment;
-import com.goldsikka.goldsikka.MainActivity;
 import com.goldsikka.goldsikka.Models.BannersModel;
 import com.goldsikka.goldsikka.NewDesignsActivity.GiftContactList;
 import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
@@ -87,44 +62,33 @@ import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
-import com.goldsikka.goldsikka.WelcomeActivity;
+import com.goldsikka.goldsikka.LOGIN.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.interfaces.OnClickItemListenerForSchemes;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.DexterError;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.PermissionRequestErrorListener;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.squareup.picasso.Picasso;
-import com.viewpagerindicator.CirclePageIndicator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
-import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.Locale;
 
 import javax.net.ssl.HttpsURLConnection;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import de.hdodenhof.circleimageview.CircleImageView;
 import me.relex.circleindicator.CircleIndicator3;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -150,9 +114,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.tvtime)
     TextView tvtime;
-    @SuppressLint("NonConstantResourceId")
+  /*  @SuppressLint("NonConstantResourceId")
     @BindView(R.id.tvliverate)
-    TextView tvliverate;
+    TextView tvliverate;*/
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.tvdate)
@@ -213,6 +177,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
     @BindView(R.id.llrpoint)
     LinearLayout llrpoint;
 
+
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.lldonte)
     LinearLayout lldonte;
@@ -264,7 +229,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.indicator)
     CircleIndicator3 indicator;
-    RelativeLayout directory;
+    RelativeLayout directory, knowmore;
+    TextView tvliveprice, cwish, uname;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -280,30 +246,37 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         view = inflater.inflate(R.layout.homefragment, container, false);
         ButterKnife.bind(this, view);
         sharedPreference = new shared_preference(activity);
-
-        tvliverate = view.findViewById(R.id.tvliverate);
+        //  tvliverate = view.findViewById(R.id.tvliverate);
         tvnoticount = view.findViewById(R.id.tvNotificationCount);
         lljewelleryinv = view.findViewById(R.id.lljewelleryinv);
         llschemee = view.findViewById(R.id.llschemee);
         homens = view.findViewById(R.id.homens);
+        tvliveprice = view.findViewById(R.id.tvliveprice);
         lljewelleryinv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), JewelleryHome.class));
             }
         });
-
         mainFragmentActivity = new MainFragmentActivity();
         ivmenu = view.findViewById(R.id.ivmenu);
-        ivmenu.setOnClickListener(this);
-
         ivmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((MainFragmentActivity) getActivity()).getDrawerLayout();
             }
         });
+        cwish = view.findViewById(R.id.cwish);
+        uname = view.findViewById(R.id.uname);
+        uname.setText(AccountUtils.getName(getActivity()));
 
+        String currentTime = new SimpleDateFormat("HH", Locale.getDefault()).format(new Date());
+        if (Integer.parseInt(currentTime) < 12)
+            cwish.setText("Good Morning,");
+        else if (Integer.parseInt(currentTime) >= 12 && Integer.parseInt(currentTime) < 16)
+            cwish.setText("Good Afternoon,");
+        else if (Integer.parseInt(currentTime) >= 16 && Integer.parseInt(currentTime) <= 24)
+            cwish.setText("Good Evening,");
         intilizerecyclerview(view);
         getbanners();
         CustomerDetails();
@@ -327,8 +300,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
 
             }
         });
-        return view;
 
+        knowmore = view.findViewById(R.id.knowmore);
+        knowmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), DirectoryHomeActivity.class));
+                // startActivity(new Intent(getContext(), ProfileActivity.class));
+
+            }
+        });
+        return view;
     }
 
     public void wallet_amount() {
@@ -361,8 +343,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                         } catch (Exception e) {
 
                         }
-
-
                     } else {
                         dialog.dismiss();
                         // ToastMessage.onToast(activity, "Technical issue", ToastMessage.ERROR);
@@ -408,13 +388,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         });
     }
 
+
     private Runnable sliderRunnable = new Runnable() {
         @Override
         public void run() {
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
         }
     };
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -427,10 +407,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
     @Override
     public void onPause() {
         super.onPause();
-
         sliderHandler.removeCallbacks(sliderRunnable);
     }
-
 
     @Override
     public void onResume() {
@@ -452,18 +430,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         llevent.setOnClickListener(this);
         llrpoint.setOnClickListener(this);
         lldonte.setOnClickListener(this);
-
-
         rv_schemeslist.setHasFixedSize(true);
         rv_schemeslist.setLayoutManager(new LinearLayoutManager(activity));
         rv_schemeslist.setItemAnimator(new DefaultItemAnimator());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rv_schemeslist.setLayoutManager(layoutManager);
-
         arrayList = new ArrayList<>();
         adapter = new Schemes_list_Adapter(arrayList, activity, this);
         rv_schemeslist.setAdapter(adapter);
-
     }
 
     private void setscrollfun() {
@@ -495,10 +469,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                                 liveprice = listmodel.getSell_price_per_gram();
                                 Log.e("liveprice", liveprice);
                                 //tv_sellprice.setText(getString(R.string.Rs) + liveprice);
-                                tvliverate.setText("₹" + liveprice);
+                                //  tvliverate.setText("₹" + liveprice);
                                 tvdate.setText(listmodel.getDate());
                                 tvtime.setText(listmodel.getTime());
                                 tvlocation.setText(listmodel.getLocation());
+                                tvliveprice.setText("₹" + liveprice);
                                 AccountUtils.setGsttax(activity, listmodel.getTaxPercentage());
                             }
                         } else {
@@ -551,7 +526,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                             setupSlider(view);
                         }
                     } else {
-                       // Toast.makeText(activity, "No Images", Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(activity, "No Images", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -564,7 +539,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
             @Override
             public void onFailure(Call<List<Listmodel>> call, Throwable t) {
                 dialog.dismiss();
-              //  Toast.makeText(activity, "onFailure", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(activity, "onFailure", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -594,7 +569,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         });
     }
 
-
     BannersAdapter bannersAdapter;
 
     private void setupSlider(View view) {
@@ -602,17 +576,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         viewPager.setClipChildren(false);
         viewPager.setOffscreenPageLimit(3);
         viewPager.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
-
         sliderItemList.add(new BannersModel(get_banners));
         bannersAdapter = new BannersAdapter(sliderItemList, viewPager, activity);
         viewPager.setAdapter(bannersAdapter);
-
-
         bannersAdapter.registerAdapterDataObserver(indicator.getAdapterDataObserver());
         viewPager.setCurrentItem(bannersAdapter.getItemCount() - 2, false);
         indicator.setViewPager(viewPager);
-
-
     }
 
     public void CustomerDetails() {
@@ -823,7 +792,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                 @Override
                 public void onFailure(@NonNull Call<JsonElement> call, @NonNull Throwable t) {
 
-                  //  Toast.makeText(activity, "Technical problem", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(activity, "Technical problem", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -831,12 +800,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
     }
 
     public void getSchemelist() {
-
         if (!NetworkUtils.isConnected(activity)) {
             ToastMessage.onToast(activity, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
         } else {
             arrayList.clear();
-
             apiDao = ApiClient.getClient(AccountUtils.getAccessToken(activity)).create(ApiDao.class);
             Call<List<Listmodel>> getschemes = apiDao.getschemes("Bearer " + AccountUtils.getAccessToken(activity));
             getschemes.enqueue(new Callback<List<Listmodel>>() {
@@ -888,7 +855,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                 openTransfer();
                 //requestPermissions();
                 break;
-
             case R.id.llredeem:
                 openreedem();
                 break;
@@ -1028,8 +994,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
                     dialog.dismiss();
                 }
             });
-
-
         }
     }
 
@@ -1061,14 +1025,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, OnCl
         if (!NetworkUtils.isConnected(activity)) {
             ToastMessage.onToast(activity, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
         } else {
-
             Intent intent = new Intent(activity, Reedem_fragment.class);
             intent.putExtra("wallet", st_ingrams);
             intent.putExtra("amount", st_incurrency);
             startActivity(intent);
         }
-
-
     }
 
     public void opensell() {

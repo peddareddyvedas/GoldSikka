@@ -38,6 +38,7 @@ import androidx.core.app.NavUtils;
 import com.goldsikka.goldsikka.Activitys.Coupons.CouponsList;
 import com.goldsikka.goldsikka.Activitys.Coupons.CouponsModel;
 import com.goldsikka.goldsikka.Activitys.Elevenplus_Jewellery;
+import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -143,7 +144,6 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buy_digitalgold_design);
-
 
         backbtn = findViewById(R.id.backbtn);
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -333,7 +333,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                 @Override
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     dialog.dismiss();
-                //    ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues", ToastMessage.ERROR);
+                    //    ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues", ToastMessage.ERROR);
                 }
             });
         }
@@ -390,10 +390,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
             }
         }
     }
-
-
     public void lockprice() {
-
         Log.e("livepricelrate", String.valueOf(this.liveprice));
         ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
         this.apiDao = apiDao2;
@@ -413,119 +410,67 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
 
             public void onFailure(Call<List<Listmodel>> call, Throwable th) {
                 Log.e("lockratesfail", th.toString());
-               // ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues Try After some Time", ToastMessage.ERROR);
+                // ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues Try After some Time", ToastMessage.ERROR);
             }
         });
-//        Log.e("livepricelrate",String.valueOf(liveprice));
-//        apiDao = ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-//
-//        Call<List<Listmodel>> lockrates = apiDao.getlock_rates(liveprice,"Bearer "+AccountUtils.getAccessToken(this));
-//        lockrates.enqueue(new Callback<List<Listmodel>>() {
-//            @Override
-//            public void onResponse(Call<List<Listmodel>> call, Response<List<Listmodel>> response) {
-//                int statuscode = response.code();
-//                Log.e("statuscode Lock",String.valueOf(statuscode));
-//                if (statuscode == HttpsURLConnection.HTTP_ACCEPTED){
-//
-//                    buygold();
-////                    btnbuygold.setEnabled(true);
-////                    btnbuygold.setBackgroundResource(R.drawable.buttonborder);
-//
-//                }else {
-//                    ToastMessage.onToast(Buy_Digitalgold.this,"Try After some Time",ToastMessage.ERROR);
-////                    btnbuygold.setEnabled(false);
-////                    btnbuygold.setBackgroundResource(R.drawable.backgroundvisablity);
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Listmodel>> call, Throwable t) {
-//                Log.e("lockratesfail",t.toString());
-//                ToastMessage.onToast(Buy_Digitalgold.this,"We have some issues Try After some Time",ToastMessage.ERROR);
-//
-//            }
-//        });
-
     }
-
     @Override
     public void onBackPressed() {
 //        NavUtils.navigateUpFromSameTask(this);
         super.onBackPressed();
-        // finish();
+        startActivity(new Intent(getApplicationContext(), MainFragmentActivity.class));
     }
 
     public void btnAmount() {
-
         rupeessymbol.setVisibility(View.VISIBLE);
         tvresult.setVisibility(View.VISIBLE);
         rupeessymbol.setText("\u20B9");
-
         amountvalue = etamount.getText().toString();
 //        etamount.setHint("Amount");
         etamount.setHint(Html.fromHtml(getString(R.string.amount)));
         tvchange.setText("Enter Amount");
         btngrams.setText("BUY IN GRAMS");
-
         btnamount.setBackgroundResource(R.drawable.buy_amount_button);
         btngrams.setBackgroundResource(R.drawable.buy_grams_button);
-
         btngrams.setTextColor(getResources().getColor(R.color.black));
         btnamount.setTextColor(getResources().getColor(R.color.white));
-
         status = "0";
         testcal();
-
     }
 
     public void btGrams() {
-
         rupeessymbol.setVisibility(View.VISIBLE);
         tvresult.setVisibility(View.VISIBLE);
         rupeessymbol.setText("Gms");
-
         amountvalue = etamount.getText().toString();
 //        etamount.setHint("Grams");
         etamount.setHint(Html.fromHtml(getString(R.string.grams)));
         btnamount.setText("BUY IN AMOUNT");
         tvchange.setText("Enter Grams");
-
         btnamount.setBackgroundResource(R.drawable.button_left_border);
         btngrams.setBackgroundResource(R.drawable.button_right_background);
-
         btnamount.setTextColor(getResources().getColor(R.color.black));
         btngrams.setTextColor(getResources().getColor(R.color.white));
-
         status = "1";
         testcal();
-
     }
 
-
     public void goldcalcluation() {
-
         textWatcher = new TextWatcher() {
-
-
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
 //                finalamount = etAmount.getText().toString();
 //                finalgold = etgold.getText().toString();
-
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 //                finalamount = etAmount.getText().toString();
 //                finalgold = etgold.getText().toString();
-
             }
 
             @Override
             public void afterTextChanged(Editable charSequence) {
-
                 if (charSequence != null && !charSequence.toString().equalsIgnoreCase("")) {
 
                     if (etamount.getText().hashCode() == charSequence.hashCode()) {
@@ -545,28 +490,19 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                         }
                         //status = "0";
                         testcal();
-
                     }
-
                 } else {
-
                     tvresult.setText("");
                     btnbuygold.setText(getResources().getString(R.string.proceed_to_pay));
-
-
                 }
-
-
             }
         };
         etamount.addTextChangedListener(textWatcher);
     }
 
     public void testcal() {
-
         if (status.equals("0")) {
             if (!amountvalue.isEmpty()) {
-
                 if (amountvalue.equals(".")) {
                     Toast.makeText(getApplicationContext(), "Enter a valid input", Toast.LENGTH_SHORT).show();
                 } else {
@@ -575,9 +511,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                     double grms = (goldgrms / live);
                     BigDecimal b = BigDecimal.valueOf(grms).setScale(2, RoundingMode.HALF_EVEN);
                     finalgold = String.valueOf(b);
-
                     tvresult.setText(finalgold + " g");
-
 //                    tvresult.setText(finalgold);
                     btnbuygold.setText(getResources().getString(R.string.proceed_to_pay));
 
@@ -675,7 +609,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                 @Override
                 public void onFailure(@NonNull Call<JsonElement> call, @NonNull Throwable t) {
                     dialog.dismiss();
-                  //  Toast.makeText(Buy_Digitalgold.this, "Technical problem", Toast.LENGTH_SHORT).show();
+                    //  Toast.makeText(Buy_Digitalgold.this, "Technical problem", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -749,7 +683,6 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
     }
 
     public void validation() {
-
         amountvalue = etamount.getText().toString();
 //        finalgold = etgold.getText().toString();
 
@@ -816,45 +749,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
 
         }
 
-//        if (status.equals("0")){
-//            if (amountvalue.isEmpty()){
-//                ToastMessage.onToast(Buy_Digitalgold.this,"Please Enter Amount",ToastMessage.ERROR);
-//            }else if (Double.parseDouble(amountvalue)<100){
-//                ToastMessage.onToast(Buy_Digitalgold.this,"Please Enter Min Rs100",ToastMessage.ERROR);
-//            }else if (Double.parseDouble(finalgold)>30){
-//                openalertdiloug();
-//               // etAmount.getText().clear();
-//
-//            }else {
-//                lockprice();
-//            }
-//        }else {
-//            if (amountvalue.isEmpty()){
-//                ToastMessage.onToast(Buy_Digitalgold.this,"Please Enter Gold",ToastMessage.ERROR);
-//            }
-//            else if (Double.parseDouble(amountvalue)>30){
-//                openalertdiloug();
-//               // etAmount.getText().clear();
-//            }
-//            else {
-//                lockprice();
-//            }
-        //     }
 
-//        if (amountvalue.isEmpty()){
-//            ToastMessage.onToast(Buy_Digitalgold.this,"Please Enter Amount or Gold",ToastMessage.ERROR);
-//        }else if (Double.parseDouble(finalamount)<100){
-//            ToastMessage.onToast(Buy_Digitalgold.this,"Please Enter Min Rs100",ToastMessage.ERROR);
-//        }else if (Double.parseDouble(finalgold)>30){
-//            openalertdiloug();
-//            etgold.getText().clear();
-//
-//        }
-//        else {
-//
-//            lockprice();
-//
-//        }
     }
 
     String passamount;
@@ -867,15 +762,12 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
         if (!NetworkUtils.isConnected(this)) {
             ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
             dialog.dismiss();
-
         } else {
-
             if (status.equals("0")) {
                 passamount = amountvalue;
             } else {
                 passamount = finalamount;
             }
-
             Log.e("codestatuscode", String.valueOf(passamount));
             apiDao = ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
             Call<CouponsModel> invalidation = apiDao.couponvalidation("Bearer " + AccountUtils.getAccessToken(this), stcouponcode, passamount);
@@ -923,7 +815,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                 public void onFailure(Call<CouponsModel> call, Throwable t) {
                     dialog.dismiss();
                     //ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues please try after some time"
-                      //      , ToastMessage.ERROR);
+                    //      , ToastMessage.ERROR);
 
                 }
             });
@@ -1047,657 +939,4 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
 
 }
 
-//
-//package com.goldsikka.goldsikka.Fragments;
-//
-//import android.annotation.SuppressLint;
-//import android.app.Activity;
-//import android.app.ProgressDialog;
-//import android.content.Intent;
-//import android.os.Bundle;
-//import android.os.Handler;
-//import android.text.Editable;
-//import android.text.Html;
-//import android.text.TextWatcher;
-//import android.util.Log;
-//import android.view.MenuItem;
-//import android.view.View;
-//import android.view.ViewGroup;
-//import android.widget.Button;
-//import android.widget.EditText;
-//import android.widget.ImageView;
-//import android.widget.LinearLayout;
-//import android.widget.TextView;
-//import android.widget.Toast;
-//import androidx.appcompat.app.ActionBar;
-//import androidx.appcompat.app.AlertDialog;
-//import androidx.appcompat.app.AppCompatActivity;
-//import androidx.appcompat.widget.Toolbar;
-//import androidx.core.app.NavUtils;
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-//import butterknife.OnClick;
-//import com.facebook.appevents.AppEventsConstants;
-//import com.goldsikka.goldsikka.Activitys.Coupons.CouponsList;
-//import com.goldsikka.goldsikka.Activitys.Coupons.CouponsModel;
-////import com.goldsikka.goldsikka.C2002R;
-//import com.goldsikka.goldsikka.C2002R;
-//import com.goldsikka.goldsikka.Utils.AccountUtils;
-//import com.goldsikka.goldsikka.Utils.NetworkUtils;
-//import com.goldsikka.goldsikka.Utils.ToastMessage;
-//import com.goldsikka.goldsikka.interfaces.ApiDao;
-//import com.goldsikka.goldsikka.model.Listmodel;
-//import com.goldsikka.goldsikka.netwokconnection.ApiClient;
-//import com.google.firebase.analytics.FirebaseAnalytics;
-//import com.google.gson.JsonElement;
-//import com.google.gson.JsonParser;
-//import java.io.IOException;
-//import java.math.BigDecimal;
-//import java.math.RoundingMode;
-//import java.util.Collections;
-//import java.util.List;
-//import java.util.Timer;
-//import java.util.TimerTask;
-//import org.json.JSONArray;
-//import org.json.JSONException;
-//import org.json.JSONObject;
-////import p010pl.droidsonroids.gif.GifImageView;
-//import pl.droidsonroids.gif.GifImageView;
-//import retrofit2.Call;
-//import retrofit2.Callback;
-//import retrofit2.Response;
-//
-//public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickListener {
-//    String Coupongold;
-//    AlertDialog alertDialogdialog;
-//    String amountvalue;
-//    ApiDao apiDao;
-//    Button btnamount;
-//    Button btnbuygold;
-//    Button btngrams;
-//    String buttonvalidation;
-//    String customer_gold;
-//    EditText etAmount;
-//    EditText etamount;
-//    EditText etgold;
-//    String finalamount;
-//    String finalgold;
-//    String goldvalue;
-//    ImageView imageView_close;
-//    boolean isCoupon = true;
-//    TextView iv_liveprice;
-//    String live_gold_buy;
-//    String liveprice;
-//    LinearLayout llInAmount;
-//    LinearLayout llInGrams;
-//    @SuppressLint("ResourceType")
-//    @BindView(2131362483)
-//    LinearLayout llofferremove;
-//    @SuppressLint("ResourceType")
-//    @BindView(2131362484)
-//    LinearLayout llopencoupon;
-//    GifImageView loading_gif;
-//    MenuItem menuItem;
-//    String passamount;
-//    String st_currencyinwords;
-//    String st_incurrency;
-//    String st_ingrams;
-//    String status = AppEventsConstants.EVENT_PARAM_VALUE_NO;
-//    String stcouponamount = "null";
-//    String stcouponcode = "null";
-//    String stcouponfrom = "null";
-//    String taxPercentage;
-//    TextWatcher textWatcher;
-//    TextView tvInAmount;
-//    TextView tvInGrams;
-//    TextView tv_amt;
-//    TextView tv_grms;
-//    @SuppressLint("ResourceType")
-//    @BindView(2131363085)
-//    TextView tv_purity;
-//    TextView tv_sellprice;
-//    TextView tvchange;
-//    @SuppressLint("ResourceType")
-//    @BindView(2131363019)
-//    TextView tvgold;
-//    TextView tvliverate;
-//    @SuppressLint("ResourceType")
-//    @BindView(2131363206)
-//    TextView tvofferremove;
-//    TextView tvresult;
-//    String value;
-//
-//    /* access modifiers changed from: protected */
-//    public void onCreate(Bundle bundle) {
-//        super.onCreate(bundle);
-//        setContentView((int) C2002R.layout.buy_digitalgold_design);
-//        getliveprices();
-//        TextView textView = (TextView) findViewById(C2002R.C2005id.iv_liveprice);
-//        this.iv_liveprice = textView;
-//        textView.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                final ProgressDialog progressDialog = new ProgressDialog(Buy_Digitalgold.this);
-//                progressDialog.setCancelable(false);
-//                progressDialog.setMessage("Please wait..");
-//                progressDialog.show();
-//                new Handler().postDelayed(new Runnable() {
-//                    public void run() {
-//                        Buy_Digitalgold.this.getliveprices();
-//                        progressDialog.dismiss();
-//                    }
-//                }, 1500);
-//            }
-//        });
-//        ButterKnife.bind((Activity) this);
-//        setSupportActionBar((Toolbar) findViewById(C2002R.C2005id.toolbar));
-//        setTitle("Buy Gold");
-//        ActionBar supportActionBar = getSupportActionBar();
-//        if (supportActionBar != null) {
-//            supportActionBar.setDisplayHomeAsUpEnabled(true);
-//        }
-//        initlizeviews();
-//        goldcalcluation();
-//        getdata();
-//        Bundle extras = getIntent().getExtras();
-//        if (extras != null) {
-//            this.stcouponcode = extras.getString("couponcode");
-//            this.stcouponamount = extras.getString("offeramount");
-//            this.isCoupon = extras.getBoolean("isCoupon", true);
-//            this.value = extras.getString("value");
-//        }
-//    }
-//
-//    @OnClick({2131363206})
-//    public void offerremove() {
-//        this.llopencoupon.setVisibility(View.VISIBLE);
-//        this.llofferremove.setVisibility(View.GONE);
-//        this.isCoupon = true;
-//        this.stcouponcode = "null";
-//        this.stcouponamount = "null";
-//    }
-//
-//    public void initlizeviews() {
-//        this.loading_gif = (GifImageView) findViewById(C2002R.C2005id.loading_gif);
-//        this.tvchange = (TextView) findViewById(C2002R.C2005id.tvchange);
-//        this.tvliverate = (TextView) findViewById(C2002R.C2005id.tvliverate);
-//        this.tvgold = (TextView) findViewById(C2002R.C2005id.tv_gold);
-//        this.tv_purity = (TextView) findViewById(C2002R.C2005id.tv_purity);
-//        this.tv_sellprice = (TextView) findViewById(C2002R.C2005id.tv_sellprice);
-//        Button button = (Button) findViewById(C2002R.C2005id.btn_buygold);
-//        this.btnbuygold = button;
-//        button.setOnClickListener(this);
-//        this.etamount = (EditText) findViewById(C2002R.C2005id.et_amount);
-//        this.etgold = (EditText) findViewById(C2002R.C2005id.et_grms);
-//        this.etamount.setHint(Html.fromHtml(getString(C2002R.string.amount)));
-//        Button button2 = (Button) findViewById(C2002R.C2005id.btInAmount);
-//        this.btnamount = button2;
-//        button2.setOnClickListener(this);
-//        Button button3 = (Button) findViewById(C2002R.C2005id.btInGrams);
-//        this.btngrams = button3;
-//        button3.setOnClickListener(this);
-//        this.tvresult = (TextView) findViewById(C2002R.C2005id.tv_grms);
-//    }
-//
-//    public void getliveprices() {
-//        final ProgressDialog progressDialog = new ProgressDialog(this);
-//        progressDialog.setCancelable(false);
-//        progressDialog.setMessage("Please wait...");
-//        progressDialog.show();
-//        if (!NetworkUtils.isConnected(this)) {
-//            progressDialog.dismiss();
-//            ToastMessage.onToast(this, getString(C2002R.string.error_no_internet_connection), ToastMessage.ERROR);
-//            return;
-//        }
-//        ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-//        this.apiDao = apiDao2;
-//        apiDao2.getlive_rates("Bearer " + AccountUtils.getAccessToken(this)).enqueue(new Callback<Listmodel>() {
-//            static final /* synthetic */ boolean $assertionsDisabled = false;
-//
-//            {
-//                Class<Buy_Digitalgold> cls = Buy_Digitalgold.class;
-//            }
-//
-//            public void onResponse(Call<Listmodel> call, Response<Listmodel> response) {
-//                int code = response.code();
-//                List<Listmodel> singletonList = Collections.singletonList(response.body());
-//                if (code != 200 && code != 201) {
-//                    progressDialog.dismiss();
-//                    try {
-//                        JSONObject jSONObject = new JSONObject(response.errorBody().string());
-//                        String string = jSONObject.getString("message");
-//                        jSONObject.getJSONObject("errors");
-//                        Toast.makeText(Buy_Digitalgold.this, string, Toast.LENGTH_SHORT).show();
-//                    } catch (IOException | JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                } else if (singletonList != null) {
-//                    for (Listmodel listmodel : singletonList) {
-//                        progressDialog.dismiss();
-//                        Buy_Digitalgold.this.liveprice = listmodel.getSell_price_per_gram();
-//                        Log.e("liveprice", Buy_Digitalgold.this.liveprice);
-//                        TextView textView = Buy_Digitalgold.this.tv_sellprice;
-//                        textView.setText(Buy_Digitalgold.this.getString(C2002R.string.f168Rs) + Buy_Digitalgold.this.liveprice);
-//                        TextView textView2 = Buy_Digitalgold.this.tvliverate;
-//                        textView2.setText(Buy_Digitalgold.this.getString(C2002R.string.f168Rs) + Buy_Digitalgold.this.liveprice);
-//                        Buy_Digitalgold.this.taxPercentage = String.valueOf(Double.parseDouble(listmodel.getTaxPercentage()) / 100.0d);
-//                        AccountUtils.setGsttax(Buy_Digitalgold.this, listmodel.getTaxPercentage());
-//                    }
-//                } else {
-//                    progressDialog.dismiss();
-//                }
-//            }
-//
-//            public void onFailure(Call<Listmodel> call, Throwable th) {
-//                progressDialog.dismiss();
-//                ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues", ToastMessage.ERROR);
-//            }
-//        });
-//    }
-//
-//    @OnClick({2131362484})
-//    public void openoffers() {
-//        Intent intent = new Intent(this, CouponsList.class);
-//        intent.putExtra("value", this.etamount.getText().toString().trim());
-//        startActivityForResult(intent, 2);
-//    }
-//
-//    /* access modifiers changed from: protected */
-//    public void onActivityResult(int i, int i2, Intent intent) {
-//        super.onActivityResult(i, i2, intent);
-//        if (i == 2) {
-//            this.stcouponcode = intent.getStringExtra("couponcode");
-//            this.stcouponamount = intent.getStringExtra("offeramount");
-//            this.isCoupon = intent.getBooleanExtra("isCoupon", false);
-//            this.etamount.setText(intent.getStringExtra("value"));
-//            this.amountvalue = intent.getStringExtra("value");
-//            this.llopencoupon.setVisibility(View.GONE);
-//            this.llofferremove.setVisibility(View.VISIBLE);
-//            this.tvofferremove.setOnClickListener(new View.OnClickListener() {
-//                public void onClick(View view) {
-//                    Buy_Digitalgold.this.isCoupon = true;
-//                    Buy_Digitalgold.this.llopencoupon.setVisibility(View.VISIBLE);
-//                    Buy_Digitalgold.this.llofferremove.setVisibility(View.GONE);
-//                }
-//            });
-//        }
-//    }
-//
-//    public void lockprice() {
-//        Log.e("livepricelrate", String.valueOf(this.liveprice));
-//        ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-//        this.apiDao = apiDao2;
-//        String str = this.liveprice;
-//        apiDao2.getlock_rates(str, "Bearer " + AccountUtils.getAccessToken(this)).enqueue(new Callback<List<Listmodel>>() {
-//            public void onResponse(Call<List<Listmodel>> call, Response<List<Listmodel>> response) {
-//                int code = response.code();
-//                Log.e("statuscode Lock", String.valueOf(code));
-//                if (code == 202) {
-//                    Buy_Digitalgold.this.buygold();
-//                } else {
-//                    ToastMessage.onToast(Buy_Digitalgold.this, "Try After some Time", ToastMessage.ERROR);
-//                }
-//            }
-//
-//            public void onFailure(Call<List<Listmodel>> call, Throwable th) {
-//                Log.e("lockratesfail", th.toString());
-//                ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues Try After some Time", ToastMessage.ERROR);
-//            }
-//        });
-//    }
-//
-//    public void onBackPressed() {
-//        NavUtils.navigateUpFromSameTask(this);
-//        super.onBackPressed();
-//    }
-//
-//    public void btnAmount() {
-//        this.amountvalue = this.etamount.getText().toString();
-//        this.etamount.setHint(Html.fromHtml(getString(C2002R.string.amount)));
-//        this.tvchange.setText("Enter Amount");
-//        this.btngrams.setText("BUY IN GRAMS");
-//        this.btnamount.setBackgroundResource(C2002R.C2004drawable.buy_amount_button);
-//        this.btngrams.setBackgroundResource(C2002R.C2004drawable.buy_grams_button);
-//        this.btngrams.setTextColor(getResources().getColor(C2002R.C2003color.black));
-//        this.btnamount.setTextColor(getResources().getColor(C2002R.C2003color.white));
-//        this.status = AppEventsConstants.EVENT_PARAM_VALUE_NO;
-//        testcal();
-//    }
-//
-//    public void btGrams() {
-//        this.amountvalue = this.etamount.getText().toString();
-//        this.etamount.setHint(Html.fromHtml(getString(C2002R.string.grams)));
-//        this.btnamount.setText("BUY IN AMOUNT");
-//        this.tvchange.setText("Enter Grams");
-//        this.btnamount.setBackgroundResource(C2002R.C2004drawable.button_left_border);
-//        this.btngrams.setBackgroundResource(C2002R.C2004drawable.button_right_background);
-//        this.btnamount.setTextColor(getResources().getColor(C2002R.C2003color.black));
-//        this.btngrams.setTextColor(getResources().getColor(C2002R.C2003color.white));
-//        this.status = "1";
-//        testcal();
-//    }
-//
-//    public void goldcalcluation() {
-//        TextWatcher r0 = new TextWatcher() {
-//            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-//            }
-//
-//            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-//            }
-//
-//            public void afterTextChanged(Editable editable) {
-//                if (editable == null || editable.toString().equalsIgnoreCase("")) {
-//                    Buy_Digitalgold.this.tvresult.setText("");
-//                    Buy_Digitalgold.this.btnbuygold.setText(Buy_Digitalgold.this.getResources().getString(C2002R.string.proceed_to_pay));
-//                } else if (Buy_Digitalgold.this.etamount.getText().hashCode() == editable.hashCode()) {
-//                    Buy_Digitalgold buy_Digitalgold = Buy_Digitalgold.this;
-//                    buy_Digitalgold.amountvalue = buy_Digitalgold.etamount.getText().toString();
-//                    Buy_Digitalgold buy_Digitalgold2 = Buy_Digitalgold.this;
-//                    buy_Digitalgold2.buttonvalidation = buy_Digitalgold2.amountvalue;
-//                    Buy_Digitalgold.this.etamount.removeTextChangedListener(Buy_Digitalgold.this.textWatcher);
-//                    Buy_Digitalgold.this.etamount.addTextChangedListener(Buy_Digitalgold.this.textWatcher);
-//                    if (Buy_Digitalgold.this.etamount.length() == 0) {
-//                        Buy_Digitalgold.this.tvresult.setText("");
-//                        Buy_Digitalgold.this.btnbuygold.setText(Buy_Digitalgold.this.getResources().getString(C2002R.string.proceed_to_pay));
-//                    }
-//                    Buy_Digitalgold.this.testcal();
-//                }
-//            }
-//        };
-//        this.textWatcher = r0;
-//        this.etamount.addTextChangedListener(r0);
-//    }
-//
-//    public void testcal() {
-//        if (this.status.equals(AppEventsConstants.EVENT_PARAM_VALUE_NO) && !this.amountvalue.isEmpty()) {
-//            if (this.amountvalue.equals(".")) {
-//                Toast.makeText(getApplicationContext(), "Enter a valid input", Toast.LENGTH_SHORT).show();
-//            } else {
-//                String valueOf = String.valueOf(BigDecimal.valueOf(Double.parseDouble(this.amountvalue) / Double.parseDouble(this.liveprice)).setScale(2, RoundingMode.HALF_EVEN));
-//                this.finalgold = valueOf;
-//                this.tvresult.setText(valueOf);
-//                Button button = this.btnbuygold;
-//                button.setText(getResources().getString(C2002R.string.proceed_to_pay) + " " + this.amountvalue);
-//            }
-//        }
-//        if (this.status.equals("1") && !this.amountvalue.isEmpty()) {
-//            if (this.amountvalue.equals(".")) {
-//                Toast.makeText(getApplicationContext(), "Enter a valid input", Toast.LENGTH_SHORT).show();
-//                return;
-//            }
-//            String valueOf2 = String.valueOf(BigDecimal.valueOf(Double.parseDouble(this.liveprice) * Double.parseDouble(this.amountvalue)).setScale(0, RoundingMode.HALF_EVEN));
-//            this.finalamount = valueOf2;
-//            this.tvresult.setText(valueOf2);
-//            Button button2 = this.btnbuygold;
-//            button2.setText(getResources().getString(C2002R.string.proceed_to_pay) + " " + this.finalamount);
-//        }
-//    }
-//
-//    public void getdata() {
-//        final ProgressDialog progressDialog = new ProgressDialog(this);
-//        progressDialog.setMessage("Please Wait....");
-//        progressDialog.setCancelable(false);
-//        progressDialog.show();
-//        if (!NetworkUtils.isConnected(this)) {
-//            ToastMessage.onToast(this, getString(C2002R.string.error_no_internet_connection), ToastMessage.ERROR);
-//            progressDialog.dismiss();
-//            return;
-//        }
-//        ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-//        this.apiDao = apiDao2;
-//        apiDao2.get_digitalwallet("Bearer " + AccountUtils.getAccessToken(this)).enqueue(new Callback<JsonElement>() {
-//            static final /* synthetic */ boolean $assertionsDisabled = false;
-//
-//            {
-//                Class<Buy_Digitalgold> cls = Buy_Digitalgold.class;
-//            }
-//
-//            public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-//                int code = response.code();
-//                if (code == 201 || code == 200) {
-//                    try {
-//                        JSONObject jSONObject = new JSONObject(new JsonParser().parse(String.valueOf(response.body().getAsJsonObject())).getAsJsonObject().toString()).getJSONObject("balance");
-//                        Buy_Digitalgold.this.st_currencyinwords = jSONObject.getString("currencyInWords");
-//                        Buy_Digitalgold.this.st_ingrams = jSONObject.getString("humanReadable");
-//                        Buy_Digitalgold.this.st_incurrency = jSONObject.getString("inCurrency");
-//                        Buy_Digitalgold.this.setview();
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                } else {
-//                    try {
-//                        JSONObject jSONObject2 = new JSONObject(response.errorBody().string());
-//                        Toast.makeText(Buy_Digitalgold.this, jSONObject2.getString("message"), Toast.LENGTH_SHORT).show();
-//                        jSONObject2.getJSONObject("errors");
-//                    } catch (IOException | JSONException e2) {
-//                        e2.printStackTrace();
-//                    }
-//                }
-//                progressDialog.dismiss();
-//            }
-//
-//            public void onFailure(Call<JsonElement> call, Throwable th) {
-//                progressDialog.dismiss();
-//                Toast.makeText(Buy_Digitalgold.this, "Technical problem", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-//
-//    public void setview() {
-//        TextView textView = this.tvgold;
-//        textView.setText(this.st_ingrams + " grams");
-//    }
-//
-//    public void init_validation() {
-//        this.btnbuygold.setVisibility(View.GONE);
-//        this.loading_gif.setVisibility(View.VISIBLE);
-//        new Timer().schedule(new TimerTask() {
-//            public void run() {
-//                try {
-//                    Thread.sleep(500);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                Buy_Digitalgold.this.runOnUiThread(new Runnable() {
-//                    public void run() {
-//                        Buy_Digitalgold.this.validation();
-//                        Buy_Digitalgold.this.btnbuygold.setVisibility(View.VISIBLE);
-//                        Buy_Digitalgold.this.loading_gif.setVisibility(View.GONE);
-//                    }
-//                });
-//            }
-//        }, 500);
-//    }
-//
-//    public void validation() {
-//        this.amountvalue = this.etamount.getText().toString();
-//        if (this.isCoupon) {
-//            this.stcouponcode = "null";
-//            this.stcouponamount = "null";
-//            if (this.status.equals(AppEventsConstants.EVENT_PARAM_VALUE_NO)) {
-//                if (this.amountvalue.isEmpty()) {
-//                    ToastMessage.onToast(this, "Please Enter Amount", ToastMessage.ERROR);
-//                } else if (Double.parseDouble(this.amountvalue) < 50.0d) {
-//                    ToastMessage.onToast(this, "Please Enter Min Rs50", ToastMessage.ERROR);
-//                } else if (Double.parseDouble(this.finalgold) > 30.0d) {
-//                    openalertdiloug();
-//                } else {
-//                    lockprice();
-//                }
-//            } else if (this.amountvalue.isEmpty()) {
-//                ToastMessage.onToast(this, "Please Enter Gold", ToastMessage.ERROR);
-//            } else if (Double.parseDouble(this.finalamount) < 50.0d) {
-//                ToastMessage.onToast(this, "Amount Must be Rs.50", ToastMessage.ERROR);
-//            } else if (Double.parseDouble(this.amountvalue) > 30.0d) {
-//                openalertdiloug();
-//            } else {
-//                lockprice();
-//            }
-//        } else if (this.status.equals(AppEventsConstants.EVENT_PARAM_VALUE_NO)) {
-//            if (this.amountvalue.isEmpty()) {
-//                ToastMessage.onToast(this, "Please Enter Amount", ToastMessage.ERROR);
-//            } else if (Double.parseDouble(this.finalgold) > 30.0d) {
-//                openalertdiloug();
-//            } else {
-//                Log.e("Else", "Else checking");
-//                couponvalidation();
-//            }
-//        } else if (this.amountvalue.isEmpty()) {
-//            ToastMessage.onToast(this, "Please Enter Gold", ToastMessage.ERROR);
-//        } else if (Double.parseDouble(this.amountvalue) > 30.0d) {
-//            openalertdiloug();
-//        } else {
-//            couponvalidation();
-//        }
-//    }
-//
-//    public void couponvalidation() {
-//        final ProgressDialog progressDialog = new ProgressDialog(this);
-//        progressDialog.setMessage("Please Wait....");
-//        progressDialog.setCancelable(false);
-//        progressDialog.show();
-//        if (!NetworkUtils.isConnected(this)) {
-//            ToastMessage.onToast(this, getString(C2002R.string.error_no_internet_connection), ToastMessage.ERROR);
-//            progressDialog.dismiss();
-//            return;
-//        }
-//        if (this.status.equals(AppEventsConstants.EVENT_PARAM_VALUE_NO)) {
-//            this.passamount = this.amountvalue;
-//        } else {
-//            this.passamount = this.finalamount;
-//        }
-//        Log.e("codestatuscode", String.valueOf(this.passamount));
-//        ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
-//        this.apiDao = apiDao2;
-//        apiDao2.couponvalidation("Bearer " + AccountUtils.getAccessToken(this), this.stcouponcode, this.passamount).enqueue(new Callback<CouponsModel>() {
-//            static final /* synthetic */ boolean $assertionsDisabled = false;
-//
-//            {
-//                Class<Buy_Digitalgold> cls = Buy_Digitalgold.class;
-//            }
-//
-//            public void onResponse(Call<CouponsModel> call, Response<CouponsModel> response) {
-//                int code = response.code();
-//                CouponsModel body = response.body();
-//                Log.e("codestatuscode", String.valueOf(code));
-//                if (code == 200 || code == 202) {
-//                    progressDialog.dismiss();
-//                    Buy_Digitalgold.this.lockprice();
-//                    return;
-//                }
-//                progressDialog.dismiss();
-//                try {
-//                    JSONObject jSONObject = new JSONObject(response.errorBody().string());
-//                    ToastMessage.onToast(Buy_Digitalgold.this, jSONObject.getString("message"), ToastMessage.ERROR);
-//                    JSONObject jSONObject2 = jSONObject.getJSONObject("errors");
-//                    try {
-//                        JSONArray jSONArray = jSONObject2.getJSONArray(FirebaseAnalytics.Param.COUPON);
-//                        for (int i = 0; i < jSONArray.length(); i++) {
-//                            ToastMessage.onToast(Buy_Digitalgold.this, jSONArray.getString(i), ToastMessage.ERROR);
-//                        }
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                    try {
-//                        JSONArray jSONArray2 = jSONObject2.getJSONArray("amount");
-//                        for (int i2 = 0; i2 < jSONArray2.length(); i2++) {
-//                            ToastMessage.onToast(Buy_Digitalgold.this, jSONArray2.getString(i2), ToastMessage.ERROR);
-//                        }
-//                    } catch (Exception e2) {
-//                        e2.printStackTrace();
-//                    }
-//                } catch (IOException | JSONException e3) {
-//                    e3.printStackTrace();
-//                }
-//            }
-//
-//            public void onFailure(Call<CouponsModel> call, Throwable th) {
-//                progressDialog.dismiss();
-//                ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues please try after some time", ToastMessage.ERROR);
-//            }
-//        });
-//    }
-//
-//    public void openalertdiloug() {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        View inflate = getLayoutInflater().inflate(C2002R.layout.popup_buygold_screen, (ViewGroup) null);
-//        builder.setCancelable(false);
-//        builder.setView(inflate);
-//        this.alertDialogdialog = builder.create();
-//        ImageView imageView = (ImageView) inflate.findViewById(C2002R.C2005id.iv_close);
-//        this.imageView_close = imageView;
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                Buy_Digitalgold.this.alertDialogdialog.dismiss();
-//            }
-//        });
-//        this.alertDialogdialog.show();
-//    }
-//
-//    public void buygold() {
-//        if (!this.isCoupon) {
-//            double parseDouble = Double.parseDouble(this.taxPercentage);
-//            double parseDouble2 = Double.parseDouble(this.stcouponamount);
-//            double d = parseDouble2 - (parseDouble * parseDouble2);
-//            Log.e("witfinalcaluclation", String.valueOf(d));
-//            String valueOf = String.valueOf(d / Double.parseDouble(this.liveprice));
-//            this.Coupongold = valueOf;
-//            Log.e("withgst@cou", valueOf);
-//        } else {
-//            this.stcouponcode = "null";
-//            this.stcouponamount = "null";
-//        }
-//        if (!NetworkUtils.isConnected(this)) {
-//            ToastMessage.onToast(this, getString(C2002R.string.error_no_internet_connection), ToastMessage.ERROR);
-//        } else if (this.status.equals(AppEventsConstants.EVENT_PARAM_VALUE_NO)) {
-//            Intent intent = new Intent(this, Buy_Gold_Information.class);
-//            intent.putExtra("customer_rate", this.amountvalue);
-//            intent.putExtra("customer_gold", this.finalgold);
-//            intent.putExtra("liveprice", this.liveprice);
-//            intent.putExtra("Coupongold", this.Coupongold);
-//            intent.putExtra("couponcode", this.stcouponcode);
-//            intent.putExtra("isCoupon", this.isCoupon);
-//            intent.putExtra("status", this.status);
-//            intent.putExtra("taxPercentage", this.taxPercentage);
-//            startActivity(intent);
-//            Log.e("customer_rate", this.amountvalue);
-//            Log.e("customer_gold", this.finalgold);
-//        } else if (this.status.equals("1")) {
-//            Intent intent2 = new Intent(this, Buy_Gold_Information.class);
-//            intent2.putExtra("customer_rate", this.finalamount);
-//            intent2.putExtra("customer_gold", this.amountvalue);
-//            intent2.putExtra("liveprice", this.liveprice);
-//            intent2.putExtra("Coupongold", this.Coupongold);
-//            intent2.putExtra("couponcode", this.stcouponcode);
-//            intent2.putExtra("isCoupon", this.isCoupon);
-//            intent2.putExtra("taxPercentage", this.taxPercentage);
-//            intent2.putExtra("status", this.status);
-//            startActivity(intent2);
-//            Log.e("customer_rate", this.finalamount);
-//            Log.e("customer_gold", this.amountvalue);
-//        }
-//    }
-//
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case C2002R.C2005id.btInAmount /*2131361939*/:
-//                btnAmount();
-//                return;
-//            case C2002R.C2005id.btInGrams /*2131361940*/:
-//                btGrams();
-//                return;
-//            case C2002R.C2005id.btn_buygold /*2131361968*/:
-//                openBuygoldValidation();
-//                return;
-//            default:
-//                return;
-//        }
-//    }
-//
-//    public void openBuygoldValidation() {
-//        if (!NetworkUtils.isConnected(this)) {
-//            ToastMessage.onToast(this, getString(C2002R.string.error_no_internet_connection), ToastMessage.ERROR);
-//        } else {
-//            init_validation();
-//        }
-//    }
-//}
+

@@ -46,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:src="@drawable/goldsikka_logo2" />
+                        android:src="@drawable/goldsikkalogo" />
 
                 </RelativeLayout>
 
@@ -145,8 +145,10 @@
                                     android:background="@drawable/borderbg"
                                     android:drawableLeft="@drawable/searchicon"
                                     android:hint="Search"
+                                    android:imeOptions="actionDone"
                                     android:inputType="text"
                                     android:padding="7dp"
+                                    android:singleLine="true"
                                     android:textColorHint="@color/gray"
                                     android:visibility="gone" />
 

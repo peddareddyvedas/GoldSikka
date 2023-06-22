@@ -197,6 +197,8 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
                     if (statuscode == HttpsURLConnection.HTTP_OK || statuscode == HttpsURLConnection.HTTP_CREATED) {
                         List<Listmodel> list = response.body().getResult();
                         if (list.size() != 0) {
+                            itemList.clear();
+
                             for (Listmodel listmodel : list) {
                                 itemList.add(listmodel);
                                 adapter.notifyDataSetChanged();
@@ -417,4 +419,10 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
             });
         }
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        openaddresslist();
+    }
+
 }

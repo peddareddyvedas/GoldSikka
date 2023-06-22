@@ -1,49 +1,71 @@
 {
   "project_info": {
-    "project_number": "1054771871420",
-    "project_id": "goldsikka-59f07",
-    "storage_bucket": "goldsikka-59f07.appspot.com"
+    "project_number": "24486500857",
+    "project_id": "hrms-c93e3",
+    "storage_bucket": "hrms-c93e3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1054771871420:android:ffdf8d69719132700c5ab9",
+        "mobilesdk_app_id": "1:24486500857:android:406c0265582de58f104528",
         "android_client_info": {
           "package_name": "com.goldsikka.goldsikka"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1054771871420-bjaqldikbrqmgnpr4af0ehh9vk63m5kp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.goldsikka.goldsikka",
-            "certificate_hash": "718db6552e5b42f3d33ed8e7f9c64272abcb382b"
-          }
-        },
-        {
-          "client_id": "1054771871420-idtlk02ss5vr4cpfoi4saa8t18esvn8f.apps.googleusercontent.com",
+          "client_id": "24486500857-dvr33l11eh76ibc53rlgd9ndufbih598.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAIubKWNAKy_VfGkcZXhdqY3bklUj5Cywo"
+          "current_key": "AIzaSyDfze81qh718yXcrlSJn-0JwbV9A1lZtBM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1054771871420-idtlk02ss5vr4cpfoi4saa8t18esvn8f.apps.googleusercontent.com",
+              "client_id": "24486500857-dvr33l11eh76ibc53rlgd9ndufbih598.apps.googleusercontent.com",
               "client_type": 3
-            },
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24486500857:android:191175667f255f14104528",
+        "android_client_info": {
+          "package_name": "com.xyug.hrms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24486500857-992uekaaa4f3ueoq6ibuaips7rm15inu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xyug.hrms",
+            "certificate_hash": "a4e20c45c449efcf3cd520fc6ae52ee5502ef99a"
+          }
+        },
+        {
+          "client_id": "24486500857-dvr33l11eh76ibc53rlgd9ndufbih598.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfze81qh718yXcrlSJn-0JwbV9A1lZtBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
             {
-              "client_id": "1054771871420-3ttfu81rpbk2aspvg5n61jfhmthuek23.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.goldsikkajewels.goldsikka"
-              }
+              "client_id": "24486500857-dvr33l11eh76ibc53rlgd9ndufbih598.apps.googleusercontent.com",
+              "client_type": 3
             }
           ]
         }

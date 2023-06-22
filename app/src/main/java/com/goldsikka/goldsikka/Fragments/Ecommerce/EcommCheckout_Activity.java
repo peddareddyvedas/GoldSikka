@@ -35,7 +35,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.goldsikka.goldsikka.Activitys.Elevenplus_Jewellery;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
@@ -75,8 +74,6 @@ import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Field;
-import retrofit2.http.Header;
 
 public class EcommCheckout_Activity extends AppCompatActivity implements PaymentResultListener {
 
@@ -257,6 +254,8 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
         proceedPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 //  onpaymentsucess();
             /*    Intent i = new Intent(getApplicationContext(), EcommPaymentActivity.class);
                 i.putExtra("ecommtotalprice", totalpayableamount);
@@ -266,6 +265,7 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
                 i.putExtra("productscount", productscount);
                 startActivity(i);*/
                 //  liveprice=
+
                 Timer timer = new Timer();
 
                 timer.schedule(new TimerTask() {
@@ -303,7 +303,13 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
 
                 }, 500);
             }
+
         });
+
+       /* String ssss = et_wallet_money.getText().toString().trim();
+        if (ssss.isEmpty()) {
+            ToastMessage.onToast(getApplicationContext(), "Please enter amount", ToastMessage.ERROR);
+        } else { }*/
 
         wallet_amount();
         init_timer();
@@ -319,11 +325,14 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
 
                                                      if (isChecked) {
                                                          et_wallet_money.setVisibility(View.VISIBLE);
-                                                         et_wallet_money.setText("");
+                                                         // et_wallet_money.setText("");
+                                                         et_wallet_money.setText(paybleamount);
+
                                                          isCheck = true;
                                                      } else {
                                                          proceedPay.setEnabled(true);
                                                          isCheck = false;
+                                                         et_wallet_money.setText("");
                                                          et_wallet_money.setVisibility(View.GONE);
                                                          tv_wallet_error.setVisibility(View.GONE);
                                                          setdata();
@@ -386,6 +395,8 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
                 Intent intent = new Intent(getApplicationContext(), Elevenplus_Jewellery.class);
                 intent.putExtra("schemename", "GOLD PLUS PLAN");
                 intent.putExtra("id", "2");
+                AccountUtils.setSchemeIDD(getApplicationContext(), "2");
+                AccountUtils.setSchemenamee(getApplicationContext(),"GOLD PLUS PLAN");
 
                 startActivity(intent);
 
@@ -766,6 +777,10 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void afterTextChanged(Editable charSequence) {
+                if (charSequence.toString().length() == 1 && charSequence.toString().startsWith("0")) {
+                    charSequence.clear();
+                }
+
 
                 if (charSequence != null && !charSequence.toString().equalsIgnoreCase("")) {
                     if (et_wallet_money.getText().hashCode() == charSequence.hashCode()) {
@@ -930,6 +945,7 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
         double astamount = Double.parseDouble(totalpayableamount);
         Log.e("paybleamount", "" + totalpayableamount);
 
+
         finalcaluclation = astamount;
         try {
             DecimalFormat df = new DecimalFormat();
@@ -938,6 +954,7 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
             paybleamount = String.valueOf(b);
             tv_payble_amount.setText(getString(R.string.Rs) + paybleamount);
             Log.e("paybleamount", "" + paybleamount);
+
         } catch (NumberFormatException ex) {
             Log.e("myexception", "" + ex);
         }
@@ -1070,8 +1087,8 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
 
         final Activity activity = this;
         final Checkout co = new Checkout();
-      //  co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
-        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
+        co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+        //  co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         try {
             JSONObject options = new JSONObject();
@@ -1129,7 +1146,7 @@ public class EcommCheckout_Activity extends AppCompatActivity implements Payment
         et_wallet_money.setVisibility(View.GONE);
         cb_wallet.setChecked(false);
         tv_wallet_error.setVisibility(View.GONE);
-       // init();
+        // init();
 
         if (CouponCodeid.equals("")) {
             getEcommCheckoutproducts();

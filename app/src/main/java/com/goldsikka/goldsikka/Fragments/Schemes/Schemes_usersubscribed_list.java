@@ -51,6 +51,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -328,6 +329,8 @@ public class Schemes_usersubscribed_list extends AppCompatActivity implements Sw
                                     @Override
                                     public void run() {
                                         items.add(listmodel);
+                                        Collections.reverse(items);
+
                                         adapter.notifyDataSetChanged();
                                         dialog.dismiss();
                                         if (currentPage != PAGE_START)
@@ -453,6 +456,9 @@ public class Schemes_usersubscribed_list extends AppCompatActivity implements Sw
                 Intent intent = new Intent(this, Elevenplus_Jewellery.class);
                 intent.putExtra("id", schemeid);
                 intent.putExtra("schemename", schemename);
+                AccountUtils.setSchemeIDD(getApplicationContext(),schemeid);
+                AccountUtils.setSchemenamee(getApplicationContext(),schemename);
+
                 startActivity(intent);
             }
         }

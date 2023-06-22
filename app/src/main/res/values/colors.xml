@@ -6,7 +6,7 @@
 <!--    <color name="purple_200">#124747</color>-->
 <!--    <color name="purple_500">#124747</color>-->
 <!--    <color name="purple_700">#124747</color>-->
-    <color name="colorPrimary">#1A2E23</color>
+    <color name="colorPrimary">#1A2E22</color>
     <color name="colorPrimaryDark">#fff</color>
     <color name="colorAccent">#1A2E23</color>
     <color name="purple_200">#1A2E23</color>
@@ -17,13 +17,10 @@
     <color name="colorTransparent">#00FFFFFF</color>
     <color name="colorBackgroundTransparent">@color/colorPrimaryDark</color>
     <color name="colorWhite">#FFFFFF</color>
-
     <color name="green">#4CBA24</color>
     <color name="cardcolor">#F6F6F6</color>
     <color name="background">#1A2E22</color>
-
     <color name="texxtcolor">#fff</color>
-
     <color name="colorRed">#f93939</color>
     <color name="colorYellow">#f5c35d</color>
     <color name="colorGreen">#57ae57</color>
@@ -33,19 +30,12 @@
     <color name="colorBlueGrey">#607D8B</color>
     <color name="colorIndigo">#3F51B5</color>
     <color name="colorOrange">#FF9800</color>
-
-
     <color name="colorBackground">#131f37</color>
     <color name="toolbar_color_control_normal">#ffff</color>
 
-
 <!--new edit colors 344C4B -->
-
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-
-
     <color name="primarybackground">#1A2E23</color>
     <color name="edittextbackground">#B3BCBC</color>
     <color name="secondrybackground">#dce0dd</color>
@@ -56,17 +46,14 @@
     <color name="linearlayoutcolor">#B3BCBC</color>
     <color name="buttoncolor">#F8E6D9</color>
 
-
-
     <color name="red">#E41708</color>
     <color name="LightBrown2">#E9E8E8</color>
     <color name="LightBrown">#817979</color>
     <color name="DarkBrown">#261616</color>
 <!--    <color name="Gold">#124747</color>-->
-    <color name="Gold">#1A2E23</color>
+    <color name="Gold">#013220</color>
     <color name="lightgray">#d3d3d3</color>
-
-
     <color name="trackinggreen">#00C04B</color>
+    <color name="newtextcolor">#9A9A9A</color>
 
 </resources>

@@ -47,7 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:src="@drawable/goldsikka_logo2" />
+                        android:src="@drawable/goldsikkalogo" />
 
                 </RelativeLayout>
 
@@ -133,7 +133,8 @@
                             android:id="@+id/search_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
+                            android:singleLine="true"       android:layout_margin="20dp"
+                            android:imeOptions="actionDone"
                             android:background="@drawable/borderbg"
                             android:drawableLeft="@drawable/searchicon"
                             android:hint="Search"

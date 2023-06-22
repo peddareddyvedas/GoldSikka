@@ -82,8 +82,8 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
         recyclerView.setHasFixedSize(true);
-        linearLayoutManager.setStackFromEnd(true);
-        linearLayoutManager.setReverseLayout(true);
+        //  linearLayoutManager.setStackFromEnd(true);
+        //  linearLayoutManager.setReverseLayout(true);
         myoderslist = new ArrayList<>();
         myorderimages = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -144,47 +144,27 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                     for (Listmodel listmodel : flist1) {
                         Log.e("catname", "enter2");
                         Log.e("jcjnnnnn", "" + listmodel.getImage_uri());
-
                         Log.e("jcjnnnnn", "" + listmodel.getPname());
-
                         ordernameee = listmodel.getGold_type();
                         Log.e("caratgift", "" + ordernameee);
-
                         orderimage = String.valueOf(listmodel.getImage_uri());
                         Log.e("orderimage", orderimage);
-
-
-                        break;
-
-                    }
-                    mylistmodel.setImage_uri(orderimage);
-                    myoderslist.add(mylistmodel);
-                  //  Collections.reverse(myoderslist);
-                    ecommMyOrdersAdapter.notifyDataSetChanged();
-                   /* if (ordernameee.equals("0")) {
-                        myoderslist.remove(mylistmodel);
-
-                    } else {
                         mylistmodel.setImage_uri(orderimage);
-                        myoderslist.add(mylistmodel);
-                        Collections.reverse(myoderslist);
-                        ecommMyOrdersAdapter.notifyDataSetChanged()
-
-                    }*/
-
+                       break;
+                    }
+                    myoderslist.add(mylistmodel);
+                    //  Collections.reverse(myoderslist);
+                    ecommMyOrdersAdapter.notifyDataSetChanged();
                 } else if (statuscode == 400) {
                     Log.e("cv", String.valueOf(statuscode));
                 } else {
                 }
             }
-
             @Override
             public void onFailure(@NonNull Call<List<Listmodel>> call, @NonNull Throwable t) {
                 Log.e("ughb", String.valueOf(t));
             }
         });
-
-
     }
 
     private void getEcommmyorders() {
@@ -223,6 +203,9 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                             Log.e("orderid", listmodel.getOrder_id());
                             getMyOrderImages11(listmodel.getOrder_id(), listmodel);
                             Log.e("imageurl", "" + orderimage);
+
+                            // myoderslist.add(listmodel);
+                            //  ecommMyOrdersAdapter.notifyDataSetChanged();
                         }
 
                     } else {
@@ -231,11 +214,6 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                         totalorders.setText(String.valueOf(wcount));
                     }
 
-                   /* if (flist != null) {
-
-                    } else {
-                        Log.e("catname", "No Products");
-                    }*/
                 } else if (statuscode == 422) {
                     dialog.dismiss();
                     Log.e("cv", String.valueOf(statuscode));
@@ -282,7 +260,7 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
 
             Listmodel w = myoderslist.get(position);
             holder.sub_id.setText("Order Id :" + w.getOrder_id());
-            Log.e("myimage", w.getImage_uri());
+            // Log.e("myimage",""+ w.getImage_uri());
             Picasso.with(getApplicationContext()).load(w.getImage_uri()).into(holder.cimg);
             //  holder.order_status_tv.setText(w.getStatustext());
             Log.e("ordername", "" + w.getPname());
@@ -347,6 +325,16 @@ public class EcommMyOrdersActivity extends AppCompatActivity {
                 return 0;
             }*/
 
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            return position;
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {

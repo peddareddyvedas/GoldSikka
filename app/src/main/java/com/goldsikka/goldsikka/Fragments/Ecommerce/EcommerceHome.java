@@ -923,6 +923,8 @@ public class EcommerceHome extends Fragment implements OnItemClickListener, View
 
     private void init() {
         float density = 0;
+       // String[] image = new String[]{ "https://goldsikka.s3.ap-south-1.amazonaws.com/ecombanners-Image/04-web.jpg", "https://goldsikka.s3.ap-south-1.amazonaws.com/ecombanners-Image/03-web.jpg", "https://goldsikka.s3.ap-south-1.amazonaws.com/ecombanners-Image/02-web.jpg"};
+
         String[] image = new String[]{get_banners};
         for (int i = 0; i < image.length; i++) {
             Log.e("bannerurl", String.valueOf(urls));

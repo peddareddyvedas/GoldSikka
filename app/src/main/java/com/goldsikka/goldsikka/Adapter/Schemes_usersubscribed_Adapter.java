@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.goldsikka.goldsikka.Activitys.Predict_price.BaseViewHolder;
 import com.goldsikka.goldsikka.Models.SchemeModel;
 import com.goldsikka.goldsikka.R;
@@ -38,7 +39,7 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
     private static final int VIEW_TYPE_NORMAL = 1;
     private boolean isLoaderVisible = false;
 
-    public Schemes_usersubscribed_Adapter(Context context,ArrayList<SchemeModel> arrayList, OnItemClickListener listener) {
+    public Schemes_usersubscribed_Adapter(Context context, ArrayList<SchemeModel> arrayList, OnItemClickListener listener) {
         this.arrayList = arrayList;
         this.listener = listener;
         this.context = context;
@@ -64,6 +65,7 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         holder.onBind(position);
     }
+
     @Override
     public int getItemViewType(int position) {
         if (isLoaderVisible) {
@@ -72,7 +74,8 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
             return VIEW_TYPE_NORMAL;
         }
     }
-    public void addItems(ArrayList<SchemeModel>  postItems) {
+
+    public void addItems(ArrayList<SchemeModel> postItems) {
         arrayList.addAll(postItems);
         notifyDataSetChanged();
     }
@@ -104,8 +107,8 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
     }
 
     public class ViewHolder extends BaseViewHolder implements View.OnClickListener {
-        TextView tv_title,  tv_date;
-        LinearLayout tv_more,tvnickname,llnickremove;
+        TextView tv_title, tv_date;
+        LinearLayout tv_more, tvnickname, llnickremove;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -148,15 +151,13 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
 //
 //            }
 
-
             tv_title.setText(item.getNickName());
-
-            tv_date.setText("Date : "+item.getCreated_date());
-
-            if (item.isNickname()){
+            tv_date.setText("Date : " + item.getCreated_date());
+            Log.e("Createdate", "" + ("Date : " + item.getCreated_date()));
+            if (item.isNickname()) {
                 llnickremove.setVisibility(View.VISIBLE);
                 tvnickname.setVisibility(View.GONE);
-            }else {
+            } else {
                 llnickremove.setVisibility(View.GONE);
                 tvnickname.setVisibility(View.VISIBLE);
             }
@@ -164,7 +165,7 @@ public class Schemes_usersubscribed_Adapter extends RecyclerView.Adapter<BaseVie
 
         @Override
         public void onClick(View v) {
-            listener.onItemClick(v,getAdapterPosition());
+            listener.onItemClick(v, getAdapterPosition());
         }
     }
 

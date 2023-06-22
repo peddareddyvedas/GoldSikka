@@ -39,15 +39,14 @@
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/arrowleft"
-                        />
+                        android:background="@drawable/arrowleft" />
 
                     <ImageView
                         android:id="@+id/dr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:src="@drawable/goldsikka_logo2" />
+                        android:src="@drawable/goldsikkalogo" />
 
                 </RelativeLayout>
 
@@ -108,14 +107,13 @@
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
-            android:layout_below="@id/view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/view">
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
 
 
                 <RelativeLayout
@@ -136,9 +134,11 @@
                             android:layout_margin="20dp"
                             android:background="@drawable/borderbg"
                             android:drawableLeft="@drawable/searchicon"
+                            android:imeOptions="actionDone"
                             android:hint="Search"
                             android:inputType="text"
                             android:padding="7dp"
+                            android:singleLine="true"
                             android:textColorHint="@color/gray" />
 
                     </LinearLayout>
@@ -148,6 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/Searchll" />
+
                     <RelativeLayout
                         android:id="@+id/notfound"
                         android:layout_width="match_parent"

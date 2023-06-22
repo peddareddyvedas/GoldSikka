@@ -62,7 +62,7 @@
                 android:layout_marginTop="10dp"
                 android:button="@drawable/radiobutton"
                 android:checked="false"
-                android:text=" Upto ₹10000"
+                android:text=" Upto ₹30000"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
 
@@ -73,7 +73,7 @@
                 android:layout_marginTop="10dp"
                 android:button="@drawable/radiobutton"
                 android:checked="false"
-                android:text=" ₹10000 - ₹20000"
+                android:text=" Upto ₹60000"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginTop="10dp"
                 android:button="@drawable/radiobutton"
                 android:checked="false"
-                android:text=" ₹20000 - ₹30000"
+                android:text=" Upto ₹100000"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
 
@@ -95,7 +95,7 @@
                 android:layout_marginTop="10dp"
                 android:button="@drawable/radiobutton"
                 android:checked="false"
-                android:text=" ₹30000 - ₹50000"
+                android:text=" Upto ₹150000"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
 
@@ -106,7 +106,7 @@
                 android:layout_marginTop="10dp"
                 android:button="@drawable/radiobutton"
                 android:checked="false"
-                android:text=" Above ₹50000"
+                android:text=" Above ₹150000"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </RadioGroup>

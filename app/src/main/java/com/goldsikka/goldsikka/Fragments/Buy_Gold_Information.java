@@ -3,9 +3,7 @@ package com.goldsikka.goldsikka.Fragments;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -13,13 +11,11 @@ import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,19 +23,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.facebook.FacebookSdk;
 import com.facebook.LoggingBehavior;
 import com.facebook.appevents.AppEventsLogger;
 import com.goldsikka.goldsikka.Activitys.BaseActivity;
 
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
-import com.goldsikka.goldsikka.Activitys.RegistationActivity;
-import com.goldsikka.goldsikka.MainActivity;
+import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -233,7 +224,7 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
         tvliverate.setText(getString(R.string.Rs) + liveprice);
         setdata();
         wallet_amount();
-        init_timer();
+        init_timerbuygold();
 
         et_wallet_money.setHint(Html.fromHtml(getString(R.string.wallet_hint)));
         // openoffer();
@@ -287,29 +278,21 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void afterTextChanged(Editable charSequence) {
-
                 if (charSequence != null && !charSequence.toString().equalsIgnoreCase("")) {
                     if (et_wallet_money.getText().hashCode() == charSequence.hashCode()) {
                         amountvalue = et_wallet_money.getText().toString();
                         Log.e("amountvalue", "" + amountvalue);
                         tv_wallet_error.setVisibility(View.VISIBLE);
-
-
                         if (Integer.parseInt(paybleamount) >= Integer.parseInt(amountvalue)) {
-
                             // tv_wallet_error.setText("Money less then");
                             tv_wallet_error.setVisibility(View.GONE);
 
                             int minus = Integer.parseInt(paybleamount) - Integer.parseInt(amountvalue);
-
                             after_dedcation = String.valueOf(minus);
 
                             // paybleamount = after_dedcation;
-
                             tv_payble_amount.setText(getString(R.string.Rs) + after_dedcation);
                             btn_payment.setEnabled(true);
-
-
                             Log.e("Walletamountddd", "" + Walletamount);
                             String result = Walletamount.replaceAll("[^\\w\\s]", "");
                             String stopEnd = result.substring(0, result.length() - 2);
@@ -319,18 +302,14 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
                               /*  double entervalue = Double.parseDouble(amountvalue);
                                 double walletvalue = Double.parseDouble(Walletamount);
                                 Log.e("walletvalue", "" + walletvalue);
-
                                 if (entervalue > walletvalue) {
                                     Log.e("amountvalue", "" + entervalue);
                                     Log.e("walletvalue", "" + walletvalue);*/
-
                                 tv_wallet_error.setVisibility(View.VISIBLE);
                                 btn_payment.setEnabled(false);
                                 btn_payment.setBackgroundResource(R.drawable.backgroundvisablity);
-
                                 tv_wallet_error.setText("You can't enter more then " + Walletamount);
                                 tv_wallet_error.setTextColor(getColor(R.color.red));
-
                             } /*else if (amountvalue.equals("0")) {
                                 Log.e("edit", "" + amountvalue);
                                 btn_payment.setEnabled(false);
@@ -339,26 +318,20 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
                                 tv_wallet_error.setText("Please enter more than 0 Rupees");
                                 tv_wallet_error.setTextColor(getColor(R.color.red));
                             }*/
-
                         } else {
                             tv_payble_amount.setText(getString(R.string.Rs) + "0");
                             btn_payment.setEnabled(false);
                             btn_payment.setBackgroundResource(R.drawable.backgroundvisablity);
                             tv_wallet_error.setText("You can't enter more than Payable Amount");
                             tv_wallet_error.setTextColor(getColor(R.color.red));
-
                         }
-
                         et_wallet_money.removeTextChangedListener(textWatcher);
                         et_wallet_money.addTextChangedListener(textWatcher);
-
                     }
                 } else {
-
                     tv_payble_amount.setText(getString(R.string.Rs) + paybleamount);
                     tv_wallet_error.setText("");
                     amountvalue = "null";
-
                 }
             }
         };
@@ -415,7 +388,7 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
 
                     dialog.dismiss();
 
-                   // ToastMessage.onToast(Buy_Gold_Information.this, "We have some issue", ToastMessage.ERROR);
+                    // ToastMessage.onToast(Buy_Gold_Information.this, "We have some issue", ToastMessage.ERROR);
                 }
             });
         }
@@ -427,8 +400,8 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
         countDownTimer.onFinish();
         timerRunning = false;
         super.onBackPressed();
-
-        finish();
+        startActivity(new Intent(getApplicationContext(), Buy_Digitalgold.class));
+     //   finish();
     }
 
     //    @Override
@@ -439,7 +412,7 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
 //        super.onPause();
 //    }
 
-    public void init_timer() {
+    public void init_timerbuygold() {
 
         long duration = 300000;
         countDownTimer = new CountDownTimer(duration, 1000) {
@@ -460,7 +433,7 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
             public void onFinish() {
 
                 tv_second_title.setVisibility(View.GONE);
-                Intent intent = new Intent(Buy_Gold_Information.this, Buy_Digitalgold.class);
+                Intent intent = new Intent(Buy_Gold_Information.this, MainFragmentActivity.class);
                 startActivity(intent);
 
                 // tvsendagain.setVisibility(View.VISIBLE);
@@ -861,8 +834,8 @@ public class Buy_Gold_Information extends BaseActivity implements baseinterface,
 
         final Activity activity = this;
         final Checkout co = new Checkout();
-       // co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
-        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
+        co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+        // co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         try {
             JSONObject options = new JSONObject();

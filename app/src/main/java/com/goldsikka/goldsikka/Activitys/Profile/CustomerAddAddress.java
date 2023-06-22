@@ -734,16 +734,21 @@ public class CustomerAddAddress extends AppCompatActivity implements View.OnClic
                 String exactlocation = addresses.get(0).getCountryCode();
 
 
+
 //////state_id
                 state_id = "25";
 
-                String add = addresses.get(0).getFeatureName() + "," + addresses.get(0).getSubThoroughfare() + "," + addresses.get(0).getThoroughfare();
+              //  String add = addresses.get(0).getFeatureName() + "," + addresses.get(0).getSubThoroughfare() + "," + addresses.get(0).getThoroughfare();
+                  String add = addresses.get(0).getFeatureName();
                 addres = add;
-
                 et_address.setText(add);
                 et_city.setText(city);
                 et_pincode.setText(postalCode);
                 et_state.setText(state);
+
+                Log.e("addres ", "" + addres);
+
+                Log.e("add ", "" + add);
 
                 Log.e("orginallocation ", "" + address1);
 

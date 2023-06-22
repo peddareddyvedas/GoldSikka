@@ -47,6 +47,8 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.AppCompat"
         android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateHidden|adjustPan"
+
         tools:ignore="RedundantNamespace"
         tools:targetApi="n">
         <receiver
@@ -94,10 +96,14 @@
             android:name=".Activitys.JewelleryExpo"
             android:exported="false" />
         <activity
-            android:name=".Activitys.MPIN"
+            android:name=".LOGIN.MPIN"
             android:exported="false" />
         <activity
             android:name=".Activitys.Refer_Earn_List"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".Directory.ActivityVideoView"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activitys.NotificationList"
@@ -116,11 +122,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activitys.EntryPin"
+            android:name=".LOGIN.EntryPin"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Activitys.CreatePIN"
+            android:name=".LOGIN.CreatePIN"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
@@ -197,15 +203,15 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.GrayStatusBar" />
         <activity
-            android:name=".Activitys.ChangePassword"
+            android:name=".LOGIN.ChangePassword"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activitys.ForgotChangePassword"
+            android:name=".LOGIN.ForgotChangePassword"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activitys.ForgotOtp"
+            android:name=".LOGIN.ForgotOtp"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -393,11 +399,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".LOGIN.WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activitys.OTPActivity"
+            android:name=".LOGIN.OTPActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
@@ -406,17 +412,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activitys.LoginActivity"
+            android:name=".LOGIN.LoginActivity"
             android:exported="true"
-            android:parentActivityName=".WelcomeActivity"
+            android:parentActivityName=".LOGIN.WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activitys.OnBoardScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".LOGIN.SplashActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.GrayStatusBar"
-            android:exported="true">
+            android:theme="@style/AppTheme.GrayStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -424,7 +434,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".FirebaseMessageReceiver"
+        <service
+            android:name=".FirebaseMessageReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -432,7 +443,7 @@
         </service>
 
         <activity
-            android:name=".Activitys.RegistationActivity"
+            android:name=".LOGIN.RegistationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -532,6 +543,13 @@
             android:name=".Fragments.Schemes.Scheme_features"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <activity
+            android:name=".Activitys.Elevenplusinformation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity
             android:name=".Fragments.Schemes.Scheme_Faqs_Fragment"
             android:screenOrientation="portrait"
@@ -691,7 +709,7 @@
         <activity
             android:name=".Directory.DirectrotyStoreReportActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Directory.DirectoryReviewslistActivity"
             android:exported="false"
@@ -699,13 +717,13 @@
         <activity
             android:name=".Directory.Adapters.DirectoryImageurlsAdapter"
             android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Directory.Adapters.DirectoryStoreVideoAdapter"
             android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Directory.Adapters.DirectoryStoreProfileAdapter"
             android:exported="false"
@@ -713,14 +731,12 @@
             tools:ignore="Instantiatable" />
 
 
-
-
         <!-- test rzp_test_0VM20Pg2VIA2aR -->
         <!-- live 06-04-21    rzp_live_uvxtS5LwJPMIOP, rzp_test_0VM20Pg2VIA2aR -->
         <!--        rzp_live_uvxtS5LwJPMIOP-->
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_live_uvxtS5LwJPMIOP" />
+            android:value="rzp_test_0VM20Pg2VIA2aR" />
         <meta-data
             android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
             android:value="false" />

@@ -1,7 +1,5 @@
 package com.goldsikka.goldsikka.Directory;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -18,14 +16,12 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -45,19 +41,15 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatRatingBar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
-import com.goldsikka.goldsikka.Activitys.ChangePassword;
-import com.goldsikka.goldsikka.Activitys.Elevenplus_Jewellery;
-import com.goldsikka.goldsikka.Activitys.Events.EventModel;
 import com.goldsikka.goldsikka.Activitys.LocationTracker;
 
 
-import com.goldsikka.goldsikka.Directory.Adapters.DirectoryImageurlsAdapter;
 import com.goldsikka.goldsikka.Directory.Adapters.DirectoryStoreProfileAdapter;
 import com.goldsikka.goldsikka.Directory.Adapters.DirectoryStoreVideoAdapter;
 import com.goldsikka.goldsikka.Fragments.Ecommerce.Adapters.PageviewecomAdapter;
@@ -66,9 +58,7 @@ import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
-import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
-import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -76,10 +66,7 @@ import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -87,12 +74,9 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import butterknife.internal.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -153,12 +137,13 @@ public class DirectoryStoreDetails extends AppCompatActivity {
     Button btn_submit;
     FrameLayout layoutframe;
     TextView emailerror, numbererror, nameerror, messageerror;
-
+    ImageView imagelocation;
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES;
     private ArrayList<String> urls = new ArrayList<>();
     boolean isAllFieldsChecked = false;
+    CardView cardclick;
 
     @Override
 
@@ -214,7 +199,9 @@ public class DirectoryStoreDetails extends AppCompatActivity {
         storeownername = findViewById(R.id.storeownername);
         verifiedimg = findViewById(R.id.verifiedimg);
         viewpagerimage = findViewById(R.id.viewpagerimage);
+
         layoutframe = findViewById(R.id.layoutframe);
+        imagelocation = findViewById(R.id.imagelocation);
         if (verifiedstatus.equals("0")) {
             //  verifiedimg.setImageResource(R.drawable.notverifiedimage);
 
@@ -328,6 +315,21 @@ public class DirectoryStoreDetails extends AppCompatActivity {
         });
         direction.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View view) {
+                String originLocation = String.valueOf(LocationTracker.getInstance().currentLocation.getLatitude()) + "," + String.valueOf(LocationTracker.getInstance().currentLocation.getLongitude());
+                String destinationLocation = String.valueOf(serverlatitude) + "," + String.valueOf(serverlogitude);
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps?saddr=" + originLocation + "&daddr=" + destinationLocation + "&mode=d"));
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+       /* direction.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
 
 
@@ -347,7 +349,17 @@ public class DirectoryStoreDetails extends AppCompatActivity {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
-
+            }
+        });
+*/
+        imagelocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String originLocation = String.valueOf(LocationTracker.getInstance().currentLocation.getLatitude()) + "," + String.valueOf(LocationTracker.getInstance().currentLocation.getLongitude());
+                String destinationLocation = String.valueOf(serverlatitude) + "," + String.valueOf(serverlogitude);
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://maps.google.com/maps?saddr=" + originLocation + "&daddr=" + destinationLocation + "&mode=d"));
+                startActivity(intent);
             }
         });
         website.setOnClickListener(new View.OnClickListener() {
@@ -361,8 +373,19 @@ public class DirectoryStoreDetails extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                share();
+               share();
                 //toname
+                //startActivity(new Intent(getApplicationContext(), ActivityVideoView.class));
+
+            }
+        });
+        cardclick = findViewById(R.id.cardclick);
+        cardclick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastMessage.onToast(getApplicationContext(), "fsfsfddddddcliclfff", ToastMessage.ERROR);
+
+                startActivity(new Intent(getApplicationContext(), ActivityVideoView.class));
             }
         });
     }
@@ -521,7 +544,6 @@ public class DirectoryStoreDetails extends AppCompatActivity {
         }
     }
 
-
     public void predictaccesdialog() {
         final Dialog pdialog = new Dialog(DirectoryStoreDetails.this);
         pdialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -665,7 +687,6 @@ public class DirectoryStoreDetails extends AppCompatActivity {
 
 
     }
-
 
     private boolean businessvalidations(final Dialog pdifffff) {
 
@@ -1078,7 +1099,8 @@ public class DirectoryStoreDetails extends AppCompatActivity {
                                     closetime.setText(closetimee);
                                     storeagee = listmodel.getAge_of_store();
                                     storeage.setText(storeagee + " years");
-
+                                    serverlatitude = listmodel.getLatitude();
+                                    serverlogitude = listmodel.getLongitude();
                                     String loadviewimage = listmodel.getImage();
 
                                     if (listmodel.getImage() != null) {
@@ -1487,7 +1509,7 @@ public class DirectoryStoreDetails extends AppCompatActivity {
     public void share() {
         String title = toname;
         String content = "http://www.goldsikka.com";
-        String titleAndContent = "Title: " + title + "\n Shop Website: " + content;
+        String titleAndContent = "Shop Name: " + title + "\n Shop Website: " + content;
 
         Intent intentShare = new Intent();
         intentShare.setAction(Intent.ACTION_SEND);

@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -148,14 +148,14 @@
             android:textSize="15sp" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/enquiryemail"
             android:text="*"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="@color/red"
+            android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/rating"
@@ -166,6 +166,7 @@
             android:max="5"
             android:scaleX=".8"
             android:scaleY=".8"
+            android:stepSize="1"
             android:theme="@style/MyRatingBar" />
     </LinearLayout>
 

@@ -30,7 +30,7 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
     private Context context;
     ArrayList<Listmodel> list;
     OnItemClickListener itemClickListener;
-    String to_name;
+    String to_name = " ";
 
     public Customer_Address_List_Adapter(Context context, ArrayList<Listmodel> list, OnItemClickListener itemclick) {
         this.itemClickListener = itemclick;
@@ -82,7 +82,7 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
 
         JsonElement liststate = listmodel.getState();
 
-        if (liststate.equals(null)) {
+       /*    if (liststate.equals(null)) {
             Log.e("jsonelement", "jsonelement error");
         } else {
 
@@ -94,9 +94,17 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        }*/
+        try {
+            JSONObject   object = new JSONObject(new Gson().toJson(listmodel.getState()));
+
+            to_name = object.getString("name");
+            Log.e("to_name", ""+to_name);
+
+            // holder.tv_state.setText(to_name);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-
         holder.tverrormessage.setText(listmodel.getMessage().trim());
         holder.tvaddresstitle.setText(listmodel.getTitle());
         holder.tvaddress.setText(listmodel.getAddress() + "," + listmodel.getCity() + "," + to_name + "," + listmodel.getZip());

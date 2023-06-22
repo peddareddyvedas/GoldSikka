@@ -250,7 +250,6 @@ public class DirectorySubTopActivity extends AppCompatActivity implements SwipeR
             currentPage = PAGE_START;
             isLastPage = false;
             getViewItems(id);
-
             swipeRefresh.setRefreshing(false);
 
         }

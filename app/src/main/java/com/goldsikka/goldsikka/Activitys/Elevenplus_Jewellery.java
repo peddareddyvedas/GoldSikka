@@ -35,8 +35,10 @@ import android.widget.Toast;
 import com.goldsikka.goldsikka.Activitys.Coupons.CouponsList;
 import com.goldsikka.goldsikka.Activitys.Coupons.CouponsModel;
 import com.goldsikka.goldsikka.Activitys.Profile.CustomerAddressList;
+import com.goldsikka.goldsikka.Directory.DirectorySubRandomActivity;
 import com.goldsikka.goldsikka.Fragments.Buy_Digitalgold;
 import com.goldsikka.goldsikka.Fragments.Buy_Gold_Information;
+import com.goldsikka.goldsikka.Fragments.Schemes.Schemes_usersubscribed_list;
 import com.goldsikka.goldsikka.Fragments.Successpopup;
 import com.goldsikka.goldsikka.MainActivity;
 import com.goldsikka.goldsikka.R;
@@ -130,7 +132,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
     String after_dedcation = "null";
     String st_liveprice, st_processingfee, st_grams, st_finalamount, st_mmiamount, st_gst, sublistamount, SUB_LISTAMOUNT = "";
     String[] spn_amount = {"Select Monthly Amount", "1000", "1500", "2000", "2500",
-            "3000", "3500", "4000", "4500", "5000"};
+            "3000", "3500", "4000", "4500", "5000", "5500", "6000", "6500", "7000", "7500", "8000", "8500", "9000", "9500"};
 
 
     ArrayList<String> spn_list;
@@ -191,6 +193,11 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
         }
         Log.e("dfvdf", "" + schemeId);
         Log.e("dfvdf", "" + schemename);
+
+        schemeId = AccountUtils.getSchemeIDD(getApplicationContext());
+        schemename = AccountUtils.getSchemeNamee(getApplicationContext());
+
+
         et_wallet_money.setHint(Html.fromHtml(getString(R.string.wallet_hint)));
         loading_gif = findViewById(R.id.loading_gif);
         unameTv = findViewById(R.id.uname);
@@ -280,7 +287,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     Log.e("on fails", t.toString());
                     dialog.dismiss();
-                   // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issue", ToastMessage.ERROR);
+                    // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issue", ToastMessage.ERROR);
                 }
             });
         }
@@ -463,8 +470,8 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 @Override
                 public void onFailure(Call<CouponsModel> call, Throwable t) {
                     dialog.dismiss();
-                 //   ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues please try after some time"
-                            //, ToastMessage.ERROR);
+                    //   ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues please try after some time"
+                    //, ToastMessage.ERROR);
                 }
             });
         }
@@ -532,6 +539,50 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                     cb_wallet.setChecked(false);
                 } else if (sublistamount.equals("5000")) {
                     SUB_LISTAMOUNT = "5000";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("5500")) {
+                    SUB_LISTAMOUNT = "5500";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+                } else if (sublistamount.equals("6000")) {
+                    SUB_LISTAMOUNT = "6000";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("6500")) {
+                    SUB_LISTAMOUNT = "6500";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("7000")) {
+                    SUB_LISTAMOUNT = "7000";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("7500")) {
+                    SUB_LISTAMOUNT = "7500";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("8000")) {
+                    SUB_LISTAMOUNT = "8000";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("8500")) {
+                    SUB_LISTAMOUNT = "8500";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("9000")) {
+                    SUB_LISTAMOUNT = "9000";
+                    calculation(SUB_LISTAMOUNT);
+                    cb_wallet.setChecked(false);
+
+                } else if (sublistamount.equals("9500")) {
+                    SUB_LISTAMOUNT = "9500";
                     calculation(SUB_LISTAMOUNT);
                     cb_wallet.setChecked(false);
 
@@ -603,7 +654,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 @Override
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     dialog.dismiss();
-                   // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues", ToastMessage.ERROR);
+                    // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues", ToastMessage.ERROR);
                 }
             });
         }
@@ -618,6 +669,8 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
     }
 
     public void opencalculation(String selected_amount) {
+        Log.e("start", "calculation" + selected_amount);
+
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Please Wait....");
         dialog.setCancelable(false);
@@ -627,6 +680,9 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
             dialog.dismiss();
             return;
         } else {
+            Log.e("start", "apicalculation");
+            Log.e("start", "apicalculation" + selected_amount);
+
             apiDao = ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
             Call<Listmodel> getjewelleery = apiDao.getelevenplus_calculation("Bearer " + AccountUtils.getAccessToken(this),
                     schemeId, selected_amount);
@@ -635,6 +691,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 public void onResponse(Call<Listmodel> call, Response<Listmodel> response) {
                     int statuscode = response.code();
                     Listmodel listmodel = response.body();
+
                     if (statuscode == HttpsURLConnection.HTTP_OK || statuscode == HttpsURLConnection.HTTP_CREATED) {
                         dialog.dismiss();
 
@@ -654,7 +711,9 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 @Override
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     dialog.dismiss();
-                   // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues", ToastMessage.ERROR);
+                    Log.e("start", "faiolure" + t);
+
+                    ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issues", ToastMessage.ERROR);
 
                 }
             });
@@ -710,12 +769,21 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
                 return;
             } else {
+                lockprice();
+
+
+            }
+            // onsuccess();
+        }
+    }
 //               referalCode_validation();
-                if (!NetworkUtils.isConnected(this)) {
+                /*   if (!NetworkUtils.isConnected(this)) {
                     ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
                     return;
                 } else {
-                    refcode = etreferalcode.getText().toString().trim();
+
+
+                    /*refcode = etreferalcode.getText().toString().trim();
                     if (isCoupon && !cb_wallet.isChecked() && refcode.equals("")) { //NNN
                         openpayment();
                     } else if (!isCoupon && !cb_wallet.isChecked() && refcode.equals("")) { //YNN
@@ -811,7 +879,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                         } else {
                             Log.e("failed", "check sts");
                         }
-                    }
+                    }*/
 
 //                if(!isCoupon){
 //                    couponvalidation();
@@ -821,11 +889,11 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
 //                    amt_ed.setVisibility(View.GONE);
 //                    referalCode_validation();
 //                }
-                }
-            }
+
+          /*  }
             // onsuccess();
         }
-    }
+    }*/
 
     private String walletvalidation() {
         String etmoney = et_wallet_money.getText().toString().trim();
@@ -918,7 +986,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
                 public void onFailure(Call<Listmodel> call, Throwable t) {
                     Log.e("on fails", t.toString());
                     dialog.dismiss();
-                   // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issue", ToastMessage.ERROR);
+                    // ToastMessage.onToast(Elevenplus_Jewellery.this, "We have some issue", ToastMessage.ERROR);
                     vv[0] = "failed";
                 }
             });
@@ -1196,12 +1264,10 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
     }
 
     public void openpayment() {
-
         final Activity activity = this;
         final Checkout co = new Checkout();
-
-     //   co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
-        co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
+        co.setKeyID("rzp_test_0VM20Pg2VIA2aR");
+        // co.setKeyID("rzp_live_uvxtS5LwJPMIOP");
 
         try {
             JSONObject options = new JSONObject();
@@ -1211,9 +1277,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
             options.put("image", "https://rzp-mobile.s3.amazonaws.com/images/rzp.png");
             options.put("currency", "INR");
             options.put("payment_capture", 1);
-
             double total = Double.parseDouble(tv_final_amount.getText().toString().substring(3));
-
             //  double total = Double.parseDouble("1");
 
             Log.e("finialdouble", String.valueOf(total));
@@ -1223,9 +1287,7 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
             JSONObject preFill = new JSONObject();
             preFill.put("email", AccountUtils.getEmail(this));
             preFill.put("contact", AccountUtils.getMobile(this));
-
             options.put("prefill", preFill);
-
             co.open(activity, options);
 
         } catch (Exception e) {
@@ -1238,10 +1300,10 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
     public void onPaymentSuccess(String s) {
         try {
             onsuccess(s);
-            Log.e("payment id", s);
+            Log.e("paymentid", s);
 //            Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            onsuccess(s);
+            // onsuccess(s);
             Log.e("payment id", s);
 //            Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
         }
@@ -1348,4 +1410,46 @@ public class Elevenplus_Jewellery extends AppCompatActivity implements View.OnCl
 
         }
     }
+
+    public void lockprice() {
+
+        Log.e("livepricelrate", String.valueOf(this.st_liveprice));
+        ApiDao apiDao2 = (ApiDao) ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
+        this.apiDao = apiDao2;
+        String str = this.st_liveprice;
+        apiDao2.getlock_ratesforschems(str, "22", "Bearer " + AccountUtils.getAccessToken(this)).enqueue(new Callback<List<Listmodel>>() {
+            public void onResponse(Call<List<Listmodel>> call, Response<List<Listmodel>> response) {
+                int code = response.code();
+                Log.e("statuscode Lock", String.valueOf(code));
+//                ToastMessage.onToast(Buy_Digitalgold.this, String.valueOf(code), ToastMessage.ERROR);
+
+                if (code == 202) {
+
+                    Intent intent = new Intent(getApplicationContext(), Elevenplusinformation.class);
+                    intent.putExtra("st_grams", st_grams);
+                    intent.putExtra("st_mmiamount", st_mmiamount);
+                    intent.putExtra("st_processingfee", st_processingfee);
+                    intent.putExtra("st_finial_amount", finial_amount);
+                    startActivity(intent);
+
+                } else {
+                    ToastMessage.onToast(Elevenplus_Jewellery.this, "Try After some Time", ToastMessage.ERROR);
+                }
+            }
+
+            public void onFailure(Call<List<Listmodel>> call, Throwable th) {
+                Log.e("lockratesfail", th.toString());
+                // ToastMessage.onToast(Buy_Digitalgold.this, "We have some issues Try After some Time", ToastMessage.ERROR);
+            }
+        });
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), Schemes_usersubscribed_list.class));
+    }
+
 }

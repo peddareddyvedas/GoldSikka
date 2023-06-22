@@ -152,6 +152,7 @@ dependencies {
     // implementation 'com.github.chrisbanes:PhotoView:2.0.0'
     implementation 'com.jsibbold:zoomage:1.2.0'
 
+
 }
 
 apply plugin: 'com.google.gms.google-services'

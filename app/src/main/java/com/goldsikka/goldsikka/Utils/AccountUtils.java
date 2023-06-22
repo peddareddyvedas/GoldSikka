@@ -47,11 +47,17 @@ public class AccountUtils {
     private static final String isprice = "Price";
 
     private static final String isGiftCard = "GictCard";
+    private static final String productselectid = "PSelectid";
+
+    private static final String scheamidd = "Scheamid";
+    private static final String scheamname = "ScheamName";
 
 
     private static SharedPreferences getSharedPreferences(final Context context) {
         return context.getSharedPreferences("Goldsikka", Context.MODE_PRIVATE);
     }
+
+
 
 
     public static void setIsPin(Context context, Boolean value) {
@@ -389,4 +395,37 @@ public class AccountUtils {
         SharedPreferences sharedPref = getSharedPreferences(context);
         return sharedPref.getString(isGiftCard, "");
     }
+
+
+    public static void setproductselectid(Context context, String Token) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        sharedPref.edit().putString(productselectid, Token).apply();
+    }
+
+    public static String getproductselectid(Context context) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        return sharedPref.getString(productselectid, "");
+    }
+
+
+    public static void setSchemeIDD(Context context, String schamid) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        sharedPref.edit().putString(scheamidd, schamid).apply();
+    }
+
+    public static String getSchemeIDD(Context context) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        return sharedPref.getString(scheamidd, "");
+    }
+
+    public static void setSchemenamee(Context context, String schamname) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        sharedPref.edit().putString(scheamname, schamname).apply();
+    }
+
+    public static String getSchemeNamee(Context context) {
+        SharedPreferences sharedPref = getSharedPreferences(context);
+        return sharedPref.getString(scheamname, "");
+    }
+
 }

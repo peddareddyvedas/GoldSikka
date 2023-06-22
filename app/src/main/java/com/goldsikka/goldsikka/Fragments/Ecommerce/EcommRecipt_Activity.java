@@ -65,6 +65,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 public class EcommRecipt_Activity extends AppCompatActivity {
     TextView unameTv, uidTv, titleTv, orderidd;
     RelativeLayout backbtn;
@@ -423,7 +424,7 @@ public class EcommRecipt_Activity extends AppCompatActivity {
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     dialog.dismiss();
                     Log.e("onfail", t.toString());
-                //   ToastMessage.onToast(EcommRecipt_Activity.this, "We have some issues Try after some time ", ToastMessage.ERROR);
+                    //   ToastMessage.onToast(EcommRecipt_Activity.this, "We have some issues Try after some time ", ToastMessage.ERROR);
 
                 }
             });

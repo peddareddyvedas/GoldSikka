@@ -73,6 +73,7 @@ import com.goldsikka.goldsikka.Fragments.MainFragment;
 import com.goldsikka.goldsikka.Fragments.Reedem_fragment;
 import com.goldsikka.goldsikka.Fragments.Schemes.Scheme_Content_Fragment;
 import com.goldsikka.goldsikka.Fragments.Sell_Fragment;
+import com.goldsikka.goldsikka.LOGIN.WelcomeActivity;
 import com.goldsikka.goldsikka.Models.MainModuleModel;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.ErrorSnackBar;
