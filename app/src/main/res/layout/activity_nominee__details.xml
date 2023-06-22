@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -22,8 +22,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -31,15 +32,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -51,11 +51,12 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="17dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -64,7 +65,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -111,7 +111,7 @@
             android:layout_gravity="center"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/nomineeimg"
+            android:src="@drawable/nomineeicon"
             android:tint="@color/LightBrown"
             tools:ignore="UseAppTint" />
         <TextView

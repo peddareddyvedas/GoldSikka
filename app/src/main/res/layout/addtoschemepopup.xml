@@ -60,7 +60,7 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/goldplusbackground">
+                android:background="@drawable/button_passbook">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:text=" Recommended Monthly Amount"
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/black"
                     android:textSize="12sp" />
 
                 <TextView
@@ -80,7 +80,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:text=""
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/black"
                     android:textSize="12sp" />
             </RelativeLayout>
 
@@ -169,13 +169,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+
                 android:layout_marginRight="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Period of 11 months"
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/LightBrown"
                     android:textSize="10sp" />
 
                 <TextView
@@ -185,7 +186,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginLeft="20dp"
                     android:text=""
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/LightBrown"
                     android:textSize="8sp" />
             </RelativeLayout>
 
@@ -224,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="100% of 1 month installment value "
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/LightBrown"
                     android:textSize="10sp" />
 
                 <TextView
@@ -235,7 +236,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:text=""
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/LightBrown"
                     android:textSize="12sp" />
             </RelativeLayout>
 
@@ -275,7 +276,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Grand Item Amount"
+                    android:text="Grand Total"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
 
@@ -306,7 +307,7 @@
             <Button
                 android:id="@+id/btn_subscribe"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"

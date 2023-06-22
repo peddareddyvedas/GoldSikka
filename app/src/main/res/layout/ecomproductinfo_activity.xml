@@ -6,7 +6,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 

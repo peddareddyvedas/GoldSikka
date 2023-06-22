@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Activitys.MPIN">
+    tools:context=".LOGIN.MPIN">
 
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -23,8 +23,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -32,15 +33,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:visibility="gone"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -52,11 +52,12 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="17dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -65,7 +66,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -99,6 +99,7 @@
         android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:layout_marginTop="24dp"
         android:background="@color/LightBrown2"/>
     <TextView
         android:visibility="gone"

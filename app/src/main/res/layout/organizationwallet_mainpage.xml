@@ -36,7 +36,6 @@
              android:paddingTop="5dp"
              android:paddingBottom="5dp"
              app:itemIconTint="@color/Gold"
-             app:itemTextAppearanceActive="@color/Gold"
              app:labelVisibilityMode="labeled"
              app:menu="@menu/org_bottom_navigation_menu" />
 

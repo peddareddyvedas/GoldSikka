@@ -78,9 +78,9 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
 
     RelativeLayout backbtn;
     ImageView maddaddress;
- Button addaddress;
 
-    @SuppressLint({"NewApi", "MissingInflatedId"})
+
+    @SuppressLint("NewApi")
     @Nullable
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,8 +92,6 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
         titleTv = findViewById(R.id.title);
         backbtn = findViewById(R.id.backbtn);
         maddaddress = findViewById(R.id.addaddress);
-        titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Bank Details");
 
         apiDao = ApiClient.getClient(AccountUtils.getAccessToken(this)).create(ApiDao.class);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -113,18 +111,10 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
 
             }
         });
-
-        addaddress = findViewById( R.id.addaddressnew );
-        addaddress.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openbankdetails();
-
-            }
-        } );
         maddaddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openbankdetails();
             }
         });
 
@@ -195,12 +185,10 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
                                 ll_bankempty.setVisibility(View.GONE);
                                 arrayList.add(listmodel);
                                 adapter.notifyDataSetChanged();
-                                addaddress.setVisibility( View.VISIBLE );
                                 dialog.dismiss();
                             }
                         } else {
                             ll_bankempty.setVisibility(View.VISIBLE);
-                            addaddress.setVisibility( View.GONE );
                             ll_list.setVisibility(View.GONE);
                             dialog.dismiss();
                             Toast.makeText(Customer_BankDetailslist.this, "No Data Available ", Toast.LENGTH_SHORT).show();
@@ -274,11 +262,11 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
     public void onItemClick(View view, int position) {
         Listmodel list = arrayList.get(position);
         switch (view.getId()) {
-            case R.id.editbtn:
+            case R.id.bt_edit:
 
                 openedit(list.getId());
                 break;
-            case R.id.deletebtn:
+            case R.id.bt_remove:
 
                 if (!NetworkUtils.isConnected(this)) {
                     ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
@@ -287,7 +275,7 @@ public class Customer_BankDetailslist extends AppCompatActivity implements View.
                     openremove(list.getId());
                 }
                 break;
-            case R.id.tv_setprimary:
+            case R.id.set_bank_primary:
                 set_bankdetails_asprimary(list.getId());
                 break;
         }

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
     android:id="@+id/framelayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,7 +19,6 @@
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <EditText
@@ -25,7 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginLeft="24dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginRight="24dp"
                     android:background="@drawable/edittext_background"
                     android:hint="@string/user_name"
@@ -195,7 +196,7 @@
                 <EditText
                     android:id="@+id/etmessage"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="45dp"
                     android:layout_below="@id/tvaddress"
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="20dp"
@@ -204,8 +205,6 @@
                     android:hint="@string/message"
                     android:inputType="text"
                     android:paddingLeft="12dp"
-                    android:gravity="top|left"
-                    android:paddingTop="7dp"
                     android:textColor="@color/DarkBrown"
                     android:textColorHint="@color/LightBrown"
                     android:textSize="14dp" />
@@ -228,9 +227,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_below="@id/tvmessage"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="90dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginHorizontal="70dp"
+
                     android:background="@drawable/button_background"
                     android:backgroundTint="@color/Gold"
                     android:text="@string/Submit"

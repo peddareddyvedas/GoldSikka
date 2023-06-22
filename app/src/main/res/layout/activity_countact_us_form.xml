@@ -12,7 +12,6 @@
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="match_parent">
 
         <ScrollView
@@ -121,12 +120,10 @@
                 <EditText
                     android:id="@+id/etmessage"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:textSize="14dp"
-                    android:gravity="top|left"
-                    android:paddingTop="7dp"
                     android:inputType="text"
                     android:textColor="@color/DarkBrown"
                     android:textColorHint="@color/LightBrown"
@@ -160,7 +157,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_background"
+                    android:background="@drawable/contentboxbackground"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="24dp"
@@ -172,7 +169,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/contact_information"
                         android:textSize="14dp"
-                        android:textColor="@color/newgray"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:layout_marginLeft="8dp"/>
@@ -198,9 +194,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="040-40137575 / 040-23222175"
-                            android:textSize="12dp"
-                            android:textColor="@color/newgray"
-                            />
+                            android:textSize="12dp"/>
 
                     </LinearLayout>
 
@@ -225,7 +219,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="9989874992"
-                            android:textColor="@color/newgray"
                             android:textSize="12dp"/>
 
                     </LinearLayout>
@@ -243,7 +236,7 @@
                             android:layout_height="15dp"
                             android:layout_marginLeft="8dp"
                             android:tint="@color/Gold"
-                            android:src="@drawable/messagenew"
+                            android:src="@drawable/ic_baseline_email"
                             tools:ignore="UseAppTint" />
 
                         <TextView
@@ -251,7 +244,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="info@goldsikka.com"
-                            android:textColor="@color/newgray"
                             android:textSize="12dp"/>
 
                     </LinearLayout>
@@ -277,7 +269,6 @@
                             android:layout_marginLeft="8dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/newgray"
                             android:text="Monday-Saturday(9:30 AM to 6:30 PM)"
                             android:textSize="12dp"/>
 

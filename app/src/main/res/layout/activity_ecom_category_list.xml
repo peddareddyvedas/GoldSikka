@@ -5,55 +5,35 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
-    android:orientation="vertical"
     app:cardElevation="5dp"
     app:contentPadding="10dp">
 
-<!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_categoryimg"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:visibility="gone"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/profile" />-->
-
-    <FrameLayout
-        android:id="@+id/idFrame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
-
-        <!--on below line we are creating an image button-->
-        <ImageView
-            android:id="@+id/iv_categoryimg"
-            android:layout_width="120dp"
-            android:layout_height="160dp"
-            android:background="@color/purple_200"
-            android:scaleType="fitXY"
-            android:padding="10dp"
             android:src="@drawable/profile" />
 
-        <!--on below line we are creating a
-             text for our image button-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="45dp"
-            android:background="@drawable/gold_background">
         <TextView
             android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="false"
-            android:text="Android"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
             android:textColor="@color/black"
-            android:textStyle="bold" />
-        </LinearLayout>
-    </FrameLayout>
+            android:textSize="10dp" />
 
+    </LinearLayout>
 </LinearLayout>
 

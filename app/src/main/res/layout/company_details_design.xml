@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -20,9 +21,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -30,15 +31,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:visibility="gone"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -50,11 +50,12 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="17dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -110,9 +111,8 @@
                 android:layout_width="128dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:visibility="gone"
                 android:layout_marginTop="32dp"
-                android:src="@drawable/goldsikka_logo2" />
+                android:src="@drawable/goldsikkalogo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -306,22 +306,11 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/edittext_background">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:text="@string/Govt_of_Telangana_Reg_No"
                     android:textColor="@color/DarkBrown" />
 
@@ -329,11 +318,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp"
                     android:text="@string/Govt_of_Telangana_Reg_Number"
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/DarkBrown"
                     android:textStyle="bold" />
+
 
             </LinearLayout>
 
@@ -342,7 +332,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="24dp"
                 android:background="@drawable/edittext_background"
                 android:orientation="vertical">
@@ -443,12 +433,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="24dp"
                 android:background="@drawable/edittext_background"
                 android:orientation="vertical">
 
-
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -459,7 +454,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="24dp"
                             android:text="@string/GJEPC_Membership_No"
                             android:textColor="@color/DarkBrown" />
 
@@ -467,37 +462,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="12dp"
                             android:layout_marginBottom="12dp"
                             android:text="@string/GJEPC_Membership_Number"
-                            android:textColor="@color/goldnewcolor"
+                            android:textColor="@color/DarkBrown"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:elevation="8dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:id="@+id/lrgster"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="32dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -531,7 +511,6 @@
                         android:text="@string/Registered_Office_Address"
                         android:textColor="@color/LightBrown"
                         android:textSize="14dp"
-                        android:layout_marginBottom="10dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -549,23 +528,12 @@
                     android:visibility="gone" />
 
             </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:elevation="8dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:id="@+id/ladmin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="32dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -598,7 +566,6 @@
                         android:layout_marginRight="24dp"
                         android:text="@string/Admin_Office_Addrsss"
                         android:textColor="@color/LightBrown"
-                        android:layout_marginBottom="10dp"
                         android:textSize="14dp"
                         android:textStyle="bold" />
 
@@ -617,17 +584,6 @@
                     android:visibility="gone" />
 
             </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:elevation="8dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:id="@+id/llretail"
@@ -667,7 +623,6 @@
                         android:text="@string/Bullion_Retail_Shoppe_Address"
                         android:textColor="@color/LightBrown"
                         android:textSize="14dp"
-                        android:layout_marginBottom="10dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -686,23 +641,12 @@
 
             </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:elevation="12dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:id="@+id/lltechlab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="25dp"
                 android:orientation="vertical">
 
@@ -736,7 +680,6 @@
                         android:layout_marginLeft="19dp"
                         android:text="@string/Tech_labs_Address"
                         android:textColor="@color/LightBrown"
-                        android:layout_marginBottom="10dp"
                         android:textSize="14dp"
                         android:textStyle="bold" />
 
@@ -755,13 +698,13 @@
                     android:visibility="gone" />
 
             </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_gravity="bottom"
-               >
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
 
                 <fragment
                     android:id="@+id/fmap"

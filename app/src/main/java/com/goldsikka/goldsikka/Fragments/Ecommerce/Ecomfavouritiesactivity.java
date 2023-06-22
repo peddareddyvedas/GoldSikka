@@ -116,7 +116,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
         uidTv.setText(AccountUtils.getCustomerID(getApplicationContext()));
         unameTv.setText(AccountUtils.getName(getApplicationContext()));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Wishlist");
+        titleTv.setText("My Favourites");
 
         notfound = findViewById(R.id.notfound);
 
@@ -302,7 +302,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
             TextView pnameTv, pweightTv, totalwhisprice;
             ImageView pimg, ewdelete;
             String pid = "24";
-            RelativeLayout wishaddtocart;
+            Button wishaddtocart;
 
             @SuppressLint("SetTextI18n")
             public ViewHolder(@NonNull View itemView) {
@@ -312,7 +312,7 @@ public class Ecomfavouritiesactivity extends AppCompatActivity {
                 pimg = itemView.findViewById(R.id.pimg);
                 ewdelete = itemView.findViewById(R.id.ewdelete);
                 totalwhisprice = itemView.findViewById(R.id.totalwhisprice);
-                wishaddtocart = itemView.findViewById(R.id.movetocartrll);
+                wishaddtocart = itemView.findViewById(R.id.movetocart);
             }
         }
     }

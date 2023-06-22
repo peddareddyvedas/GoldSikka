@@ -35,7 +35,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.goldsikka.goldsikka.Activitys.Elevenplus_Jewellery;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
@@ -75,8 +74,6 @@ import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Field;
-import retrofit2.http.Header;
 
 public class EcommCheckout_Activity extends AppCompatActivity implements PaymentResultListener {
 

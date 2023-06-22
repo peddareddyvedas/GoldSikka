@@ -294,7 +294,7 @@ public class EcomSubcategory extends AppCompatActivity implements OnItemClickLis
     public void intilizerecyclerview() {
         ecomsubcat = findViewById(R.id.ecomsubcat);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL); // set Horizontal Orientation
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
         ecomsubcat.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         ecomsubcat.setHasFixedSize(true);
         subcatList = new ArrayList<>();

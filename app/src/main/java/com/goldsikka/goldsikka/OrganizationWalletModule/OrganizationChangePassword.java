@@ -1,8 +1,6 @@
 package com.goldsikka.goldsikka.OrganizationWalletModule;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -11,7 +9,6 @@ import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,13 +16,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.goldsikka.goldsikka.Activitys.ChangePassword;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
-import com.goldsikka.goldsikka.WelcomeActivity;
+import com.goldsikka.goldsikka.LOGIN.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;

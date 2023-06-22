@@ -1,36 +1,23 @@
 package com.goldsikka.goldsikka.Fragments;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.Html;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 
-import com.chaos.view.PinView;
-import com.goldsikka.goldsikka.Activitys.ForgotOtp;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
+import com.goldsikka.goldsikka.LOGIN.ForgotOtp;
+import com.goldsikka.goldsikka.LOGIN.LoginActivity;
 
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -40,18 +27,13 @@ import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

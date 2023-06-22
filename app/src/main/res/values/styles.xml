@@ -36,13 +36,6 @@
 
     </style>
 
-
-    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabBackground">@drawable/tab_background</item>
-    </style>
-
-
-
     <style name="AppTheme.AppBarOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -66,9 +59,12 @@
         <item name="background">@drawable/edittext_border</item>
     </style>
 
+
+
     <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/newtextcolor</item>
     </style>
+
 
     <style name="textview_common_field">
         <item name="android:textColor">
@@ -133,7 +129,7 @@
     <style name="spinnerbackground">
 
         <!--      <item name= "android:colorControlHighlight">#E91E63</item>-->
-        <item name="color">@color/LightBrown</item>
+        <item name="color">@color/newtextcolor</item>
     </style>
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
@@ -429,6 +425,12 @@
 
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">#FFFFFF</item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">#FFFFFF</item> <!-- activated color change as you wish -->
     </style>
 
 </resources>

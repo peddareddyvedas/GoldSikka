@@ -3,26 +3,23 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:src="@drawable/goldsuvidhaimg"
+        android:src="@drawable/bullet"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
         />
 
     <TextView
-        android:textSize="14dp"
+        android:textSize="12dp"
         android:id="@+id/tv_content"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:textColor="@color/DarkBrown"
         android:text=""
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

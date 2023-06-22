@@ -27,7 +27,6 @@ import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +35,7 @@ public class TempleAndNGOsDetails extends AppCompatActivity implements View.OnCl
 
     TextView tvorgid, tvorgname, tvorgreg, tvorgaddress, tvorgdesc;
     String storgid, storgname, storgreg, storgaddress, storgdesc, ststate;
-    CircleImageView ivtemple;
+    ImageView ivtemple;
     ApiDao apiDao;
     Button btntemple;
     String st_org_id, stid, stimage;
@@ -63,7 +62,7 @@ public class TempleAndNGOsDetails extends AppCompatActivity implements View.OnCl
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Organization Details");
+        titleTv.setText("Organization Info");
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             st_org_id = bundle.getString("org_id");

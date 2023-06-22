@@ -15,7 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.goldsikka.goldsikka.MainActivity;
+import com.goldsikka.goldsikka.LOGIN.EntryPin;
+import com.goldsikka.goldsikka.LOGIN.LoginActivity;
+import com.goldsikka.goldsikka.LOGIN.OTPActivity;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -29,15 +31,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.net.ssl.HttpsURLConnection;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -17,7 +17,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -67,7 +66,6 @@ public class CustomerEditAddress extends AppCompatActivity implements View.OnCli
     ArrayAdapter<String> adapter;
     String idcode,fromto,fromcartlist;
     List<Listmodel> list;
-    RelativeLayout backbtn;
 
     TextView unameTv, uidTv, titleTv;
 
@@ -86,22 +84,16 @@ public class CustomerEditAddress extends AppCompatActivity implements View.OnCli
         unameTv = findViewById(R.id.uname);
         uidTv = findViewById(R.id.uid);
         titleTv = findViewById(R.id.title);
-        backbtn = findViewById(R.id.backbtn);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Add New Address");
+        titleTv.setText("Edit Your Addess");
       //  toolbar.setTitleTextColor(getColor(R.color.colorWhite));
-     /*   ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-        }*/
+        }
         spinner_stateclick();
         intilizeviews();
         set_previousdetails();

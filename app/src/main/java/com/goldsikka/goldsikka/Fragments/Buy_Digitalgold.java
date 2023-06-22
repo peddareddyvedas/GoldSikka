@@ -91,16 +91,6 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
     TextView tvliverate, tv_sellprice, tvchange;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvlocation)
-    TextView tvlocation;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvtime)
-    TextView tvtime;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvdate)
-    TextView tvdate;
-    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.tv_purity)
     TextView tv_purity;
 
@@ -317,9 +307,6 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
                                 Log.e("liveprice", liveprice);
                                 tv_sellprice.setText(getString(R.string.Rs) + sp);
                                 tvliverate.setText(getString(R.string.Rs) + liveprice);
-                                tvdate.setText(listmodel.getDate());
-                                tvtime.setText(listmodel.getTime());
-                                tvlocation.setText(listmodel.getLocation());
                                 double tax = Double.parseDouble(listmodel.getTaxPercentage()) / 100;
                                 taxPercentage = String.valueOf(tax);
                                 AccountUtils.setGsttax(Buy_Digitalgold.this, listmodel.getTaxPercentage());
@@ -454,7 +441,7 @@ public class Buy_Digitalgold extends AppCompatActivity implements View.OnClickLi
     public void btGrams() {
         rupeessymbol.setVisibility(View.VISIBLE);
         tvresult.setVisibility(View.VISIBLE);
-        rupeessymbol.setText("g");
+        rupeessymbol.setText("Gms");
         amountvalue = etamount.getText().toString();
 //        etamount.setHint("Grams");
         etamount.setHint(Html.fromHtml(getString(R.string.grams)));

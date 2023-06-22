@@ -18,8 +18,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -27,15 +28,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2"
-                    android:visibility="gone" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -47,11 +47,12 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text="Buy Gold"
                 android:textColor="@color/DarkBrown"
-                android:textSize="17sp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -61,8 +62,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/uname"
@@ -118,7 +118,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/digital_wallet"
-                    android:textColor="@color/goldnewcolor"
+                    android:textColor="@color/DarkBrown"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -132,7 +132,7 @@
                     android:layout_marginRight="24dp"
                     android:text=""
                     android:textColor="@color/DarkBrown"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:textStyle="normal" />
 
 
@@ -157,7 +157,7 @@
                             android:layout_height="40dp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
-                            android:src="@drawable/goldsikka_logo2" />
+                            android:src="@drawable/goldsikkalogo" />
 
                         <RelativeLayout
                             android:id="@+id/design"
@@ -169,19 +169,14 @@
                                 android:layout_width="48dp"
                                 android:layout_height="58dp"
                                 android:layout_alignParentRight="true"
-                                android:src="@drawable/rectangle_design"
-                                android:visibility="gone" />
+                                android:src="@drawable/rectangle_design" />
 
                             <ImageView
                                 android:layout_width="24dp"
                                 android:layout_height="28dp"
                                 android:layout_alignParentRight="true"
-                                android:layout_marginStart="12dp"
-                                android:layout_marginTop="12dp"
-                                android:layout_marginEnd="12dp"
-                                android:layout_marginBottom="12dp"
+                                android:layout_margin="12dp"
                                 android:src="@drawable/logo"
-                                android:visibility="gone"
                                 app:tint="@color/Gold" />
 
                         </RelativeLayout>
@@ -211,27 +206,24 @@
 
                     <TextView
                         android:id="@+id/tvfeatures"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="100dp"
-                        android:layout_marginTop="10dp"
+                        android:gravity="center"
                         android:text="@string/features"
-                        android:gravity="center_horizontal"
-                        android:textColor="#344056"
-                        android:textSize="14dp"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/dw_terms_condition"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvfeatures"
                         android:layout_marginTop="10dp"
-                        android:layout_toRightOf="@+id/tvfeatures"
                         android:gravity="center"
-                        android:layout_marginStart="10dp"
                         android:text="@string/terms_and_conditions"
-                        android:textColor="@color/goldnewcolor"
-                        android:textSize="14dp"
+                        android:textColor="@color/Gold"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <Button

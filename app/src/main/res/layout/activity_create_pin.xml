@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -21,9 +21,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -31,15 +31,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -51,11 +50,12 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="17dp"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -64,7 +64,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -112,7 +111,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:src="@drawable/applockimg" />
+                android:src="@drawable/frame" />
 
             <TextView
                 android:id="@+id/tv_heading"
@@ -135,6 +134,7 @@
                 android:cursorVisible="true"
                 android:hint=""
                 android:inputType="number"
+                android:itemBackground="@color/lightgray"
                 android:padding="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -146,7 +146,7 @@
                 app:itemRadius="4dp"
                 app:itemSpacing="10dp"
                 app:itemWidth="48dp"
-                app:lineColor="@color/gray"
+                app:lineColor="@color/Gold"
                 app:lineWidth="2dp"
                 app:viewType="rectangle" />
 
@@ -168,7 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="@string/reenter_pin1"
                 android:textColor="@color/black"
@@ -181,10 +181,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:cursorVisible="true"
                 android:hint=""
                 android:inputType="number"
+                android:itemBackground="@color/lightgray"
                 android:padding="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -197,7 +198,7 @@
                 app:itemRadius="4dp"
                 app:itemSpacing="10dp"
                 app:itemWidth="48dp"
-                app:lineColor="@color/gray"
+                app:lineColor="@color/Gold"
                 app:lineWidth="2dp"
                 app:viewType="rectangle" />
 
@@ -272,7 +273,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="155dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="24dp"
                 android:background="@drawable/button_background"
                 android:backgroundTint="@color/Gold"

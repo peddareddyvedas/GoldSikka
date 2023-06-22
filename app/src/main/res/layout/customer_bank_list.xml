@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:background="@android:color/transparent">
 
             <LinearLayout
@@ -26,8 +26,9 @@
 
                 <RelativeLayout
                     android:id="@+id/backbtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/back"
@@ -35,15 +36,14 @@
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/arrowleftnew" />
+                        android:background="@drawable/arrowleft" />
 
                     <ImageView
                         android:id="@+id/dr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:visibility="gone"
-                        android:src="@drawable/goldsikka_logo2" />
+                        android:src="@drawable/goldsikkalogo" />
 
                 </RelativeLayout>
 
@@ -55,11 +55,12 @@
                     android:layout_centerInParent="true"
                     android:layout_weight="1"
                     android:ellipsize="end"
+                    android:gravity="center"
                     android:padding="15dp"
                     android:singleLine="true"
                     android:text=""
                     android:textColor="@color/DarkBrown"
-                    android:textSize="17dp"
+                    android:textSize="13dp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -68,6 +69,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
+                    android:gravity="end"
                     android:orientation="vertical">
 
                     <ImageView
@@ -76,7 +78,6 @@
                         android:layout_height="25dp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="12dp"
-                        android:visibility="gone"
                         android:background="@drawable/ic_add_24"
                         android:tint="@color/Gold" />
 
@@ -111,14 +112,6 @@
             android:layout_height="2dp"
             android:background="@color/LightBrown2"/>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
         <LinearLayout xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -132,7 +125,7 @@
                 android:layout_gravity="center"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/bankimage"
+                android:src="@drawable/bankicon"
                 android:tint="@color/LightBrown"
                 tools:ignore="UseAppTint" />
             <TextView
@@ -161,8 +154,6 @@
                 android:text="@string/Add_bank"
                 android:id="@+id/lladd_bankdetails"
                 android:textColor="@color/white"/>
-
-
         </LinearLayout>
 
                 <LinearLayout
@@ -177,24 +168,7 @@
                         android:layout_height="wrap_content">
 
                     </androidx.recyclerview.widget.RecyclerView>
-
-                    <Button
-                        android:id="@+id/addaddressnew"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="20dp"
-                        android:textColor="@color/white"
-                        android:text="Add Bank"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:visibility="gone"
-                        android:background="@drawable/button_background"
-                        android:backgroundTint="@color/Gold"/>
-
                 </LinearLayout>
-            </RelativeLayout>
-        </ScrollView>
 
     </LinearLayout>
 </FrameLayout>

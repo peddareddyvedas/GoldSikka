@@ -2,10 +2,8 @@ package com.goldsikka.goldsikka.OrganizationWalletModule;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
 
 import android.annotation.SuppressLint;
@@ -20,7 +18,6 @@ import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -32,9 +29,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.goldsikka.goldsikka.Activitys.Events.EventGift;
 import com.goldsikka.goldsikka.Activitys.Events.EventModel;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
 import com.goldsikka.goldsikka.Fragments.Successpopup;
 import com.goldsikka.goldsikka.R;
@@ -131,16 +126,6 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
     @BindView(R.id.tv_wallet_error)
     TextView tv_wallet_error;
 
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvlocation)
-    TextView tvlocation;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvtime)
-    TextView tvtime;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tvdate)
-    TextView tvdate;
     TextView tv_paybaleamount;
 
   String Walletamount;
@@ -471,9 +456,6 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
                                 Log.e("liveprice", liveprice);
                                 tv_sellprice.setText(getString(R.string.Rs) + liveprice);
                                 tvliverate.setText(getString(R.string.Rs) + llll);
-                                tvdate.setText(listmodel.getDate());
-                                tvtime.setText(listmodel.getTime());
-                                tvlocation.setText(listmodel.getLocation());
                                 double tax = Double.parseDouble(listmodel.getTaxPercentage()) / 100;
 
                                 taxPercentage = String.valueOf(tax);
@@ -638,7 +620,7 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
         rupeessymbol.setText("\u20B9");
 
         amountvalue = etamount.getText().toString();
-        etamount.setHint(Html.fromHtml(getString(R.string.wallet_hint)));
+        etamount.setHint(Html.fromHtml(getString(R.string.amount)));
         tvchange.setText("Enter Amount");
         btngrams.setText("DONATE IN GRAMS");
 
@@ -657,7 +639,7 @@ public class DonateGold extends AppCompatActivity implements View.OnClickListene
 
         rupeessymbol.setVisibility(View.VISIBLE);
         tvresult.setVisibility(View.VISIBLE);
-        rupeessymbol.setText("g");
+        rupeessymbol.setText("Gms");
 
         amountvalue = etamount.getText().toString();
         etamount.setHint(Html.fromHtml(getString(R.string.grams)));

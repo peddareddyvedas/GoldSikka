@@ -31,9 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
-import com.goldsikka.goldsikka.Fragments.Buy_Gold_Information;
 import com.goldsikka.goldsikka.Fragments.Successpopup;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;

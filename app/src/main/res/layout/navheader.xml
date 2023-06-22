@@ -5,11 +5,53 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="30dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/sidemenuname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#1E2A3A"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sidemenuemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sidemenugsid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="#DCAB37"
+            android:textSize="13sp" />
+    </LinearLayout>
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/goldsikka_logo2"
+        android:src="@drawable/goldsikkalogo"
+        android:visibility="gone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="25dp" />

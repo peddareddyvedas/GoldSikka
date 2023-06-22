@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.Editable;
@@ -14,7 +13,6 @@ import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,17 +23,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.appcompat.widget.Toolbar;
 
-
-import com.facebook.FacebookSdk;
-import com.facebook.LoggingBehavior;
-import com.facebook.appevents.AppEventsLogger;
-import com.goldsikka.goldsikka.Activitys.LoginActivity;
 import com.goldsikka.goldsikka.Activitys.PaymentError;
 import com.goldsikka.goldsikka.Activitys.Profile.CustomerAddAddress;
 import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;

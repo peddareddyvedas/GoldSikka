@@ -9,8 +9,8 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-      >
+        android:layout_height="55dp"
+        android:background="@color/Gold">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,8 +21,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/back"
@@ -30,15 +31,14 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleftnew" />
+                    android:background="@drawable/arrowleft" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikka_logo2" />
+                    android:src="@drawable/goldsikkalogo" />
 
             </RelativeLayout>
 
@@ -48,12 +48,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:layout_weight="1"
                 android:ellipsize="end"
+                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
-                android:textColor="@color/black"
-                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textSize="13dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -62,7 +64,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -96,9 +97,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        app:tabIndicatorColor="#1E2A3A"
-        app:tabSelectedTextColor="#1E2A3A"
-        app:tabTextColor="#64748B" />
+        android:background="@color/Gold"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#EEDFDEDE" />
 
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"

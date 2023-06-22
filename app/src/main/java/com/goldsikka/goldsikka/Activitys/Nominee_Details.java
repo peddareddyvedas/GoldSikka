@@ -105,7 +105,6 @@ public class Nominee_Details extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nominee__details);
-        setContentView(R.layout.activity_nominee__details);
 
         ButterKnife.bind(this);
 

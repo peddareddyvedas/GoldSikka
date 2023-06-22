@@ -10,8 +10,8 @@
     app:contentPadding="10dp">
 
     <LinearLayout
-        android:layout_width="120dp"
-        android:layout_height="140dp"
+        android:layout_width="250dp"
+        android:layout_height="165dp"
         android:layout_marginBottom="5dp"
         android:orientation="vertical">
 
@@ -27,8 +27,8 @@
 
         <ImageView
             android:id="@+id/topsellimg"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
+            android:layout_width="230dp"
+            android:layout_height="100dp"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/textcolorblack"
