@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,14 +56,15 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
 //            holder.tv_address.setText(listmodel.getAddress());
         String primary = listmodel.getIs_primary();
         if (listmodel.isActions()) {
-            holder.delete.setVisibility(View.VISIBLE);
-            holder.edit.setVisibility(View.VISIBLE);
+            holder.deletebtn.setVisibility(View.VISIBLE);
+            holder.editbtn.setVisibility(View.VISIBLE);
             holder.tvmessage.setVisibility(View.GONE);
             holder.tverrormessage.setVisibility(View.VISIBLE);
 
         } else {
-            holder.delete.setVisibility(View.GONE);
-            holder.edit.setVisibility(View.GONE);
+
+            holder.deletebtn.setVisibility(View.GONE);
+            holder.editbtn.setVisibility(View.GONE);
             holder.tvmessage.setText(listmodel.getMessage());
             holder.tverrormessage.setVisibility(View.VISIBLE);
         }
@@ -70,8 +72,8 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
         if (primary.equals("true")) {
             holder.tvsetprimary.setVisibility(View.GONE);
             holder.tvisprimary.setVisibility(View.VISIBLE);
-            holder.delete.setVisibility(View.GONE);
-            holder.edit.setVisibility(View.GONE);
+            holder.deletebtn.setVisibility(View.GONE);
+            holder.editbtn.setVisibility(View.GONE);
             holder.tverrormessage.setVisibility(View.GONE);
 
         } else {
@@ -121,6 +123,8 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
         TextView tvaddresstitle, tvaddress, tvisprimary, tvmessage;
         TextView tvsetprimary, edit, delete, tverrormessage;
 
+        ImageView editbtn,deletebtn;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -131,12 +135,13 @@ public class Customer_Address_List_Adapter extends RecyclerView.Adapter<Customer
 //            tv_pin = itemView.findViewById(R.id.tv_state);
 //            tv_state = itemView.findViewById(R.id.tv_pin);
             tvsetprimary = itemView.findViewById(R.id.tv_setprimary);
-            edit = itemView.findViewById(R.id.bt_edit);
-            delete = itemView.findViewById(R.id.bt_remove);
+
+            editbtn = itemView.findViewById(R.id.editbtn);
+            deletebtn = itemView.findViewById(R.id.deletebtn);
             tvmessage = itemView.findViewById(R.id.tvmessage);
             itemView.setOnClickListener(this);
-            edit.setOnClickListener(this);
-            delete.setOnClickListener(this);
+            editbtn.setOnClickListener(this);
+            deletebtn.setOnClickListener(this);
             tvsetprimary.setOnClickListener(this);
             tverrormessage = itemView.findViewById(R.id.tverrormessage);
 

@@ -42,6 +42,7 @@ public class EnquiryandSupport extends AppCompatActivity {
         unameTv = findViewById(R.id.uname);
         uidTv = findViewById(R.id.uid);
         titleTv = findViewById(R.id.title);
+        titleTv.setText( "Enquiry" );
 
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));

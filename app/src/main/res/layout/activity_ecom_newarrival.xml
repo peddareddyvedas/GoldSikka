@@ -42,9 +42,8 @@
             android:layout_marginLeft="10dp"
             android:ellipsize="end"
             android:singleLine="true"
-
             android:text="₹ 20,000"
-            android:textColor="@color/black"
+            android:textColor="@color/goldnewcolor"
             android:textSize="12dp" />
 
     </LinearLayout>

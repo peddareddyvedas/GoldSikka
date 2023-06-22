@@ -1,12 +1,12 @@
 package com.goldsikka.goldsikka.Activitys;
 
+import android.app.Activity;
 import android.app.Instrumentation;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.test.rule.ActivityTestRule;
 
-import com.goldsikka.goldsikka.LOGIN.LoginActivity;
-import com.goldsikka.goldsikka.LOGIN.OTPActivity;
 import com.goldsikka.goldsikka.R;
 
 import org.junit.After;

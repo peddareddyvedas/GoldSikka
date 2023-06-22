@@ -26,13 +26,14 @@ import com.goldsikka.goldsikka.Activitys.Events.Eventlist;
 import com.goldsikka.goldsikka.Activitys.MoneyWallet.AddMonet_to_Wallet;
 import com.goldsikka.goldsikka.Activitys.Predict_price.BaseViewHolder;
 import com.goldsikka.goldsikka.Activitys.Predict_price.PaginationListener;
+import com.goldsikka.goldsikka.FirebaseMessageReceiver;
 import com.goldsikka.goldsikka.Fragments.Schemes.Schemes_usersubscribed_list;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
-import com.goldsikka.goldsikka.LOGIN.WelcomeActivity;
+import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
 import com.goldsikka.goldsikka.model.Listmodel;
@@ -596,9 +597,9 @@ public class NotificationList extends AppCompatActivity implements SwipeRefreshL
                 tvmessage.setText(model.getMessage());
                 tvtitle.setText(model.getTitle());
 
-                if (!model.isSeen()) {
+               /* if (!model.isSeen()) {
                     llbackground.setBackgroundColor(Color.parseColor("#e1f1ff"));
-                }
+                }*/
 
                 if (model.getTitle().equals("Login with new device")) {
                     // onlogout();

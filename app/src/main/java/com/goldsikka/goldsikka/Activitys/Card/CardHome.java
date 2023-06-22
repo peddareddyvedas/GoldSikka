@@ -1,22 +1,48 @@
 package com.goldsikka.goldsikka.Activitys.Card;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
+import com.goldsikka.goldsikka.Utils.NetworkUtils;
+import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
+import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
+import com.goldsikka.goldsikka.model.Listmodel;
+import com.goldsikka.goldsikka.netwokconnection.ApiClient;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CardHome extends AppCompatActivity {
 

@@ -5,8 +5,7 @@
     tools:ignore="HardcodedText">
 
     <group android:checkableBehavior="single">
-        <item android:title="Goldsikka Gullak"
-            >
+        <item android:title="Goldsikka Gullak">
             <menu>
                 <group
                     android:id="@+id/menu_top"
@@ -14,22 +13,22 @@
                     <item
                         android:id="@+id/goldsuvidhamenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/goldsuvidhaimg"
+                        android:icon="@drawable/goldsuvidamenu"
                         android:title="Gold Suvidha" />
                     <item
                         android:id="@+id/sellgoldmenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/sellgoldimage"
+                        android:icon="@drawable/sellgoldmenu"
                         android:title="Sell Gold" />
                     <item
                         android:id="@+id/redeemmenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/redeemimage"
+                        android:icon="@drawable/redeemmenu"
                         android:title="Redeem" />
                     <item
                         android:id="@+id/transfermenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/transactionimage"
+                        android:icon="@drawable/transfermenu"
                         android:title="Transfer" />
                 </group>
             </menu>
@@ -40,22 +39,22 @@
     <item
         android:id="@+id/moneywalletmenubtn"
         android:checkable="true"
-        android:icon="@drawable/bankimg"
+        android:icon="@drawable/moneywalletmenu"
         android:title="Booking Account" />
     <item
         android:id="@+id/referandearnmenubtn"
         android:checkable="true"
-        android:icon="@drawable/referandearnimage"
+        android:icon="@drawable/referandearnmenu"
         android:title="Refer and Earn" />
     <item
         android:id="@+id/feedbackmenubtn"
         android:checkable="true"
-        android:icon="@drawable/feedbackimage"
+        android:icon="@drawable/feedbackmenu"
         android:title="Feedback" />
     <item
         android:id="@+id/loyalitypointsmenubtn"
         android:checkable="true"
-        android:icon="@drawable/loyalityimage"
+        android:icon="@drawable/loyalitypointsmenu"
         android:title="Loyalty Points" />
 
     <group android:checkableBehavior="single">
@@ -72,7 +71,7 @@
                     <item
                         android:id="@+id/mygoldplusmenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/goldplusimg"
+                        android:icon="@drawable/goldplusmenu"
                         android:title="Gold Plus Plan" />
                 </group>
             </menu>
@@ -88,12 +87,12 @@
                     <item
                         android:id="@+id/Eventsmenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/eventsimg"
+                        android:icon="@drawable/eventsmenu"
                         android:title="Events" />
                     <item
                         android:id="@+id/donatemenubtn"
                         android:checkable="true"
-                        android:icon="@drawable/donateimg"
+                        android:icon="@drawable/orgmenu"
                         android:title="Donate" />
                 </group>
             </menu>

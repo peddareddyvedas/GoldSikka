@@ -6,7 +6,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -18,9 +18,9 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+               >
 
                 <ImageView
                     android:id="@+id/back"
@@ -28,7 +28,7 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleft"
+                    android:background="@drawable/arrowleftnew"
                     android:visibility="gone" />
 
                 <ImageView
@@ -36,7 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikkalogo" />
+                    android:visibility="gone"
+                    android:src="@drawable/goldsikka_logo2" />
 
             </RelativeLayout>
 
@@ -48,12 +49,11 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text="About Us"
                 android:textColor="@color/DarkBrown"
-                android:textSize="13dp"
+                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -62,6 +62,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -140,7 +141,7 @@
                 android:drawablePadding="12dp"
                 android:drawableTint="@color/Gold"
                 android:text="Read More"
-                android:textColor="@color/Gold"
+                android:textColor="@color/goldnewcolor"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -161,8 +162,9 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="26dp"
-                        android:src="@drawable/info_circle" />
+                        android:src="@drawable/usersearch" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -212,8 +214,9 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="26dp"
-                        android:src="@drawable/briefcase" />
+                        android:src="@drawable/securityuser" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -264,7 +267,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="26dp"
-                        android:src="@drawable/help_circle" />
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/messagequestion" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -315,7 +319,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="26dp"
-                        android:src="@drawable/help_circle" />
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/emojihappy" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -366,7 +371,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="26dp"
-                        android:src="@drawable/smile" />
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/buildings" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

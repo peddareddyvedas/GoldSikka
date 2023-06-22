@@ -38,9 +38,9 @@ public class EventsListAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Created Events";
-            case 1:
                 return "Received Events";
+            case 1:
+                return "Completed Events";
 
         }
         return null;

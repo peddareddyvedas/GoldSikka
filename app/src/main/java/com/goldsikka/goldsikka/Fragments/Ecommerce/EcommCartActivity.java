@@ -17,18 +17,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
+import com.goldsikka.goldsikka.Activitys.LoginActivity;
+import com.goldsikka.goldsikka.Activitys.OTPActivity;
+import com.goldsikka.goldsikka.Activitys.Verifyaccount_Class;
 import com.goldsikka.goldsikka.Directory.GiftCardActivity;
+import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -39,9 +46,12 @@ import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -66,7 +76,7 @@ public class EcommCartActivity extends AppCompatActivity {
     Bundle bundle;
     String titleprice;
     String cartid = "99";
-    Button checkout;
+    LinearLayout buybtnll;
     TextView walletbalace, carttotal;
     RelativeLayout notfound;
     SwipeRefreshLayout swipe_layout;
@@ -117,7 +127,7 @@ public class EcommCartActivity extends AppCompatActivity {
         uidTv.setText(AccountUtils.getCustomerID(getApplicationContext()));
         unameTv.setText(AccountUtils.getName(getApplicationContext()));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Cart");
+        titleTv.setText("My Cart");
         notxt = findViewById(R.id.notxt);
         cartRecyclerview = findViewById(R.id.recyclercart);
         LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getApplicationContext());
@@ -127,12 +137,12 @@ public class EcommCartActivity extends AppCompatActivity {
         cartList = new ArrayList<>();
         cartAdapter = new EcommCartAdapter(cartList);
         cartRecyclerview.setAdapter(cartAdapter);
-        checkout = findViewById(R.id.checkout);
+        buybtnll= findViewById(R.id.buybtnll);
         walletbalace = findViewById(R.id.walletbalace);
         carttotal = findViewById(R.id.carttotal);
         remove = findViewById(R.id.remove);
         addgift = findViewById(R.id.addgift);
-        checkout.setOnClickListener(new View.OnClickListener() {
+        buybtnll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), EcommCheckout_Activity.class);
@@ -365,7 +375,7 @@ public class EcommCartActivity extends AppCompatActivity {
                     if (statuscode == HttpsURLConnection.HTTP_OK) {
                         Listmodel list = response.body();
                         String Walletamount = list.getAmount_wallet();
-                        walletbalace.setText("Account Balance : " + getString(R.string.Rs) + " " + Walletamount);
+                        walletbalace.setText("Booking Account Available Balance : " + getString(R.string.Rs) + " " + Walletamount);
                         dialog.dismiss();
 
                     } else {
@@ -435,10 +445,10 @@ public class EcommCartActivity extends AppCompatActivity {
                             cartList.add(listmodel);
                             cartAdapter.notifyDataSetChanged();
                             notfound.setVisibility(View.GONE);
-                            checkout.setClickable(true);
+                            buybtnll.setClickable(true);
                         }
                     } else {
-                        checkout.setClickable(false);
+                        buybtnll.setClickable(false);
                         // carttotal.setText(" ");
                         carttotal.setText("₹ " + "0");
 
@@ -447,7 +457,7 @@ public class EcommCartActivity extends AppCompatActivity {
 
                 } else if (statuscode == 404) {
                     notfound.setVisibility(View.VISIBLE);
-                    checkout.setClickable(false);
+                    buybtnll.setClickable(false);
                     //  carttotal.setText(" ");
                     carttotal.setText("₹ " + "0");
 
@@ -474,7 +484,7 @@ public class EcommCartActivity extends AppCompatActivity {
                 //removeGiftCardCodeback(couponcode);
                 carttotal.setText("₹ " + "0");
                 notfound.setVisibility(View.VISIBLE);
-                checkout.setClickable(false);
+                buybtnll.setClickable(false);
 
 
             }

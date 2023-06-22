@@ -1,5 +1,7 @@
 package com.goldsikka.goldsikka.Directory;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -16,12 +18,14 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -41,15 +45,20 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
+import com.goldsikka.goldsikka.Activitys.ChangePassword;
+import com.goldsikka.goldsikka.Activitys.Elevenplus_Jewellery;
+import com.goldsikka.goldsikka.Activitys.Events.EventModel;
 import com.goldsikka.goldsikka.Activitys.LocationTracker;
 
 
+import com.goldsikka.goldsikka.Directory.Adapters.DirectoryImageurlsAdapter;
 import com.goldsikka.goldsikka.Directory.Adapters.DirectoryStoreProfileAdapter;
 import com.goldsikka.goldsikka.Directory.Adapters.DirectoryStoreVideoAdapter;
 import com.goldsikka.goldsikka.Fragments.Ecommerce.Adapters.PageviewecomAdapter;
@@ -58,7 +67,9 @@ import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
+import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
+import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -66,7 +77,10 @@ import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
 
+import java.io.IOException;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,9 +88,12 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import butterknife.internal.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

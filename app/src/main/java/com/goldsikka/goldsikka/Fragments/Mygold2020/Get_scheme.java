@@ -5,6 +5,7 @@ import static android.os.Environment.DIRECTORY_DOWNLOADS;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -20,20 +21,26 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.SystemClock;
+import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 
 import android.util.Pair;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
@@ -48,15 +55,21 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
 import com.goldsikka.goldsikka.Activitys.ReceiptActivity;
+import com.goldsikka.goldsikka.Adapter.mygoldlist_Adapter;
 import com.goldsikka.goldsikka.Fragments.Schemes.NextMMiPaymentForSchems;
 import com.goldsikka.goldsikka.Fragments.Schemes.SchemeTicket;
+import com.goldsikka.goldsikka.MainActivity;
 import com.goldsikka.goldsikka.Models.SchemeModel;
+import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
+import com.goldsikka.goldsikka.OrganizationWalletModule.DonateGold;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
+import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.interfaces.OnItemClickListener;
+import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
 
 import com.google.gson.JsonObject;
@@ -78,6 +91,7 @@ import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import butterknife.BindView;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

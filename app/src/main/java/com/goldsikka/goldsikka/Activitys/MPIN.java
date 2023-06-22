@@ -27,24 +27,24 @@ public class MPIN extends AppCompatActivity {
 
     boolean ispin;
     String accesstoken;
-    String token,from;
+    String token, from;
 
     TextView cpin, upin, dpin;
 
-    View v1, v2 , v3;
+    View v1, v2, v3;
 
     int complete = 0;
 
-    String stpin,strepin,stcpin;
-//    String accesstoken;
+    String stpin, strepin, stcpin;
+    //    String accesstoken;
 //    String token,from;
     private shared_preference sharedPreference;
     String value = "0";
     ApiDao apiDao;
-//    boolean ispin;
+    //    boolean ispin;
     ActionBar actionBar;
 
-    TextView unameTv, uidTv;
+    TextView unameTv, uidTv,titleTv;
 
     RelativeLayout backbtn;
 
@@ -79,7 +79,10 @@ public class MPIN extends AppCompatActivity {
 
         unameTv = findViewById(R.id.uname);
         uidTv = findViewById(R.id.uid);
+        titleTv = findViewById(R.id.title);
 
+        titleTv.setVisibility(View.VISIBLE);
+        titleTv.setText("App Lock");
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
 
@@ -100,12 +103,12 @@ public class MPIN extends AppCompatActivity {
             ispin = bundle.getBoolean("isPin");
         }
 
-        if(ispin){
+        if (ispin) {
             upin.setVisibility(View.VISIBLE);
             v2.setVisibility(View.VISIBLE);
 //            dpin.setVisibility(View.VISIBLE);
 //            v3.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             cpin.setVisibility(View.VISIBLE);
             v1.setVisibility(View.VISIBLE);
 //            v2.setVisibility(View.VISIBLE);
@@ -115,7 +118,7 @@ public class MPIN extends AppCompatActivity {
         cpin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!ispin) {
+                if (!ispin) {
                     Intent intent = new Intent(MPIN.this, CreatePIN.class);
                     intent.putExtra("from", "Generatepin");
                     intent.putExtra("token", "");
@@ -128,7 +131,7 @@ public class MPIN extends AppCompatActivity {
         upin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ispin){
+                if (ispin) {
                     Intent intent = new Intent(MPIN.this, CreatePIN.class);
                     intent.putExtra("from", "Generatepin");
                     intent.putExtra("token", "");

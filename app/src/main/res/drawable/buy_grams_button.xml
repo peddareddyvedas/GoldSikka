@@ -10,6 +10,7 @@
         android:color="@color/black" />
     <corners
         android:bottomRightRadius="10dp"
-        android:topRightRadius="10dp" />
+        android:topRightRadius="10dp"
+        />
 
 </shape>

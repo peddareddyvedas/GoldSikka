@@ -71,7 +71,7 @@ import retrofit2.Response;
 
 public class OTPActivity extends BaseActivity implements baseinterface {
     String message, verified;
-    String rs_mobile, stotp, credential, UUUId,mobilenumber;
+    String rs_mobile, stotp, credential, UUUId, mobilenumber;
     String accesstoken, verifytoken, roleid;
     String maskedphone, last2digits;
     //otp
@@ -395,7 +395,6 @@ public class OTPActivity extends BaseActivity implements baseinterface {
             startActivity(intent);
             finish();
         }
-
     }
 
     public void facebookEvents() {

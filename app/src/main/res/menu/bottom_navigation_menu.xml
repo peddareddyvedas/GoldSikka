@@ -13,13 +13,13 @@
     <item
         android:id="@+id/Ecommerce"
         android:enabled="true"
-        android:icon="@drawable/store_selector"
-        android:title="Store"/>
+        android:icon="@drawable/hecom"
+        android:title="Jewel Store"/>
     <item
         android:id="@+id/Aboutus"
         android:enabled="true"
-        android:icon="@drawable/goldplan_selectro"
-        android:title="Gold Plans"/>
+        android:icon="@drawable/aboutus_selector"
+        android:title="About Us"/>
     <item
         android:id="@+id/Account"
         android:enabled="true"

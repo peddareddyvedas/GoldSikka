@@ -11,11 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="12dp">
+
 
             <LinearLayout
                 android:id="@+id/lltemple"
@@ -25,8 +21,8 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/templelistimage"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_margin="18dp"
                     android:src="@drawable/temple_icon" />
 
@@ -62,7 +58,11 @@
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
 
     </LinearLayout>
 

@@ -54,7 +54,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CustomerAddressList extends AppCompatActivity implements View.OnClickListener, OnItemClickListener {
-    LinearLayout ll_addressempty, ll_list;
+    LinearLayout ll_addressempty;
+    RelativeLayout  ll_list;
     Button lladd_address;
     RecyclerView recyclerView;
     ArrayList<Listmodel> itemList;
@@ -68,6 +69,7 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
 
     RelativeLayout backbtn;
     ImageView addcustomeraddress;
+    Button addaddressbtn;
 
     @SuppressLint("NewApi")
     @Override
@@ -88,7 +90,7 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
         titleTv.setVisibility(View.VISIBLE);
         titleTv.setText("Address List");
         addcustomeraddress = findViewById(R.id.addcustomeraddress);
-
+        addaddressbtn = findViewById( R.id.addaddressbtn );
         backbtn = findViewById(R.id.backbtn);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -98,10 +100,17 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
 
             }
         });
-        addcustomeraddress.setOnClickListener(new View.OnClickListener() {
+
+        addaddressbtn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openaddaddress();
+            }
+        } );
+        addcustomeraddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 //
@@ -266,10 +275,10 @@ public class CustomerAddressList extends AppCompatActivity implements View.OnCli
     public void onItemClick(View view, int position) {
         Listmodel list = itemList.get(position);
         switch (view.getId()) {
-            case R.id.bt_edit:
+            case R.id.editbtn:
                 openedit(Integer.parseInt(list.getId()));
                 break;
-            case R.id.bt_remove:
+            case R.id.deletebtn:
                 if (!NetworkUtils.isConnected(this)) {
                     ToastMessage.onToast(this, getString(R.string.error_no_internet_connection), ToastMessage.ERROR);
                     return;

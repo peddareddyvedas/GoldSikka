@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -21,9 +21,8 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/back"
@@ -31,14 +30,15 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleft" />
+                    android:background="@drawable/arrowleftnew" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikkalogo" />
+                    android:src="@drawable/goldsikka_logo2" />
 
             </RelativeLayout>
 
@@ -50,12 +50,11 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="13dp"
+                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -64,6 +63,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:gravity="end"
                 android:orientation="vertical">
 
@@ -97,13 +97,20 @@
         android:layout_height="2dp"
         android:background="@color/LightBrown2" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        >
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -121,9 +128,34 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="@string/Change_Profile_Picture"
-                android:textColor="@color/Gold"
+                android:textColor="@color/goldnewcolor"
                 android:textSize="12dp"
                 android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backdetailscard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
 
 
             <EditText
@@ -142,7 +174,7 @@
                 android:textColor="@color/DarkBrown"
                 android:textColorHint="@color/LightBrown"
                 android:textSize="16dp"
-                android:textStyle="bold" />
+                 />
 
             <TextView
                 android:id="@+id/tv_name"
@@ -173,7 +205,7 @@
                 android:textColor="@color/DarkBrown"
                 android:textColorHint="@color/LightBrown"
                 android:textSize="16dp"
-                android:textStyle="bold" />
+                 />
 
             <TextView
                 android:id="@+id/tv_mobile"
@@ -204,7 +236,7 @@
                 android:textColor="@color/DarkBrown"
                 android:textColorHint="@color/LightBrown"
                 android:textSize="16dp"
-                android:textStyle="bold" />
+                 />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -219,21 +251,28 @@
                 android:visibility="gone" />
 
 
+
             <Button
                 android:id="@+id/bt_edit"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="188dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="24dp"
                 android:background="@drawable/button_background"
                 android:backgroundTint="@color/Gold"
                 android:text="@string/Submit"
                 android:textColor="@color/white" />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
 
         </LinearLayout>
+
+
     </ScrollView>
 
-
+    </LinearLayout>
 </LinearLayout>

@@ -1,75 +1,75 @@
-<FrameLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frame_layout"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout android:layout_height="match_parent"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:background="@color/colorWhite"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:orientation="vertical">
 
 
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@android:color/transparent"-->
-<!--            android:id="@+id/toolbar"-->
-<!--            xmlns:android="http://schemas.android.com/apk/res/android">-->
+        <!--        <androidx.appcompat.widget.Toolbar-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@android:color/transparent"-->
+        <!--            android:id="@+id/toolbar"-->
+        <!--            xmlns:android="http://schemas.android.com/apk/res/android">-->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:orientation="horizontal">-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:orientation="horizontal">-->
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:id="@+id/dr1"-->
-<!--                    android:src="@drawable/goldsikka_logo2"/>-->
+        <!--                <ImageView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:id="@+id/dr1"-->
+        <!--                    android:src="@drawable/goldsikka_logo2"/>-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text=""-->
-<!--                    android:textSize="13dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:gravity="end"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:id="@+id/title"-->
-<!--                    android:visibility="gone"-->
-<!--                    android:layout_centerInParent="true"-->
-<!--                    android:textColor="@color/DarkBrown" />-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text=""-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:gravity="end"-->
+        <!--                    android:layout_weight="1"-->
+        <!--                    android:id="@+id/title"-->
+        <!--                    android:visibility="gone"-->
+        <!--                    android:layout_centerInParent="true"-->
+        <!--                    android:textColor="@color/DarkBrown" />-->
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:layout_marginEnd="30dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:gravity="end"-->
-<!--                    android:orientation="vertical">-->
-<!--                    <TextView-->
-<!--                        android:layout_width="100dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text=""-->
-<!--                        android:gravity="end"-->
-<!--                        android:id="@+id/uname"-->
-<!--                        android:textColor="@color/Gold"/>-->
-<!--                    <TextView-->
-<!--                        android:layout_width="100dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text=""-->
-<!--                        android:id="@+id/uid"-->
-<!--                        android:gravity="end"-->
-<!--                        android:textColor="@color/Gold"/>-->
-<!--                </LinearLayout>-->
-<!--            </LinearLayout>-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_alignParentEnd="true"-->
+        <!--                    android:layout_marginEnd="30dp"-->
+        <!--                    android:layout_weight="1"-->
+        <!--                    android:gravity="end"-->
+        <!--                    android:orientation="vertical">-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="100dp"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text=""-->
+        <!--                        android:gravity="end"-->
+        <!--                        android:id="@+id/uname"-->
+        <!--                        android:textColor="@color/Gold"/>-->
+        <!--                    <TextView-->
+        <!--                        android:layout_width="100dp"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text=""-->
+        <!--                        android:id="@+id/uid"-->
+        <!--                        android:gravity="end"-->
+        <!--                        android:textColor="@color/Gold"/>-->
+        <!--                </LinearLayout>-->
+        <!--            </LinearLayout>-->
 
-<!--        </androidx.appcompat.widget.Toolbar>-->
+        <!--        </androidx.appcompat.widget.Toolbar>-->
 
         <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/toolbar"
@@ -86,9 +86,9 @@
 
                 <RelativeLayout
                     android:id="@+id/backbtn"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                   >
 
                     <ImageView
                         android:id="@+id/back"
@@ -96,14 +96,15 @@
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/arrowleft" />
+                        android:background="@drawable/arrowleftnew" />
 
                     <ImageView
                         android:id="@+id/dr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:src="@drawable/goldsikkalogo" />
+                        android:src="@drawable/goldsikka_logo2"
+                        android:visibility="gone" />
 
                 </RelativeLayout>
 
@@ -115,12 +116,11 @@
                     android:layout_centerInParent="true"
                     android:layout_weight="1"
                     android:ellipsize="end"
-                    android:gravity="center"
                     android:padding="15dp"
                     android:singleLine="true"
                     android:text=""
                     android:textColor="@color/DarkBrown"
-                    android:textSize="13dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -129,6 +129,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
+                    android:visibility="gone"
                     android:gravity="end"
                     android:orientation="vertical">
 
@@ -166,73 +167,85 @@
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/LightBrown2"/>
-        <LinearLayout
-            android:visibility="gone"
-            xmlns:tools="http://schemas.android.com/tools"
+            android:background="@color/LightBrown2" />
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ll_addressempty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:background="@color/white"
-            android:id="@+id/ll_addressempty"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <ImageView
-                android:layout_gravity="center"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_gravity="center"
                 android:src="@drawable/locationicon"
                 android:tint="@color/LightBrown"
                 tools:ignore="UseAppTint" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="30dp"
-                android:textSize="14dp"
+                android:layout_marginRight="40dp"
                 android:gravity="center"
-                android:textColor="@color/DarkBrown"
+                android:justificationMode="inter_word"
                 android:text="@string/empty_address_content"
-                android:justificationMode="inter_word"/>
+                android:textColor="@color/DarkBrown"
+                android:textSize="14dp" />
 
             <Button
                 android:id="@+id/lladd_address"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginLeft="117dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginRight="117dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/button_background"
                 android:backgroundTint="@color/Gold"
                 android:text="@string/Add_Address"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/ll_list"
-            android:visibility="visible"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
 
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/address_list"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/addaddressbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/Gold"                android:text="Add Address" />
+
+        </RelativeLayout>
 
     </LinearLayout>
-
 
 
 </FrameLayout>

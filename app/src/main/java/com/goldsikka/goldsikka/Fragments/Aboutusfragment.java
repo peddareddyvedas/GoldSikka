@@ -58,7 +58,7 @@ public class Aboutusfragment extends AppCompatActivity {
 
     ApiDao apiDao;
 
-    TextView unameTv, uidTv;
+    TextView unameTv, uidTv,titleTv;
 
 
     RelativeLayout backbtn;
@@ -104,7 +104,8 @@ public class Aboutusfragment extends AppCompatActivity {
 
         unameTv = findViewById(R.id.uname);
         uidTv = findViewById(R.id.uid);
-
+        titleTv = findViewById(R.id.title);
+        titleTv.setText("About Goldsikka");
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
         backbtn = findViewById(R.id.backbtn);

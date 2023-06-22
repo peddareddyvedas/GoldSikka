@@ -5,17 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/lltitle"
-        android:layout_width="match_parent"
-        android:layout_height="199dp"
-        android:background="@color/Gold"
-        android:orientation="vertical">
+
 
         <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:background="@android:color/transparent">
 
             <LinearLayout
@@ -27,9 +22,9 @@
 
                 <RelativeLayout
                     android:id="@+id/backbtn"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    >
 
                     <ImageView
                         android:id="@+id/back"
@@ -37,31 +32,31 @@
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/arrowleft" />
+                        android:background="@drawable/arrowleftnew" />
 
                     <ImageView
                         android:id="@+id/dr1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/back"
-                        android:src="@drawable/goldsikkalogo" />
+                        android:visibility="gone"
+                        android:src="@drawable/goldsikka_logo2" />
 
                 </RelativeLayout>
 
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/titleTv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:layout_weight="1"
                     android:ellipsize="end"
-                    android:gravity="center"
                     android:padding="15dp"
                     android:singleLine="true"
                     android:text=""
                     android:textColor="@color/DarkBrown"
-                    android:textSize="13dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -101,6 +96,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="gone"
             android:orientation="horizontal">
 
             <TextView
@@ -123,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="230dp"
+            android:visibility="gone"
             android:layout_marginTop="-180dp"
             android:src="@drawable/goldsikkalogo_watermark" />
 
@@ -131,6 +128,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="-110dp"
             android:gravity="end"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <ImageView
@@ -141,13 +139,31 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/goldbgimg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/goldplanbgimg"/>
+    <TextView
+        android:id="@+id/goldplantext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="GOLD PLUS PLAN"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/goldbgimg"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/goldnewcolor"/>
 
     <RelativeLayout
         android:id="@+id/relativelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lltitle">
+        android:layout_below="@+id/goldplantext">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -163,86 +179,113 @@
                     android:id="@+id/tv_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
                     android:text=""
                     android:textColor="@color/Gold"
                     android:textSize="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_below="@id/tv_content"
+                    android:elevation="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    app:cardBackgroundColor="#E1E8F0">
 
                 <RelativeLayout
                     android:id="@+id/rlBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@drawable/contentboxbackground">
+                   >
+
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
+                        <RelativeLayout
+                            android:id="@+id/rltext"
+                            android:layout_width="match_parent"
+                            android:layout_below="@id/rv_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_features"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/features"
+                                android:textColor="@color/Gold"
+                                android:layout_marginStart="110dp"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/andtext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="&amp;"
+                                android:textStyle="bold"
+                                android:textColor="@color/Gold"
+                                android:layout_marginStart="10dp"
+                                android:layout_toRightOf="@+id/tv_features"/>
+
+                            <TextView
+                                android:id="@+id/tv_faqs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/andtext"
+                                android:text="@string/FAQs"
+                                android:textColor="@color/Gold"
+                                android:layout_marginStart="10dp"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tvby"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_faqs"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="@string/by_starting_a_subscription_you_agree_to_the"
+                                android:textColor="@color/LightBrown"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tv_terms_condition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvby"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="@string/terms_and_conditions"
+                                android:textColor="@color/goldnewcolor"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="20dp"/>
+
+                        </RelativeLayout>
+
+
+
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/rltext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rlBox"
-                    android:layout_marginTop="16dp">
-
-                    <TextView
-                        android:id="@+id/tv_features"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/features"
-                        android:textColor="@color/Gold"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_faqs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_features"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="@string/FAQs"
-                        android:textColor="@color/Gold"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvby"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_faqs"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="@string/by_starting_a_subscription_you_agree_to_the"
-                        android:textColor="@color/LightBrown"
-                        android:textSize="12dp" />
-
-                    <TextView
-                        android:id="@+id/tv_terms_condition"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvby"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="@string/terms_and_conditions"
-                        android:textColor="@color/Gold"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
                 <Button
                     android:id="@+id/bt_continue"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:layout_below="@id/rltext"
+                    android:layout_below="@id/cardview"
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginRight="24dp"

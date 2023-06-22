@@ -9,11 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="12dp">
+
 
             <LinearLayout
                 android:id="@+id/llngos"
@@ -55,7 +51,6 @@
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

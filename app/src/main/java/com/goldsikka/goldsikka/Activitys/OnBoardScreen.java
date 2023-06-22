@@ -1,6 +1,7 @@
 package com.goldsikka.goldsikka.Activitys;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.ProgressDialog;
@@ -8,16 +9,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.goldsikka.goldsikka.Adapter.PageviewAdapter;
 import com.goldsikka.goldsikka.Fragments.baseinterface;
-import com.goldsikka.goldsikka.LOGIN.EntryPin;
 import com.goldsikka.goldsikka.NewDesignsActivity.MainFragmentActivity;
 import com.goldsikka.goldsikka.OrganizationWalletModule.Organizationwallet_mainpage;
 import com.goldsikka.goldsikka.R;
@@ -26,7 +28,7 @@ import com.goldsikka.goldsikka.Utils.ErrorSnackBar;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
 import com.goldsikka.goldsikka.Utils.ToastMessage;
 import com.goldsikka.goldsikka.Utils.shared_preference;
-import com.goldsikka.goldsikka.LOGIN.WelcomeActivity;
+import com.goldsikka.goldsikka.WelcomeActivity;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
@@ -46,6 +48,7 @@ import java.util.TimerTask;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -147,18 +150,17 @@ public class OnBoardScreen extends BaseActivity implements baseinterface {
         }
 */
         sharedPreference = new shared_preference(this);
-       /* if (sharedPreference.readloginstatus()) {
+        if (sharedPreference.readloginstatus()) {
             if (AccountUtils.getRoleid(this).equals("1") || AccountUtils.getRoleid(this).equals("2")) {
                 tv_skip.setText("Skip");
 
             } else {
-
-                tv_skip.setText("Skip");
+                tv_skip.setText("Login or Sign up");
 
             }
         } else {
-            tv_skip.setText("Skip");
-        }*/
+            tv_skip.setText("Login or Sign up");
+        }
         init_getbanners();
         try {
             sendToMixpanel();

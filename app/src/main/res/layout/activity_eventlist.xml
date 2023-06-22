@@ -14,7 +14,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:id="@+id/toolbar"
             app:menu="@menu/ticketmenu"

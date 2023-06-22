@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:id="@+id/rlayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
@@ -13,46 +13,44 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true" />
 
-    <Button
-        android:id="@+id/tv_skip"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:drawableEnd="@drawable/rightarrow"
-        android:gravity="center"
-        android:text="Skip"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-
-        <RelativeLayout
+     android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical"
             tools:ignore="MissingConstraints">
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:background="@drawable/pageview_indicator"
+            android:gravity="bottom"
+            android:padding="10dip"
+            app:fillColor="#FF6F00"
+            app:pageColor="#fff" />
 
-            <com.viewpagerindicator.CirclePageIndicator
-                android:id="@+id/indicator"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:padding="10dip"
-                app:background="@drawable/pageview_indicator"
-                app:fillColor="#FF6F00"
-                app:pageColor="#fff" />
-
-        </RelativeLayout>
+        <Button
+            android:id="@+id/tv_skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/Gold"
+            android:textColor="@color/white"
+            android:text=""
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

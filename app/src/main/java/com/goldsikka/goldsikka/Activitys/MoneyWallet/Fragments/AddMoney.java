@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -18,12 +19,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.goldsikka.goldsikka.Activitys.Events.EventModel;
+import com.goldsikka.goldsikka.Activitys.LoginActivity;
+import com.goldsikka.goldsikka.Activitys.MoneyWallet.AddMonet_to_Wallet;
 import com.goldsikka.goldsikka.Activitys.RazorpayPayment;
+import com.goldsikka.goldsikka.Fragments.baseinterface;
 import com.goldsikka.goldsikka.R;
 import com.goldsikka.goldsikka.Utils.AccountUtils;
 import com.goldsikka.goldsikka.Utils.NetworkUtils;
@@ -32,6 +38,14 @@ import com.goldsikka.goldsikka.Withdraw_popup;
 import com.goldsikka.goldsikka.interfaces.ApiDao;
 import com.goldsikka.goldsikka.model.Listmodel;
 import com.goldsikka.goldsikka.netwokconnection.ApiClient;
+import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
+
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -41,6 +55,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
+import static com.goldsikka.goldsikka.Activitys.Predict_price.PaginationListener.PAGE_START;
 
 public class AddMoney extends Fragment implements View.OnClickListener {
 
@@ -139,8 +154,8 @@ public class AddMoney extends Fragment implements View.OnClickListener {
         tv_withdraw.setOnClickListener(this);
         btn_add.setOnClickListener(this::onClick);
 
+        et_add_money.setHint(Html.fromHtml(getString(R.string.amount)));
 
-        et_add_money.setHint(Html.fromHtml(getString(R.string.wallet_hint)));
         et_add_money.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

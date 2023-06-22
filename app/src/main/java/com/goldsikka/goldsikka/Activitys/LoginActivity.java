@@ -331,7 +331,7 @@ public class LoginActivity extends BaseActivity implements baseinterface, Google
         } else {
             getLocation();
         }
-
+        generateHashKey();
     }
 
 

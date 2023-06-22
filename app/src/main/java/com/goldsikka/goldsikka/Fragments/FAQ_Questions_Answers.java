@@ -68,6 +68,8 @@ public class FAQ_Questions_Answers extends AppCompatActivity {
         }
 
         Bundle bundle = getIntent().getExtras();
+
+
         ids = bundle.getString("faq_ids");
 
         initlizerecyclerview();

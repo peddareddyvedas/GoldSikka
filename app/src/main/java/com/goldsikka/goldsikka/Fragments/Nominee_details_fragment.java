@@ -108,7 +108,7 @@ public class Nominee_details_fragment extends AppCompatActivity implements View.
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Add Nominee Details");
+        titleTv.setText("Add Nominee");
         intilizeviews();
         setHint();
 
@@ -247,7 +247,7 @@ public class Nominee_details_fragment extends AppCompatActivity implements View.
 
                 st_statelist = spin_state.getItemAtPosition(spin_state.getSelectedItemPosition()).toString();
 
-                if (!st_statelist.equals("Select State")) {
+                if (!st_statelist.equals("State")) {
                     Listmodel listmodel = list.get(i);
                     state_id = listmodel.getId();
 //                    for (Listmodel listmodel:list){
@@ -324,7 +324,7 @@ public class Nominee_details_fragment extends AppCompatActivity implements View.
                 st_countrylist = spin_country.getItemAtPosition(spin_country.getSelectedItemPosition()).toString();
 
                 // String listmodel = statelist.get();
-                if (!st_countrylist.equals("Select Country")) {
+                if (!st_countrylist.equals("Country")) {
                     Listmodel listmodel = list.get(i);
                     country_id = listmodel.getId();
 //                    ToastMessage.onToast(Nominee_details_fragment.this, country_id, ToastMessage.SUCCESS);

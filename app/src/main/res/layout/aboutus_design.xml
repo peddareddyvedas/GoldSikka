@@ -1,10 +1,9 @@
-
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
+
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,9 +19,8 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/back"
@@ -30,14 +28,15 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleft" />
+                    android:background="@drawable/arrowleftnew" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikkalogo" />
+                    android:src="@drawable/goldsikka_logo2"
+                    android:visibility="gone" />
 
             </RelativeLayout>
 
@@ -49,12 +48,11 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=""
                 android:textColor="@color/DarkBrown"
-                android:textSize="13dp"
+                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -64,7 +62,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/uname"
@@ -93,107 +92,302 @@
 
     <View
         android:id="@+id/view"
-        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/LightBrown2"/>
-    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@id/toolbar"
+        android:background="@color/LightBrown2" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/colorWhite"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-        android:visibility="visible"
-        android:id="@+id/linear_layout"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            style="@style/textview_common_field"
-            android:layout_width="match_parent"
-            android:text="ABOUT US"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:src="@drawable/aboutus_top_image"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"/>
-
-        <ImageView
-            android:scaleType="fitXY"
-            android:layout_margin="10dp"
-        android:src="@drawable/vision"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"/>
-
-        <ImageView
-            android:scaleType="fitXY"
-            android:layout_margin="10dp"
-            android:src="@drawable/mission"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"/>
-
-        <ImageView
-            android:scaleType="fitXY"
-            android:layout_margin="10dp"
-            android:src="@drawable/philosophy"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"/>
-
-<!--        <TextView-->
-<!--            style="@style/textview_common_field"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textSize="22sp"-->
-<!--            android:gravity="center"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:text="@string/aboutus"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
+        android:background="#F5F5F5"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:layout_gravity="center"
+            android:id="@+id/linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <View
-                android:background="@color/textcolorprimary"
-                android:layout_width="100dp"
-                android:layout_height="2dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:padding="10dp"
+            android:visibility="visible">
 
             <TextView
-                android:justificationMode="inter_word"
                 style="@style/textview_common_field"
-                android:id="@+id/paragraph1"
-                android:layout_margin="5dp"
-                android:textSize="15dp"
-                android:text=""
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="ABOUT US"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/backdetailscard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Conservative Approach"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Traditional Values"
+                                android:textStyle="bold"
+                                android:textColor="@color/newgray"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Technology Driven"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Radical Vision"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Protection"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Respect"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Futuristic"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/bullet"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/aboutbuttion" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/bullet"
+                                android:text="Prosperity"
+                                android:textColor="@color/newgray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/phylosopy" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/vision" />
+
+            <!--        <TextView-->
+            <!--            style="@style/textview_common_field"-->
+            <!--            android:textStyle="bold"-->
+            <!--            android:textSize="22sp"-->
+            <!--            android:gravity="center"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:text="@string/aboutus"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:background="@color/textcolorprimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/paragraph1"
+                    style="@style/textview_common_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:justificationMode="inter_word"
+                    android:text=""
+                    android:textSize="15dp" />
 
 
-
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
     </ScrollView>
 </LinearLayout>

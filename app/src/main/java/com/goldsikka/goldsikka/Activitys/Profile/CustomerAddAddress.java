@@ -131,8 +131,9 @@ public class CustomerAddAddress extends AppCompatActivity implements View.OnClic
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     RelativeLayout backbtn;
+    Button manualaddress;
 
-    @SuppressLint({"NewApi", "ServiceCast"})
+    @SuppressLint({"NewApi", "ServiceCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -156,7 +157,7 @@ public class CustomerAddAddress extends AppCompatActivity implements View.OnClic
         unameTv.setText(AccountUtils.getName(this));
         uidTv.setText(AccountUtils.getCustomerID(this));
         titleTv.setVisibility(View.VISIBLE);
-        titleTv.setText("Add New Address");
+        titleTv.setText("Address List");
 
         backbtn = findViewById(R.id.backbtn);
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +173,20 @@ public class CustomerAddAddress extends AppCompatActivity implements View.OnClic
         }
         intilizeviews();
         setHint();
+
+        manualaddress = findViewById( R.id.manualaddress );
+        manualaddress.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), CustomerEditAddress.class);
+                intent.putExtra("from", "addresslist");
+                startActivity(intent);
+            }
+
+
+        } );
+
 
         btn_currentlocation.setOnClickListener(new View.OnClickListener() {
             @Override

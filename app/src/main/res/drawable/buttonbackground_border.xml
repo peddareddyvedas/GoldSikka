@@ -12,7 +12,7 @@
         <path
             android:pathData="M12 0H315C321.627 0 327 5.37258 327 12V32C327 38.6274 321.627 44 315 44H12C5.37258 44 0 38.6274 0 32V12C0 5.37258 5.37258 0 12 0Z"
             android:strokeWidth="2"
-            android:strokeColor="#FFFFFF" />
+            android:strokeColor="#261616" />
 
     </group>
 

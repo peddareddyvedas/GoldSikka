@@ -13,7 +13,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:background="@color/white"
             android:id="@+id/toolbar"
             app:titleTextColor="@color/DarkBrown"
@@ -22,7 +22,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/goldsikkalogo"/>
+                android:src="@drawable/goldsikka_logo2"/>
         </androidx.appcompat.widget.Toolbar>
 
         <View

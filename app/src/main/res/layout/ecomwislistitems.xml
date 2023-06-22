@@ -6,7 +6,7 @@
 
     <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp">
@@ -22,9 +22,18 @@
                 android:layout_height="130dp"
                 android:scaleType="fitXY"
                 android:transitionName="pimgtransition" />
+            <ImageView
+                android:id="@+id/ewdelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/addcircle" />
 
 
             <RelativeLayout
+                android:id="@+id/productsrll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pimg">
@@ -34,26 +43,43 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-
                     android:ellipsize="end"
-                    android:lines="2"
+                    android:lines="1"
                     android:singleLine="false"
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="13dp"
                     android:textStyle="bold" />
 
+                <RelativeLayout
+                    android:id="@+id/pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pname">
+
+
+                    <TextView
+                        android:id="@+id/totalwhisprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="scbb"
+                        android:textColor="@color/goldnewcolor"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rrr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/pname">
+                    android:layout_below="@+id/pp">
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
                         android:backgroundTint="@color/colorBlue"
                         android:src="@drawable/tsellgold" />
 
@@ -61,42 +87,45 @@
                         android:id="@+id/pweightTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="10dp"
                         android:paddingTop="5dp"
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="12dp" />
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/pp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rrr"
-                    android:layout_marginBottom="10dp">
 
 
-                    <TextView
-                        android:id="@+id/totalwhisprice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:paddingTop="5dp"
-                        android:text="scbb"
-                        android:textColor="@color/black"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
 
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/movetocartrll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/productsrll"
+                >
                 <ImageView
-                    android:id="@+id/ewdelete"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:src="@drawable/dottedbg"
+                     />
 
-                    android:layout_marginTop="50dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_delete_24" />
+                <TextView
+                    android:id="@+id/styles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/underpricetext"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/movetocart"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
 
             </RelativeLayout>
         </RelativeLayout>
@@ -113,7 +142,8 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/buttonborder"
         android:singleLine="true"
-        android:text="Move to Cart"
+        android:text=""
+        android:visibility="gone"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="15dp" />

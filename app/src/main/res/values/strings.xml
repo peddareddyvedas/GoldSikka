@@ -561,7 +561,7 @@
     <string name="Enter_OTP">Enter OTP </string>
     <string name="Didnt_recieve_the_code">Didn’t recieve the code?</string>
     <string name="Resend"> Resend</string>
-    <string name="Verify_and_Proceed">Verify &amp; Proceed</string>
+    <string name="Verify_and_Proceed">Verify and Proceed</string>
     <string name="Verify_Details">Verify Details </string>
 
     <!--    FORGOT PASSWORD MODULE NAME CONVERSIONS-->
@@ -625,13 +625,13 @@
     <string name="Personal_Address">Personal Address</string>
     <string name="OrgPersonal_Address">Address</string>
     <string name="KYC">KYC</string>
-    <string name="Change_Profile_Picture">Change Profile Picture</string>
+    <string name="Change_Profile_Picture"><u>Change Profile Picture</u></string>
     <string name="Name"><![CDATA[Name<font color=\'#cc0029\'>*</font>]]></string>
     <string name="Save">Save</string>
     <string name="SetasPrimary">Set as Primary</string>
-    <string name="Add_Address">Add Address</string>
+    <string name="Add_Address">Save Address</string>
     <string name="Add_New_Address">Add New Address</string>
-    <string name="Add_bank">Add Bank Details</string>
+    <string name="Add_bank">Add Bank</string>
     <string name="empty_bank">You don’t have bank details added yet, please add by tapping on the button below.</string>
     <string name="empty_address_content">You don’t have any address saved, please add by tapping on the button below.</string>
     <string name="Select_addresstype"> Select Address Type</string>
@@ -673,6 +673,8 @@
     <string name="MMTC_Limited">MMTC Limited</string>
     <string name="Hyderabad">Hyderabad</string>
     <string name="Ahmedabad">Ahmedabad</string>
+    <string name="movetocart"><u>Move to Cart</u></string>
+
     <string name="Hyderbad_code">Gold Code : 10882GL01 <br /> <br /> Silver Code : 108825V01</string>
     <string name="Ahmedabad_code">Gold Code : 10925GL01 <br /> <br /> Silver Code : 109255V01</string>
     <string name="GJEPC_Membership_No">GJEPC Membership No</string>
@@ -730,7 +732,7 @@ By creating account you agree to the
 
     <string name="passbook">
 
-Transactions
+My Transactions
 </string>
 
     <string name="hyderabad_2">
@@ -830,15 +832,15 @@ Forgot Password?
 
 
     <string name="my_gold_2021">My Gold 2021</string>
-    <string name="features">Features</string>
-    <string name="FAQs">FAQs</string>
+    <string name="features"><u>Features</u></string>
+    <string name="FAQs"><u>FAQs</u></string>
     <string name="by_starting_a_subscription_you_agree_to_the">By starting a subscription you agree to the</string>
-    <string name="terms_and_conditions">TERMS &amp; CONDITIONS</string>
+    <string name="terms_and_conditions"><u>TERMS &amp; CONDITIONS</u></string>
     <string name="start_subscription">NEXT</string>
     <string name="referesh">Refresh</string>
     <string name="live_price">Live Price</string>
     <string name="enter_grams">ENTER GRAMS</string>
-    <string name="grams"><![CDATA[Grams <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="grams"><![CDATA[Enter Grams <font color=\'#cc0029\'>*</font>]]></string>
     <string name="mmi_tenure">MMP TENURE</string>
     <string name="PayNextInstalment">Pay Installment</string>
     <string name="select_tenure">Select Tenure</string>
@@ -850,7 +852,8 @@ Forgot Password?
     <string name="cashback">Cashback</string>
     <string name="subscribe">Subscribe</string>
     <string name="select_amount">Select Amount</string>
-    <string name="amount"><![CDATA[Amount <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="amount"><![CDATA[ Enter Amount <font color=\'#cc0029\'>*</font>]]></string>
+    <string name="bookingamount">₹ Enter Amount <font color='#cc0029'>*</font></string>
     <string name="gold_grams">Gold Grams</string>
     <string name="gold_plus">Gold Plus</string>
     <string name="business_associates">Business Associates</string>
@@ -867,7 +870,7 @@ Forgot Password?
     <string name="your_contacts">YOUR CONTACTS</string>
 
     <string name="transactions">TRANSACTIONS</string>
-    <string name="digital_wallet">Gold Suvidha</string>
+    <string name="digital_wallet">GOLD SUVIDHA</string>
     <string name="i_agree">I Agree</string>
     <string name="purity">PURITY</string>
     <string name="hallmark">999/24</string>
@@ -886,7 +889,7 @@ Forgot Password?
     <string name="best_security_certification">Best security, certification and audit institutions of india</string>
     <string name="help_support">Help and Support</string>
     <string name="more_info">More info</string>
-    <string name="create_account">Create Your New Account</string>
+    <string name="create_account">Create Account</string>
     <string name="user_name"><![CDATA[Name <font color=\'#cc0029\'>*</font>]]></string>
     <string name="user_email"><![CDATA[Email <font color=\'#cc0029\'>*</font>]]></string>
     <string name="phone_number"><![CDATA[Phone Number <font color=\'#cc0029\'>*</font>]]></string>
@@ -902,8 +905,6 @@ Forgot Password?
     <string name="referral_code">Referral code</string>
     <string name="by_creating_account_you_agree_to_the">By creating account you agree to the</string>
     <string name="privacy_policy">PRIVACY POLICY</string>
-    <string name="signup"><u>Signup</u></string>
-
     <string name="date">Date</string>
     <string name="scheme_name">Scheme name</string>
     <string name="total_mmis">Total MMP</string>
@@ -963,16 +964,16 @@ Forgot Password?
     <!-- <string name="event_holder_name"><![CDATA[Event holder name<font color=\'#cc0029\'>*</font> ]]></string>
      <string name="other_event_type"><![CDATA[Other event type<font color=\'#cc0029\'>*</font> ]]></string>-->
     <string name="event_type">Event type</string>
-    <string name="upload_couple_photo"><![CDATA[Upload couple photo <font color=\'#cc0029\'>*</font>]]></string>
-    <string name="upload_wedding_card_photo"><![CDATA[Upload wedding card photo <font color=\'#cc0029\'>*</font>]]></string>
-    <string name="upload_photo"><![CDATA[Upload Photo <font color=\'#cc0029\'>*</font> ]]></string>
+    <string name="upload_couple_photo"><![CDATA[ <font color=\'#cc0029\'>*</font> Upload couple photo]]></string>
+    <string name="upload_wedding_card_photo"><![CDATA[<font color=\'#cc0029\'>*</font> Upload wedding card photo ]]></string>
+    <string name="upload_photo"><![CDATA[<font color=\'#cc0029\'>*</font> Upload Photo ]]></string>
     <string name="event_information">Event Information</string>
     <string name="time"><![CDATA[Time ]]></string>
 
     <string name="Gift_in_rupess">Gift in Rupees</string>
     <string name="Gift_in_grams">Gift in Grams</string>
     <string name="proceed_to_gift">Proceed to Gift</string>
-    <string name="ImgSizeNote">* Image size should not be exceed 5 mb</string>
+    <string name="ImgSizeNote"><font color='#cc0029'>*</font> Image size should not be exceed 5 mb</string>
     <string name="Register">Register</string>
     <string name="upload_organization_document"><![CDATA[upload organization document <font color=\'#cc0029\'>*</font> ]]></string>
     <string name="upload_org_photo"><![CDATA[Upload organization photo  <font color=\'#cc0029\'>*</font>]]></string>
@@ -1081,9 +1082,6 @@ Forgot Password?
         <item>30</item>
     </string-array>
 
-
-
-
-    <string name="apply_gift">Apply Gift Card</string>
+    <string name="apply_gift">All Offers &amp; Gift Card</string>
 
 </resources>

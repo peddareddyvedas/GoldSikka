@@ -1,28 +1,26 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:background="@color/white"
-    android:orientation="vertical">
-
-    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="center"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        android:gravity="center"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/DarkBrown"
+        android:layout_gravity="center"
         android:textAlignment="center"
-        app:titleTextColor="@color/DarkBrown">
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
     </androidx.appcompat.widget.Toolbar>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/LightBrown2" />
-
+        android:background="@color/LightBrown2"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -37,66 +35,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
                     android:layout_weight="1"
+                    android:layout_marginLeft="24dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="77dp"
                         android:text="@string/Please_enter_OTP"
                         android:textColor="@color/DarkBrown"
+                        android:textStyle="bold"
                         android:textSize="20dp"
-                      />
-
+                        android:layout_marginTop="77dp"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
-                            android:id="@+id/tvotpmsg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:text=""
                             android:textColor="@color/LightBrown"
+                            android:textStyle="bold"
+                            android:id="@+id/tvotpmsg"
                             android:textSize="14dp"
-                            android:textStyle="bold" />
-
+                            android:layout_marginTop="12dp"/>
                         <TextView
                             android:id="@+id/tvmobile"
+                            android:text=""
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="12dp"
-                            android:text=""
                             android:textColor="@color/LightBrown"
+                            android:textStyle="bold"
                             android:textSize="14dp"
-                            android:textStyle="bold" />
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="12dp"/>
                     </LinearLayout>
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="91dp"
                         android:text="@string/Enter_OTP"
                         android:textColor="@color/LightBrown"
+                        android:textStyle="bold"
                         android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="91dp"/>
                 </LinearLayout>
-
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
+                    android:layout_width="56.91dp"
+                    android:layout_height="59dp"
+                    android:src="@drawable/cellphone"
                     android:layout_marginTop="77dp"
                     android:layout_marginRight="24.03dp"
-                    android:src="@drawable/cellphone" />
+                    />
             </LinearLayout>
 
 
@@ -106,16 +99,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
                 android:cursorVisible="true"
                 android:hint=""
                 android:inputType="number"
-                android:itemBackground="@color/white"
                 android:padding="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:cursorColor="@color/Gold"
                 app:cursorWidth="2dp"
+                android:layout_marginTop="50dp"
+                app:hideLineWhenFilled="true"
+                android:itemBackground="@color/lightgray"
                 app:itemCount="6"
                 app:itemHeight="48dp"
                 app:itemRadius="4dp"
@@ -129,59 +123,55 @@
                 android:id="@+id/otp_edo1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="24dp"
                 android:text=""
                 android:textColor="#E41708"
                 android:textSize="12sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="10dp"
                 android:visibility="gone" />
-
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
-                android:gravity="end"
-                android:orientation="horizontal">
-
+                android:gravity="end">
                 <TextView
+                    android:visibility="visible"
                     android:id="@+id/tv_second_title"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="#DCAB37"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/LightBrown"
                     android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:visibility="visible" />
-
+                    android:textStyle="bold" />
                 <LinearLayout
                     android:id="@+id/llsendagain"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
+                    android:orientation="horizontal">
                     <TextView
+                        android:textSize="12dp"
+                        android:textColor="@color/DarkBrown"
+                        android:visibility="visible"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Didnt_recieve_the_code"
-                        android:textColor="@color/DarkBrown"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tv_sendagain"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
-                        android:text="@string/Resend"
                         android:textColor="@color/Gold"
                         android:textSize="12dp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Resend"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
 
@@ -191,16 +181,15 @@
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="45dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/button_background"
-                android:backgroundTint="@color/lightgray"
                 android:text="@string/Verify_and_Proceed"
-                android:textColor="#013220"
                 android:textSize="14dp"
-
-                android:textStyle="bold" />
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/Gold"
+                android:background="@drawable/button_background"/>
 
         </LinearLayout>
     </ScrollView>

@@ -7,7 +7,7 @@
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent">
 
         <LinearLayout
@@ -19,9 +19,8 @@
 
             <RelativeLayout
                 android:id="@+id/backbtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/back"
@@ -29,14 +28,15 @@
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/arrowleft" />
+                    android:background="@drawable/arrowleftnew" />
 
                 <ImageView
                     android:id="@+id/dr1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_toRightOf="@+id/back"
-                    android:src="@drawable/goldsikkalogo" />
+                    android:src="@drawable/goldsikka_logo2" />
 
             </RelativeLayout>
 
@@ -48,12 +48,11 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:gravity="center"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:text=" "
                 android:textColor="@color/DarkBrown"
-                android:textSize="13dp"
+                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -105,7 +104,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#E1E8F0">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ecomwishlist_recyclerview"

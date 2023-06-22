@@ -34,9 +34,9 @@ public class OrganizationListAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Temples List";
+                return "Temple List";
             case 1:
-                return "NGOs List";
+                return "NGO List";
 
         }
         return null;
