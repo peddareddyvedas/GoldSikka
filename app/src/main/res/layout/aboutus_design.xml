@@ -146,6 +146,7 @@
             android:scaleType="fitXY"
             android:layout_margin="10dp"
             android:src="@drawable/philosophy"
+            android:src="@drawable/vision"
             android:layout_width="match_parent"
             android:layout_height="180dp"/>
 
